@@ -91,7 +91,6 @@ function agregarCarrito(id, nombre, cantidad, precio) {
     CARRITO[id].subtotal = CARRITO[id].cantidad * CARRITO[id].precio;
     
 	actualizarCarrito();
-	 $.post( "../assets/php/productos/actualizar.php", { productoID: id, cantidad: cantidad} );
 	   $.post( "../assets/php/productos/agregar.php", { productoID: id, cantidad: cantidad, precio: precio} );
   }
 </script>
