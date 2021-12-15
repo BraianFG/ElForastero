@@ -25,7 +25,7 @@
                 <?php include"assets/php/presentacion.php" ?>
                 
                 <!--Productos -->
-                <?php include"assets/php/productos.php" ?>
+                <?php include"assets/php/productos_nologueado.php" ?>
         
                 <!-- Botones flotantes-->
                 <?php include"assets/php/contacto.php" ?>

@@ -23,9 +23,11 @@
               <div class="title">Inicio de sessión</div>
          <form class="registro" method="post" action="login.php">
              <img class="registro__logo" src="<?php echo $mostrar_admin['logo'] ?> ">
+             <label class="datos"><i class="fas fa-envelope"></i> Correo Electrónico</label>
                <input class="compradores" name="email" type="email" placeholder="Ingrese correo electrónico" value="" required maxlenght="90" autocomplete>
+               <label class="datos"><i class="fas fa-key"></i> Contraseña</label>
                <input class="compradores" name="password" type="password" placeholder="Ingrese contraseña" value="" required minlength="8" maxlength="15" autocomplete>
-            <button type="submit" class="button primary compradores " value="login"  >Ingresar</button>
+            <button type="submit" class="button primary compradores ">Ingresar <i class="fas fa-sign-in-alt"></i></button>
             </form>
       <?php
           }
@@ -33,7 +35,7 @@
        </div>
     </div> 
     <div class="registrarse__recuadro pregunta">
-         <p class="registro">¿Todavía no tenés una cuenta? ,<br> <a class="marron" href="registrarse">Registrate para comenzar a comprar</a></a></p>
+         <p class="registro uk-text-center">¿Todavía no tenés una cuenta?<br> <a class="marron" href="registrarse">Registrate para comenzar a comprar</a></a></p>
         </div>
      </div>   
     </body> 

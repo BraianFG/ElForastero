@@ -1,13 +1,7 @@
-
-<?php
-
- session_start();
-if(isset($_SESSION['id_admin'])){
-    
-  if(isset($_REQUEST["salir"])){
-       unset($_SESSION["id_admin"]);
-       header('Location:ingresar');
-    }
-}
-
-?>
+<?php      
+   session_start();
+       if(isset($_REQUEST["salir"])){
+          unset($_SESSION["id"]);
+          header('Location:ingresar');
+      }
+?>            

@@ -7,7 +7,7 @@ $id = $_SESSION["id"];
 // SDK de Mercado Pago
 require __DIR__ .  '/vendor/autoload.php';
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('TEST-5946296600794681-071419-4b3ffe5d6c446830d017f9c5ea747b07-335219991');
+MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991');
 ?>
 
  <?php
@@ -48,17 +48,13 @@ MercadoPago\SDK::setAccessToken('TEST-5946296600794681-071419-4b3ffe5d6c446830d0
           <ul class="actions stacked">
           <h6>Total: $ <span id="total"></span></h6>
      </div>  
+     
         <div class="modal__botones carrito">
             <a href="/index" class="button__modal volver">
                  <i class="fas fa-undo"></i>Volver</a>
             <div class="comprar"></div>
                 </ul>
         </div>
-
- <div class="resumen text">         
-          <p class="uk-text-center">¿Termeniste de hacer la compra? ,<br> <a class="marron" href="#mensaje" uk-toggle ><i class="fas fa-arrow-right"></i>Enviale un mensaje de aviso al vendedor<i class="fas fa-arrow-left"></i></a></a></p>
-        </div>  
-   </div>
    
         <script>
     // Agrega credenciales de SDK

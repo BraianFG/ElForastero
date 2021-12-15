@@ -17,6 +17,8 @@ require_once 'database.php';
         if(password_verify($password, $fila['password'])) {
               header("Location : index2");
              $_SESSION["id"] = $fila['id'];
+             $_SESSION["nombre"] =  $fila['nombre'];
+             $_SESSION["apellido"] = $fila['apellido'];
              $_SESSION["carrito"];
         }else{
              header('Location:ingresar'); 

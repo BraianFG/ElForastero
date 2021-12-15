@@ -30,7 +30,7 @@
                <input class="compradores" name="password" minlength="8" maxlength="15" type="password" placeholder="Ingrese contraseña" value="" required autocomplete="off">
                <label class="datos"><i class="fas fa-phone"></i> Celular</label> 
                 <input class="compradores" name="celular" type="tel" maxlength="18" placeholder="Ingrese su celular" value="" required>
-             <label class="datos">Domicilio</label>    
+             <label class="datos"><i class="fas fa-directions"></i> Domicilio</label>    
                <input class="compradores" name="domicilio" type="text" placeholder="Ingrese el domicilio a enviar" value="" required>
               <label class="datos"> <i class="fas fa-city"></i> Ciudad</label>  
               <input class="compradores" name="ciudad" type="text" placeholder="Ingrese la ciudad a enviar" value="" required>
