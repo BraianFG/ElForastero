@@ -142,3 +142,25 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 *Posibilidad de incluír código postal
 
+14/12
+
+*Botones slider con enlaces tipo anclas a diferentes secciones de la página 
+
+*Botón ancla para subir para arriba 
+
+*label a cada input para mejor compresión de la información
+
+*Ventanas Modal que abren por id para editar y eliminar
+
+*Creación de las $_SESSION nombre y apellido para guardar los datos de la sessión de ese usuario
+
+*Más información como nombre,apellido,fecha,hora y precio de cada producto en la tabla Carrito
+
+*Posibilidad de comprimir imagenes en la misma página
+
+*Mejoras de estilos en detalles
+
+*Creación de lista de desplegable de categoría para cargar productos
+
+*Incorporación de Lazzy loading para optimizar imagenes
+
