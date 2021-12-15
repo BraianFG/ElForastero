@@ -139,14 +139,13 @@
          <label class="datos">Enlace al quinto modal</label>
         <input  name="modal5" type="text" placeholder="Ingrese el enlace al quinto modal" value="<?php echo $ver[15] ?>">
           
-        </div>
-
         <div class="uk-modal-footer uk-text-right">
           <button type="submit"  data-id="<?php echo $ver[0] ?>"class="button primary compradores"  value="editar_productos"> <i class="fas fa-pen"></i> Editar producto</button>
           </form>
         </div>
     </div>
-
+ </div>
+        
 <div id="eliminar__productos_<?php echo $ver['0'] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
