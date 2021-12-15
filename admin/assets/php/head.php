@@ -29,9 +29,9 @@
 
    
     <!-- Descripcion del sitio  -->
-    <meta property="og:title" content="<?php echo $negocio['titulo_sitio']?>">
+    <meta property="og:title" content="<?php echo $negocio['title']?>">
     <meta property="og:image" content="<?php echo $negocio['imagen_sitio']?>" />
-    <meta property="og:site_name" content="<?php echo $negocio['nombre_sitio']?>">
+    <meta property="og:site_name" content="<?php echo $negocio['title']?>">
     <meta property="og:description" content="<?php echo $negocio['descripcion']?>">
     <link rel="shortcut icon" href="<?php echo $negocio['favicon']?>" />
     

@@ -14,8 +14,13 @@ include 'database.php';
   <?php include "assets/php/head.php" ?>
 </head>
 <body>
-   <!-- Header -->    
+   <!-- Header -->  
+   
  <?php include "assets/php/navbar2.php" ?>
+            
+ <?php include "slider/slider.php" ?>
+ 
+
     <!-------------------------------------------------------------------------->
 <?php include "usuarios/usuarios_tabla.php" ?>    
     <!-------------------------------------------------------------------------->
@@ -40,7 +45,10 @@ include 'database.php';
 <?php include "negocio/estilos.php" ?>    
     <!-------------------------------------------------------------------------->
 <?php include "negocio/negocio.php" ?>
+
     <!-------------------------------------------------------------------------->
+<?php include "slider/up.php" ?>
+    
 <?php include "assets/css/main.php" ?>
 </body>
 </html>

@@ -24,5 +24,6 @@
 
       $resultInsert = mysqli_query($conn, $sql); 
       
-   mysqli_close($conexion);   
+   mysqli_close($conn);   
+   
 ?>

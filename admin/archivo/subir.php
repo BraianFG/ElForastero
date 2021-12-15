@@ -11,22 +11,22 @@
   
   if(!file_exists('../')){
       mkdir('../../images/' ,0777,true);
+        
       if(file_exists('../../')){
-         if(move_uploaded_file($guardado, '../../images/' .$nombre)){
+           if(move_uploaded_file($guardado, '../../images/' .$nombre)){
+           }
              header('Location:/');
+             imagewebp($nombre,$guardado);
          }else{
               header('Location:../');
          }
-      }
 }else{
    if(move_uploaded_file($guardado, '../../images/' .$nombre)){
           header('Location:../');
-          
          }else{
               header('Location:../');
+                 imagewebp($nombre,$guardado);
          } 
 }
 
 ?>
-
-

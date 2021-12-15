@@ -44,5 +44,5 @@
   $sql = "UPDATE `usuarios` SET nombre= '$nombre' , apellido = '$apellido', email = '$email',  direccion = '$direccion' , celular = '$celular' , ciudad = '$ciudad' , codPostal = '$codPostal' WHERE `usuarios` .id = '$id' ";
    $resultInsert = mysqli_query($conn, $sql);    
    
-   mysqli_close($conexion, $sql);   
+   mysqli_close($conn);   
 ?>

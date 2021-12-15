@@ -1,14 +1,14 @@
-         <div class="uk-container  uk-container-large wrap">
+         <div id="negocio" class="uk-container  uk-container-large wrap">
         <div class="uk-overflow-auto">     
              <table class="uk-table uk-table-striped ">
-              <caption> <i class="fas fa-desktop"></i> Datos del negocio</caption>
+              <caption><i class="fas fa-desktop"></i> Datos del negocio</caption>
          <thead>    
              <tr>
                 <th>NOMBRE</th>
                 <th>LOGO</th>
                 <th>DESCRIPCIÓN</th>
                 <th>CELULAR</th>
-                <th>ALERT</th>
+                <th>ANUNCIO</th>
                 <th>EMAIL</th>
                 <th>WHATSSAPP</th>
                 <th>WHATSSAPP</th>

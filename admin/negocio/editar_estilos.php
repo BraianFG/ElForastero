@@ -31,16 +31,10 @@ mysqli_real_escape_string($conn, $navbar);
 $texto = filter_var($_POST['texto'], FILTER_SANITIZE_STRING);
 mysqli_real_escape_string($conn, $texto);
 
-$buttonColorPrimary = filter_var($_POST['buttonColorPrimary'], FILTER_SANITIZE_STRING);
-mysqli_real_escape_string($conn, $buttonColorPrimary);
-
-$buttonColor = filter_var($_POST['buttonColor'], FILTER_SANITIZE_STRING);
-mysqli_real_escape_string($conn, $buttonColor);
-
 $placeholder = filter_var($_POST['placeholder'], FILTER_SANITIZE_STRING);
 mysqli_real_escape_string($conn, $placeholder);
 
-  $sql = "UPDATE `estilos` SET  body = '$body' , color2 = '$color2' ,  color3 = '$color3' , navbar = '$navbar' ,  texto = '$texto' , buttonColor = '$buttonColorPrimary' , buttonColorPrimary = '$buttonColor' ,  placeholder = '$placeholder' WHERE 1";
+  $sql = "UPDATE `estilos` SET  body = '$body' , color2 = '$color2' ,  color3 = '$color3' , navbar = '$navbar' ,  texto = '$texto' , placeholder = '$placeholder' WHERE 1";
    $resultInsert = mysqli_query($conn, $sql);    
  mysqli_close($conexion, $sql);   
 ?>

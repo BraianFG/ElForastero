@@ -235,11 +235,13 @@ input[type="submit"]:hover{
     background: <?php echo $negocio['color2'] ?> ; !important;
     color: <?php echo $negocio['color3'] ?> ;
     display: block;
-    font-family: <?php echo $negocio['fontFamily'] ?> ;
+    font-family: <?php echo $negocio['fontFamily'] ?>;
     margin: auto;
     align-items: baseline;
     border:0;
     padding:0 1.3em;
+    margin-left:0.15em;
+    margin-right:0.15em;
     outline:0;
 }
 
@@ -295,11 +297,6 @@ input[type="text"], input[type="password"], input[type="email"], select {
     margin-bottom:1.1em;
 }
 
-textarea {
-    padding: 0.75em 1em;
-    margin-bottom:1em;
-    height:8em;
-}
 
 
 /* Image */
@@ -698,7 +695,7 @@ a {
 }
     
  .registro{
-    max-width:50%;
+   max-width:50%;
    padding:  1em 1.4em 1em;
    background-color:  <?php echo $negocio['color3'] ?>;
    border-radius: 0em 0em  0.7 0.7em;
@@ -746,17 +743,17 @@ a {
     padding: 1.2em 1em 1em;
     border-radius: 0em 0em  0.7 0.7em;
     box-sizing: border-box;
-    min-width:80%;
+    min-width:85%;
 }
 
  .registro{
    padding:1.3em 1.5em 1.5em;
    background-color: <?php echo $negocio['color3'] ?> ;
    box-sizing: border-box;
-   min-width: 80%;
+   min-width: 85%;
  }
     .header {
-       min-width: 80%;
+       min-width: 85%;
        display: block;
        margin-top:3em;
     }
@@ -800,15 +797,17 @@ a {
 
 .lista{
     display:flex;
-    margin:auto;
-    justify-content:center;
-    padding: 0.5em;
+    justify-content:flex-end;
+    padding: 0.5em 0em
+    margin-bottom:1em;
+    padding-top:1em;
 }
 
 .lista__item{
     width: 10em;
     margin-left:0.4em;
     margin-right:0.4em;
+    list-style:none;
 }
 
 .upload{
@@ -892,7 +891,10 @@ input[type="number" i] {
 
 .fondo{
    background-color:<?php echo $negocio['color3'] ?> ;
+   justify-content:center;
    border-bottom:<?php echo $negocio['color2'] ?>  0.1em solid;
+    display: flex;
+    margin: auto;
 }
 
 .uk-modal-footer {
@@ -963,6 +965,35 @@ svg,a{
     margin-top:-2em;
 }
 
+.slider{
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.telegram {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    z-index: 999;
+    outline:none;
+}
+
+.telegram img {
+    width: 2.5em;
+    height: 2.5em;
+    border:0;
+    outline:none;
+    margin-bottom:1em;
+}
+
+.eliminar{
+    display:flex;
+    width:100%;
+}
+
+.descripcion{
+    height:10em;
+}
 </style>
 <?php
 }

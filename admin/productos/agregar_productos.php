@@ -23,7 +23,7 @@
     $precio = filter_var($_POST['precio'], FILTER_SANITIZE_NUMBER_INT);
     mysqli_real_escape_string($conn , $precio);
     
-    $categoria = filter_var($_POST['categoria'], FILTER_SANITIZE_NUMBER_INT);
+    $categoria = filter_var($_POST['categoria'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $categoria);
     
     $imagen = filter_var($_POST['imagen'], FILTER_SANITIZE_URL);
