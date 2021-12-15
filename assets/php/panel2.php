@@ -15,7 +15,8 @@
                 <p><i class="fas fa-phone "></i> <?php echo $negocio['celular']?> </p>
                 <p><i class="fas fa-envelope "></i> <?php echo  $negocio["email"]?></p>
                 <a href="#editar" class="set__text"uk-toggle><i class="fas fa-edit"></i> Editar mis datos</a><br>
-                <a href="#estado" class="set__text" stlye ="margin-top:2em;" uk-toggle><i class="fas fa-traffic-light"></i> Estado de mis compras</a>  
+                <a href="#mensaje" class="set__text" stlye ="margin-top:2em;" uk-toggle><i class="fas fa-paper-plane"></i>Enviar mensaje al vendedor</a><br>
+                <a href="#estado" class="set__text" stlye ="margin-top:2em;" uk-toggle><i class="fas fa-traffic-light"></i> Estado de mis compras</a>
             <a href="salir.php?salir=1" class="button primary compradores" >Cerrar Sessión <i class="fas fa-sign-out-alt "></i> </a>
     </div>
     </div>
@@ -75,3 +76,5 @@
     </div>
 </div>    
 </div>
+
+<?php include 'mensaje.php' ?>

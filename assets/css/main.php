@@ -239,7 +239,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     border: 0;
     border-bottom-color: currentcolor;
     box-shadow: inset 0 0 0 1px rgb(160 160 160 / 30%);
-    color: <?php echo $negocio['buttonColor'] ?>;
+    color: <?php echo $negocio['color2'] ?>;
     cursor: pointer;
     font-size: 0.6em;
     font-weight: 800;
@@ -309,7 +309,7 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
 
 .button.primary {
     background: <?php echo $negocio['color2']?> !important;
-    color: <?php echo $negocio['buttonColorPrimary'] ?>;
+    color: <?php echo $negocio['color3'] ?>;
     display: block;
     font-family: <?php echo $negocio['fontFamily'] ?>;
     margin: auto;
@@ -318,11 +318,11 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
 }
 
 .button.primary:hover{
-    color: <?php echo $negocio['buttonColorPrimary'] ?>;
+    color: <?php echo $negocio['color3'] ?>;
 }
 
 .button:hover{
-    color: <?php echo $negocio['buttonColor'] ?>;
+    color: <?php echo $negocio['color2'] ?>;
 }
 
 input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"].disabled, input[type="reset"]:disabled, input[type="button"].disabled, input[type="button"]:disabled, button.disabled, button:disabled, .button.disabled, .button:disabled {
@@ -584,7 +584,7 @@ ul.icons li > * .label {
     -ms-transition: -ms-transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
     width: 100%;
-    height: 23em;
+    height: 20em;
 }
 
 .mini-post .image:hover img {
@@ -1099,7 +1099,7 @@ a:hover {
     }
 
 .button__modal {
-    background-color: <?php echo $negocio['buttonColor'] ?>;
+    background-color: <?php echo $negocio['color2'] ?>;
     color:  <?php echo $negocio['color3'] ?>;
     font-weight: bolder;
     text-transform: uppercase;
@@ -1450,7 +1450,7 @@ body.single #footer {
     background-color: <?php echo $negocio['color2'] ?> ;
     text-transform: uppercase;
     font-weight: bold;
-    color:  <?php echo $negocio['buttonColorPrimary'] ?> ; 
+    color:  <?php echo $negocio['color3'] ?> ; 
     text-align: center;
     height: 2em;
     margin-bottom: 0.1em;

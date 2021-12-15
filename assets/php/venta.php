@@ -2,7 +2,8 @@
 session_start();
 include '../../database.php';
 $id =  $_SESSION["id"];
-
+$nombre = $_SESSION["nombre"];
+$apellido = $_SESSION["apellido"];
     $mensaje =filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $mensaje);
     
@@ -24,11 +25,10 @@ $id =  $_SESSION["id"];
    }
 
 //------------------------------------------------------------------------------//
-$sql = "INSERT INTO `ventas`(`UsuarioID`, `mensaje`, `fecha` , `hora`,`estado`,`MensajeVendedor`,`vendedor`) VALUES ('$id','$mensaje','$fecha','$hora','pendiente','pendiente','El Forastero')";
+$sql = "INSERT INTO `ventas`(`UsuarioID`,`nombre`,`apellido`,`mensaje`, `fecha` , `hora`,`estado`,`MensajeVendedor`,`vendedor`) VALUES ('$id','$nombre','$apellido',$mensaje','$fecha','$hora','pendiente','pendiente','El Forastero')";
 
-$sql2 ="UPDATE `ventas` SET `mensaje`='$mensaje',`fecha`='$fecha',`hora`='$hora',`estado`='$estado',`MensajeVendedor`='$MensajeVendedor',`vendedor`='El Forastero' WHERE UsuarioID = '$id'";
+$sql2 ="UPDATE `ventas` SET `nombre`='$nombre',`apellido`='$apellido',`mensaje`='$mensaje',`fecha`='$fecha',`hora`='$hora',`estado`='$estado',`MensajeVendedor`='$MensajeVendedor',`vendedor`='El Forastero' WHERE UsuarioID = '$id'";
    $resultInsert = mysqli_query($conn, $sql); 
     $resultInsert = mysqli_query($conn, $sql2); 
    mysqli_close($conn);   
 ?>
-  
