@@ -179,3 +179,9 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 *Total de carrito y total de pedido se calculan en tablas separadas de mensajes
 
 *Mayor información en la tabla pedidos y productos
+
+*Incorporación de la tabla pedidos en el CRUD con el total de compra
+
+*Incorporacíón de la tabla del todal de carrito
+
+*Reorganización de las columnas de base de datos en la tabla mensajes y en la vista del CRUD
