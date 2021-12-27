@@ -4,29 +4,6 @@ session_start();
 include 'database.php';
 $id = $_SESSION["id"];
 
-// SDK de Mercado Pago
-require __DIR__ .  '/vendor/autoload.php';
-// Agrega credenciales
-MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991');
-?>
-
- <?php
-  $negocio = "SELECT * FROM totalPedido WHERE UsuarioID = '$id'" ;     
-  $resultados = mysqli_query($conn,$negocio);          
-        while($negocio= mysqli_fetch_array($resultados)){
-            
-    // Crea un objeto de preferencia
-    $preference = new MercadoPago\Preference();
-    $item = new MercadoPago\Item();
-    $item->title = 'Su compra';
-    $item->quantity = 1;
-    $item->unit_price = $negocio['total'];
-    $preference->items = array($item);
-    $preference->save();
- }
-  ?>
-  
-<?php
     if (isset($_SESSION["id"])){
      $id = $_SESSION["id"];
     }else{
@@ -43,15 +20,16 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
        <?php include "assets/css/main.php" ?> 
     <div id="resultados" class="uk-container uk-container-xsmall wrapp"> 
     <table class="uk-table uk-table-striped">
-              <div class="modal__header">Pedidos</caption>
+              <div class="modal__header">Resumen</caption>
          <thead>    
              <tr>
                 <th>Artículo</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
+                <th>Eliminar</th>
             </tr>
         </thead>        
-   <?php $productosp1 = "SELECT * FROM `pedidos` WHERE UsuarioID = '$id' " ;     
+   <?php $productosp1 = "SELECT * FROM `carrito` WHERE UsuarioID = '$id' " ;     
           $result3 = mysqli_query($conn,$productosp1);
         
         ?>
@@ -65,11 +43,31 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
                    <td><?php echo $mostrar_productosp1['5'] ?></td>
                    <td ><?php echo $mostrar_productosp1['6'] ?></td>
                    <td><?php echo '$ ',$mostrar_productosp1['7'] ?></td>
+                   <td><a class="button primary eliminar" href="#eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle><i class="fas fa-trash "></i> Eliminar</a></td>
               </tr>
             </tbody>
+        
+  <div id="eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-modal>
+    <div class="uk-modal-dialog">
+     <div class="uk-modal-body">      
+    <h3 class="uk-text-center">¿Desea eliminar este pedido?</h3>
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="eliminar">
+            <a class="button primary eliminar__si" style="margin-right:1em;"onclick="eliminar_carrito((id ='<?php echo  $mostrar_productosp1['0'] ?>'))">Si <i class="fas fa-check"></i></a>
+            <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
+     </div>     
+      </div>    
+    </div>
+</div>
 
            
-
+<script>
+    function eliminar_carrito(id){
+       $.post( "eliminar_carrito.php", { id : id,UsuarioID:<?php echo $_SESSION["id"]?>});
+       $("#resultados").load("resumen.php #resultados");
+       $("#total").load("resumen.php #total");
+    } 
+</script>
 
   <?php
  }
@@ -77,7 +75,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
   
     </table>
     <?php 
-         $negocio = "SELECT * FROM totalPedido WHERE UsuarioID = '$id'" ;     
+         $negocio = "SELECT * FROM totalCarrito WHERE UsuarioID = '$id'" ;     
          $resultados = mysqli_query($conn,$negocio);          
             while($negocio= mysqli_fetch_array($resultados)){
     ?>      
@@ -90,28 +88,19 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
 
      </div>  
         <div class="modal__botones carrito uk-container uk-container-xsmall ">
-            <a href="/index2" class="button__modal volver">
+            <a href="/index" class="button__modal volver">
                  <i class="fas fa-undo"></i>Volver</a>
-               <div class="comprar"></div>
+             <a href="comprar" onclick="confirmar()" class="button__modal confirmar">
+                 <i class="fas fa-check"></i>Comprar</a>      
+                 
+          <!---  <div class="comprar"></div> -->
                 </ul>
         </div>
    
 <script>
-    // Agrega credenciales de SDK
-  const mp = new MercadoPago('TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d', {
-        locale: 'es-AR'
-  });
-
-  // Inicializa el checkout
-  mp.checkout({
-      preference: {
-          id: '<?php echo $preference->id ?>'
-      },
-      render: {
-            container: '.comprar', // Indica el nombre de la clase donde se mostrará el botón de pago
-            label: 'pagar', // Cambia el texto del botón de pago (opcional)
-      }
-});
+    function confirmar(){
+       $.post( "confirmar.php", { UsuarioID:<?php echo $_SESSION["id"]?>});
+    }
 </script>
    
      <?php include "assets/js/productos.php" ?>
