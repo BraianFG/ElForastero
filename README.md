@@ -164,3 +164,18 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 *Incorporación de Lazzy loading para optimizar imagenes
 
+27/12
+
+*Posibilidad de subir multiples imagenes
+
+*Creación de la tabla pedidos confirmando el resumen de compra
+
+*Posibilidad de ver las miniaturas de imagenes en la tabla de productos en el CRUD
+
+*Mejoras visual en el chat con el venddor y en una página distinta
+
+*Mejoras en organizacíón del menu en el modal
+
+*Total de carrito y total de pedido se calculan en tablas separadas de mensajes
+
+*Mayor información en la tabla pedidos y productos
