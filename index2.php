@@ -43,5 +43,6 @@ include 'database.php';
          <!--style --> 
 
    <?php include 'assets/js/productos.php' ?>
+  <?php include "assets/js/Google-Analytics.php" ?>
 </body>
 </html>

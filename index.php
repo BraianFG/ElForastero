@@ -33,6 +33,6 @@
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
         </div>     
-        
+        <?php include "assets/js/Google-Analytics.php" ?>
 </body>
 </html>
