@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-12-2021 a las 02:56:49
+-- Tiempo de generación: 27-12-2021 a las 14:38:37
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -41,7 +41,9 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `nombre`, `email`, `password`) VALUES
 (1, 'admin', 'admin@elforastero.com', '$2y$08$kBK4zpgZBpHKfcckX2kLj.N8JQPE2LLhfoRLAaPU1CC8pAFJRfM1G'),
 (9, 'Jose', 'orihuelaconde@eest1chivilcy.edu.ar', '$2y$08$uRXoCSBzpqQeFyiI095XnuANk7m.sWJG5.BlSTPpVMgQEEBlSwsY.'),
-(32, 'Tincho', 'tincho@gmail.com', '$2y$08$9.F/9jvPXcXzdW.HXfpl1u01/ZhMjqHxsIzm/C.2SqQUTBI.ovHAe');
+(32, 'Tincho', 'tincho@gmail.com', '$2y$08$9.F/9jvPXcXzdW.HXfpl1u01/ZhMjqHxsIzm/C.2SqQUTBI.ovHAe'),
+(51, 'Antonella', 'antofrediani5@gmail.com', '$2y$08$dQ9FVsoxSIjFfyZLvfG39OpEkwGjP0YAIKYevhb8NtrWMY1R.96qi'),
+(54, 'Marcela', 'marcelaguelffi@gmail.com', '$2y$08$9JhPKzS4iB.01rvIwPi4N.4fggs6KFXLzPzyRTIlB3itm.ZHq.gP.');
 
 --
 -- Índices para tablas volcadas
@@ -62,7 +64,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

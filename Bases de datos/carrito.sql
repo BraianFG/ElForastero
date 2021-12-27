@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-12-2021 a las 02:56:55
+-- Tiempo de generación: 27-12-2021 a las 14:38:29
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -33,6 +33,7 @@ CREATE TABLE `carrito` (
   `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `apellido` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `productoID` int(11) NOT NULL,
+  `nombreProduc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cantidad` int(11) NOT NULL,
   `precio` int(11) NOT NULL,
   `fecha` date NOT NULL,
@@ -43,11 +44,16 @@ CREATE TABLE `carrito` (
 -- Volcado de datos para la tabla `carrito`
 --
 
-INSERT INTO `carrito` (`id`, `usuarioID`, `nombre`, `apellido`, `productoID`, `cantidad`, `precio`, `fecha`, `hora`) VALUES
-(26, 346, 'Braian', 'Frediani Guelffi', 10, 1, 430, '2021-12-14', '21:36:14'),
-(27, 346, 'Braian', 'Frediani Guelffi', 10, 1, 430, '2021-12-14', '21:36:14'),
-(28, 346, 'Braian', 'Frediani Guelffi', 9, 1, 1270, '2021-12-14', '21:36:14'),
-(29, 346, 'Braian', 'Frediani Guelffi', 11, 1, 2000, '2021-12-14', '21:36:18');
+INSERT INTO `carrito` (`id`, `usuarioID`, `nombre`, `apellido`, `productoID`, `nombreProduc`, `cantidad`, `precio`, `fecha`, `hora`) VALUES
+(280, 1004, 'Tincho', 'Menganoo', 2, '02. CAMISAS DE VESTIR', 1, 1600, '2021-12-20', '22:43:47'),
+(281, 1004, 'Tincho', 'Menganoo', 3, '03. MEDIAS ROMBOS', 1, 330, '2021-12-20', '22:43:51'),
+(282, 1004, 'Tincho', 'Menganoo', 2, '02. CAMISAS DE VESTIR', 1, 1600, '2021-12-20', '22:44:16'),
+(284, 1004, 'Tincho', 'Menganoo', 1, '01. JEAN CARTIER LISAS', 1, 230, '2021-12-20', '22:45:48'),
+(285, 1004, 'Tincho', 'Menganoo', 2, '02. CAMISAS DE VESTIR', 1, 1600, '2021-12-20', '22:45:50'),
+(522, 346, 'Braian ', 'Frediani Guelffi', 1, '01. JEAN CARTIER LISAS', 1, 230, '2021-12-24', '13:17:21'),
+(524, 1030, 'Gustsvo Adolffo', 'Frediani', 10, '010. BOXER ZORBA', 1, 430, '2021-12-25', '00:12:43'),
+(526, 1030, 'Gustsvo Adolffo', 'Frediani', 2, '02. CAMISAS DE VESTIR', 1, 1600, '2021-12-25', '00:13:04'),
+(527, 1030, 'Gustsvo Adolffo', 'Frediani', 10, '010. BOXER ZORBA', 1, 430, '2021-12-25', '00:13:10');
 
 --
 -- Índices para tablas volcadas
@@ -57,7 +63,9 @@ INSERT INTO `carrito` (`id`, `usuarioID`, `nombre`, `apellido`, `productoID`, `c
 -- Indices de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usuarioID` (`usuarioID`),
+  ADD KEY `productoID` (`productoID`,`usuarioID`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -67,18 +75,7 @@ ALTER TABLE `carrito`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `carrito`
---
-ALTER TABLE `carrito`
-  ADD CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`productoID`) REFERENCES `productos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `carrito_ibfk_2` FOREIGN KEY (`usuarioID`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=528;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

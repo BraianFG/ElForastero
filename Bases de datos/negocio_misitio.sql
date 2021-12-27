@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-12-2021 a las 02:57:22
+-- Tiempo de generación: 27-12-2021 a las 14:37:53
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -39,7 +39,7 @@ CREATE TABLE `negocio_misitio` (
 --
 
 INSERT INTO `negocio_misitio` (`title`, `descripcion`, `favicon`, `imagen_sitio`) VALUES
-('El Forastero  ', 'Puedes comprarlo de forma fácil y rápida desde la comodidad de tu casa o donde estés, te lo enviaremos y entraremos en la web para realizar la compra.', '/images/logo.ico ', '/images/logo.jpg');
+('El Forastero  ', 'Compre de manera fácil y rápida desde la comodidad de tu casa o donde estés y te lo enviamos.\r\n¿Qué esperas para hacer tu primera compra?.', '/images/logo.ico ', '/images/logo.jpg');
 
 --
 -- Índices para tablas volcadas

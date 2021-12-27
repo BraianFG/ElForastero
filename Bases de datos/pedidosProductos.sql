@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-12-2021 a las 14:36:18
+-- Tiempo de generación: 07-11-2021 a las 20:49:42
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -24,18 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ventas`
+-- Estructura de tabla para la tabla `pedidosProductos`
 --
 
-CREATE TABLE `ventas` (
-  `id` int(11) NOT NULL,
-  `UsuarioID` int(11) NOT NULL,
-  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apellido` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mensaje` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fecha` date NOT NULL,
-  `hora` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `MensajeVendedor` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+CREATE TABLE `pedidosProductos` (
+  `pedidoID` int(11) NOT NULL,
+  `productoID` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` int(11) NOT NULL,
+  `promocionCantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -43,20 +40,20 @@ CREATE TABLE `ventas` (
 --
 
 --
--- Indices de la tabla `ventas`
+-- Indices de la tabla `pedidosProductos`
 --
-ALTER TABLE `ventas`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `pedidosProductos`
+  ADD PRIMARY KEY (`pedidoID`,`productoID`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- Restricciones para tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `ventas`
+-- Filtros para la tabla `pedidosProductos`
 --
-ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+ALTER TABLE `pedidosProductos`
+  ADD CONSTRAINT `pedidosProductos_ibfk_1` FOREIGN KEY (`pedidoID`) REFERENCES `productos_imagenes` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

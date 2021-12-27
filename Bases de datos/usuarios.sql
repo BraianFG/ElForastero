@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-12-2021 a las 02:57:39
+-- Tiempo de generación: 27-12-2021 a las 14:36:29
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -44,8 +44,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `direccion`, `ciudad`, `codPostal`, `celular`, `email`, `password`) VALUES
-(346, 'Braian', 'Frediani Guelffi', ' Junin 559', 'Chivilcoy', '6620', '2346338767', 'admin@admin.com', '$2y$08$EpPVTv4NEm5MmT8r.hgPkeSQmh1JY/JaGE0t9kjQ/E2S4ZQypOUJW'),
-(355, 'Roberto ', 'Frediani ', 'Av Urquiza 541', 'Chivilcoy ', '', '2346521865', 'robertofrediani22@gmail.com', '$2y$08$yrs035uq81E5X2r9DQplhO1lHq0nvwgAQcv26G3Mkt2f/rftoWnda');
+(346, 'Braian ', 'Frediani Guelffi', 'Junin 559', 'Chivilcoy', '6620', '2346338767', 'admin@admin.com', '$2y$08$efI3SQlsoCwZxDXZmZe3CueVtfkx7kH73r8F2IMM7YNSus/M21dR2'),
+(355, 'Roberto ', 'Frediani ', 'Av Urquiza 541', 'Chivilcoy ', '', '2346521865', 'robertofrediani22@gmail.com', '$2y$08$yrs035uq81E5X2r9DQplhO1lHq0nvwgAQcv26G3Mkt2f/rftoWnda'),
+(1003, 'Faustina ', 'Rios ', 'Balcarce 379', 'Chivilcoy ', '6620', '2346330549', 'lpsdibercionxd@gnail.com', '$2y$08$aiYNwhT7t3yCgpIFuChihui8WUTsK69bRPjMWJwFMHRciyz3HEFgi'),
+(1030, 'Gustsvo Adolffo', 'Frediani', 'Junin 559', 'Chivilcoy', '6620', '2346482017', 'gustavofrediani36@gmail.com', '$2y$08$QzvaOJG2rKYQdTV94/pC4.aW1IJu1.11XxASMvpz9GkSqD00gdaC6');
 
 --
 -- Índices para tablas volcadas
@@ -67,7 +69,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1031;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

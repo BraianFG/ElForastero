@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-12-2021 a las 02:57:03
+-- Tiempo de generación: 27-12-2021 a las 14:38:23
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -39,6 +39,9 @@ CREATE TABLE `categorias` (
 INSERT INTO `categorias` (`id`, `nombre`) VALUES
 (5, 'Abrigos'),
 (3, 'Accesorios'),
+(7, 'Camisas'),
+(9, 'Chombas'),
+(8, 'Gorros/as'),
 (1, 'Medias'),
 (2, 'Plantas'),
 (4, 'Remeras'),
