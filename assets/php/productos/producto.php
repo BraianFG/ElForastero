@@ -1,4 +1,4 @@
-<div class="mini-post card"  data-id="<?php echo '0', $productosp1['id'] ?>" id="<?php echo $productosp1['id'] ?>" >
+<div class="mini-post card"  data-id="<?php echo $productosp1['id'] ?>" id="<?php echo $productosp1['id'] ?>" >
        <a href="#" class="image"><img  href="<?php echo '#',$productosp1['modal1'] ?>" uk-toggle src="<?php echo 'images/', $productosp1['imagen'] ?>" class="card-img-top" alt="..."></a>
       <div id="<?php echo $productosp1['id'] ?>" class="card-body">
         <h3 class="card-title"><?php echo $productosp1['id'], '. '?><?php echo $productosp1['nombre'] ?></h3>
