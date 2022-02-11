@@ -1,6 +1,5 @@
 # ElForastero
-Tienda online de ropa y más
-
+Tienda online
 9/9
 
 *Trabajé en las pantallas de registro e ingreso 
@@ -185,3 +184,10 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 *Incorporacíón de la tabla del todal de carrito
 
 *Reorganización de las columnas de base de datos en la tabla mensajes y en la vista del CRUD
+
+
+11/2
+
+*Incorporación de Bootstrap al proyecto
+ 
+*Mejora del repositive en la página
