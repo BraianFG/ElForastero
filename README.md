@@ -191,3 +191,5 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 *Incorporación de Bootstrap al proyecto
  
 *Mejora del repositive en la página
+
+*Correción de errores
