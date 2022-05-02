@@ -20,8 +20,6 @@
                     </li>
                 </ul>
             </nav>
-                </ul>
-            </nav>
         </header>
  <?php
    }

@@ -1,4 +1,4 @@
-<secction class="productos">
+<section class="productos">
 <?php
     
   $productos = "SELECT * FROM productos";

@@ -1,19 +1,20 @@
 <?php
-    include 'database.php';
-    header('Content-Type: text/html; charset=UTF-8');
+   include 'database.php';
     session_start();
     if (isset($_SESSION["id"])){
-        $id = $_SESSION["id"];
-       header('Location: index2');
+      $id = $_SESSION["id"];
+    header('Location: index2');
     }
 ?>
 <html>
 <head>
-    <!--head-->
    <?php include "assets/php/head.php" ?>
+       <?php include 'assets/css/main.php' ?>
+       <?php include 'assets/css/style.php' ?>
+    <?php include "assets/js/Google-Analytics.php" ?>
+    <?php include "assets/js/script.php" ?>
 </head>
-
-<body class="is-preload">
+<body>
         <!-- Header -->
         <?php include"assets/php/navbar3.php" ?>
 
@@ -24,15 +25,17 @@
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
+                <?php include 'assets/php/slider.php' ?>
+
                 <!--Productos -->
                 <?php include"assets/php/productos_nologueado.php" ?>
-        
+              
                 <!-- Botones flotantes-->
                 <?php include"assets/php/contacto.php" ?>
         
-                 <!-- Footer -->
-                <?php include"assets/php/footer.php" ?>
-        </div>     
-        <?php include "assets/js/Google-Analytics.php" ?>
+         <!-- Footer -->
+              <?php include"assets/php/footer.php" ?>
+        </div>
+
 </body>
 </html>

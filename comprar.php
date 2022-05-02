@@ -37,10 +37,15 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
 <html>
     <head>
          <?php include "assets/php/head.php" ?>
+         <?php include "assets/css/style.php" ?>
+        <?php include "assets/js/Google-Analytics.php" ?>
+       <?php include "assets/js/script.php" ?>
+       <script src="https://sdk.mercadopago.com/js/v2"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+              <?php include "assets/css/main.php" ?>
     </head>
 <body>   
      <?php include "assets/php/navbar2.php" ?>  
-       <?php include "assets/css/main.php" ?> 
     <div id="resultados" class="uk-container uk-container-xsmall wrapp"> 
     <table class="uk-table uk-table-striped">
               <div class="modal__header">Pedidos</caption>
@@ -64,7 +69,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
               <tr>
                    <td><?php echo $mostrar_productosp1['5'] ?></td>
                    <td ><?php echo $mostrar_productosp1['6'] ?></td>
-                   <td><?php echo '$ ',$mostrar_productosp1['7'] ?></td>
+                   <td><?php echo '$',$mostrar_productosp1['7'] ?></td>
               </tr>
             </tbody>
 
@@ -81,7 +86,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
          $resultados = mysqli_query($conn,$negocio);          
             while($negocio= mysqli_fetch_array($resultados)){
     ?>      
-     <div class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
+     <div style="margin-top:-1.2em" class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
     <?php
       }
     ?>      
@@ -113,10 +118,39 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
       }
 });
 </script>
+             
+     <!-- footer -->
+      <div class="uk-container uk-container-xsmall"> 
+         <?php include "assets/php/footer.php" ?>
+      </div> 
    
-     <?php include "assets/js/productos.php" ?>
-     <?php include "assets/php/mensaje.php" ?>
-     
-             <?php include "assets/js/Google-Analytics.php" ?>
+  <?php 
+  $negocio = 'SELECT * FROM estilos' ;     
+  $resultados = mysqli_query($conn,$negocio);          
+ ?> 
+         
+<?php
+        while($negocio= mysqli_fetch_array($resultados)){
+?>    
+      <style>
+          .mercadopago-button {
+                background-color:<?php echo $negocio['color2'] ?>;
+                justify-content: center;
+                border: 0;
+                text-align: left;
+                outline: 0;
+                display: flex;
+                flex: 1;
+                height: 4.8em;
+                margin-top: 0.5em;
+                width: 10.5em;
+                text-align: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+      </style>
+<?php
+ }
+?>
 </body>
 </html>

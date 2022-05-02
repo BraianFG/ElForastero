@@ -73,7 +73,7 @@ $("#BorrarCarrito").click(function () {
 				CARRITO[total];
 	}
 	actualizarCarrito();
-
+    alertify.notify('carrito vaciado con exito','success');
 });
 
 function agregarCarrito(id, nombre, cantidad, precio) {
@@ -93,6 +93,7 @@ function agregarCarrito(id, nombre, cantidad, precio) {
     
 	actualizarCarrito();
 	   $.post( "../assets/php/productos/agregar.php", { productoID: id, cantidad: cantidad, precio: precio,nombre:nombre} );
+	   alertify.notify('Producto agregado al carrito','success');
   }
 </script>
  	

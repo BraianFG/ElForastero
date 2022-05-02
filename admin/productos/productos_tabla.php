@@ -1,5 +1,4 @@
 <?php include "../database.php"?>
-
 <div id="producto" class="uk-container  uk-container-large wrap">
         <ul class="lista">
           <li class="lista__item"><a href="#agregar__productos"  uk-toggle class="button primary"> <i class="fas fa-plus "></i> Agregar</a></p></li>
@@ -46,15 +45,15 @@
                    <td><?php echo $mostrar_productosp1['3'] ?></td>
                    <td><?php echo '$ ',$mostrar_productosp1['4'] ?></td>
                    <td><?php echo $mostrar_productosp1['5'] ?></td>
-                   <td><a href="../../images/<?php echo $mostrar_productosp1['6'] ?>" target="_Blank"><img class="img__producto"  src="/images/<?php echo $mostrar_productosp1['6'] ?>" lazzy="loading" onerror="this.style.display='none'"/></a></td>
+                   <td><a href="https://img.gs/jhcplzwzdm/200x200,scale-down/https://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['6'] ?>" target="_Blank"><img class="img__producto"  src="/images/<?php echo $mostrar_productosp1['6'] ?>" lazzy="loading" onerror="this.style.display='none'"/></a></td>
                    
-                   <td><a href="../../images/<?php echo $mostrar_productosp1['7'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['7'] ?>" loading="lazzy" onerror="this.style.display='none'"/></a></td>
+                   <td><a href="https://img.gs/jhcplzwzdm/200x200,scale-down/https://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['7'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['7'] ?>" loading="lazzy" onerror="this.style.display='none'"/></a></td>
                    
-                   <td><a href="../../images/<?php echo $mostrar_productosp1['8'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['8'] ?>" loading="lazzy" onerror="this.style.display='none'" /></a></td>
+                   <td><a href="https://img.gs/jhcplzwzdm/200x200,scale-down/https://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['8'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['8'] ?>" loading="lazzy" onerror="this.style.display='none'" /></a></td>
                    
-                   <td><a href="../../images/<?php echo $mostrar_productosp1['9'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['9'] ?>" loading="lazzy" onerror="this.style.display='none'" ></a></td>
+                   <td><a href="https://img.gs/jhcplzwzdm/200x200,scale-down/https://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['9'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['9'] ?>" loading="lazzy" onerror="this.style.display='none'" ></a></td>
                    
-                   <td><a href="../../images/<?php echo $mostrar_productosp1['10'] ?>" target="_Blank"><img  class="img__producto" src="/images/<?php echo $mostrar_productosp1['10'] ?>" loading="lazzy" onerror="this.style.display='none'" /></a></td>
+                   <td><a href="https://img.gs/jhcplzwzdm/200x200,scale-down/https://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['10'] ?>" target="_Blank"><img  class="img__producto" src="/images/<?php echo $mostrar_productosp1['10'] ?>" loading="lazzy" onerror="this.style.display='none'" /></a></td>
                    
                    <td><?php echo $mostrar_productosp1['11'] ?></td>
                    <td><?php echo $mostrar_productosp1['12'] ?></td>
@@ -91,63 +90,64 @@
         <div class="modal__header">Editar producto</div>
    
        <div class="uk-modal-body" id="productos" uk-overflow-auto>
-          <form method="post" action="productos/editar_productos.php/">
+          <form method="POST" action="return false" onsubmit="return false">
               
         <label class="datos">Número de producto</label> 
-         <input  name="id" type="number" placeholder="Número de producto" value="<?php echo $ver[0] ?>" required >
+         <input  id="id_<?php echo $ver['0'] ?>" name="id" type="number" placeholder="Número de producto" value="<?php echo $ver[0] ?>" required >
          
          <label class="datos">Nombre del producto</label> 
-         <input  name="nombre" type="text" placeholder="Ingrese nombre de producto" value="<?php echo $ver[1] ?>" required >
+         <input id="nombre_<?php echo $ver['0'] ?>" name="nombre" type="text" placeholder="Ingrese nombre de producto" value="<?php echo $ver[1] ?>" required >
            
          <label class="datos">Descripción del producto</label> 
-         <textarea class="descripcion" name="descripcion" placeholder="Ingrese una descripción"><?php echo $ver[2] ?></textarea>
+         <textarea id="descripcion_<?php echo $ver['0'] ?>" class="descripcion" name="descripcion" placeholder="Ingrese una descripción"><?php echo $ver[2] ?></textarea>
               
-         <label class="datos">Cantidad disponible</label> 
-         <input  name="cantidad" type="text" placeholder="Ingrese la cantidad" value="<?php echo $ver[3] ?>" required>
+         <label class="cantidad" class="datos">Cantidad disponible</label> 
+         <input  id="cantidad_<?php echo $ver['0'] ?>" type="text" placeholder="Ingrese la cantidad" value="<?php echo $ver[3] ?>" required>
          
          <label class="datos">Precio del producto</label>   
-         <input  name="precio" type="number" placeholder="Ingrese el precio" value="<?php echo $ver[4] ?>" required>
+         <input id="precio_<?php echo $ver['0'] ?>" name="precio" type="number" placeholder="Ingrese el precio" value="<?php echo $ver[4] ?>" required>
          
         <label class="datos">Categoría</label> 
-         <input  name="categoria" type="text" placeholder="Ingrese la categoria" value="<?php echo $ver[5] ?>" required>
+         <input id="categoria_<?php echo $ver['0'] ?>" name="categoria" type="text" placeholder="Ingrese la categoria" value="<?php echo $ver[5] ?>" required>
          
         <label class="datos">Enlace a la primera imagen</label>  
            <div class="help">
-              <i href="#imagenes_popup_ver" uk-toggle class="fas fa-question-circle"></i><input  name="imagen" type="text" placeholder="Ingrese el enlace a la imagen" value="<?php echo $ver[6] ?>" required>
+              <i href="#imagenes_popup_ver" uk-toggle class="fas fa-question-circle"></i><input  name="imagen" id="imagen_<?php echo $ver['0'] ?>" type="text" placeholder="Ingrese el enlace a la imagen" value="<?php echo $ver[6] ?>" required>
               
            </div>
            
      <label class="datos">Enlace a la segunda imagen</label>
-       <input  name="imagen01" type="text" placeholder="Ingrese el enlace a la segunda imagen" value="<?php echo $ver[7] ?>">
+       <input  id="imagen01_<?php echo $ver['0'] ?>" name="imagen01" type="text" placeholder="Ingrese el enlace a la segunda imagen" value="<?php echo $ver[7] ?>">
        
    <label class="datos">Enlace a la tercera imagen</label>
-    <input  name="imagen02" type="text" placeholder="Ingrese el enlace a la tercera imagen" value="<?php echo $ver[8] ?>">
+    <input id="imagen02_<?php echo $ver['0'] ?>" name="imagen02" type="text" placeholder="Ingrese el enlace a la tercera imagen" value="<?php echo $ver[8] ?>">
     
      <label class="datos">Enlace a la cuarta imagen</label>
-     <input  name="imagen03" type="text" placeholder="Ingrese el enlace a la cuarta imagen" value="<?php echo $ver[9] ?>">
+     <input  id="imagen03_<?php echo $ver['0'] ?>" name="imagen03" type="text" placeholder="Ingrese el enlace a la cuarta imagen" value="<?php echo $ver[9] ?>">
      
       <label class="datos">Enlace a la quinta imagen</label>
-             <input  name="imagen04" type="text" placeholder="Ingrese el enlace a la quinta imagen" value="<?php echo $ver[10] ?>">
+             <input id="imagen04_<?php echo $ver['0'] ?>" name="imagen04" type="text" placeholder="Ingrese el enlace a la quinta imagen" value="<?php echo $ver[10] ?>">
     
      <label class="datos">Enlace al primer modal</label>         
-     <input  name="modal1" type="text" placeholder="Ingrese el enlace al primer modal" value="<?php echo $ver[11] ?>" required>
+     <input  id="modal1_<?php echo $ver['0'] ?>" name="modal1" type="text" placeholder="Ingrese el enlace al primer modal" value="<?php echo $ver[11] ?>" required>
      
       <label class="datos">Enlace a la segundo modal</label>
-      <input  name="modal2" type="text" placeholder="Ingrese el enlace al segundo modal" value="<?php echo $ver[12] ?>">
+      <input  id="modal2_<?php echo $ver['0'] ?>" name="modal2" type="text" placeholder="Ingrese el enlace al segundo modal" value="<?php echo $ver[12] ?>">
       
        <label class="datos">Enlace al tercer modal</label>
-       <input  name="modal3" type="text" placeholder="Ingrese el enlace al tercer modal" value="<?php echo $ver[13] ?>">
+       <input  id="modal3_<?php echo $ver['0'] ?>" name="modal3" type="text" placeholder="Ingrese el enlace al tercer modal" value="<?php echo $ver[13] ?>">
        
         <label class="datos">Enlace al cuarto modal</label>
-        <input  name="modal4" type="text" placeholder="Ingrese el enlace al cuarto modal" value="<?php echo $ver[14] ?>">
+        <input  id="modal4_<?php echo $ver['0'] ?>" name="modal4" type="text" placeholder="Ingrese el enlace al cuarto modal" value="<?php echo $ver[14] ?>">
         
          <label class="datos">Enlace al quinto modal</label>
-        <input  name="modal5" type="text" placeholder="Ingrese el enlace al quinto modal" value="<?php echo $ver[15] ?>">
+        <input  id="modal5_<?php echo $ver['0'] ?>" name="modal5" type="text" placeholder="Ingrese el enlace al quinto modal" value="<?php echo $ver[15] ?>">
           
         </div>
 
         <div class="uk-modal-footer uk-text-right">
-          <button type="submit"  data-id="<?php echo $ver[0] ?>"class="button primary compradores"  value="editar_productos"> <i class="fas fa-pen"></i> Editar producto</button>
+          <button onclick="Hola(document.getElementById('id_<?php echo $ver['0'] ?>').value, document.getElementById('nombre_<?php echo $ver['0'] ?>').value,document.getElementById('descripcion_<?php echo $ver['0'] ?>').value,document.getElementById('cantidad_<?php echo $ver['0'] ?>').value,document.getElementById('precio_<?php echo $ver['0'] ?>').value,document.getElementById('categoria_<?php echo $ver['0'] ?>').value,document.getElementById('imagen_<?php echo $ver['0'] ?>').value,document.getElementById('imagen01_<?php echo $ver['0'] ?>').value,document.getElementById('imagen02_<?php echo $ver['0'] ?>').value,document.getElementById('imagen03_<?php echo $ver['0'] ?>').value,document.getElementById('imagen04_<?php echo $ver['0'] ?>').value,document.getElementById('modal1_<?php echo $ver['0'] ?>').value,document.getElementById('modal2_<?php echo $ver['0'] ?>').value,document.getElementById('modal3_<?php echo $ver['0'] ?>').value,document.getElementById('modal4_<?php echo $ver['0'] ?>').value,document.getElementById('modal5_<?php echo $ver['0'] ?>').value);" data-id="<?php echo $ver[0] ?>"class="button primary compradores"  value="editar_productos"> <i class="fas fa-pen"></i> Editar producto</button>
+          <div id="resultado"></div>
           </form>
         </div>
     </div>
@@ -207,7 +207,7 @@
 
            while($mostrar_productosp1 = mysqli_fetch_array($result3)){
          ?>   
-            <option><?php echo $mostrar_productosp1['nombre']?></option>
+            <option style="width: 100%;display: block;margin: auto;"><?php echo $mostrar_productosp1['nombre']?></option>
        <?php 
            }
          ?>    
@@ -264,6 +264,24 @@
 <script>
     function eliminar_producto(id){
        $.post( "productos/eliminar_productos.php", { id : id } );
+        alertify.notify('producto eliminado con exito','success',8)
 
     }
+</script>
+
+<script>
+function Hola(id,nombre,descripcion,cantidad,precio,categoria,imagen,imagen01,imagen02,imagen03,imagen04,modal1,modal2,modal3,modal4,modal5) {
+     var parametros = {"id":id,"nombre":nombre,"descripcion":descripcion,"cantidad":cantidad,"precio":precio,"categoria":categoria,"imagen":imagen,"imagen01":imagen01,"imagen02":imagen02,"imagen03":imagen03,"imagen04":imagen04,"modal1":modal1,"modal2":modal2,"modal3":modal3,"modal4":modal4,"modal5":modal5};
+        {
+            $.ajax({
+                url: "productos/editar_productos.php",
+                type: "POST",
+                data: parametros,
+                success: function(resp){
+                 $('#resultados').html(resp)
+                 alertify.notify('cambios aplicados con exito','success',8)
+                }      
+            });
+        }
+}
 </script>

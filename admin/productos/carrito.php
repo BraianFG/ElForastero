@@ -2,7 +2,7 @@
  include '../database.php';
 ?>
 <div id="carrito" class="uk-container  uk-container-large wrap">
-  <header class="caption"><i class="fas fa-shopping-cart"></i>carrito de usuarios</header>
+  <header style="margin-bottom:-1.2em" class="caption"><i class="fas fa-shopping-cart"></i>carrito de usuarios</header>
     <div class="uk-overflow-auto">     
     <table class="uk-table uk-table-striped ">
          <thead>    
@@ -38,7 +38,7 @@
                    <td><?php echo $mostrar_productosp1['6'] ?></td>
                    <td><?php echo '$ ' ,$mostrar_productosp1['7'] ?></td>
                    <td><?php echo $mostrar_productosp1['8'] ?></td>
-                   <td><?php echo $mostrar_productosp1['8'] ?></td>
+                   <td><?php echo $mostrar_productosp1['9'] ?></td>
                    <td><a class="button primary" href="#eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle><i class="fas fa-trash "></i> Eliminar</a></td>  
               </tr>
             </tbody>

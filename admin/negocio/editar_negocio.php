@@ -23,6 +23,9 @@
     
     $descripcion = filter_var($_POST['descripcion'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $descripcion);
+    
+    $info = filter_var($_POST['info'], FILTER_SANITIZE_STRING);
+    mysqli_real_escape_string($conn , $info);
      
     $alert = filter_var($_POST['alert'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $alert);
@@ -51,7 +54,7 @@
    mysqli_real_escape_string($conn , $sql);
 
 //------------------------------------------------------------------------------//
-  $sql = "UPDATE `negocio` SET nombre= '$nombre' , logo = '$logo' ,  descripcion = '$descripcion' , alert = '$alert' , celular = '$celular' , email = '$email' , whatsapp = '$whatsapp' , whatsapp2 = '$whatsapp2' , facebook = '$facebook' , instagram = '$instagram' , telegram = '$telegram' WHERE 1";
+  $sql = "UPDATE `negocio` SET nombre= '$nombre' , logo = '$logo' ,  descripcion = '$descripcion' , alert = '$alert' , celular = '$celular' , email = '$email' , whatsapp = '$whatsapp' , whatsapp2 = '$whatsapp2' , facebook = '$facebook' , instagram = '$instagram' , telegram = '$telegram' , info = '$info' WHERE 1";
    $resultInsert = mysqli_query($conn, $sql);    
    
    mysqli_close($conexion, $sql);   

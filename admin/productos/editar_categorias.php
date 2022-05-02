@@ -7,11 +7,6 @@ include '../../database.php';
     $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
     mysqli_real_escape_string($conn , $id);
     
- if($id ==""){
-    header("Location:../../");
-}else{
-     header("Location:../../");
-}
 
 //------------------------------------------------------------------------------//
   $sql = "UPDATE `categorias` SET nombre= '$nombre'  WHERE `categorias` .id = '$id' ";

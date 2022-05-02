@@ -6,7 +6,7 @@
         while($negocio= mysqli_fetch_array($resultados)){
      ?> 
 <header id="header">
-     <h1><a href="index2"><?php echo $negocio['nombre'] ?></a></h1>
+     <h1><a href="/"><?php echo $negocio['nombre'] ?></a></h1>
      <nav class="main">
          <ul>
               <li class="main">
