@@ -1,7 +1,7 @@
 # ElForastero
 # Tienda online CMS
 
-**20/8/2021
+**20/8/2021**
 
 * Agegué más arículo,en general todo los que me interesan 
 
