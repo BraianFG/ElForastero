@@ -186,10 +186,30 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 *Reorganización de las columnas de base de datos en la tabla mensajes y en la vista del CRUD
 
 
-11/2
+11/2/2022
 
 *Incorporación de Bootstrap al proyecto
  
 *Mejora del repositive en la página
 
 *Correción de errores
+
+
+22/4/2022
+
+*Animaciones con CSS
+
+*Optimización en la carga de imagenes 
+
+*Corrección de errores con expresiones regulares y validaciones desde el Back-end y desde el panel de usuario
+
+*Inicio de sesión con AJAX evitando las recargas en caso de dar error
+
+*Incorporación de ajax en el panel de usuario,registro,editar nombre de imagenes,eliminar las imagenesy editar productos así evitar la recarga de la página cada vez que se realize un cambio.
+
+*Funcionamiento del selector del producto en el inicio de la página 
+
+*Incorporación de Alertify para mensajes de error o afirmaciones
+
+*Carga de proyectos externos como Framework CSS o Google Fonts desde los mismos archivos ya descargados
+
