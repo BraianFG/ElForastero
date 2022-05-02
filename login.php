@@ -15,16 +15,16 @@ require_once 'database.php';
     if(!empty($result) AND (mysqli_num_rows($result)==1)){
         $fila = mysqli_fetch_array($result);
         if(password_verify($password, $fila['password'])) {
-              header("Location : index2");
+         echo '<script>location.href = "index2"</script>';
              $_SESSION["id"] = $fila['id'];
              $_SESSION["nombre"] =  $fila['nombre'];
              $_SESSION["apellido"] = $fila['apellido'];
              $_SESSION["carrito"];
         }else{
-             header('Location:ingresar'); 
+            
         }
     }else{
-        header('Location:ingresar');
+             echo "<script>alertify.notify('Error al acceder,vuelva a intentarlo','error',5)</script>";
     }
     
   ?>

@@ -14,6 +14,7 @@ $id = $_SESSION["id"];
 <html>
     <head>
          <?php include "assets/php/head.php" ?>
+         <?php include "assets/css/style.php" ?>
     </head>
 <body>   
      <?php include "assets/php/navbar2.php" ?>  
@@ -40,9 +41,16 @@ $id = $_SESSION["id"];
                     <input type="text" name="mensaje" id="comprador"></input>
                     <button class="enviar__mensaje-boton" type="submit">Enviar <i class="fas fa-paper-plane"></i></button>
                 </form> 
+      </div>  
+    </div> 
+    
+       <!-- footer -->
+      <div class="uk-container uk-container-xsmall"> 
+         <?php include "assets/php/footer.php" ?>
       </div> 
-     </div> 
-             <?php include "assets/js/Google-Analytics.php" ?>
+      <?php include "assets/js/Google-Analytics.php" ?>
+     <?php include "assets/js/productos.php" ?>
+     <?php include "assets/js/script.php" ?>
    
 </body>
 </html>

@@ -1,0 +1,43 @@
+{
+  "name": "El Forastero",
+  "short_name": "El Forastero",
+  "display": "standalone",
+  "start_url":"/",
+  "background_color":"#F4F6F6",
+  "theme_color":"#F4F6F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo-72.png",
+      "type": "image/png", "sizes": "92x72"
+    },
+    {
+      "src": "/images/logo-96.png",
+      "type": "image/png", "sizes": "116x96"
+    },
+    {
+      "src": "/images/logo-128.png",
+      "type": "image/png","sizes": "148x128"
+    },
+    {
+      "src": "/images/logo-144.png",
+      "type": "image/png", "sizes": "164x144"
+    },
+    {
+      "src": "/images/logo-152.png",
+      "type": "image/png", "sizes": "172x152"
+    },
+    {
+      "src": "/images/logo-192.png",
+      "type": "image/png", "sizes": "212x192"
+    },
+    {
+      "src": "/images/logo-384.png",
+      "type": "image/png", "sizes": "404x384"
+    },
+    {
+      "src": "/images/logo-512.png",
+      "type": "image/png", "sizes": "534x512"
+    }
+  ]
+}

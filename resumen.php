@@ -14,10 +14,14 @@ $id = $_SESSION["id"];
 <html>
     <head>
          <?php include "assets/php/head.php" ?>
+         <?php include "assets/css/style.php" ?>
+        <?php include "assets/js/Google-Analytics.php" ?>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+       <?php include "assets/js/script.php" ?>
+       <?php include "assets/css/main.php" ?>
     </head>
 <body>   
      <?php include "assets/php/navbar2.php" ?>  
-       <?php include "assets/css/main.php" ?> 
     <div id="resultados" class="uk-container uk-container-xsmall wrapp"> 
     <table class="uk-table uk-table-striped">
               <div class="modal__header">Resumen</caption>
@@ -59,12 +63,12 @@ $id = $_SESSION["id"];
       </div>    
     </div>
 </div>
-
            
 <script>
     function eliminar_carrito(id){
        $.post( "eliminar_carrito.php", { id : id,UsuarioID:<?php echo $_SESSION["id"]?>});
        $("#resultados").load("resumen.php #resultados");
+          alertify.notify('Producto eliminado de la lista','success');
        $("#total").load("resumen.php #total");
     } 
 </script>
@@ -79,10 +83,11 @@ $id = $_SESSION["id"];
          $resultados = mysqli_query($conn,$negocio);          
             while($negocio= mysqli_fetch_array($resultados)){
     ?>      
-     <div class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
+     <div style="margin-top:-1.2em" class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
     <?php
       }
-    ?>      
+    ?>   
+    
  </div>    
 </div>    
 
@@ -95,6 +100,7 @@ $id = $_SESSION["id"];
                  
           <!---  <div class="comprar"></div> -->
                 </ul>
+                
         </div>
    
 <script>
@@ -106,6 +112,9 @@ $id = $_SESSION["id"];
      <?php include "assets/js/productos.php" ?>
      <?php include "assets/php/mensaje.php" ?>
      
-             <?php include "assets/js/Google-Analytics.php" ?>
+     <!-- footer -->
+      <div class="uk-container uk-container-xsmall"> 
+         <?php include "assets/php/footer.php" ?>
+      </div> 
 </body>
 </html>
