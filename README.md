@@ -1,5 +1,5 @@
 # ElForastero
-# Tienda online CMS
+**Tienda online CMS**
 
 **20/8/2021**
 
@@ -20,7 +20,7 @@
 * Hice publicidad en dos post de la página de Facebook El Forastero
 
 
- **9/9/2021
+ **9/9/2021**
 
 * Trabajé en las pantallas de registro e ingreso 
 
@@ -32,7 +32,7 @@
 
 * Conexión y funcionamiento de la base de datos
 
-**1/9/2021
+**1/9/2021**
 
 * Más artículos 
 
@@ -42,7 +42,7 @@
 
 * Diseños de panfletos con Inkscape
 
-**23/10/2021
+**23/10/2021**
 
 * Creación de la base de datos USUARIOS,PRODUCTOS,MISITIO,MINEGOCIO,ADMIN,PEDIDOS
 
@@ -68,7 +68,7 @@
 
 * Poner en funcionamiento la API de la pasarella de pago Mercado Pago con Checkout Pro
 
-**1/11/2021
+**1/11/2021**
 
 * CSS dinamico,los colores se pueden cambiar a gusto del usuario desde el aréa del administrador
 
@@ -88,7 +88,7 @@
 
 * Se limitó caracteres desde el front en los imput type number en los ID mayor a uno ,y los password como minimo 8 caracteres y máximo 15 caracteres
 
-**7/11/2021
+**7/11/2021**
 
 * Panel de usuario en completo funcionamiento
 
@@ -113,7 +113,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Modificaciones en el htaccess para no mostrar ERROR 404 y que no liste directorios
 
 
-**14/11/2021
+**14/11/2021**
 
 *Guardar en una tabla de base de datos los Carritos de los usuarios a tráves de una petición POST con AJAX
 
@@ -133,7 +133,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * NO PUDE HACER QUE SE ACTUALIZEN LOS CANTIDAD DE ARTÍCULOS DE UN DETERMINADO PRODUCTO
 
-**17/11/2021
+**17/11/2021**
 
 *Correcciones en CSS
 
@@ -141,7 +141,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 *Posibilidad de incluír código postal
 
-14/12
+**14/12/2021**
 
 * Botones slider con enlaces tipo anclas a diferentes secciones de la página 
 
@@ -163,7 +163,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Incorporación de Lazzy loading para optimizar imagenes
 
-**27/12/2021
+**27/12/2021**
 
 * Posibilidad de subir multiples imagenes
 
@@ -186,7 +186,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Reorganización de las columnas de base de datos en la tabla mensajes y en la vista del CRUD
 
 
-**11/2/2022
+**11/2/2022**
 
 * Incorporación de Bootstrap al proyecto
  
@@ -195,7 +195,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Correción de errores
 
 
-**22/4/2022
+**22/4/2022**
 
 * Animaciones con CSS
 
