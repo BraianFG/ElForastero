@@ -213,3 +213,6 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 *Carga de proyectos externos como Framework CSS o Google Fonts desde los mismos archivos ya descargados
 
+*Mejoras en el rendmiento en general
+
+* Página propia para errores 403 y 404
