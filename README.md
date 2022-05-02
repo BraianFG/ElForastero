@@ -1,139 +1,139 @@
 # ElForastero
-Tienda online
-9/9
+# Tienda online CMS
 
-*Trabajé en las pantallas de registro e ingreso 
+**20/8/2021
 
-*Mejora del front-end
+* Agegué más arículo,en general todo los que me interesan 
 
-*Creación de la tabla de base de datos con el campo de email unico para evitar repeticiones
+* Corregí errores en los link de pagos de los productos
 
-*Validaciones para campo vacios desde el php
+* Inserté fuentes de Google como Manrope para darle más estilo
 
-*Conexión y funcionamiento de la base de datos
+* Agregué visor de imagen con una ventana modal con un Framework UiKit
 
-1/9
+* Opción de compra con pack de 3,6,9 y hasta 12 unidades con descuento
 
-*Más artículos 
+* Hice un logo para el carrito de Whatsapp
 
-*Fragemente todo un archivo HTML de más de 1000 lineas en varios archivos php,utilizando el include
+* Agregué artículos al carrito de Whatsapp
 
-*Panel con los datos del comprador con parte del JS en funcionamiento
-
-*Diseños de panfletos con Inkscape
+* Hice publicidad en dos post de la página de Facebook El Forastero
 
 
-20/8 cambios
+ **9/9/2021
 
-*Agegué más arículo,en general todo los que me interesan 
+* Trabajé en las pantallas de registro e ingreso 
 
-*Corregí errores en los link de pagos de los productos
+* Mejora del front-end
 
-*Inserté fuentes de Google como Manrope para darle más estilo
+* Creación de la tabla de base de datos con el campo de email unico para evitar repeticiones
 
-*Agregué visor de imagen con una ventana modal con un Framework UiKit
+* Validaciones para campo vacios desde el php
 
-*Opción de compra con pack de 3,6,9 y hasta 12 unidades con descuento
+* Conexión y funcionamiento de la base de datos
 
-*Hice un logo para el carrito de Whatsapp
+**1/9/2021
 
-*Agregué artículos al carrito de Whatsapp
+* Más artículos 
 
-*Hice publicidad en dos post de la página de Facebook El Forastero
+* Fragemente todo un archivo HTML de más de 1000 lineas en varios archivos php,utilizando el include
 
+* Panel con los datos del comprador con parte del JS en funcionamiento
 
-23/10
+* Diseños de panfletos con Inkscape
 
-*Creación de la base de datos USUARIOS,PRODUCTOS,MISITIO,MINEGOCIO,ADMIN,PEDIDOS
+**23/10/2021
 
-*Conexión con la base de datos 
+* Creación de la base de datos USUARIOS,PRODUCTOS,MISITIO,MINEGOCIO,ADMIN,PEDIDOS
 
-*Los productos se pueden eliminar,editar y agregar dianamicamente desde php y una base de datos
+* Conexión con la base de datos 
 
-*Se creó el subdominio https://admin.tiendaelforastero.com.ar en donde se va a permitir al usuario editar,eliminar y agregar dinamicamente contenido sin tocar código y de forma amigable.
+* Los productos se pueden eliminar,editar y agregar dianamicamente desde php y una base de datos
 
-*Se hizo un pequeño gestor de archivos en donde se puede subir desde el subdominio archivos al servidor en el directorio /public_html/images/ ,esto mismo se puede visualizar en una lista con un enlace a las mismas,se pueden editar los nombres y eliminar las imagenes desde la interfaz.
+* Se creó el subdominio https://admin.tiendaelforastero.com.ar en donde se va a permitir al usuario editar,eliminar y agregar dinamicamente contenido sin tocar código y de forma amigable.
 
-*El login está funcionando con cookies del lado principal
+* Se hizo un pequeño gestor de archivos en donde se puede subir desde el subdominio archivos al servidor en el directorio /public_html/images/ ,esto mismo se puede visualizar en una lista con un enlace a las mismas,se pueden editar los nombres y eliminar las imagenes desde la interfaz.
 
-*Panel de administrador 100% terminado
+* El login está funcionando con cookies del lado principal
 
-*Eliminación de más de 30 archivos que generaban redundancia
+* Panel de administrador 100% terminado
 
-*Mejora de la visualización de la página principal
+* Eliminación de más de 30 archivos que generaban redundancia
 
-*Pruebas de ensayos y error y en el funcionamiento
+* Mejora de la visualización de la página principal
 
-*Me falta reforzar la seguridad en el login con las opciones de recuperación 
+* Pruebas de ensayos y error y en el funcionamiento
 
-*Poner en funcionamiento la API de la pasarella de pago Mercado Pago con Checkout Pro
+* Me falta reforzar la seguridad en el login con las opciones de recuperación 
 
-1/11
+* Poner en funcionamiento la API de la pasarella de pago Mercado Pago con Checkout Pro
 
-*CSS dinamico,los colores se pueden cambiar a gusto del usuario desde el aréa del administrador
+**1/11/2021
 
-*Las contraseñas en las bases de datos se encriptan con SHA1
+* CSS dinamico,los colores se pueden cambiar a gusto del usuario desde el aréa del administrador
 
-*Mejoras en el  CSS 
+* Las contraseñas en las bases de datos se encriptan con SHA1
 
-*Se optimizó código CSS quitando unas 10.000 lineas sin algún uso
+* Mejoras en el  CSS 
 
-*Se solucionó problemas de compatibilidad con Chrome en iconos de Font-Awesome
+* Se optimizó código CSS quitando unas 10.000 lineas sin algún uso
 
-*Panel de usuario con las variables de $_SESSION
+* Se solucionó problemas de compatibilidad con Chrome en iconos de Font-Awesome
 
-*Panel con los datos del usuario
+* Panel de usuario con las variables de $_SESSION
 
-*Redirecciones funcionando al 100% en funcióń si el usuario está logueado o no.
+* Panel con los datos del usuario
 
-*Se limitó caracteres desde el front en los imput type number en los ID mayor a uno ,y los password como minimo 8 caracteres y máximo 15 caracteres
+* Redirecciones funcionando al 100% en funcióń si el usuario está logueado o no.
 
-7/11
+* Se limitó caracteres desde el front en los imput type number en los ID mayor a uno ,y los password como minimo 8 caracteres y máximo 15 caracteres
 
-*Panel de usuario en completo funcionamiento
+**7/11/2021
 
-*Mejoras de detalles estéticos vinculados con la funcionalidad del area de administador
+* Panel de usuario en completo funcionamiento
 
-*Control de invitiados
+* Mejoras de detalles estéticos vinculados con la funcionalidad del area de administador
 
-*Solución al error loguerse en el aréa administrativa
+* Control de invitiados
 
-*Encriptado definitivo Con Password_hash salt 8
+* Solución al error loguerse en el aréa administrativa
 
-*Redireciones funcionando a pleno 
+* Encriptado definitivo Con Password_hash salt 8
 
-*Protección contra inyeccion SQL
+* Redireciones funcionando a pleno 
 
-*Control de usuarios invitados en el aréa de administrador NUEVA RUTA tiendaelforastero.com.ar/admin
+* Protección contra inyeccion SQL
 
-*Reconstrucciones de código CSS dañado
+* Control de usuarios invitados en el aréa de administrador NUEVA RUTA tiendaelforastero.com.ar/admin
+
+* Reconstrucciones de código CSS dañado
 
 FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
-*Modificaciones en el htaccess para no mostrar ERROR 404 y que no liste directorios
+* Modificaciones en el htaccess para no mostrar ERROR 404 y que no liste directorios
 
 
-14/11
+**14/11/2021
 
 *Guardar en una tabla de base de datos los Carritos de los usuarios a tráves de una petición POST con AJAX
 
-*Eliminar carrito desde la base de datos a tráves de una petición con AJAX
+* Eliminar carrito desde la base de datos a tráves de una petición con AJAX
 
-*Generación de Link de pago con la API de MercadoPago con monto total a pagar cargado y recargado previamente con peticiones $_POST de AJAX
+* Generación de Link de pago con la API de MercadoPago con monto total a pagar cargado y recargado previamente con peticiones $_POST de AJAX
 
-*Posibilidad de enviar y reenviar mensaje al vendedor y ver estado del pedido con la respuesta del vendedor
+* Posibilidad de enviar y reenviar mensaje al vendedor y ver estado del pedido con la respuesta del vendedor
 
-*Volví a acomodar la tabla de usuarios 
+* Volví a acomodar la tabla de usuarios 
 
-*Creación de tablas para ver los carritos con posibilidad de eliminarlos y ver que usuarios pertenecen 
+* Creación de tablas para ver los carritos con posibilidad de eliminarlos y ver que usuarios pertenecen 
 
-*Creación de tabla venta para dar respuesta al mensaje del comprador y actualizar estado de compra o posible compra,con posibilidad de ver a quien se responde
+* Creación de tabla venta para dar respuesta al mensaje del comprador y actualizar estado de compra o posible compra,con posibilidad de ver a quien se responde
 
-*Acomodé algunos detalles estéticos
+* Acomodé algunos detalles estéticos
 
-*NO PUDE HACER QUE SE ACTUALIZEN LOS CANTIDAD DE ARTÍCULOS DE UN DETERMINADO PRODUCTO
+* NO PUDE HACER QUE SE ACTUALIZEN LOS CANTIDAD DE ARTÍCULOS DE UN DETERMINADO PRODUCTO
 
-17/11
+**17/11/2021
 
 *Correcciones en CSS
 
@@ -143,76 +143,76 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 14/12
 
-*Botones slider con enlaces tipo anclas a diferentes secciones de la página 
+* Botones slider con enlaces tipo anclas a diferentes secciones de la página 
 
-*Botón ancla para subir para arriba 
+* Botón ancla para subir para arriba 
 
-*label a cada input para mejor compresión de la información
+* label a cada input para mejor compresión de la información
 
-*Ventanas Modal que abren por id para editar y eliminar
+* Ventanas Modal que abren por id para editar y eliminar
 
-*Creación de las $_SESSION nombre y apellido para guardar los datos de la sessión de ese usuario
+* Creación de las $_SESSION nombre y apellido para guardar los datos de la sessión de ese usuario
 
-*Más información como nombre,apellido,fecha,hora y precio de cada producto en la tabla Carrito
+* Más información como nombre,apellido,fecha,hora y precio de cada producto en la tabla Carrito
 
-*Posibilidad de comprimir imagenes en la misma página
+* Posibilidad de comprimir imagenes en la misma página
 
-*Mejoras de estilos en detalles
+* Mejoras de estilos en detalles
 
-*Creación de lista de desplegable de categoría para cargar productos
+* Creación de lista de desplegable de categoría para cargar productos
 
-*Incorporación de Lazzy loading para optimizar imagenes
+* Incorporación de Lazzy loading para optimizar imagenes
 
-27/12
+**27/12/2021
 
-*Posibilidad de subir multiples imagenes
+* Posibilidad de subir multiples imagenes
 
-*Creación de la tabla pedidos confirmando el resumen de compra
+* Creación de la tabla pedidos confirmando el resumen de compra
 
-*Posibilidad de ver las miniaturas de imagenes en la tabla de productos en el CRUD
+* Posibilidad de ver las miniaturas de imagenes en la tabla de productos en el CRUD
 
-*Mejoras visual en el chat con el venddor y en una página distinta
+* Mejoras visual en el chat con el venddor y en una página distinta
 
-*Mejoras en organizacíón del menu en el modal
+* Mejoras en organizacíón del menu en el modal
 
-*Total de carrito y total de pedido se calculan en tablas separadas de mensajes
+* Total de carrito y total de pedido se calculan en tablas separadas de mensajes
 
-*Mayor información en la tabla pedidos y productos
+* Mayor información en la tabla pedidos y productos
 
-*Incorporación de la tabla pedidos en el CRUD con el total de compra
+* Incorporación de la tabla pedidos en el CRUD con el total de compra
 
-*Incorporacíón de la tabla del todal de carrito
+* Incorporacíón de la tabla del todal de carrito
 
-*Reorganización de las columnas de base de datos en la tabla mensajes y en la vista del CRUD
+* Reorganización de las columnas de base de datos en la tabla mensajes y en la vista del CRUD
 
 
-11/2/2022
+**11/2/2022
 
-*Incorporación de Bootstrap al proyecto
+* Incorporación de Bootstrap al proyecto
  
-*Mejora del repositive en la página
+* Mejora del repositive en la página
 
-*Correción de errores
+* Correción de errores
 
 
-22/4/2022
+**22/4/2022
 
-*Animaciones con CSS
+* Animaciones con CSS
 
-*Optimización en la carga de imagenes 
+* Optimización en la carga de imagenes 
 
-*Corrección de errores con expresiones regulares y validaciones desde el Back-end y desde el panel de usuario
+* Corrección de errores con expresiones regulares y validaciones desde el Back-end y desde el panel de usuario
 
-*Inicio de sesión con AJAX evitando las recargas en caso de dar error
+* Inicio de sesión con AJAX evitando las recargas en caso de dar error
 
-*Incorporación de ajax en el panel de usuario,registro,editar nombre de imagenes,eliminar las imagenesy editar productos así evitar la recarga de la página cada vez que se realize un cambio.
+* Incorporación de ajax en el panel de usuario,registro,editar nombre de imagenes,eliminar las imagenesy editar productos así evitar la recarga de la página cada vez que se realize un cambio.
 
 *Funcionamiento del selector del producto en el inicio de la página 
 
-*Incorporación de Alertify para mensajes de error o afirmaciones
+* Incorporación de Alertify para mensajes de error o afirmaciones
 
-*Carga de proyectos externos como Framework CSS o Google Fonts desde los mismos archivos ya descargados
+* Carga de proyectos externos como Framework CSS o Google Fonts desde los mismos archivos ya descargados
 
-*Mejoras en el rendmiento en general
+* Mejoras en el rendmiento en general
 
 * Página propia para errores 403 y 404
