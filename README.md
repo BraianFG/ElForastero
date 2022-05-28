@@ -1,5 +1,4 @@
-# El FORASTERO
-# TIENDA ONLINE Y CMS
+# El FORASTERO TIENDA ONLINE Y CMS
 
 # INSTALACIÓN Y CONFIGURACÍON
 * Descargar el archivo .zip y subirlo al servidor
