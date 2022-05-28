@@ -35,26 +35,8 @@
     $imagen02 = filter_var($_POST['imagen02'], FILTER_SANITIZE_URL);
     mysqli_real_escape_string($conn, $imagen02);
     
-    $imagen03 = filter_var($_POST['imagen03'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen03);
-    
-    $imagen04 = filter_var($_POST['imagen04'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen04);
-    
     $modal1 = filter_var($_POST['modal1'], FILTER_SANITIZE_URL);
     mysqli_real_escape_string($conn, $modal1);
-    
-    $modal2 = filter_var($_POST['modal2'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal2);
-    
-    $modal3 = filter_var($_POST['modal3'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal3);
-    
-    $modal4 = filter_var($_POST['modal4'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal4);
-    
-    $modal5 = filter_var($_POST['modal5'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal5);
     
     
    if($id == "" ){
@@ -66,9 +48,6 @@
   
 //------------------------------------------------------------------------------//
 
-$sql_productos = "INSERT INTO `productos` (`id`, `nombre`, `descripcion`,`cantidad` , `precio` , `categoria`, `imagen`,`imagen01` , `imagen02` , `imagen03`,`imagen04`,`modal1` , `modal2` , `modal3` , `modal4` , `modal5`) VALUES ('{$id}','{$nombre}' , '{$descripcion}' , '{$cantidad}' ,'{$precio}','{$categoria}' , '{$imagen}' , '{$imagen01}','{$imagen02}','{$imagen03}','{$imagen04}','{$modal1}' , '{$modal2}' , '{$modal3}' , '{$modal4}' , '{$modal5}');";
+$sql_productos = "INSERT INTO `productos` (`id`, `nombre`, `descripcion`,`cantidad` , `precio` , `categoria`, `imagen`,`imagen01` , `imagen02` , `modal1`) VALUES ('{$id}','{$nombre}' , '{$descripcion}' , '{$cantidad}' ,'{$precio}','{$categoria}' , '{$imagen}' , '{$imagen01}','{$imagen02}','{$modal1}');";
     $resultInsert = mysqli_query($conn, $sql_productos);   
    mysqli_close($conexion);   
-
-?>
-
