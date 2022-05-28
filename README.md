@@ -1,7 +1,27 @@
 # ElForastero
 **Tienda online CMS**
 
+**INSTALACIÓN**
+* Descargar el archivo .zip y subirlo al servidor
+
+* Descomprimirlo en el servidor 
+
+* Crear una base de datos y conectarla desde el archivo **database.php** ,las tablas o archivo de configuración se encuentra en la carpeta **Base de Datos**
+
+* Una vez realizada la conexión ir a **httṕ://tudominio.com/admin** e ingresar **email : admin@admin** y **Contraseña:12345678**
+
+* Una vez adentro del aréa administrativa ir **httṕ://tudominio.com/admin/registro** y ahí hacer una cuenta nueva a gusto del usuario
+
+* Una vez hecho esto eliminar esta cuenta **email : admin@admin** y **Contraseña:12345678** que aparece en el **id : 1 , tabla: admin** de la Base de Datos
+
+* Una vez eliminada la cuenta inicial modifícarle **id : 1** a la cuenta nueva y comprobar si se puede ingresar con la cuenta nueva
+
+* Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
+
+**AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/) **
 **20/8/2021**
+
+##MEJORAS##
 
 * Agegué más arículo,en general todo los que me interesan 
 
@@ -207,7 +227,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Incorporación de ajax en el panel de usuario,registro,editar nombre de imagenes,eliminar las imagenesy editar productos así evitar la recarga de la página cada vez que se realize un cambio.
 
-*Funcionamiento del selector del producto en el inicio de la página 
+* Funcionamiento del selector del producto en el inicio de la página 
 
 * Incorporación de Alertify para mensajes de error o afirmaciones
 
@@ -216,3 +236,15 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Mejoras en el rendmiento en general
 
 * Página propia para errores 403 y 404
+
+**28/5/2022**
+
+* Sustitución de las 5 ventanas modal donde se mostraban productos por una sola con tres imagenes que se despliegan en Carrousel
+
+* Ordenamiento de la tablas donde se mostraba el carrito y del pedido donde se mostraba varias veces el mismo producto sin agruparlo por cantidad
+
+* Correcciones de malas prácticas CSS
+
+**LIBERACIÓN DEL CÓDIGO BAJO LA LICENCIA APACHE 2.0**
+
+
