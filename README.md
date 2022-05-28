@@ -1,5 +1,6 @@
 # El FORASTERO TIENDA ONLINE Y CMS
 
+
 # INSTALACIÓN Y CONFIGURACÍON
 * Descargar el archivo .zip y subirlo al servidor
 
@@ -19,6 +20,22 @@
 
 **AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
 
+
+# COMPONENTES EXTERNOS
+
+* Plantilla de base de **HTML5UP Future Inperfect (https://html5up.net/future-imperfect)**
+
+* Framework CSS **UIkit (https://getuikit.com/)** y  **Bootstrap (https://getbootstrap.com/)** 
+
+* Framework JS **Alertify (https://alertifyjs.com/)** y **Ajax(https://api.jquery.com/jquery.ajax/)**
+
+* Librería JS **Jquery (https://jquery.com/)**
+
+* Iconos de **Fonts Awesome (https://fontawesome.com/)** y con imagenes usadas de **Pixabay (https://pixabay.com/)**
+
+* Fuentes tipográficas de **Google Fonts(https://fonts.google.com/)**
+
+* Pasarela de pago **SDK de Cheeckout Pro de Mercado Pago** **(https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/landing)**
 
 # MEJORAS
 **20/8/2021**
