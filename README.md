@@ -1,7 +1,7 @@
 # ElForastero
 **Tienda online CMS**
 
-**INSTALACIÓN**
+# INSTALACIÓN Y CONFIGURACÍON
 * Descargar el archivo .zip y subirlo al servidor
 
 * Descomprimirlo en el servidor 
@@ -18,10 +18,11 @@
 
 * Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
 
-**AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/) **
-**20/8/2021**
+**AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
 
-##MEJORAS##
+
+# MEJORAS
+**20/8/2021**
 
 * Agegué más arículo,en general todo los que me interesan 
 
