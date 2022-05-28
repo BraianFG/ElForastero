@@ -24,6 +24,9 @@
    <!-- Descripcion -->
     <meta property="og:title" content="<?php echo $negocio['title']?>">
     <meta property="og:image" content="images/<?php echo $negocio['imagen_sitio']?>" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="400" />
+    
     <meta property="og:site_name" content="<?php echo $negocio['title']?>">
     <meta property="og:description" content="<?php echo $negocio['descripcion']?>">
      

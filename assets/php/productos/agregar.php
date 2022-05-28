@@ -33,11 +33,10 @@
  $sql2 = "INSERT INTO `totalCarrito`(`UsuarioID`, `nombre`, `apellido`,`fecha`, `hora`, `total`) VALUES ('$id','$nombre','$apellido','$fecha','$hora',(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id'))";
    
   $sql3 ="UPDATE `totalCarrito` SET `fecha` ='$fecha',`hora`='$hora' ,`total`=(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id')  WHERE `totalCarrito`.`UsuarioID` = '$id'";    
-  
+
   $resultInsert = mysqli_query($conn, $sql);  
   $resultInsert2 = mysqli_query($conn, $sql2); 
   $resultInsert3 = mysqli_query($conn, $sql3); 
-    
    mysqli_close($conn);   
    
    return;

@@ -26,6 +26,7 @@ body {
     line-height: 1;
     font-family:  <?php echo $negocio['fontFamily'] ?>;
     background-color: <?php echo $negocio['body'] ?>;
+    overflow-x: hidden;
 }
 
 ol, ul {
@@ -44,11 +45,6 @@ body {
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
-}
-
-
-.uk-close:hover{
-     color: <?php echo $negocio['color3'] ?>;
 }
 
 input, select, textarea {
@@ -73,25 +69,6 @@ input, select, textarea {
     background-color: <?php echo $negocio['color3'] ?>;
 }
     
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-    -moz-animation: none !important;
-    -webkit-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-    -moz-transition: none !important;
-    -webkit-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important;
-}
-
 
 body, input, select, textarea {
     color: <?php echo $negocio['texto'] ?>;
@@ -105,7 +82,7 @@ body, input, select, textarea {
 }
 
 a {
-    color: inherit;
+    color:<?php echo $negocio ['color2'] ?>;
     text-decoration: none;
      cursor:pointer;
 }
@@ -113,7 +90,7 @@ a {
 
 a:hover {
   text-decoration:none;
-  color:none;
+  color:transparent;
   color: <?php echo $negocio['texto'] ?>;
   cursor:pointer;
 }
@@ -239,8 +216,9 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
     outline:0
 }
 
+
 input[type="submit"]:hover:active, input[type="reset"]:hover:active, input[type="button"]:hover:active, button:hover:active, .button:hover:active {
-    background-color: rgba(46, 186, 174, 0.05);
+    
 }
 
 input[type="submit"]:before, input[type="submit"]:after, input[type="reset"]:before, input[type="reset"]:after, input[type="button"]:before, input[type="button"]:after, button:before, button:after, .button:before, .button:after {
@@ -262,15 +240,11 @@ input[type="submit"].fit, input[type="reset"].fit, input[type="button"].fit, but
     width: 100%;
 }
 
-.button.fit:hover{
-
-}
-
 input[type="submit"].large, input[type="reset"].large, input[type="button"].large, button.large, .button.large {
     font-size: 0.7em;
     display: block;
     margin: auto;
-    margin-top: 2.5em;
+    margin-top: 2em;
     margin-bottom: 1em;
 }
 
@@ -366,9 +340,14 @@ textarea {
     position: relative;
 }
 
+.image__modal{
+    border: 0;
+    width:100%;
+}
+
 .image img {
     display: block;
-    border: 0em;
+    border: 0em; 
 }
 
 @media screen and (max-width: 736px) {
@@ -406,7 +385,6 @@ ul {
     box-sizing: border-box;
     font-size: 0.8em;
     padding-bottom: 1.3em;
-    margin-top: 3em;
     text-align: left;
 }
 
@@ -541,303 +519,11 @@ ul.icons li > * .label {
     }
 }
 
-
-/* Post */
-.post {
-    padding: 3em 3em 1em 3em ;
-    background: <?php echo $negocio['color3'] ?>;
-    margin: 0 0 3em 0;
-    position: relative;
-}
-
-.post > header {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    left: -3em;
-    margin: -3em 0 3em 0;
-    position: relative;
-    width: calc(100% + 6em);
-}
-
-.post > header .title {
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex: 1;
-    padding: 3.75em 3em 3.3em 3em;
-}
-
-.post > header .title h2 {
-    font-weight: 900;
-    font-size: 1.5em;
-}
-
-.post > header .title > :last-child {
-    margin-bottom: 0;
-}
-
-.post > header .meta {
-    padding: 3.75em 3em 1.75em 3em ;
-    border-left: solid 1px rgba(160, 160, 160, 0.3);
-    min-width: 17em;
-    text-align: right;
-    width: 17em;
-}
-
-.post > header .meta > * {
-    margin: 0 0 1em 0;
-}
-
-.post > header .meta > :last-child {
-    margin-bottom: 0;
-}
-
-.post > header .meta .published {
-    color: <?php echo $negocio['texto'] ?>;
-    display: block;
-    font-size: 0.7em;
-    font-weight: 800;
-    letter-spacing: 0.25em;
-    margin-top: 0.5em;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.post > a.image.featured {
-    overflow: hidden;
-}
-
-.post > a.image.featured img {
-    -moz-transition: -moz-transform 0.2s ease-out;
-    -webkit-transition: -webkit-transform 0.2s ease-out;
-    -ms-transition: -ms-transform 0.2s ease-out;
-    transition: transform 0.2s ease-out;
-}
-
-.post > a.image.featured:hover img {
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-}
-
-.post > footer {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-}
-
-.post > footer .actions {
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
-}
-
-.post > footer .stats {
-    cursor: default;
-    list-style: none;
-    padding: 0;
-}
-
-.post > footer .stats li {
-    border-left: solid 1px rgba(160, 160, 160, 0.3);
-    display: inline-block;
-    font-family: <?php echo $negocio['fontFamily'] ?>;
-    font-size: 0.6em;
-    font-weight: 400;
-    letter-spacing: 0.25em;
-    line-height: 1;
-    margin: 0 0 0 2em;
-    padding: 0 0 0 2em;
-    text-transform: uppercase;
-}
-
-.post > footer .stats li:first-child {
-    border-left: 0;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.post > footer .stats li .icon {
-    border-bottom: 0;
-}
-
-.post > footer .stats li .icon:before {
-    color: rgba(160, 160, 160, 0.3);
-    margin-right: 0.75em;
-}
-
-@media screen and (max-width: 980px) {
-    .post {
-        border-left: 0;
-        border-right: 0;
-        left: -3em;
-        width: calc(100% + (3em * 2));
-    }
-
-    .post > header {
-        -moz-flex-direction: column;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding: 3.75em 3em 1.25em 3em ;
-        border-left: 0;
-    }
-
-    .post > header .title {
-        -ms-flex: 0 1 auto;
-        margin: 0 0 2em 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    .post > header .meta {
-        -moz-align-items: center;
-        -webkit-align-items: center;
-        -ms-align-items: center;
-        align-items: center;
-        display: -moz-flex;
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        -moz-justify-content: center;
-        -webkit-justify-content: center;
-        -ms-justify-content: center;
-        justify-content: center;
-        border-left: 0;
-        margin: 0 0 2em 0;
-        padding-top: 0;
-        padding: 0;
-        text-align: left;
-        width: 100%;
-    }
-
-    .post > header .meta > * {
-        border-left: solid 1px rgba(160, 160, 160, 0.3);
-        margin-left: 2em;
-        padding-left: 2em;
-    }
-
-    .post > header .meta > :first-child {
-        border-left: 0;
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    .post > header .meta .published {
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-
-    .post > header .meta .author {
-        -moz-flex-direction: row-reverse;
-        -webkit-flex-direction: row-reverse;
-        -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse;
-        margin-bottom: 0;
-    }
-
-    .post > header .meta .author .name {
-        margin: 0 0 0 1.5em;
-    }
-
-    .post > header .meta .author img {
-        width: 3.5em;
-    }
-}
-
-@media screen and (max-width: 736px) {
-    .post {
-        padding: 1.5em 1.5em 0.1em 1.5em ;
-        left: -1.5em;
-        margin: 0 0 2em 0;
-        width: calc(100% + (1.5em * 2));
-    }
-
-    .post > header {
-        padding: 3em 1.5em 0.5em 1.5em ;
-        left: -1.5em;
-        margin: -1.5em 0 1.5em 0;
-        width: calc(100% + 3em);
-    }
-
-    .post > header .title h2 {
-        font-size: 1.1em;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .post > header .meta {
-        -moz-align-items: center;
-        -webkit-align-items: center;
-        -ms-align-items: center;
-        align-items: center;
-        -moz-flex-direction: column;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .post > header .meta > * {
-        border-left: 0;
-        margin: 1em 0 0 0;
-        padding-left: 0;
-    }
-
-    .post > header .meta .author .name {
-        display: none;
-    }
-
-    .post > .image.featured {
-        margin-left: -1.5em;
-        margin-top: calc(-1.5em - 1px);
-        width: calc(100% + 3em);
-    }
-
-    .post > footer {
-        -moz-align-items: -moz-stretch;
-        -webkit-align-items: -webkit-stretch;
-        -ms-align-items: -ms-stretch;
-        align-items: stretch;
-        -moz-flex-direction: column-reverse;
-        -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    }
-
-    .post > footer .stats {
-        text-align: center;
-    }
-
-    .post > footer .stats li {
-        margin: 0 0 0 1.25em;
-        padding: 0 0 0 1.25em;
-    }
-}
-
 header p {
     font-weight: 400;
     letter-spacing: 0.25em;
     line-height: 1.5em;
     text-transform: uppercase;
-
-/* Post */
-.post {
-    padding: 3em 3em 1em 3em;
-    background: <?php echo $negocio['color3']?>;
-    border: solid 1px rgba(160, 160, 160, 0.3);
-    margin: 0 0 3em 0;
-    position: relative;
-}
 
 /* Footer */
 #footer .icons {
@@ -856,25 +542,6 @@ header p {
 body.single #footer {
     text-align: center;
 }
-
-#intro {
-    padding: 1.1em 0.3em 1.4em 0;
-    display: flex;
-    align-items: center;
-}
-
-#intro header {
-    overflow: hidden;
-    padding: 1em 0em 1em 0;
-}
-
-
-a:hover {
-
-    a {
-     color: <?php echo $negocio['texto'] ?> ;
-}
-    }
 
 .button__modal {
     background-color: <?php echo $negocio['color2'] ?>;
@@ -915,8 +582,10 @@ a:hover {
     background: <?php echo $negocio['color3']?>;
     width: 2em;
     height: 2em;
-    transition: .1s ease-in-out;
-    transition-property: color,opacity;
+}
+
+.uk-close:hover{
+        background: <?php echo $negocio['color3']?>;
 }
 
 [class*=uk-modal-close-] {
@@ -927,7 +596,6 @@ a:hover {
     height:2.4em;
     cursor:pointer;
 }
-
 
 ul li{
     font-family: <?php echo $negocio['fontFamily'] ?> ;
@@ -1056,6 +724,9 @@ ul li{
 #intro header h2 {
     font-size: 3em;
     font-weight: 900;
+    animation-duration:12s;
+    animation-iteration-count: infinite;
+    animation-name:pulse;
 }
 
 #intro header p {
@@ -1159,8 +830,8 @@ body.single #footer {
 }
 
 .whatsapp img {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
     border: 0;
     margin-bottom:1em;
 }
@@ -1179,8 +850,8 @@ body.single #footer {
 }
 
 .telegram img {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
     border:0;
     outline:none;
     margin-bottom:1em;
@@ -1202,6 +873,7 @@ body.single #footer {
     margin: auto;
     margin-bottom: 1em;
     padding-left: 0.5em;
+    animation-duration:12s;
 }
 
 .fa-times-circle {
@@ -1262,8 +934,9 @@ body.single #footer {
     cursor:pointer;
     width: 100%;
     box-sizing: border-box;
-    height:5em;
-    margin-bottom:4em;
+    height:3.5em;
+    margin:auto;
+    margin-bottom:5em;
 }
 
 .fa-arrow-left:before {
@@ -1304,11 +977,19 @@ ul li{
 
 .registrarse__recuadro{
    padding: 1em 1em 1em;
-   margin-top:-1.5em;
+   margin-top:4em;
+}
+
+.login__recuadro{
+    margin-top:5em;
+}
+
+.pregunta{
+    margin:1em 0;
 }
 
 .registro{
-    padding: 1em 1.5em 2em;
+    padding:1em 1.5em 2em;
     background-color: <?php echo $negocio['color3'] ?>;
     border-radius: 0em 0em  .7em .7em;
     box-sizing: border-box;
@@ -1317,28 +998,26 @@ ul li{
     margin:auto;
     border-bottom:  0.2em solid;
     border-top: <?php echo $negocio['color2'] ?> 0.1em solid;
-    margin-bottom:1em;
     padding-bottom:1em;
+    
 }
-
  .title{
     background:<?php echo $negocio['color2'] ?>;
     color:<?php echo $negocio['color3'] ?>;;
     margin: auto;
     display: block;
-    margin-top:4em;
     text-align: center;
     max-width: 30%;
     border-radius: 0.3em 0.3em 0 0;
     font-weight:bold;
     text-transform:uppercase;
 }
+
  @media(max-width:1000px){
      .registro{
         padding:  1em 1.4em 1.5em;
         background-color:  <?php echo $negocio['color3'] ?>;
         min-width: 50%;
-        margin-top: 0em;
         padding: 1em;
         padding-bottom:1em;
       }
@@ -1353,12 +1032,15 @@ ul li{
         font-weight:bold;
         min-width:50%;
         text-transform:uppercase;
-        margin-top:4em;
       }  
       
       .registrarse__recuadro{
-       padding: 1em 1em 1em;
-        margin-top:-1.5em;
+        padding: 1em 1em 1em;
+        margin-top:4em;
+       }
+       
+       #error{
+           padding: 1em 1em 1em;
        }
 
 }    
@@ -1368,6 +1050,7 @@ ul li{
             padding: 1.2em 0em 1em;
             border-radius: 0em 0em  0.7 0.7em;
             box-sizing: border-box;
+            margin-top:8em;
        }
         
      .registro{
@@ -1383,20 +1066,12 @@ ul li{
         margin: auto;
         display: block;
         text-align: center;
-        margin-top: 4em;
         border-radius: 0.3em 0.3em 0 0;
         font-weight:bold;
         min-width:80%;
         text-transform:uppercase;
-      }
-     
-    .uk-alert-close {
-        color:<?php echo $negocio['color3'] ?>;
-        background-color:transparent;
-        align-items: center;
-        top: 1.1em;
-        right: 0.56;
-    }    
+        margin-top:-5em;
+      } 
         
     .botones{
        margin: -1.3em 0em;
@@ -1406,6 +1081,7 @@ ul li{
     .pregunta{
         padding-top:1em;
         padding-bottom:1em;
+       
     }
     
     .button .primary .alianeado{
@@ -1413,24 +1089,6 @@ ul li{
         margin:auto;
     }
 }
-
-    @media(max-width:420px){
-      .modal__header{
-         font-size:0.75em; 
-         height:2.54em;
-         text-align:center;
-         padding-top:0.5em;
-      }      
-      
-      [class*=uk-modal-close-] {
-        position: absolute;
-        margin-bottom: 0;
-        top: 16;
-        margin-right: 0.3em;
-        height: 1.9em;
-        font-size: 1em;
-        padding-left: 0.1em;
-    }
     
     .uk-alert-close svg{
         margin-top:0.35em;
@@ -1450,7 +1108,7 @@ i{
     display: flex;
     padding: 1em 0;
     margin-top: 4em;
-    height: 4em;
+    height: 1.8em;
     justify-content: center;
     width: 35%;
     text-align: center;
@@ -1467,7 +1125,7 @@ i{
 .agregar{
    display: flex;
     padding: 1em;
-    height: 4em;
+    height: 2em;
     width: 100%;
     margin-left:1em;
     margin-top: 4em;
@@ -1679,7 +1337,7 @@ svg{
 }
 
 .wrapp{
-  margin-top:3em;  
+  margin-top:2.5em;  
 }
 
 .uk-table th {
@@ -1713,15 +1371,17 @@ svg{
 }
 
 .eliminar{
+    display:flex;
+    justify-content:center;
+    margin:auto;
     padding-left:1em;
     padding-right:1em;
-    display:flex;
 }
 
 .total{
     background-color:<?php echo $negocio['color3']?>;
     color:<?php echo $negocio['color2']?>;
-    height: 2.5em;
+    height:0em;
     font-weight: bold;
     margin-top: 0em;
     padding: 1em 1em 3em;
@@ -1753,13 +1413,12 @@ svg{
     width:100%;
     justify-content:center;
     margin:auto;
-   
 }
 
 .enviar__mensaje-boton{
     background-color:<?php echo $negocio['color2']?>;
     color:<?php echo $negocio['color3']?>;
-    width: 35%;
+    width: 40%;
     margin-left:2em;
 }
 
@@ -1787,12 +1446,15 @@ svg{
 .filtro{
   padding:2em 0;
   width:100%;
-  
 }
 
 .autor{
    color:<?php echo $negocio['color2']?>;
    font-weight:bold;
+}
+
+.autor:hover{
+   color:<?php echo $negocio['color2']?>;
 }
 
 .card {
@@ -1824,9 +1486,8 @@ svg{
 .card-title {
     font-size: 1em;
     height: 2em;
-    margin-bottom:1em;
+    margin-bottom:1.3em;
     font-family: <?php echo $negocio['fontFamily']?>;
-    
 }
 
 .card-img-top {
@@ -1839,43 +1500,38 @@ svg{
     display:flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
+    margin-top:1.7em;
 }
 
-@media(max-width:426px){
+@media(max-width:450px){
     .card{
         width:100%;
     }
     
       .uk-close {
-        width: 2em;
-        height: 2em;
-        transition: .1s ease-in-out;
-        transition-property: color,opacity;
+        width: 2.3em;
+        height: 2.3em;
         cursor: pointer;
-        margin-top: 0.1em;
+        margin-top: 0.2em;
     }
 }
 
-
 @media(max-width:320px){
       .uk-close {
-        width: 2em;
-        height: 2em;
-        transition: .1s ease-in-out;
-        transition-property: color,opacity;
+        width: 2.3em;
+        height: 2.3em;
         cursor: pointer;
     }
 }
 
 .precio{
-   margin-top:2em:?>
-
+   margin-top:2em;
 }
 
 .card-text{
     height:7em;
     margin-bottom:-5em;
-    
+    margin-top:0.7em;
 }
 
 .titulo{
@@ -1886,6 +1542,89 @@ svg{
     margin-top:-5em;
 }
 
+.pagination{
+    margin: -1em 3em;
+    padding-bottom:1em;
+}
+
+.slider{
+    margin:0 0.3em;
+}
+
+.info__titulo{
+   	font-family:<?php echo $negocio['fontFamily2'] ?>; 
+   	margin-top: 0em;
+    padding: 0;
+}
+
+.info__subtitulo{
+    font-weight:300;
+    font-size: 0.6em;
+}
+
+.info__logo{
+    width:2em;
+    margin-bottom:0.5em;
+}
+
+.info__descripcion{
+    font-weight:500;
+    margin-top:1.5em;
+}
+
+.modal__imagen{
+    display:block;
+    justify-content:center;
+    margin:auto;
+    width:100%;
+}
+
+.uk-close:hover{
+    color:<?php echo $negocio['color3']?>;
+}
+
+ .select{
+      width:23%;
+      font-size:0.7em;
+       color:<?php echo $negocio['color2']?>;
+       background-color:<?php echo $negocio['color3']?>;
+       border-bottom:0.2em solid  <?php echo $negocio['color2']?>;
+       text-transform:uppercase;
+       font-weight:bold;
+       outline:none;
+       border-radius:0.3em;
+   }
+         
+  @media(max-width:768px){
+    .select{
+        width:60%;
+        font-size:0.7em;
+       }
+    }
+    
+    #error{
+      margin-top:3em;
+      text-align:center;
+      color:<?php echo $negocio['color2']?>;
+      font-weight:bold;
+    }
+    
+    .CARRITO{
+        animation-duration:8s;
+        animation-iteration-count: infinite;
+        animation-name:pulse;
+    }
+    
+    .panel__texto{
+        animation-duration:15s;
+        animation-iteration-count: infinite;
+        animation-name:pulse;
+        padding-left:1.5em;
+    }
+    
+    .items{
+        display:block;
+    }
 </style>
 
 <?php

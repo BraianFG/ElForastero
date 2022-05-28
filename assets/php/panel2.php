@@ -3,12 +3,12 @@
              <button class="uk-modal-close-default" type="button" uk-close></button>
         <div class="modal__header">Panel de Usuario</div>
         <div class="uk-modal-body">
-            <a href="#datos" uk-toggle> <i class="fas fa-user"></i> Datos personales</a><br>
-             <a href="resumen"><i class="fas fa-shopping-cart"></i>Resumen de compra</a><br>
-             <a href="comprar"><i class="fas fa-tags"></i>Pedidos</a><br>
-             <a href="mensaje" class="set__text" stlye ="margin-top:2em;"><i class="fas fa-paper-plane"></i>Enviar mensaje</a><br>
-            <a download href="elforastero.apk"><i class="fas fa-download"></i>Descargar APP</a></br>
-             <a href="#info" uk-toggle><i class="fas fa-info"></i>Acerca de esta tienda</a>
+             <a class="items" href="#datos" uk-toggle> <i class="fas fa-user"></i> Datos personales</a>
+             <a class="items" href="resumen"><i class="fas fa-shopping-cart"></i>Carrito</a>
+             <a class="items" href="comprar"><i class="fas fa-tags"></i>Pedidos</a>
+             <a class="items" href="mensaje" class="set__text"><i class="fas fa-paper-plane"></i>Enviar mensaje</a>
+             <a class="items" download href="elforastero.apk"><i class="fas fa-download"></i>Descargar APP</a>
+             <a class="items" href="#info" uk-toggle><i class="fas fa-info"></i>Acerca de esta tienda</a>
             <a href="salir.php?salir=1" class="button primary compradores" >Cerrar Sesión <i class="fas fa-sign-out-alt "></i> </a>
     </div>
     </div>

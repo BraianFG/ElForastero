@@ -1,3 +1,4 @@
+
 <section id="footer">
    <?php
   $negocio = 'SELECT * FROM negocio' ;     
@@ -17,8 +18,9 @@
                     <li><a href="<?php echo $negocio['instagram'] ?>"><i class="fab fa-instagram"><span class="label">Instagram</span></i></a></li>
                     <li><a href="<?php echo $negocio['whatsapp'] ?>"><i class="fab fa-whatsapp"><span
                                 class="label">WB</span></i></a></li>
-                       <li><a href="<?php echo 'mailto:',$negocio['email'] ?>"><i class="fas fa-envelope"><span class="label">Email</span></i></a></li>
-                        <li><a class="label" style="text-transform:uppercase"href="#info2" uk-toggle> <i class="fas fa-info"></i></a></li>
+                    <li><a href="<?php echo 'mailto:',$negocio['email'] ?>"><i class="fas fa-envelope"><span class="label">Email</span></i></a></li>
+                    <li><a href="https://github.com/BraianFG/ElForastero" target="Blank"><i class="fa-brands fa-github"><span class="label">Github</span></a></i></li>
+                    <li><a class="label" style="text-transform:uppercase" href="#info2" uk-toggle> <i class="fas fa-info"></i></a></li>
                 </ul>
                 <img src="https://img.gs/jhcplzwzdm/full,3x/https://tiendaelforastero.com.ar/images/468X60.webp" 
                 title="Mercado Pago - Medios de pago" alt="Mercado Pago - Medios de pago" 

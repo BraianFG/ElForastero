@@ -5,8 +5,8 @@
        <h3 class="card-title"><?php echo $productosp1['id'], '. '?><?php echo $productosp1['nombre'] ?></h3>
     <div class="detalles">  
          <h5 class="card-text " data-precio=<?php echo $productosp1['precio'] ?> ><?php echo '$',$productosp1['precio'] ?></h5>
-           <p class="card-text "><?php echo 'Cantidad : ', $productosp1['cantidad'] ?></p>
-        <p class="card-text "><?php echo 'descripción : ', $productosp1['descripcion'] ?></p>
+           <p class="card-text "><?php echo 'En stock : ', $productosp1['cantidad'] ?></p>
+        <p class="card-text "><?php echo 'Disponible : ', $productosp1['descripcion'] ?></p>
    </div>  
    </div>
     </div>
