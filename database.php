@@ -1,8 +1,8 @@
 <?php  
-  $servername = $_ENV['localhost'];
-  $database = $_ENV['u819747409_braianfg287'];
-  $username = "$_ENV['u819747409_braianfg287']";
-  $password = "$_ENV['123456789Abc'];
+  $servername = $_ENV['DBHOST'];
+  $database = $_ENV['DBNAME'];
+  $username = "$_ENV['DBUSER']";
+  $password = "$_ENV['DBPASS'];
    
   $conn = mysqli_connect($servername, $username, $password, $database);
  
