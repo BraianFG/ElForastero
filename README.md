@@ -16,6 +16,8 @@
 
 * Una vez eliminada la cuenta inicial modifícarle **id : 1** a la cuenta nueva y comprobar si se puede ingresar con la cuenta nueva
 
+* Descomprimir el Archivo **Vendor.zip**
+
 * Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
 
 **AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
