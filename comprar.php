@@ -7,20 +7,23 @@ $id = $_SESSION["id"];
 // SDK de Mercado Pago
 require __DIR__ .  '/vendor/autoload.php';
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991');
+MercadoPago\SDK::setAccessToken('');
 ?>
 
  <?php
   $negocio = "SELECT * FROM totalPedido WHERE UsuarioID = '$id'" ;     
   $resultados = mysqli_query($conn,$negocio);          
         while($negocio= mysqli_fetch_array($resultados)){
-            
+        
+      $comision= 5;
+      $total = ($negocio['total'] * $comision)/100;
+      
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
     $item = new MercadoPago\Item();
     $item->title = 'Su compra';
     $item->quantity = 1;
-    $item->unit_price = $negocio['total'];
+    $item->unit_price = $negocio['total'] + $total;
     $preference->items = array($item);
     $preference->save();
  }
@@ -47,6 +50,9 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
 <body>   
      <?php include "assets/php/navbar2.php" ?>  
     <div id="resultados" class="uk-container uk-container-xsmall wrapp"> 
+    <div class="uk-alert">
+        <p class="panel__texto"><i class="fas fa-bullhorn"></i>Se aplicará un 5% de recargo por la comisión de Mercado Pago</p>
+    </div>
     <table class="uk-table uk-table-striped">
               <div class="modal__header">Pedidos</caption>
          <thead>    
@@ -56,7 +62,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
                 <th>Precio</th>
             </tr>
         </thead>        
-   <?php $productosp1 = "SELECT * FROM `pedidos` WHERE UsuarioID = '$id' " ;     
+   <?php $productosp1 = "SELECT SUM(`cantidad`), SUM(`precio`),`nombreProduc` ,`prodcutoID` FROM `pedidos` WHERE UsuarioID = '$id' GROUP BY `cantidad`,`prodcutoID`; ";     
           $result3 = mysqli_query($conn,$productosp1);
         
         ?>
@@ -67,9 +73,9 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1['5'] ?></td>
-                   <td ><?php echo $mostrar_productosp1['6'] ?></td>
-                   <td><?php echo '$',$mostrar_productosp1['7'] ?></td>
+                   <td><?php echo $mostrar_productosp1['nombreProduc'] ?></td>
+                   <td ><?php echo $mostrar_productosp1['SUM(`cantidad`)'] ?></td>
+                   <td><?php echo '$',$mostrar_productosp1['SUM(`precio`)'] ?></td>
               </tr>
             </tbody>
 
@@ -86,7 +92,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
          $resultados = mysqli_query($conn,$negocio);          
             while($negocio= mysqli_fetch_array($resultados)){
     ?>      
-     <div style="margin-top:-1.2em" class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
+     <div style="margin-top:-1.2em" class="total">Total: $ <span id="total"><?php echo $negocio['total'] + $total ?></span></div> 
     <?php
       }
     ?>      
@@ -103,7 +109,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
    
 <script>
     // Agrega credenciales de SDK
-  const mp = new MercadoPago('TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d', {
+  const mp = new MercadoPago('', {
         locale: 'es-AR'
   });
 

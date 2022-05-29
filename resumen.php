@@ -33,31 +33,27 @@ $id = $_SESSION["id"];
                 <th>Eliminar</th>
             </tr>
         </thead>        
-   <?php $productosp1 = "SELECT * FROM `carrito` WHERE UsuarioID = '$id' " ;     
+   <?php $productosp1 = "SELECT  `nombreProduc`,id,SUM(`cantidad`),SUM(`precio`)FROM `carrito` WHERE `usuarioID` = '$id'  GROUP BY `productoID`,`cantidad`" ;     
           $result3 = mysqli_query($conn,$productosp1);
-        
-        ?>
-        
-        
-         <?php
+
            while($mostrar_productosp1 = mysqli_fetch_array($result3)){
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1['5'] ?></td>
-                   <td ><?php echo $mostrar_productosp1['6'] ?></td>
-                   <td><?php echo '$ ',$mostrar_productosp1['7'] ?></td>
-                   <td><a class="button primary eliminar" href="#eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle><i class="fas fa-trash "></i> Eliminar</a></td>
+                   <td><?php echo $mostrar_productosp1['nombreProduc'] ?></td>
+                   <td ><?php echo $mostrar_productosp1['SUM(`cantidad`)'] ?></td>
+                   <td><?php echo '$ ',$mostrar_productosp1['SUM(`precio`)'] ?></td>
+                   <td><a class="button primary eliminar" href="#eliminar__carrito_<?php echo $mostrar_productosp1['id'] ?>" uk-toggle><i class="fas fa-trash "></i> Eliminar</a></td>
               </tr>
             </tbody>
         
-  <div id="eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-modal>
+  <div id="eliminar__carrito_<?php echo $mostrar_productosp1['id'] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
     <h3 class="uk-text-center">¿Desea eliminar este pedido?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
-            <a class="button primary eliminar__si" style="margin-right:1em;"onclick="eliminar_carrito((id ='<?php echo  $mostrar_productosp1['0'] ?>'))">Si <i class="fas fa-check"></i></a>
+            <a class="button primary eliminar__si"onclick="eliminar_carrito((productoID ='<?php echo  $mostrar_productosp1['id'] ?>'))">Si <i class="fas fa-check"></i></a>
             <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
      </div>     
       </div>    
@@ -95,7 +91,7 @@ $id = $_SESSION["id"];
         <div class="modal__botones carrito uk-container uk-container-xsmall ">
             <a href="/index" class="button__modal volver">
                  <i class="fas fa-undo"></i>Volver</a>
-             <a href="comprar" onclick="confirmar()" class="button__modal confirmar">
+             <a href="#cancelar__pedido" uk-toggle class="button__modal confirmar">
                  <i class="fas fa-check"></i>Comprar</a>      
                  
           <!---  <div class="comprar"></div> -->
@@ -103,6 +99,19 @@ $id = $_SESSION["id"];
                 
         </div>
    
+    <div id="cancelar__pedido" uk-modal>
+    <div class="uk-modal-dialog">
+     <div class="uk-modal-body">      
+    <h3 class="uk-text-center">¿Desea confirmar este pedido?</h3>
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="eliminar">
+            <a class="button primary eliminar__si" href="comprar" onclick="confirmar()">Si <i class="fas fa-check"></i></a>
+            <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
+     </div>     
+      </div>    
+    </div>
+</div>
+
 <script>
     function confirmar(){
        $.post( "confirmar.php", { UsuarioID:<?php echo $_SESSION["id"]?>});
