@@ -1,0 +1,8 @@
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+Options -Indexes
+
+
+ErrorDocument 404 /error.html
+ErrorDocument 403 /error.html
