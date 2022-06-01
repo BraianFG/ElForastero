@@ -268,4 +268,6 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 **LIBERACIÓN DEL CÓDIGO BAJO LA LICENCIA APACHE 2.0**
 
+**1/6/2022**
 
+* Mejoras de seguridad con la conexión de la Base de Datos con PhpDoenv
