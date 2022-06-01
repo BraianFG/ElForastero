@@ -16,7 +16,7 @@
 
 * Una vez eliminada la cuenta inicial modifícarle **id : 1** a la cuenta nueva y comprobar si se puede ingresar con la cuenta nueva
 
-* Descomprimir el Archivo **Vendor.zip**
+* Descomprimir el Archivo **vendor.zip** y **vendorR.zip**
 
 * Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
 
@@ -38,6 +38,8 @@
 * Fuentes tipográficas de **Google Fonts(https://fonts.google.com/)**
 
 * Pasarela de pago **SDK de Cheeckout Pro de Mercado Pago** **(https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/landing)**
+
+* Uso **PhpDonEnv(https://github.com/vlucas/phpdotenv)**
 
 # MEJORAS
 **20/8/2021**
