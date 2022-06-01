@@ -5,7 +5,7 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 **Tienda Online demo https://tiendaelforastero.com.ar/tienda**
 
-**Tienda Onlien en funcionamiento https://tiendaelforastero.com.ar**
+**Tienda Online en en funcionamiento https://tiendaelforastero.com.ar**
 
 # INSTALACIÓN Y CONFIGURACÍON
 * Descargar el archivo .zip y subirlo al servidor
