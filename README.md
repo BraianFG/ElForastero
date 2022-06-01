@@ -39,7 +39,7 @@
 
 * Pasarela de pago **SDK de Cheeckout Pro de Mercado Pago** **(https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/landing)**
 
-* Uso **PhpDonEnv(https://github.com/vlucas/phpdotenv)**
+* Uso **PhpDotEnv(https://github.com/vlucas/phpdotenv)**
 
 # MEJORAS
 **20/8/2021**
@@ -270,4 +270,4 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 **1/6/2022**
 
-* Mejoras de seguridad con la conexión de la Base de Datos con PhpDoenv
+* Mejoras de seguridad con la conexión de la Base de Datos con PhpDotEnv
