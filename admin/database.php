@@ -1,8 +1,12 @@
-<?php  
-  $servername = "localhost";
-  $database = "u819747409_elforastero";
-  $username = "u819747409_elforastero";
-  $password = "2346Catepillar";
+<?php 
+    require('../vendorR/vendor/autoload.php');
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__,'.env');
+    $dotenv ->load();
+  
+  $servername = $_ENV['DBHOST'];
+  $database = $_ENV['DBNAME'];
+  $username = $_ENV['DBUSER'];
+  $password = $_ENV['DBPASS'];
    
   $conn = mysqli_connect($servername, $username, $password, $database);
  
