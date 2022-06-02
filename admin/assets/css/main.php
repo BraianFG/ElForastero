@@ -739,8 +739,8 @@ a {
 }
 
 @media(max-width:570px){
-   .registrarse__recuadro{
-    padding: 1.2em 1em 1em;
+  .registrarse__recuadro{
+    padding: 0em 1em 1em;
     border-radius: 0em 0em  0.7 0.7em;
     box-sizing: border-box;
     min-width:85%;
@@ -804,7 +804,7 @@ a {
 }
 
 .lista__item{
-    width: 10em;
+    width:10em;
     margin-left:0.4em;
     margin-right:0.4em;
     list-style:none;
@@ -813,26 +813,15 @@ a {
 .upload{
     background-color:<?php echo $negocio['color3'] ?>;
     padding:2em;
-    border-bottom: <?php echo $negocio['color2'] ?> 0.1em solid;
+    border-bottom: <?php echo $negocio['color2'] ?> 0.2em solid;
 }
 
 .file{
     margin-bottom:3em;
 }
 
-.uk-table caption {
-    font-size: .875rem;
-    text-align: left;
-    color: <?php echo $negocio['color3'] ?>;
-    background-color:<?php echo $negocio['color2'] ?>;
-    font-weight: bold;
-    margin-bottom: 0em;
-    padding: 0.01em 0.5em;
-    text-transform:uppercase;
-}
-
 .uk-table td {
-    padding: 16px 12px;
+    padding: 1em 1.75em;
     vertical-align: top;
     background: <?php echo $negocio['color3'] ?>;
     align-items: baseline;
@@ -841,7 +830,7 @@ a {
 }
 
 .uk-table th {
-    padding: 16px 12px;
+    padding: 1em 1.75em;
     text-align: left;
     vertical-align: bottom;
     font-size: .875rem;
@@ -854,7 +843,7 @@ a {
 }
 
 .uk-table {
-     border-bottom: <?php echo $negocio['color2'] ?> 0.1em solid;
+     border-bottom: <?php echo $negocio['color2'] ?> 0.2em solid;
 }
 
 input[type="number" i] {
@@ -892,7 +881,7 @@ input[type="number" i] {
 .fondo{
    background-color:<?php echo $negocio['color3'] ?> ;
    justify-content:center;
-   border-bottom:<?php echo $negocio['color2'] ?>  0.1em solid;
+   border-bottom:<?php echo $negocio['color2'] ?>  0.2em solid;
     display: flex;
     margin: auto;
 }
@@ -953,11 +942,21 @@ svg,a{
 }
 
 @media(max-width:470px){
+     select{
+        min-width:15em;
+        justify-content:left;
+    }
+    
     .editar_link{
         color:<?php echo $negocio['color2'] ?>;
         font-weight: bold;
         text-transform: uppercase;
         font-size:0.8em;
+    }
+    
+    .registro__logo{
+        width:12em;
+        height:10em;
     }
 }    
 
@@ -1019,6 +1018,23 @@ svg,a{
     text-transform:uppercase;
     font-family: <?php echo $negocio['fontFamily'] ?>;
     margin-bottom:0em;
+}
+
+ .select{
+       width:23%;
+      font-size:0.7em;
+       color:<?php echo $negocio['color2']?>;
+       background-color:<?php echo $negocio['color3']?>;
+       border-bottom:0.2em solid  <?php echo $negocio['color2']?>;
+       text-transform:uppercase;
+       font-weight:bold;
+       outline:none;
+       border-radius:0.3em;
+       outline:none;
+}
+
+* + .uk-table{
+    margin-top:0;
 }
 </style>
 <?php

@@ -39,11 +39,11 @@
                    <td><?php echo $mostrar_productosp1['3'] ?></td>
                    <td><?php echo '$ ',$mostrar_productosp1['4'] ?></td>
                    <td><?php echo $mostrar_productosp1['5'] ?></td>
-                   <td><a href="images/<?php echo $mostrar_productosp1['imagen'] ?>" target="_Blank"><img class="img__producto"  src="https://ik.imagekit.io/gomva6ojv/images/<?php echo $mostrar_productosp1['imagen'] ?>" lazzy="loading" onerror="this.style.display='none'"/></a></td>
+                   <td><a href="images/<?php echo $mostrar_productosp1['imagen'] ?>" target="_Blank"><img class="img__producto"  src="/images/<?php echo $mostrar_productosp1['imagen'] ?>" lazzy="loading" onerror="this.style.display='none'"/></a></td>
                    
-                   <td><a href="images/<?php echo $mostrar_productosp1['imagen01'] ?>" target="_Blank"> <img class="img__producto" src="https://ik.imagekit.io/gomva6ojv/images/<?php echo $mostrar_productosp1['imagen01'] ?>" loading="lazzy" onerror="this.style.display='none'"/></a></td>
+                   <td><a href="images/<?php echo $mostrar_productosp1['imagen01'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['imagen01'] ?>" loading="lazzy" onerror="this.style.display='none'"/></a></td>
                    
-                   <td><a href="images/<?php echo $mostrar_productosp1['imagen02'] ?>" target="_Blank"> <img class="img__producto" src="https://ik.imagekit.io/gomva6ojv/images/<?php echo $mostrar_productosp1['imagen02'] ?>" loading="lazzy" onerror="this.style.display='none'" /></a></td>
+                   <td><a href="images/<?php echo $mostrar_productosp1['imagen02'] ?>" target="_Blank"> <img class="img__producto" src="/images/<?php echo $mostrar_productosp1['imagen02'] ?>" loading="lazzy" onerror="this.style.display='none'" /></a></td>
                    
                    <td><?php echo $mostrar_productosp1['modal1'] ?></td>
                    <td><a href="#eliminar__productos_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle class="button primary"> <i class="fas fa-trash "></i> Eliminar</a></td>
@@ -195,7 +195,7 @@
         <input  name="imagen02" type="text" placeholder="Ingrese el enlace a la tercera imagen" value="">
        
        <label class="datos">Ingrese enlace al modal</label>
-       <input  name="modal1" type="text" placeholder="Ingrese el enlace al modal" value="">
+       <input  name="modal1" type="text" placeholder="Ingrese el enlace al primer modal" value="">
 
         </div>
 

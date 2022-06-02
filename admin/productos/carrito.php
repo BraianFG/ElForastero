@@ -2,7 +2,7 @@
  include '../database.php';
 ?>
 <div id="carrito" class="uk-container  uk-container-large wrap">
-  <header style="margin-bottom:-1.2em" class="caption"><i class="fas fa-shopping-cart"></i>carrito de usuarios</header>
+  <header class="caption"><i class="fas fa-shopping-cart"></i>carrito de usuarios</header>
     <div class="uk-overflow-auto">     
     <table class="uk-table uk-table-striped ">
          <thead>    
@@ -19,7 +19,7 @@
                 <th>Eliminar</th>
             </tr>
         </thead>        
-   <?php $productosp1 = "SELECT * FROM `carrito`" ;     
+   <?php $productosp1 = "SELECT `id`,`usuarioID`,`nombre`,`apellido`,`productoID`,`nombreProduc`,SUM(`cantidad`),SUM(`precio`),`fecha`,`hora` FROM carrito GROUP BY `cantidad`,`productoID`" ;     
           $result3 = mysqli_query($conn,$productosp1);
         
         ?>
@@ -30,15 +30,15 @@
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1['0'] ?></td>
-                   <td><?php echo $mostrar_productosp1['1'] ?></td>
-                   <td><?php echo $mostrar_productosp1['2'] ?></td>
-                   <td><?php echo $mostrar_productosp1['3'] ?></td>
-                   <td><?php echo $mostrar_productosp1['5'] ?></td>
-                   <td><?php echo $mostrar_productosp1['6'] ?></td>
-                   <td><?php echo '$ ' ,$mostrar_productosp1['7'] ?></td>
-                   <td><?php echo $mostrar_productosp1['8'] ?></td>
-                   <td><?php echo $mostrar_productosp1['9'] ?></td>
+                   <td><?php echo $mostrar_productosp1['id'] ?></td>
+                   <td><?php echo $mostrar_productosp1['usuarioID'] ?></td>
+                   <td><?php echo $mostrar_productosp1['nombre'] ?></td>
+                   <td><?php echo $mostrar_productosp1['apellido'] ?></td>
+                   <td><?php echo $mostrar_productosp1['nombreProduc'] ?></td>
+                   <td><?php echo $mostrar_productosp1['SUM(`cantidad`)'] ?></td>
+                   <td><?php echo '$ ' ,$mostrar_productosp1['SUM(`precio`)'] ?></td>
+                   <td><?php echo $mostrar_productosp1['fecha'] ?></td>
+                   <td><?php echo $mostrar_productosp1['hora'] ?></td>
                    <td><a class="button primary" href="#eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle><i class="fas fa-trash "></i> Eliminar</a></td>  
               </tr>
             </tbody>

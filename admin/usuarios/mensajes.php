@@ -99,20 +99,21 @@
     <h3 class="uk-text-center">¿Desea eliminar este mensaje?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
-            <a class="button primary uk-modal-close" onclick="eliminar_mensajes() ">Si <i class="fas fa-check"></i></a>
+            <a class="button primary uk-modal-close" onclick="eliminar_mensajes()">Si <i class="fas fa-check"></i></a>
             <a class="button primary uk-modal-close">No <i class="fas fa-times"></i></a>
      </div>     
       </div>    
     </div>
 </div>
-<?php
-}
-?>
-    
+
 <script>
     function eliminar_mensajes(){
-       $.post( "usuarios/eliminar__mensajes.php", { UsuarioID :<?php echo $_SESSION["id"]?> });
+       $.post( "usuarios/eliminar__mensajes.php", { "UsuarioID" :<?php echo $_SESSION['id'] ?> });
 
     }
 </script>
 
+<?php
+}
+?>
+    

@@ -35,26 +35,8 @@
     $imagen02 = filter_var($_POST['imagen02'], FILTER_SANITIZE_URL);
     mysqli_real_escape_string($conn, $imagen02);
     
-    $imagen03 = filter_var($_POST['imagen03'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen03);
-    
-    $imagen04 = filter_var($_POST['imagen04'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen04);
-    
     $modal1 = filter_var($_POST['modal1'], FILTER_SANITIZE_URL);
     mysqli_real_escape_string($conn, $modal1);
-    
-    $modal2 = filter_var($_POST['modal2'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal2);
-    
-    $modal3 = filter_var($_POST['modal3'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal3);
-    
-    $modal4 = filter_var($_POST['modal4'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal4);
-    
-    $modal5 = filter_var($_POST['modal5'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal5);
     
 //--------------------------------------------//
  
@@ -64,7 +46,7 @@
        header("Location:../../");
     }
 //-------------------------------------------//
-$sql = "UPDATE productos SET nombre = '$nombre' , descripcion = '$descripcion' , cantidad = '$cantidad' , categoria= '$categoria', precio = '$precio', imagen = '$imagen' , imagen01 = '$imagen01' ,  imagen02 = '$imagen02' ,  imagen03 = '$imagen03' ,  imagen04 = '$imagen04'  , modal1 = '$modal1' , modal2 = '$modal2' , modal3 = '$modal3'  , modal4 = '$modal4' , modal5 ='$modal5'  WHERE productos .id = '$id'";
+$sql = "UPDATE productos SET nombre = '$nombre' , descripcion = '$descripcion' , cantidad = '$cantidad' , categoria= '$categoria', precio = '$precio', imagen = '$imagen' , imagen01 = '$imagen01' ,  imagen02 = '$imagen02', modal1 = '$modal1' WHERE productos .id = '$id'";
    $resultInsert = mysqli_query($conn, $sql);   
    mysqli_close($conn);   
 ?>

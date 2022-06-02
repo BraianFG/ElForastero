@@ -48,6 +48,9 @@
   
 //------------------------------------------------------------------------------//
 
-$sql_productos = "INSERT INTO `productos` (`id`, `nombre`, `descripcion`,`cantidad` , `precio` , `categoria`, `imagen`,`imagen01` , `imagen02` , `modal1`) VALUES ('{$id}','{$nombre}' , '{$descripcion}' , '{$cantidad}' ,'{$precio}','{$categoria}' , '{$imagen}' , '{$imagen01}','{$imagen02}','{$modal1}');";
+$sql_productos = "INSERT INTO `productos` (`id`, `nombre`, `descripcion`,`cantidad` , `precio` , `categoria`, `imagen`,`imagen01` , `imagen02` , `modal1` , `modal2` , `modal3` ) VALUES ('{$id}','{$nombre}' , '{$descripcion}' , '{$cantidad}' ,'{$precio}','{$categoria}' , '{$imagen}' , '{$imagen01}','{$imagen02}','{$modal1}');";
     $resultInsert = mysqli_query($conn, $sql_productos);   
    mysqli_close($conexion);   
+
+?>
+

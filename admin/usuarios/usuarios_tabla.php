@@ -2,7 +2,7 @@
          <div id="usuarios" class="uk-container  uk-container-large wrap">
          <ul class="lista">
               <li class="lista__item"><a class="button primary" href="#agregar__usuarios" uk-toggle >
-                <i class="fas fa-plus "></i>Agregar</a></li>
+                <i class="fas fa-plus "></i> Agregar</a></li>
          </ul> 
       <header class="caption"> <i class="fas fa-users"> </i> Usuarios</header>
           <div class="uk-overflow-auto">    
