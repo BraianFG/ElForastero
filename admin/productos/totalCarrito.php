@@ -1,6 +1,4 @@
-<?php
- include '../database.php';
-?>
+
 <div id="totalCarrito" class="uk-container  uk-container-large wrap">
     <header class="caption"><i class="fas fa-shopping-cart"></i>Total en carrito</header>
     <div class="uk-overflow-auto">  

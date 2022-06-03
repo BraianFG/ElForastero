@@ -1,4 +1,4 @@
-<?php include '../database.php' ?>
+<?php include '../../database.php' ?>
 <html>
     <head>
          <?php include "../assets/php/head.php" ?>
@@ -7,9 +7,7 @@
    <!-- Header -->    
  <div class="directorio__imagenes">
 <?php
-    $sitio= "tiendaelforastero.com.ar";
     $thefolder = "../../images";
-    
     
     
     if ($handler = opendir($thefolder)) {
@@ -17,7 +15,7 @@
         while (false !== ($file = readdir($handler))) {
         if($file != '.' && $file != '..'){
                 echo "<li style='list-style:none;'>
-                <a style='text-decoration: none;' href='http://$sitio/$thefolder/$file' target='_blank'> $file</a>
+                <a style='text-decoration: none;' href='$thefolder/$file' target='_blank'> $file</a>
                 </li>";
 
         }

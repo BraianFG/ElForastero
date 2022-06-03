@@ -1,5 +1,5 @@
 <?php 
-include '../../database.php';
+    require '../../database.php';
 
     $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn, $nombre);

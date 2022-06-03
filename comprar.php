@@ -7,7 +7,7 @@ $id = $_SESSION["id"];
 // SDK de Mercado Pago
 require __DIR__ .  '/vendor/autoload.php';
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('');
+MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991');
 ?>
 
  <?php
@@ -15,7 +15,7 @@ MercadoPago\SDK::setAccessToken('');
   $resultados = mysqli_query($conn,$negocio);          
         while($negocio= mysqli_fetch_array($resultados)){
         
-      $comision= 5;
+      $comision= 6;
       $total = ($negocio['total'] * $comision)/100;
       
     // Crea un objeto de preferencia
@@ -51,7 +51,7 @@ MercadoPago\SDK::setAccessToken('');
      <?php include "assets/php/navbar2.php" ?>  
     <div id="resultados" class="uk-container uk-container-xsmall wrapp"> 
     <div class="uk-alert">
-        <p class="panel__texto"><i class="fas fa-bullhorn"></i>Se aplicará un 5% de recargo por la comisión de Mercado Pago</p>
+        <p class="panel__texto"><i class="fas fa-bullhorn"></i>Se aplicará un 6% de recargo por la comisión de Mercado Pago</p>
     </div>
     <table class="uk-table uk-table-striped">
               <div class="modal__header">Pedidos</caption>
@@ -109,7 +109,7 @@ MercadoPago\SDK::setAccessToken('');
    
 <script>
     // Agrega credenciales de SDK
-  const mp = new MercadoPago('', {
+  const mp = new MercadoPago('TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d', {
         locale: 'es-AR'
   });
 

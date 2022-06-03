@@ -1,6 +1,4 @@
-<?php
- include '../database.php';
-?>
+
 <div id="carrito" class="uk-container  uk-container-large wrap">
   <header class="caption"><i class="fas fa-shopping-cart"></i>carrito de usuarios</header>
     <div class="uk-overflow-auto">     
@@ -46,7 +44,7 @@
   <div id="eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
-    <h3 class="uk-text-center">¿Desea eliminar este registro?</h3>
+    <h3 class="uk-text-center">¿Desea eliminar este artículo del carrito de <?php echo $mostrar_productosp1['nombre'] ,' ',$mostrar_productosp1['apellido'] ?> ?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
             <a class="button primary eliminar__si" onclick="eliminar_carrito((id =<?php echo  $mostrar_productosp1['0'] ?>))">Si <i class="fas fa-check"></i></a>

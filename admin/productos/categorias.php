@@ -1,6 +1,4 @@
-<?php
- include '../database.php';
-?>
+
 <div id="categorias" class="uk-container  uk-container-large wrap">
     <ul class="lista">
           <li class="lista__item"><a href="#agregar__producto-categorias"  uk-toggle class="button primary"> <i class="fas fa-plus"></i> Agregar</a></p></li>
@@ -95,7 +93,7 @@
 <div id="eliminar__categorias_<?php echo $ver0['0'] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
-    <h3 class="uk-text-center">¿Desea eliminar a esta categoría?</h3>
+    <h3 class="uk-text-center">¿Desea eliminar la categoría <?php echo $ver0['1'] ?>?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
             <a class="button primary eliminar__si" onclick="eliminar((id =<?php echo $ver0['0'] ?>)) ">Si <i class="fas fa-check"></i></a>

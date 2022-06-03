@@ -1,6 +1,4 @@
-<?php
- include '../database.php';
-?>
+
 <div id="totalPedido" class="uk-container  uk-container-large wrap">
  <header class="caption"><i class="fas fa-tags"></i>Total en pedidos</header>    
     <div class="uk-overflow-auto">  

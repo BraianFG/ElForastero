@@ -1,5 +1,5 @@
 <?php 
-  include '../../database.php';
+  require '../../database.php';
   
     session_start();
     if (isset($_SESSION["id_admin"])){
@@ -25,28 +25,77 @@
     
     $categoria = filter_var($_POST['categoria'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $categoria);
-    
-    $imagen = filter_var($_POST['imagen'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen);
-    
-    $imagen01 = filter_var($_POST['imagen01'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen01);
-    
-    $imagen02 = filter_var($_POST['imagen02'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $imagen02);
-    
-    $modal1 = filter_var($_POST['modal1'], FILTER_SANITIZE_URL);
-    mysqli_real_escape_string($conn, $modal1);
-    
+
 //--------------------------------------------//
  
     if($id ==""){
-    header("Location:../../");
+    header("Location:../");
    }else{
-       header("Location:../../");
+       header("Location:../");
     }
 //-------------------------------------------//
-$sql = "UPDATE productos SET nombre = '$nombre' , descripcion = '$descripcion' , cantidad = '$cantidad' , categoria= '$categoria', precio = '$precio', imagen = '$imagen' , imagen01 = '$imagen01' ,  imagen02 = '$imagen02', modal1 = '$modal1' WHERE productos .id = '$id'";
+$nombreIMG = $_FILES['imagen']['name'];
+  $guardado = $_FILES['imagen']['tmp_name'];
+  
+      if(!file_exists('../')){
+          mkdir('../../images/' ,0777,true);
+            
+          if(file_exists('../../')){
+               if(move_uploaded_file($guardado, '../../images/' .$nombreIMG)){
+
+               }
+             }else{
+             }
+    }else{
+       if(move_uploaded_file($guardado, '../../images/' .$nombreIMG)){
+
+             }else{
+             } 
+    }
+    
+    $nombreIMG2 = $_FILES['imagen01']['name'];
+  $guardado2 = $_FILES['imagen01']['tmp_name'];
+  
+      if(!file_exists('../')){
+          mkdir('../../images/' ,0777,true);
+            
+          if(file_exists('../../')){
+               if(move_uploaded_file($guardado2, '../../images/' .$nombreIMG2)){
+
+               }
+             }else{
+             }
+    }else{
+       if(move_uploaded_file($guardado2, '../../images/' .$nombreIMG2)){
+
+             }else{
+             } 
+    }
+    
+    
+    $nombreIMG3 = $_FILES['imagen02']['name'];
+  $guardado3 = $_FILES['imagen02']['tmp_name'];
+  
+      if(!file_exists('../')){
+          mkdir('../../images/' ,0777,true);
+            
+          if(file_exists('../../')){
+               if(move_uploaded_file($guardado3, '../../images/' .$nombreIMG3)){
+
+               }
+             }else{
+             }
+    }else{
+       if(move_uploaded_file($guardado3, '../../images/' .$nombreIMG3)){
+
+             }else{
+             } 
+    }
+
+    $modal1 = rand(1,90000);
+//-------------------------------------------//
+$sql = "UPDATE productos SET nombre = '$nombre' , descripcion = '$descripcion' , cantidad = '$cantidad' , categoria= '$categoria', precio = '$precio', imagen = '$nombreIMG' , imagen01 = '$nombreIMG2' ,  imagen02 = '$nombreIMG3', modal1 = '$modal1' WHERE productos .id = '$id'";
+
    $resultInsert = mysqli_query($conn, $sql);   
    mysqli_close($conn);   
 ?>

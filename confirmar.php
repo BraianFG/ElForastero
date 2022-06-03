@@ -20,6 +20,7 @@ $sql3 ="UPDATE `totalPedido` SET `total` = (SELECT SUM(precio)FROM carrito WHERE
 $sql4 ="DELETE FROM `carrito` WHERE `carrito`.`UsuarioID` = '$id'";
      
 $sql5="DELETE FROM `totalCarrito` WHERE `totalCarrito`.`UsuarioID` = '$id'";  
+
   
 $resultInsert = mysqli_query($conn, $sql);
 $resultInsert2 = mysqli_query($conn, $sql2);
