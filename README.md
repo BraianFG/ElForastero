@@ -277,3 +277,9 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 **1/6/2022**
 
 * Mejoras de seguridad con la conexión de la Base de Datos con PhpDotEnv
+
+**2/6/2022**
+* Cargar productos,subír las imagenes y llamarla en la base de datos desde un mismo formulario
+
+* editar productos,subír las imagenes y llamarla en la base de datos desde un mismo formulario
+
