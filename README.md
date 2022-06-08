@@ -283,3 +283,10 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * editar productos,subír las imagenes y llamarla en la base de datos desde un mismo formulario
 
+**7/6/2022**
+
+* Cargar productos,subír las imagenes y llamarla en la base de datos desde un mismo formulario en todos los formularios con imagenes
+
+* Función de borrar imagen parcialmente realizada,no borra imagen del servidor,solo la limpia de la Base de Datos
+
+* Posibilidad de subir y actualizar imagen las veces que sea necesario
