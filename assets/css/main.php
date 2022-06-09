@@ -113,7 +113,6 @@ p {
     text-transform: uppercase;
     font-family:  <?php echo $negocio['fontFamily'] ?>;
     align-items: center;
-    padding-top:-0.5em;
 }
 
 .uk-open>.uk-modal-dialog {
@@ -145,7 +144,7 @@ h2 {
     font-size: 1.1em;
     margin-top:1em;
     margin-bottom:1em;
-    padding-left:0.5em;
+    padding:0 0.5em;
 }
 
 h3 {
@@ -162,7 +161,6 @@ h5 {
 
 h6 {
     font-size: 1.2em;
-    padding:0 0.5em;
 }
 
 hr {
@@ -210,35 +208,6 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     cursor:pointer;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover, .button:hover {
-    opacity: .8;
-    border:0;
-    outline:0
-}
-
-
-input[type="submit"]:hover:active, input[type="reset"]:hover:active, input[type="button"]:hover:active, button:hover:active, .button:hover:active {
-    
-}
-
-input[type="submit"]:before, input[type="submit"]:after, input[type="reset"]:before, input[type="reset"]:after, input[type="button"]:before, input[type="button"]:after, button:before, button:after, .button:before, .button:after {
-    <?php echo $negocio['placeholder'] ?>
-    position: relative;
-}
-
-input[type="submit"]:before, input[type="reset"]:before, input[type="button"]:before, button:before, .button:before {
-    left: -1em;
-    padding: 0 0 0 0.75em;
-}
-
-input[type="submit"]:after, input[type="reset"]:after, input[type="button"]:after, button:after, .button:after {
-    left: 1em;
-    padding: 0 0.75em 0 0;
-}
-
-input[type="submit"].fit, input[type="reset"].fit, input[type="button"].fit, button.fit, .button.fit {
-    width: 100%;
-}
 
 input[type="submit"].large, input[type="reset"].large, input[type="button"].large, button.large, .button.large {
     font-size: 0.7em;
@@ -724,11 +693,15 @@ ul li{
 #intro header h2 {
     font-size: 3em;
     font-weight: 900;
-    animation-duration:12s;
-    animation-iteration-count: infinite;
-    animation-name:pulse;
+    padding:0 1em;
 }
 
+@media(max-width:360px){
+ #intro header h2 {
+   margin-bottom:2.3em;
+}
+
+}
 #intro header p {
     font-size: 1em;
     padding-top:1em;
@@ -836,11 +809,6 @@ body.single #footer {
     margin-bottom:1em;
 }
 
-.whatsapp:hover {
-    opacity: 0.7 !important;
-    filter: alpha(opacity=70) !important;
-}
-
 .telegram {
     position: fixed;
     right: 25px;
@@ -855,11 +823,6 @@ body.single #footer {
     border:0;
     outline:none;
     margin-bottom:1em;
-}
-
-.telegram:hover {
-    opacity: 0.7 !important;
-    filter: alpha(opacity=70) !important;
 }
 
 .panel {
@@ -1584,8 +1547,8 @@ svg{
 }
 
  .select{
-      width:23%;
-      font-size:0.7em;
+       width:23%;
+       font-size:0.7em;
        color:<?php echo $negocio['color2']?>;
        background-color:<?php echo $negocio['color3']?>;
        border-bottom:0.2em solid  <?php echo $negocio['color2']?>;
@@ -1613,13 +1576,6 @@ svg{
         animation-duration:8s;
         animation-iteration-count: infinite;
         animation-name:pulse;
-    }
-    
-    .panel__texto{
-        animation-duration:15s;
-        animation-iteration-count: infinite;
-        animation-name:pulse;
-        padding-left:1.5em;
     }
     
     .items{
