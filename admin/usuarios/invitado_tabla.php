@@ -1,4 +1,9 @@
+ 
          <div id="invitados" class="uk-container  uk-container-large wrap">
+        <ul class="lista">
+              <li class="lista__item"><a class="button primary" href="registrarse">
+                <i class="fas fa-plus "></i> Agregar</a></li>
+         </ul>
       <header class="caption"><i class="fas fa-star"></i> Invitados</header>    
         <div class="uk-overflow-auto">     
              <table class="uk-table uk-table-striped ">
@@ -31,6 +36,7 @@
     <script>
     function eliminar_invitado(id){
        $.post( "usuarios/eliminar_invitado.php", { id: id } );
+        alertify.notify('usuario invitado eliminado con exito','success',8);
 
     }
    </script>
@@ -75,7 +81,7 @@
 <div id="eliminar__invitado_<?php echo $mostrar[0] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
-    <h3 class="uk-text-center">¿Desea eliminar a este invitado?</h3>
+    <h3 class="uk-text-center">¿Desea eliminar al invitado <?php echo $mostrar['1'] ?> ?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
             <a class="button primary " onclick="eliminar_invitado((id =<?php echo $mostrar['0'] ?>)) ">Si <i class="fas fa-check"></i></a>

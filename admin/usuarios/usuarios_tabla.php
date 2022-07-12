@@ -2,7 +2,7 @@
          <div id="usuarios" class="uk-container  uk-container-large wrap">
          <ul class="lista">
               <li class="lista__item"><a class="button primary" href="#agregar__usuarios" uk-toggle >
-                <i class="fas fa-plus "></i>Agregar</a></li>
+                <i class="fas fa-plus "></i> Agregar</a></li>
          </ul> 
       <header class="caption"> <i class="fas fa-users"> </i> Usuarios</header>
           <div class="uk-overflow-auto">    
@@ -105,7 +105,7 @@
 <div id="eliminar_<?php echo $mostrar_productosp1[0] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
-    <h3 class="uk-text-center">¿Desea eliminar a este usuario?</h3>
+    <h3 class="uk-text-center">¿Desea eliminar a <?php echo $mostrar_productosp1[1] ,' ',$mostrar_productosp1[2] ?>?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
             <a class="button primary" onclick="eliminar_usuarios((id=<?php echo $mostrar_productosp1[0]?>))">Si <i class="fas fa-check"></i></a>
@@ -119,7 +119,7 @@
     function eliminar_usuarios(id){
        $.post( "usuarios/eliminar_usuarios.php", { id:id });
        $("#usuarios").load("usuarios/usuarios_tabla.php");
-       
+        alertify.notify('usuario eliminado con exito','success',8);
     }
 </script>
 <?php

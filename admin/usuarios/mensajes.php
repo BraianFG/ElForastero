@@ -1,6 +1,4 @@
-<?php
- include '../database.php';
-?>
+
 <div id="mensajes" class="uk-container  uk-container-large wrap">
   <header class="caption"><i class="fas fa-comment"></i> Mensajes</header>    
     <div class="uk-overflow-auto">     
@@ -19,7 +17,7 @@
                 <th>ELIMINAR</th>
             </tr>
         </thead>        
-   <?php $productosp1 = 'SELECT * FROM `ventas`' ;     
+   <?php $productosp1 = 'SELECT * FROM `mensajes`' ;     
           $result3 = mysqli_query($conn,$productosp1);
         
         ?>
@@ -42,7 +40,6 @@
                       <td><li class="lista__item"><a href="#eliminar_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle class="button primary"><i class="fas fa-trash"></i>Eliminar</li></td>
               </tr>
             </tbody>
-
   <?php
  }
 ?>  
@@ -52,7 +49,7 @@
 
 
 
-<?php $productosp1 = 'SELECT * FROM `ventas`' ;     
+<?php $productosp1 = 'SELECT * FROM `mensajes`' ;     
           $result3 = mysqli_query($conn,$productosp1);
         
    while($mostrar_productosp1 = mysqli_fetch_array($result3)){
@@ -66,10 +63,10 @@
           <form method="post" action="usuarios/editar__mensajes.php/">
               
      <label class="datos"><i class="fas fa-comment-alt"></i>Número de mensaje</label>
-        <input  name="id" type="number" placeholder="" value="<?php echo $mostrar_productosp1[0]?>" required >
+        <input  name="id" type="number" placeholder="" value="<?php echo $mostrar_productosp1[0]?>">
   
         <label class="datos"><i class="fas fa-user"></i>Número del usuario</label>
-        <input  name="UsuarioID" type="number" placeholder="" value="<?php echo $mostrar_productosp1[1]?>" required >
+        <input  name="UsuarioID" type="number" placeholder="" value="<?php echo $mostrar_productosp1[1]?>" disabled>
 
        <label class="datos"><i class="fas fa-user"></i>Nombre/s</label>
         <input  name="nombre" type="text" placeholder="" value="<?php echo $mostrar_productosp1[2]?>" disabled >
@@ -79,11 +76,11 @@
     
 
        <label class="datos"><i class="fas fa-comment-alt"></i> Mensaje del cliente</label>
-        <textarea class="descripcion"><?php echo $mostrar_productosp1[4]?></textarea disabled>
+        <textarea class="descripcion" disabled><?php echo $mostrar_productosp1[4]?></textarea>
 
         
         <label class="datos"><i class="fas fa-paper-plane"></i> Respuesta al cliente</label>
-        <textarea class="descripcion" name="MensajeVendedor" placeholder="" required > </textarea>
+        <textarea class="descripcion" name="MensajeVendedor" placeholder="" required ><?php echo $mostrar_productosp1["MensajeVendedor"]?></textarea>
 
         </div>
         <div class="uk-modal-footer uk-text-right">
@@ -96,23 +93,25 @@
 <div id="eliminar_<?php echo $mostrar_productosp1[0] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
-    <h3 class="uk-text-center">¿Desea eliminar este mensaje?</h3>
+    <h3 class="uk-text-center">¿Desea eliminar el mensaje de <?php echo $mostrar_productosp1[2] ?> ?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
-            <a class="button primary uk-modal-close" onclick="eliminar_mensajes() ">Si <i class="fas fa-check"></i></a>
+            <a class="button primary uk-modal-close" onclick="eliminar_mensajes()">Si <i class="fas fa-check"></i></a>
             <a class="button primary uk-modal-close">No <i class="fas fa-times"></i></a>
      </div>     
       </div>    
     </div>
 </div>
+
+    <script>
+        function eliminar_mensajes(){
+           $.post( "usuarios/eliminar__mensajes.php", { "UsuarioID" : <?php echo $mostrar_productosp1['1'] ?> });
+            alertify.notify('mensaje eliminado con exito','success',8);
+    
+         }
+    </script>       
+
 <?php
 }
 ?>
     
-<script>
-    function eliminar_mensajes(){
-       $.post( "usuarios/eliminar__mensajes.php", { UsuarioID :<?php echo $_SESSION["id"]?> });
-
-    }
-</script>
-

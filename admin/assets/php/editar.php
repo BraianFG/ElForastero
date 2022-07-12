@@ -8,12 +8,6 @@ $id_admin =  $_SESSION["id_admin"];
     
      mysqli_real_escape_string($conn , $sql);
 
-   if($id_admin ==""){
-         header("Location:../../");
-   }else{
-          header("Location:../../");
-   }
-
 //------------------------------------------------------------------------------//
    $sql = "UPDATE `admin` SET nombre= '$nombre' WHERE `admin` .id = '$id_admin' ";
    $resultInsert = mysqli_query($conn, $sql);    

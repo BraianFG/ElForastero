@@ -1,5 +1,5 @@
  <?php 
- include '../../database.php';
+   require '../../database.php';
  
     session_start();
     if (isset($_SESSION["id_admin"])){
@@ -17,12 +17,12 @@
     
     $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn, $nombre);
- 
-    $logo = filter_var($_POST['logo'], FILTER_SANITIZE_STRING);
-    mysqli_real_escape_string($conn , $logo);
     
     $descripcion = filter_var($_POST['descripcion'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $descripcion);
+    
+    $info = filter_var($_POST['info'], FILTER_SANITIZE_STRING);
+    mysqli_real_escape_string($conn , $info);
      
     $alert = filter_var($_POST['alert'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $alert);
@@ -48,11 +48,38 @@
    $telegram = filter_var($_POST['telegram'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $telegram);
     
-   mysqli_real_escape_string($conn , $sql);
+    
+ $logo= $_FILES['logo']['name'];
+      $guardado = $_FILES['logo']['tmp_name'];
+  
+  
+      if(!file_exists('../')){
+          mkdir('../../images/' ,0777,true);
+            
+          if(file_exists('../../')){
+               if( move_uploaded_file($guardado, '../../images/' .$logo)){
 
+               }
+                 header('Location:../../');
+             }else{
+                  header('Location:../../');
+             }
+    }else{
+       if(move_uploaded_file($guardado, '../../images/' .$logo)){
+              header('Location:../');
+             }else{
+                  header('Location:../../');
+             } 
+       }
+       
+    if(!empty($logo)){
+         $sql2 = "UPDATE `negocio` SET  logo = '$logo'  WHERE 1";
+         header("Location:../../");
+    }       
 //------------------------------------------------------------------------------//
-  $sql = "UPDATE `negocio` SET nombre= '$nombre' , logo = '$logo' ,  descripcion = '$descripcion' , alert = '$alert' , celular = '$celular' , email = '$email' , whatsapp = '$whatsapp' , whatsapp2 = '$whatsapp2' , facebook = '$facebook' , instagram = '$instagram' , telegram = '$telegram' WHERE 1";
+  $sql = "UPDATE `negocio` SET nombre= '$nombre' , descripcion = '$descripcion' , alert = '$alert' , celular = '$celular' , email = '$email' , whatsapp = '$whatsapp' , whatsapp2 = '$whatsapp2' , facebook = '$facebook' , instagram = '$instagram' , telegram = '$telegram' , info = '$info' WHERE 1";
    $resultInsert = mysqli_query($conn, $sql);    
+   $resultInsert2 = mysqli_query($conn, $sql2);    
    
    mysqli_close($conexion, $sql);   
 ?>
