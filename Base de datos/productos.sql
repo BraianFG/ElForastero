@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-05-2022 a las 04:15:51
+-- Tiempo de generación: 12-07-2022 a las 04:17:32
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `u819747409_braianfg287`
+-- Base de datos: `u819747409_elforastero`
 --
 
 -- --------------------------------------------------------
@@ -34,16 +34,10 @@ CREATE TABLE `productos` (
   `cantidad` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `precio` int(6) NOT NULL,
   `categoria` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen01` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen02` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen03` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen04` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal1` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal2` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal3` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal4` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal5` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
+  `imagen` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `imagen01` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `imagen02` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `modal1` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --

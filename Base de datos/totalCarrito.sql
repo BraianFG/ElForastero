@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-05-2022 a las 04:15:57
+-- Tiempo de generación: 12-07-2022 a las 04:17:53
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `u819747409_braianfg287`
+-- Base de datos: `u819747409_elforastero`
 --
 
 -- --------------------------------------------------------

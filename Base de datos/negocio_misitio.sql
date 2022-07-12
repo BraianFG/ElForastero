@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-05-2022 a las 04:15:41
+-- Tiempo de generación: 12-07-2022 a las 04:17:07
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `u819747409_braianfg287`
+-- Base de datos: `u819747409_elforastero`
 --
 
 -- --------------------------------------------------------
@@ -31,15 +31,16 @@ CREATE TABLE `negocio_misitio` (
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `descripcion` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `favicon` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen_sitio` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+  `imagen_sitio` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dominio` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `negocio_misitio`
 --
 
-INSERT INTO `negocio_misitio` (`title`, `descripcion`, `favicon`, `imagen_sitio`) VALUES
-('Mi tienda', 'kjfkjkfgkjfg', 'logo.ico ', 'banner.jpg');
+INSERT INTO `negocio_misitio` (`title`, `descripcion`, `favicon`, `imagen_sitio`, `dominio`) VALUES
+('El Forastero', 'Compre de manera fácil y rápida desde la comodidad de tu casa o donde estés y te lo enviamos.\r\n¿Qué esperas para hacer tu primera compra?. ', 'logo.ico', 'banner.jpg', 'https://tiendaelforastero.com.ar');
 
 --
 -- Índices para tablas volcadas

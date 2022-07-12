@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 12-07-2022 a las 04:18:22
+-- Tiempo de generación: 12-07-2022 a las 04:15:04
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -24,19 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura de tabla para la tabla `carrito`
 --
 
-CREATE TABLE `usuarios` (
+CREATE TABLE `carrito` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apellido` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `direccion` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ciudad` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `codPostal` int(10) NOT NULL,
-  `celular` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `usuarioID` int(11) NOT NULL,
+  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellido` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `productoID` int(11) NOT NULL,
+  `nombreProduc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` int(11) NOT NULL,
+  `fecha` date NOT NULL,
+  `hora` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -44,21 +45,21 @@ CREATE TABLE `usuarios` (
 --
 
 --
--- Indices de la tabla `usuarios`
+-- Indices de la tabla `carrito`
 --
-ALTER TABLE `usuarios`
+ALTER TABLE `carrito`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD KEY `id` (`id`);
+  ADD KEY `usuarioID` (`usuarioID`),
+  ADD KEY `productoID` (`productoID`,`usuarioID`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT de la tabla `carrito`
 --
-ALTER TABLE `usuarios`
+ALTER TABLE `carrito`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
