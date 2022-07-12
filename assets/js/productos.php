@@ -1,4 +1,4 @@
-<script>
+<script async>
 var CARRITO = {};
 function actualizarCarrito() {
     

@@ -36,15 +36,7 @@ ol, ul {
 body {
     -webkit-text-size-adjust: none;
     font-size: 16px;
-     -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -ms-user-select:none;
-}
-
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+    text-size-adjust: auto;
 }
 
 input, select, textarea {
@@ -60,16 +52,6 @@ input, select, textarea {
     border-color: <?php echo $negocio['texto'] ?>;
 }
 
-.uk-open > .uk-modal-dialog {
-    opacity: 1;
-    transform: translateY(0);
-    padding: 1em;
-    margin: 3em auto;
-    margin-top: 1em;
-    background-color: <?php echo $negocio['color3'] ?>;
-}
-    
-
 body, input, select, textarea {
     color: <?php echo $negocio['texto'] ?>;
     font-family: <?php echo $negocio['fontFamily'] ?>;
@@ -78,15 +60,11 @@ body, input, select, textarea {
     line-height: 1.75;
 }
 
-@media screen and (max-width: 480px) { 
-}
-
 a {
     color:<?php echo $negocio ['color2'] ?>;
     text-decoration: none;
      cursor:pointer;
 }
-
 
 a:hover {
   text-decoration:none;
@@ -161,15 +139,8 @@ h5 {
 
 h6 {
     font-size: 1.2em;
+    padding-left:1em;
 }
-
-hr {
-    border: 0;
-    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
-    margin: 1em auto;
-    background-color:<?php echo $negocio ['color2'] ?>;
-}
-
 
 /* Button */
 input[type="submit"], input[type="reset"], input[type="button"], button, .button {
@@ -177,14 +148,9 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    -moz-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-    -ms-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
     background-color: transparent;
     border: 0;
     border-bottom-color: currentcolor;
-    box-shadow: inset 0 0 0 1px rgb(160 160 160 / 30%);
     color: <?php echo $negocio['color2'] ?>;
     cursor: pointer;
     font-size: 0.6em;
@@ -208,7 +174,6 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     cursor:pointer;
 }
 
-
 input[type="submit"].large, input[type="reset"].large, input[type="button"].large, button.large, .button.large {
     font-size: 0.7em;
     display: block;
@@ -222,7 +187,7 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
 }
 
 .button.primary {
-    background: <?php echo $negocio['color2']?> !important;
+    background: <?php echo $negocio['color2']?>;
     color: <?php echo $negocio['color3'] ?>;
     display: block;
     font-family: <?php echo $negocio['fontFamily'] ?>;
@@ -241,12 +206,8 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
 
 input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"].disabled, input[type="reset"]:disabled, input[type="button"].disabled, input[type="button"]:disabled, button.disabled, button:disabled, .button.disabled, .button:disabled {
     pointer-events: none;
-    color: rgba(160, 160, 160, 0.3) !important;
 }
 
-input[type="submit"].disabled:before, input[type="submit"]:disabled:before, input[type="reset"].disabled:before, input[type="reset"]:disabled:before, input[type="button"].disabled:before, input[type="button"]:disabled:before, button.disabled:before, button:disabled:before, .button.disabled:before, .button:disabled:before {
-    color: rgba(160, 160, 160, 0.3) !important;
-}
 
 /* Form */
 form {
@@ -258,9 +219,8 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    background: rgba(160, 160, 160, 0.075);
-    border: none;
-    border: solid 1px rgba(160, 160, 160, 0.3);
+    background: <?php echo $negocio['color3']?>;
+    border:<?php echo $negocio['color2']?> 0.01em solid;
     border-radius: 0;
     color: <?php echo $negocio['texto']?>;
     display: block;
@@ -268,10 +228,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     padding: 0 1em;
     text-decoration: none;
     width: 100%;
-}
-
-input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid, input[type="tel"]:invalid, select:invalid, textarea:invalid {
-    box-shadow: none;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
@@ -287,21 +243,6 @@ textarea {
     padding: 0.75em 1em;
 }
 
-::-webkit-input-placeholder {
-    color: <?php echo $negocio['placeholder'] ?> !important;
-    opacity: 1.0;
-}
-
-:-moz-placeholder {
-    color: <?php echo $negocio['placeholder'] ?> !important;
-    opacity: 1.0;
-}
-
-::-moz-placeholder {
-    color: <?php echo $negocio['placeholder'] ?> !important;
-    opacity: 1.0;
-}
-
 /* Image */
 .image {
     border: 0;
@@ -309,43 +250,7 @@ textarea {
     position: relative;
 }
 
-.image__modal{
-    border: 0;
-    width:100%;
-}
-
-.image img {
-    display: block;
-    border: 0em; 
-}
-
-@media screen and (max-width: 736px) {
-    .image.featured {
-        margin: 0 0 1.5em 0;
-    }
-}
-
-.image.main {
-    display: block;
-    margin: 0 0 3em 0;
-    width: 100%;
-}
-
-.image.main img {
-    width: 100%;
-}
-
 /* List */
-ol {
-    list-style: decimal;
-    margin: 0 0 2em 0;
-    padding-left: 1.25em;
-}
-
-ol li {
-    padding-left: 0.25em;
-}
-
 ul {
     list-style: none;
     margin: 0 0 1em 0;
@@ -407,25 +312,9 @@ ul.actions.stacked {
     flex-wrap: nowrap;
     justify-content: center;
 
-ul.actions.stacked li {
-    padding: 0.3em 0 0 0;
-    margin-top: 1em;
-}
-
-    ul.actions:not(.fixed) li > * {
-        width: 100%;
-    }
-
-    ul.actions:not(.fixed) li:first-child {
-        padding-top: 0;
-    }
-
-    ul.actions:not(.fixed) li input[type="submit"], ul.actions:not(.fixed) li input[type="reset"], ul.actions:not(.fixed) li input[type="button"], ul.actions:not(.fixed) li button, ul.actions:not(.fixed) li .button {
-        width: 100%;
-    }
-
-    ul.actions:not(.fixed) li input[type="submit"].icon:before, ul.actions:not(.fixed) li input[type="reset"].icon:before, ul.actions:not(.fixed) li input[type="button"].icon:before, ul.actions:not(.fixed) li button.icon:before, ul.actions:not(.fixed) li .button.icon:before {
-        margin-left: -0.5em;
+    ul.actions.stacked li {
+        padding: 0.3em 0 0 0;
+        margin-top: 1em;
     }
 }
 
@@ -435,6 +324,7 @@ ul.icons {
     list-style: none;
     padding-left: 1em;
     width: 98%;
+    margin-top:1em;
 }
 
 ul.icons li {
@@ -455,7 +345,6 @@ ul.icons li > * .label {
 }
 
 @media screen and (max-width: 480px) {
-
     .modal__header{
         font-size:0.8em;
         padding-top:0.2em;
@@ -463,20 +352,6 @@ ul.icons li > * .label {
     
     .uk-close{
         font-size:0.8em;
-    }
-}
-
-    
-   ::-webkit-input-placeholder {
-        color: <?php echo $negocio['placeholder'] ?> !important;
-        opacity: 1.0;
-       font-size:1em;
-    }
-    
-    :-moz-placeholder {
-        color: <?php echo $negocio['placeholder'] ?> !important;
-        opacity: 1.0;
-       font-size:1em;
     }
 }
 
@@ -488,15 +363,16 @@ ul.icons li > * .label {
     }
 }
 
-header p {
+.header p {
     font-weight: 400;
     letter-spacing: 0.25em;
     line-height: 1.5em;
     text-transform: uppercase;
+}
 
-/* Footer */
-#footer .icons {
-    color: <?php echo $negocio['placeholder']?>;
+#footer{
+    margin-top:2em;
+    border-top:<?php echo $negocio['color2']?> 0.02em solid;
 }
 
 #footer .copyright {
@@ -525,14 +401,6 @@ body.single #footer {
     align-items:baseline;
 }
 
-
-.uk-open>.uk-modal-dialog {
-    opacity: 1;
-    transform: translateY(0);
-    padding: 1em;
-    margin:1em;
-}
-
 .modal__header {
     background-color: <?php echo $negocio['color2']?>;
     text-transform: uppercase;
@@ -544,31 +412,6 @@ body.single #footer {
     margin-bottom: 0.1em;
     font-family: <?php echo $negocio['fontFamily2']?>;
     align-items:center;
-}
-
-.uk-close {
-    color: <?php echo $negocio['texto']?>;
-    background: <?php echo $negocio['color3']?>;
-    width: 2em;
-    height: 2em;
-}
-
-.uk-close:hover{
-        background: <?php echo $negocio['color3']?>;
-}
-
-[class*=uk-modal-close-] {
-    position: absolute;
-    margin-bottom: 0em;
-    right: 16px;
-    top: 16px;
-    height:2.4em;
-    cursor:pointer;
-}
-
-ul li{
-    font-family: <?php echo $negocio['fontFamily'] ?> ;
-};
 }
 
 /* Header */
@@ -644,12 +487,6 @@ ul li{
     padding-left: 1em;
 }
 
-#header .links ul li:first-child {
-    border-left: 0;
-    margin-left: 0;
-    padding-left: 0;
-}
-
 #header .links ul li a {
     border-bottom: 0;
     font-family: <?php echo $negocio['fontFamily']?>;
@@ -658,7 +495,6 @@ ul li{
     letter-spacing: 0.25em;
     text-transform: uppercase;
 }
-
 
 @media screen and (max-width: 1500px) {
     #header .links {
@@ -690,19 +526,19 @@ ul li{
     max-width: 100%;
 }
 
-#intro header h2 {
+#intro .header h2 {
     font-size: 3em;
     font-weight: 900;
     padding:0 1em;
 }
 
 @media(max-width:360px){
- #intro header h2 {
+ #intro .header h2 {
    margin-bottom:2.3em;
 }
 
 }
-#intro header p {
+#intro .header p {
     font-size: 1em;
     padding-top:1em;
 }
@@ -713,11 +549,11 @@ ul li{
         text-align: center;
     }
 
-    #intro header h2 {
+    #intro .header h2 {
         font-size: 2.4em;
     }
 
-    #intro header p {
+    #intro .header p {
         font-size: 0.7em;
         font-family: <?php $negocio['fontFamily'] ?>
     }
@@ -741,215 +577,196 @@ ul li{
     #intro .logo {
     }
 
-    #intro header h2 {
+    #intro .header h2 {
         font-size: 1.4em;
     }
 
-    #intro header > :last-child {
+    #intro .header > :last-child {
         margin-bottom: 0;
         font-family: <?php echo $negocio['fontFamily'] ?> ;
     }
 }
 
-.marron{
-   color: <?php echo $negocio['color2'] ?>;
-   font-weight:bold;
-}
-
-
-/* Footer */
-#footer .icons {
-    color: <?php echo $negocio['texto'] ?>;
-}
-
-#footer .copyright {
-    color: <?php echo $negocio['texto'] ?>;
-    font-family: <?php echo $negocio['fontFamily'] ?> ;
-    font-size: 0.5em;
-    font-weight: 400;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    padding-bottom:1em;
-}
-
-body.single #footer {
-    text-align: center;
-}
-
-.main{
- margin-left:2em;  
- text-decoration:none;
- border:0;
-}
-
-#intro {
-    padding: 3em 0.3em 1.4em 0;
-    display: flex;
-    align-items: center;
-}
-
-#intro header {
-    overflow: hidden;
-    padding: 1em 0em 1em 0;
-}
-
-
-
-.whatsapp {
-    position: fixed;
-    right: 25px;
-    bottom: 80px;
-    z-index: 999;
-}
-
-.whatsapp img {
-    width: 2em;
-    height: 2em;
-    border: 0;
-    margin-bottom:1em;
-}
-
-.telegram {
-    position: fixed;
-    right: 25px;
-    bottom: 20px;
-    z-index: 999;
-    outline:none;
-}
-
-.telegram img {
-    width: 2em;
-    height: 2em;
-    border:0;
-    outline:none;
-    margin-bottom:1em;
-}
-
-.panel {
-    background:  <?php echo $negocio['color2'] ?> ;
-    color:  <?php echo $negocio['color3'] ?> ;
-    border-radius: 0.6em;
-    height: 1.8em;
-    width: 98.5%;
-    padding-top: 0.5em;
-    display: block;
-    margin: auto;
-    margin-bottom: 1em;
-    padding-left: 0.5em;
-    animation-duration:12s;
-}
-
-.fa-times-circle {
-    margin-right: 0.3em;
-    margin-left: 0.3em;
-    cursor: pointer;
-}
-
-
-.button__modal {
-    background-color: <?php echo $negocio['color2'] ?> ;
-    color: <?php echo $negocio['color3'] ?> ;
-    font-weight: bolder;
-    text-transform: uppercase;
-    align-items: baseline;
-    display: flex;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    font-size: 0.8em;
-    border-radius: 0.3em 0.3em 0.3em 0.3em;
-    font-family:  <?php echo $negocio['fontFamily'] ?> ;
-    margin-top: 0.6em;
-    cursor:pointer;
-}
-
-.modal__header {
-    background-color: <?php echo $negocio['color2'] ?> ;
-    text-transform: uppercase;
-    font-weight: bold;
-    color:  <?php echo $negocio['color3'] ?> ; 
-    text-align: center;
-    height: 2em;
-    margin-bottom: 0.1em;
-    font-family: <?php echo $negocio['fontFamily2'] ?> ;
-}
-
-.uk-close {
-    color: <?php echo $negocio['texto'] ?>;
-    background: <?php echo $negocio['color3'] ?>;
-    width: 2em;
-    height: 2em;
-    transition: .1s ease-in-out;
-    transition-property: color,opacity;
-    cursor:pointer;
-}
-
-[class*=uk-modal-close-] {
-    position: absolute;
-    margin-bottom: 0;
-    top:1em;
-    margin-right: 0.4em;
-    height: 2em;
-    padding-left:0.1em;
-}
-
-.modal__botones {
-    display: flex;
-    justify-content: center;
-    cursor:pointer;
-    width: 100%;
-    box-sizing: border-box;
-    height:3.5em;
-    margin:auto;
-    margin-bottom:5em;
-}
-
-.fa-arrow-left:before {
-    content: "\f060";
-    align-items: center;
-    margin: 0.6em;
-}
-
-.fa-arrow-right:before {
-    content: "\f061";
-    margin: 0.6em;
-    align-items: center;
-}
-
-ul li{
-     font-family:  <?php echo $negocio['fontFamily'] ?>;
-     background: transparent;
-}
-
-.compradores{
-    margin-top:.2em;
-    margin-bottom:0.5em;
-}
-
-.perfil{
-    justify-content:center;
-    align-items:center;
-    margin:auto;
-    display:block;
-    width:18em;
-    height:8em;
-}
-
-.compradores:disabled{
-    background-color:#E8f0fe;
-    font-weight:bold;
-}
-
-.registrarse__recuadro{
-   padding: 1em 1em 1em;
-   margin-top:4em;
-}
-
-.login__recuadro{
-    margin-top:5em;
-}
-
-.pregunta{
-    margin:1em 0;
-}
+    .marron{
+       color: <?php echo $negocio['color2'] ?>;
+       font-weight:bold;
+    }
+    
+    /* Footer */
+    #footer .icons {
+        color: <?php echo $negocio['texto'] ?>;
+    }
+    
+    #footer .copyright {
+        color: <?php echo $negocio['texto'] ?>;
+        font-family: <?php echo $negocio['fontFamily'] ?> ;
+        font-size: 0.5em;
+        font-weight: 400;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        padding-bottom:1em;
+    }
+    
+    body.single #footer {
+        text-align: center;
+    }
+    
+    .main{
+     margin-left:2em;  
+     text-decoration:none;
+     border:0;
+    }
+    
+    #intro {
+        padding: 3em 0.3em 1.4em 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    #intro .header {
+        overflow: hidden;
+        padding: 1em 0em 1em 0;
+    }
+    
+    .whatsapp {
+        position: fixed;
+        right: 25px;
+        bottom: 80px;
+        z-index: 999;
+    }
+    
+    .whatsapp img {
+        width: 2em;
+        height: 2em;
+        border: 0;
+        margin-bottom:1em;
+    }
+    
+    .telegram {
+        position: fixed;
+        right: 25px;
+        bottom: 20px;
+        z-index: 999;
+        outline:none;
+    }
+    
+    .telegram img {
+        width: 2em;
+        height: 2em;
+        border:0;
+        outline:none;
+        margin-bottom:1em;
+    }
+    
+    .button__modal {
+        background-color: <?php echo $negocio['color2'] ?> ;
+        color: <?php echo $negocio['color3'] ?> ;
+        font-weight: bolder;
+        text-transform: uppercase;
+        align-items: baseline;
+        display: flex;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        font-size: 0.8em;
+        border-radius: 0.3em 0.3em 0.3em 0.3em;
+        font-family:  <?php echo $negocio['fontFamily'] ?> ;
+        margin-top: 0.6em;
+        cursor:pointer;
+    }
+    
+    .modal__header {
+        background-color: <?php echo $negocio['color2'] ?> ;
+        text-transform: uppercase;
+        font-weight: bold;
+        color:  <?php echo $negocio['color3'] ?> ; 
+        text-align: center;
+        height: 2em;
+        margin-bottom: 0.1em;
+        font-family: <?php echo $negocio['fontFamily'] ?> ;
+    }
+    
+    .uk-close {
+        color: <?php echo $negocio['texto'] ?>;
+        background: <?php echo $negocio['color3'] ?>;
+        width: 2em;
+        height: 2em;
+        cursor:pointer;
+    }
+    
+    [class*=uk-modal-close-] {
+        position: absolute;
+        margin-bottom: 0;
+        top:1em;
+        margin-right: 0.4em;
+        height: 2em;
+        padding-left:0.1em;
+    }
+    
+    .modal__botones {
+        display: flex;
+        justify-content: center;
+        cursor:pointer;
+        width: 100%;
+        box-sizing: border-box;
+        height:3.5em;
+        margin:auto;
+        margin-bottom:5em;
+    }
+    
+    .fa-arrow-left:before {
+        content: "\f060";
+        align-items: center;
+        margin: 0.6em;
+    }
+    
+    .fa-arrow-right:before {
+        content: "\f061";
+        margin: 0.6em;
+        align-items: center;
+    }
+    
+    ul li{
+         font-family:  <?php echo $negocio['fontFamily'] ?>;
+         background: transparent;
+    }
+    
+    .compradores{
+        margin-top:.2em;
+        margin-bottom:0.5em;
+    }
+    
+    .compradores_num{
+       padding-left:1em;
+       outline:none;
+       background: <?php echo $negocio['color3']?>;
+       border:<?php echo $negocio['color2']?> 0.01em solid;
+    }
+    
+    .perfil{
+        justify-content:center;
+        align-items:center;
+        margin:auto;
+        display:block;
+        width:18em;
+        height:8em;
+    }
+    
+    .compradores:disabled{
+        background: <?php echo $negocio['color3']?>;
+        font-weight:bold;
+    }
+    
+    .registrarse__recuadro{
+       padding: 1em 1em 1em;
+       margin-top:4em;
+    }
+    
+    .login__recuadro{
+        margin-top:5em;
+    }
+    
+    .pregunta{
+        margin:1em 0;
+    }
 
 .registro{
     padding:1em 1.5em 2em;
@@ -1005,7 +822,6 @@ ul li{
        #error{
            padding: 1em 1em 1em;
        }
-
 }    
 
 @media(max-width:560px){
@@ -1059,84 +875,78 @@ ul li{
     }
 }
 
-i{
-    margin-right:0.3em;
-}
+    i{
+        margin-right:0.3em;
+    }
+    
+    .edit{
+      padding:0 0.5em;
+    }
 
-.edit{
-  padding:0 0.5em;
-}
+    .borrar{
+        display: flex;
+        padding: 1em 0;
+        margin-top: 4em;
+        height: 1.8em;
+        justify-content: center;
+        width: 35%;
+        text-align: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color:<?php echo $negocio['color3'] ?>;
+        color:<?php echo $negocio['color2'] ?>;
+        border:0.1em solid <?php echo $negocio['color2'] ?>;
+        margin-right:0.3em;
+       font-size: 0.7em;
+        margin-top: 8em;
+    }
+    
+    .agregar{
+       display: flex;
+        padding: 1em;
+        height: 2em;
+        width: 100%;
+        margin-left:1em;
+        margin-top: 4em;
+        text-align: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color:<?php echo $negocio['color2'] ?>;
+        color:<?php echo $negocio['color3'] ?>;
+        cursor:pointer;
+       font-size: 0.7em;
+        margin-top: 8em;
+    }
+    
+    .uk-alert{
+        background-color:<?php echo $negocio['color2'] ?>;
+        color:<?php echo $negocio['color3'] ?>; 
+        border-radius:0.4em;
+        align-items:center;
+    }
+    
+    #carrito{
+      padding-left:1em;
+    }
+    
+    svg{
+        margin-right:0.4em;
+        align-items:center;
+        margin-top:0em;
+        margin-bottom:0em;
+        margin-left:0.4em;
+    }
 
-.borrar{
-    display: flex;
-    padding: 1em 0;
-    margin-top: 4em;
-    height: 1.8em;
-    justify-content: center;
-    width: 35%;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    background-color:<?php echo $negocio['color3'] ?>;
-    color:<?php echo $negocio['color2'] ?>;
-    border:0.1em solid <?php echo $negocio['color2'] ?>;
-    margin-right:0.3em;
-   font-size: 0.7em;
-    margin-top: 8em;
-}
+    .datos{
+        padding:0em;
+        font-size: 0.7em;
+        font-weight: bolder;
+        text-transform: uppercase;
+        display: block;
+        justify-content: flex-start;
+        margin-bottom: -0.3em;
+    }
 
-.agregar{
-   display: flex;
-    padding: 1em;
-    height: 2em;
-    width: 100%;
-    margin-left:1em;
-    margin-top: 4em;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    background-color:<?php echo $negocio['color2'] ?>;
-    color:<?php echo $negocio['color3'] ?>;
-    cursor:pointer;
-   font-size: 0.7em;
-    margin-top: 8em;
-}
-
-.uk-alert{
-    background-color:<?php echo $negocio['color2'] ?>;
-    color:<?php echo $negocio['color3'] ?>; 
-    border-radius:0.4em;
-    align-items:center;
-}
-
-#carrito{
-  padding-left:1em;
-}
-
-svg{
-    margin-right:0.4em;
-    align-items:center;
-    margin-top:0em;
-    margin-bottom:0em;
-    margin-left:0.4em;
-}
-
-.datos{
-    padding:0em;
-    font-size: 0.7em;
-    font-weight: bolder;
-    text-transform: uppercase;
-    display: block;
-    justify-content: flex-start;
-    margin-bottom: -0.3em;
-}
-
-.uk-alert-close{
-    color:<?php echo $negocio['color3'] ?>; 
-    align-items:center;
-    margin-top:-.1em;
-    background-color:transparent;
-}
 
 #footer .icons svg{
     margin-left:0em;
@@ -1177,23 +987,6 @@ svg{
        height:4em;
        padding-top:1em;
    }
-   
-.mercadopago-button {
-    background-color: <?php echo $negocio['color2'] ?>;
-    font-family: <?php echo $negocio['fontFamily'] ?> ;
-    justify-content: center;
-    border: 0;
-    text-align: left;
-    outline: 0;
-    display: flex;
-    flex: 1;
-    height: 3.7em;
-    margin-top: 0.5em;
-    width: 10em;
-    text-align: center;
-    align-items: center;
-    box-sizing: border-box;
-}
 
    .borrar__carrito{
       justify-content:center;
@@ -1201,368 +994,364 @@ svg{
       cursor:pointer;
    }
    
-.modal{
-    width: 100%;
-    margin-left: 0.3em;
-    cursor:pointer;
-    height:5em;
-    justify-content: center;
-}
-
-.agregar:hover{
-    color:<?php echo $negocio['color3'] ?> ;
-}
-
-.modal:hover{
-    color:<?php echo $negocio['color3'] ?> ;
-}
-
-.borrar:hover{
-     color:<?php echo $negocio['color2'] ?> ;    
-}
-
-.marron:hover{
-     color:<?php echo $negocio['color2'] ?> ;
-}
-
-.uk-modal-footer{
-   border-top:0; 
-   margin-top:-1em;
-   margin-bottom:-1em;
-   padding: 0 1em 2em;
-   background-color:transparent;
-}
-
-.volver{
-    display: flex;
-    height: 4em;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    background-color:<?php echo $negocio['color3'] ?>;
-    color:<?php echo $negocio['color2'] ?>;
-    border:0.1em solid <?php echo $negocio['color2'] ?>;
-    margin-right:0.3em;
-}   
-
-.Confirmar{
-    display: flex;
-    height: 4em;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    font-weight: bolder;
-    background-color:<?php echo $negocio['color2'] ?>;
-    color:<?php echo $negocio['color3'] ?>;
-    border:0.1em solid <?php echo $negocio['color3'] ?>;
-    margin-right:0.3em;
-}   
-
-.Confirmar:hover{
-   color:<?php echo $negocio['color3'] ?>;
-}   
-
-.volver:hover{
-   color:<?php echo $negocio['color2'] ?>;
-}
-
-@media(max-width:1500px){
-    .telegram img{
-        margin-bottom:3em;
+    .modal{
+        width: 100%;
+        margin-left: 0.3em;
+        cursor:pointer;
+        height:5em;
+        justify-content: center;
     }
     
-    .whatsapp img{
-        margin-bottom:3em;
-    }
-}
-
-@media(max-width:470px){
-    .telegram img{
-        margin-bottom:1em;
+    .agregar:hover{
+        color:<?php echo $negocio['color3'] ?> ;
     }
     
-    .whatsapp img{
-        margin-bottom:1em;
+    .modal:hover{
+        color:<?php echo $negocio['color3'] ?> ;
     }
-}    }
+    
+    .borrar:hover{
+         color:<?php echo $negocio['color2'] ?> ;    
+    }
+    
+    .marron:hover{
+         color:<?php echo $negocio['color2'] ?> ;
+    }
+    
+    .uk-modal-footer{
+       border-top:0; 
+       margin-top:-1em;
+       margin-bottom:-1em;
+       padding: 0 1em 2em;
+       background-color:transparent;
+    }
+    
+    .volver{
+        display: flex;
+        height: 4em;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color:<?php echo $negocio['color3'] ?>;
+        color:<?php echo $negocio['color2'] ?>;
+        border:0.1em solid <?php echo $negocio['color2'] ?>;
+        margin-right:0.3em;
+    }   
+    
+    .Confirmar{
+        display: flex;
+        height: 4em;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color:<?php echo $negocio['color2'] ?>;
+        color:<?php echo $negocio['color3'] ?>;
+        border:0.1em solid <?php echo $negocio['color3'] ?>;
+        margin-right:0.3em;
+    }   
+    
+    .Confirmar:hover{
+       color:<?php echo $negocio['color3'] ?>;
+    }   
+    
+    .volver:hover{
+       color:<?php echo $negocio['color2'] ?>;
+    }
+    
+    @media(max-width:1500px){
+        .telegram img{
+            margin-bottom:3em;
+        }
+        
+        .whatsapp img{
+            margin-bottom:3em;
+        }
+    }
+    
+    @media(max-width:470px){
+        .telegram img{
+            margin-bottom:1em;
+        }
+        
+        .whatsapp img{
+            margin-bottom:1em;
+        }
+    }    
+    
+    .pedidos__lista{
+     display:block;
+     width:100%;
+     margin:auto;
+    }
+    
+    .wrapp{
+      margin-top:2.5em;  
+    }
+    
+    .uk-table th {
+        padding: 1em;
+        text-align:center;
+        vertical-align: bottom;
+        font-size: .700rem;
+        font-weight: 400;
+        color: <?php echo $negocio['color2']?>;
+        background-color: <?php echo $negocio['color3']?>;
+        font-weight:bold;
+        text-transform: uppercase;
+        border-bottom:<?php echo $negocio['color2']?> 0.1em solid;
+    }
+    
+    .uk-table td {
+         padding: 1em 0.5em;
+         vertical-align: middle;
+         font-size:.800rem;
+         text-align:center;
+         background-color: <?php echo $negocio['color3']?>;
+    }
+    
+    *+.uk-table {
+        margin-top:0em;
+    }
+    
+    .uk-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
+    .eliminar{
+        display:flex;
+        justify-content:center;
+        margin:auto;
+        padding-left:1em;
+        padding-right:1em;
+    }
+    
+    .total{
+        background-color:<?php echo $negocio['color3']?>;
+        color:<?php echo $negocio['color2']?>;
+        height:0em;
+        font-weight: bold;
+        margin-top: 0em;
+        padding: 1em 1em 3em;
+        margin-bottom:0em;
+        border-top:<?php echo $negocio['color2']?> 0.1em solid;
+        border-bottom:<?php echo $negocio['color2']?> 0.2em solid;
+    }
+    
+    .fondo{
+         background-color:<?php echo $negocio['color3']?>;
+         border-bottom:<?php echo $negocio['color2']?> 0.2em solid;
+         height:25em;
+         overflow:scroll;
+    }
+    
+    #comprador{
+         background-color:<?php echo $negocio['color3']?>;
+         color:<?php echo $negocio['color2']?>;
+         border-bottom:<?php echo $negocio['color2']?> 0.1em solid;
+         width:90%;
+         border-radius:0.5em;
+         margin-top:0.1em;
+         margin-top:0.65em;
+    }
+    
+    .enviar__mensaje{
+        display:flex;
+        flex:1;
+        width:100%;
+        justify-content:center;
+        margin:auto;
+    }
+    
+    .enviar__mensaje-boton{
+        background-color:<?php echo $negocio['color2']?>;
+        color:<?php echo $negocio['color3']?>;
+        width: 40%;
+        margin-left:2em;
+    }
 
-.pedidos__lista-items{
-  
-}
-
-.pedidos__lista{
- display:block;
- width:100%;
- margin:auto;
-}
-
-.wrapp{
-  margin-top:2.5em;  
-}
-
-.uk-table th {
-    padding: 1em;
-    text-align:center;
-    vertical-align: bottom;
-    font-size: .700rem;
-    font-weight: 400;
-    color: <?php echo $negocio['color2']?>;
-    background-color: <?php echo $negocio['color3']?>;
-    font-weight:bold;
-    text-transform: uppercase;
-    border-bottom:<?php echo $negocio['color2']?> 0.1em solid;
-}
-
-.uk-table td {
-     padding: 1em 0.5em;
-     vertical-align: middle;
-     font-size:.800rem;
-     text-align:center;
-     background-color: <?php echo $negocio['color3']?>;
-}
-
-*+.uk-table {
-    margin-top:0em;
-}
-
-.uk-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.eliminar{
-    display:flex;
-    justify-content:center;
-    margin:auto;
-    padding-left:1em;
-    padding-right:1em;
-}
-
-.total{
-    background-color:<?php echo $negocio['color3']?>;
-    color:<?php echo $negocio['color2']?>;
-    height:0em;
-    font-weight: bold;
-    margin-top: 0em;
-    padding: 1em 1em 3em;
-    margin-top:-1.35em;
-    border-top:<?php echo $negocio['color2']?> 0.1em solid;
-    border-bottom:<?php echo $negocio['color2']?> 0.2em solid;
-}
-
-.fondo{
-     background-color:<?php echo $negocio['color3']?>;
-     border-bottom:<?php echo $negocio['color2']?> 0.2em solid;
-     height:25em;
-     overflow:scroll;
-}
-
-#comprador{
-     background-color:<?php echo $negocio['color3']?>;
-     color:<?php echo $negocio['color2']?>;
-     border-bottom:<?php echo $negocio['color2']?> 0.1em solid;
-     width:90%;
-     border-radius:0.5em;
-     margin-top:0.1em;
-     margin-top:0.65em;
-}
-
-.enviar__mensaje{
-    display:flex;
-    flex:1;
-    width:100%;
-    justify-content:center;
-    margin:auto;
-}
-
-.enviar__mensaje-boton{
-    background-color:<?php echo $negocio['color2']?>;
-    color:<?php echo $negocio['color3']?>;
-    width: 40%;
-    margin-left:2em;
-}
-
-.mensaje__emisor{
+  .mensaje__emisor{
+     display:flex;
+     justify-content:flex-end;
      background-color:<?php echo $negocio['color2']?>;
      color:<?php echo $negocio['color3']?>;
-     width:80%;
-     height: 4em;
-     margin-left: 1em;
+     width:40%;
      border-radius: 0.5em;
      padding: 1em 2em;
-}
-
-.mensaje__receptor{
-     color:<?php echo $negocio['color2']?>;
-     width:90%;
-     height: 4em;
-     margin-left: 1em;
-     border-radius: 0.5em;
-     padding: 1em 2em;
-     text-align:right;
-     font-size:1em;
-}
-
-.filtro{
-  padding:2em 0;
-  width:100%;
-}
-
-.autor{
-   color:<?php echo $negocio['color2']?>;
-   font-weight:bold;
-}
-
-.autor:hover{
-   color:<?php echo $negocio['color2']?>;
-}
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: <?php echo $negocio['color3']?>;
-    background-clip: border-box;
-    border:0;
-    margin-bottom: 1em;
-    width:18em;
-    border-radius: 0 0 0.5em 0.5em;
-    border-bottom:<?php echo $negocio['color2']?> 0.3em solid;
-}
-
-.card-body {
-    padding: 1em 1em;
-    flex: 1;
-    flex-wrap: wrap;
-    border: 0;
-    height: 5em;
-    margin-bottom: 0em;
-    border-top:<?php echo $negocio['color2']?> 0.1em solid;
-    font-family: <?php echo $negocio['fontFamily']?>;
-}
-
-.card-title {
-    font-size: 1em;
-    height: 2em;
-    margin-bottom:1.3em;
-    font-family: <?php echo $negocio['fontFamily']?>;
-}
-
-.card-img-top {
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    height: 15em;
-}
-
-.productos{
+     position:relative;
+   }     
+   
+  .mensaje__respuesta{
     display:flex;
-    flex-wrap:wrap;
-    justify-content: space-evenly;
-    margin-top:1.7em;
-}
+    position:relative;
+    justify-content:flex-start;
+    margin:auto; 
+  }
 
-@media(max-width:450px){
-    .card{
-        width:100%;
+  .mensaje__receptor{
+     display:flex;
+     position:relative;
+     right:0;
+     color:<?php echo $negocio['color2']?>;
+     width:40%;
+     margin-left: 1em;
+     border-radius: 0.5em;
+     padding: 1em 2em;
+     text-align:left;
+     font-size:1em;
+   }
+
+    .mensaje{
+        display:flex;
+        position:relative;
+        justify-content:flex-end;
+        box-sizing:border-box;
+        margin-right:1em;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: <?php echo $negocio['color3']?>;
+        background-clip: border-box;
+        border:0;
+        margin-bottom: 1em;
+        width:18em;
+        border-radius: 0 0 0.5em 0.5em;
+        border-bottom:<?php echo $negocio['color2']?> 0.3em solid;
+    }
+
+    .card-body {
+        padding: 1em 1em;
+        flex: 1;
+        flex-wrap: wrap;
+        border: 0;
+        height: 5em;
+        margin-bottom: 0em;
+        border-top:<?php echo $negocio['color2']?> 0.1em solid;
+        font-family: <?php echo $negocio['fontFamily']?>;
     }
     
-      .uk-close {
-        width: 2.3em;
-        height: 2.3em;
-        cursor: pointer;
-        margin-top: 0.2em;
+    .card-title {
+        font-size: 1em;
+        height: 2em;
+        margin-bottom:1.3em;
+        font-family: <?php echo $negocio['fontFamily']?>;
     }
-}
 
-@media(max-width:320px){
-      .uk-close {
-        width: 2.3em;
-        height: 2.3em;
-        cursor: pointer;
+    .card-img-top {
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+        height: 15em;
     }
-}
+    
+    .productos{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+        margin-top:1.7em;
+    }
+    
+    @media(max-width:450px){
+        .card{
+            width:100%;
+        }
+        
+          .uk-close {
+            width: 2.3em;
+            height: 2.3em;
+            cursor: pointer;
+            margin-top: 0.2em;
+        }
+    }
+    
+    @media(max-width:320px){
+          .uk-close {
+            width: 2.3em;
+            height: 2.3em;
+            cursor: pointer;
+        }
+    }
+    
+    .precio{
+       margin-top:2em;
+    }
+    
+    .card-text{
+        height:7em;
+        margin-bottom:-5em;
+        margin-top:0.7em;
+    }
+    
+    .titulo{
+    	font-family:<?php echo $negocio['fontFamily2'] ?>;
+    }
+    
+    .popup{
+        margin-top:-5em;
+    }
+    
+    .info__titulo{
+       	font-family:<?php echo $negocio['fontFamily2'] ?>; 
+       	margin-top: 0em;
+        padding: 0;
+    }
+    
+    .info__subtitulo{
+        font-weight:300;
+        font-size: 0.6em;
+    }
+    
+    .info__logo{
+        width:2em;
+        margin-bottom:0.5em;
+    }
+    
+    .info__descripcion{
+        font-weight:500;
+        margin-top:1.5em;
+    }
+    
+    .modal__imagen{
+        display:block;
+        justify-content:center;
+        margin:auto;
+        width:100%;
+    }
 
-.precio{
-   margin-top:2em;
-}
-
-.card-text{
-    height:7em;
-    margin-bottom:-5em;
-    margin-top:0.7em;
-}
-
-.titulo{
-	font-family:<?php echo $negocio['fontFamily2'] ?>;
-}
-
-.popup{
-    margin-top:-5em;
-}
-
-.pagination{
-    margin: -1em 3em;
-    padding-bottom:1em;
-}
-
-.slider{
-    margin:0 0.3em;
-}
-
-.info__titulo{
-   	font-family:<?php echo $negocio['fontFamily2'] ?>; 
-   	margin-top: 0em;
-    padding: 0;
-}
-
-.info__subtitulo{
-    font-weight:300;
-    font-size: 0.6em;
-}
-
-.info__logo{
-    width:2em;
-    margin-bottom:0.5em;
-}
-
-.info__descripcion{
-    font-weight:500;
-    margin-top:1.5em;
-}
-
-.modal__imagen{
-    display:block;
-    justify-content:center;
-    margin:auto;
-    width:100%;
-}
-
-.uk-close:hover{
-    color:<?php echo $negocio['color3']?>;
-}
-
- .select{
-       width:23%;
-       font-size:0.7em;
-       color:<?php echo $negocio['color2']?>;
-       background-color:<?php echo $negocio['color3']?>;
-       border-bottom:0.2em solid  <?php echo $negocio['color2']?>;
-       text-transform:uppercase;
-       font-weight:bold;
+   .select{
+       width:2em;
+       height:2em;
+       background-image:url("../../admin/images/align-justify-solid.svg");
+       background-color:transparent;
+       border:0;
+       color:transparent;
        outline:none;
-       border-radius:0.3em;
+       margin-right:1em;
+   }
+   
+    .select2{
+       margin-top:0.7em;
+       width:2em;
+       height:1.85em;
+       background-image:url("../../admin/images/arrow-down-short-wide-solid.svg");
+       background-color:transparent;
+       border:0;
+       color:transparent;
+       outline:none;
+       margin-right:1em;
    }
          
-  @media(max-width:768px){
-    .select{
-        width:60%;
-        font-size:0.7em;
-       }
+    option{
+      color:<?php echo $negocio['color2']?>;
+      font-size:0.7em;
     }
     
     #error{
@@ -1581,8 +1370,25 @@ svg{
     .items{
         display:block;
     }
-</style>
+    
+     .uk-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 0;
+    }
 
+    .uk-card-default{
+        background-color:<?php echo $negocio['color3']?>;
+    }
+
+    .card-pregunta{
+        background-color:<?php echo $negocio['color3']?>;
+        padding:1em;
+        text-align:center;
+        border-bottom:0.2em solid <?php echo $negocio['color2']?>;
+        border-radius:0.2em 0.2em 0 0 ;
+    }
+</style>
 <?php
   }
 ?>
