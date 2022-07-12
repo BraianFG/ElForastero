@@ -27,5 +27,5 @@
     $sql_categorias = "INSERT INTO `categorias` (`id`, `nombre`) VALUES ('$id','$nombre')";
       $resultInsert = mysqli_query($conn, $sql_categorias); 
       
-   mysqli_close($conexion);   
+   mysqli_close($conn);   
 ?>

@@ -1,7 +1,5 @@
 <?php 
-    require_once 'database.php';
-    $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
-    mysqli_real_escape_string($conn , $id);
+    require '../database.php';
     
     $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $nombre);
@@ -12,26 +10,14 @@
     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $password);
     
-    mysqli_real_escape_string($conn , $sql);
-    
      $hash = password_hash($password ,PASSWORD_DEFAULT, ['cost' => 8]);
      
-   if($nombre || $email || $password ){
-       header("Location:registrarse");
-   } if(strlen($_POST['password'])<8){
-         header("Location:registrarse");
+   if(!empty($nombre && $email && $password)){
+        $sql ="INSERT INTO `admin`( `email`,`nombre`, `password`) VALUES ('$email','$nombre','$hash');";
+        $resultInsert = mysqli_query($conn, $sql); 
+        echo '<script>location.href="../admin";</script>';
    }else{
-          header("Location:ingresar");
+        echo "<script>alertify.notify('Error al registrarse','error','8');</script>";
+
    }
-   
-
-//------------------------------------------------------------------------------//
-$sql = "INSERT INTO `admin`(`nombre`, `email`, `password`) VALUES ('$nombre','$email','$hash')";
-
-      $resultInsert = mysqli_query($conn, $sql); 
-      
-   mysqli_close($conexion);   
-//------------------------------------------------------------------------------//
-
-
 ?>

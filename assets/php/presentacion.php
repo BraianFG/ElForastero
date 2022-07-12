@@ -11,10 +11,10 @@
             <!-- Intro -->
             <section id="intro">
                 <a href="#" class="logo"><img height="80" width="100 " src="images/<?php echo $negocio['logo'] ?>" alt="" /></a>
-                <header>
+                <div class="header">
                     <h2 class="titulo"><?php echo $negocio['nombre'] ?></h2>
                     <p><?php echo $negocio['descripcion'] ?></p>
-                </header>
+                <div class="header">
             </section>
 
 

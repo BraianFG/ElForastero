@@ -1,6 +1,6 @@
  <?php 
 
- include '../../database.php';
+ require '../../database.php';
  
     session_start();
     if (isset($_SESSION["id_admin"])){
@@ -9,30 +9,78 @@
         header('Location:../../ingresar');
     } 
     
- if($title ==""){
-    header("Location:../../");
-}else{
-     header("Location:../../");
-}
+    if($title ==""){
+    header("Location:../../admin");
+    }else{
+         header("Location:../../admin");
+    }
 
     $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn, $title);
     
-    $favicon = filter_var($_POST['favicon'], FILTER_SANITIZE_STRING);
-    mysqli_real_escape_string($conn, $favicon);
-    
     $descripcion = filter_var($_POST['descripcion'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn, $favicon);
     
-    $imagen_sitio = filter_var($_POST['imagen_sitio'], FILTER_SANITIZE_STRING);
-    mysqli_real_escape_string($conn, $imagen_sitio);
- 
     
-    mysqli_real_escape_string($conn, $sql);
+    $imagen_sitio = $_FILES['imagen_sitio']['name'];
+      $guardado1 = $_FILES['imagen_sitio']['tmp_name'];
+      if(!file_exists('../')){
+          mkdir('../../images/' ,0777,true);
+            
+          if(file_exists('../../')){
+               if( move_uploaded_file($guardado1, '../../images/' .$imagen_sitio)){
+
+               }
+                 header('Location:../../');
+             }else{
+                  header('Location:../../');
+             }
+    }else{
+       if(move_uploaded_file($guardado1, '../../images/' .$imagen_sitio)){
+              header('Location:../');
+             }else{
+                  header('Location:../../');
+             } 
+       }
+       
+    if(!empty($imagen_sitio)){
+         $sql2 = "UPDATE `negocio_misitio` SET  imagen_sitio = '$imagen_sitio'  WHERE 1";
+         header("Location:../../");
+    }
     
+  $favicon = $_FILES['favicon']['name'];
+      $guardado2 = $_FILES['favicon']['tmp_name'];
+  
+  
+      if(!file_exists('../')){
+          mkdir('../../images/' ,0777,true);
+            
+          if(file_exists('../../')){
+               if( move_uploaded_file($guardado2, '../../images/' .$favicon)){
+
+               }
+                 header('Location:../../');
+             }else{
+                  header('Location:../../');
+             }
+    }else{
+       if(move_uploaded_file($guardado2, '../../images/' .$favicon)){
+              header('Location:../');
+             }else{
+                  header('Location:../../');
+             } 
+       }
+       
+    if(!empty($favicon)){
+         $sql3 = "UPDATE `negocio_misitio` SET  favicon = '$favicon'  WHERE 1";
+         header("Location:../../");
+    }       
 //------------------------------------------------------------------------------//
-  $sql = "UPDATE `negocio_misitio` SET  title = '$title' , favicon = '$favicon' ,  descripcion = '$descripcion' ,  imagen_sitio = '$imagen_sitio'  WHERE 1";
+  $sql = "UPDATE `negocio_misitio` SET  title = '$title', descripcion = '$descripcion'   WHERE 1";
+  
    $resultInsert = mysqli_query($conn, $sql);    
+   $resultInsert2 = mysqli_query($conn, $sql2);  
+   $resultInsert3 = mysqli_query($conn, $sql3);  
    
    mysqli_close($conexion, $sql);   
 ?>

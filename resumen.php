@@ -16,7 +16,7 @@ $id = $_SESSION["id"];
          <?php include "assets/php/head.php" ?>
          <?php include "assets/css/style.php" ?>
         <?php include "assets/js/Google-Analytics.php" ?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
        <?php include "assets/js/script.php" ?>
        <?php include "assets/css/main.php" ?>
     </head>
@@ -79,7 +79,7 @@ $id = $_SESSION["id"];
          $resultados = mysqli_query($conn,$negocio);          
             while($negocio= mysqli_fetch_array($resultados)){
     ?>      
-     <div style="margin-top:-1.2em" class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
+     <div class="total">Total: $ <span id="total"><?php echo $negocio['total']?></span></div> 
     <?php
       }
     ?>   
@@ -112,9 +112,11 @@ $id = $_SESSION["id"];
     </div>
 </div>
 
+<?php include 'assets/php/contacto.php'?>
 <script>
     function confirmar(){
        $.post( "confirmar.php", { UsuarioID:<?php echo $_SESSION["id"]?>});
+       $.post( "total.php", { UsuarioID:<?php echo $_SESSION["id"]?>});
     }
 </script>
    

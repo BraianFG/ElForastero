@@ -15,7 +15,7 @@ $sql ="INSERT INTO `pedidos`(SELECT * FROM carrito WHERE UsuarioID = '$id')";
 
 $sql2 ="INSERT INTO `totalPedido`(SELECT * FROM totalCarrito WHERE UsuarioID = '$id')";
 
-$sql3 ="UPDATE `totalPedido` SET `total` = (SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id'),`fecha` ='$fecha',`hora`='$hora' WHERE `ventas`.`UsuarioID` = '$id'";  
+$sql3 ="UPDATE `totalPedido` SET `total` = (SELECT SUM(precio)FROM pedidos WHERE UsuarioID = '$id'),`fecha` ='$fecha',`hora`='$hora' WHERE `totalPedido`.`UsuarioID` = '$id';";  
 
 $sql4 ="DELETE FROM `carrito` WHERE `carrito`.`UsuarioID` = '$id'";
      

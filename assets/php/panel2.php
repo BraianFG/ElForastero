@@ -3,11 +3,14 @@
              <button class="uk-modal-close-default" type="button" uk-close></button>
         <div class="modal__header">Panel de Usuario</div>
         <div class="uk-modal-body">
+             <a class="items" href="index#productos"> <i class="fas fa-store-alt"></i>Productos</a>
              <a class="items" href="#datos" uk-toggle> <i class="fas fa-user"></i> Datos personales</a>
              <a class="items" href="resumen"><i class="fas fa-shopping-cart"></i>Carrito</a>
              <a class="items" href="comprar"><i class="fas fa-tags"></i>Pedidos</a>
-             <a class="items" href="mensaje" class="set__text"><i class="fas fa-paper-plane"></i>Enviar mensaje</a>
-             <a class="items" download href="elforastero.apk"><i class="fas fa-download"></i>Descargar APP</a>
+             <a class="items" href="mensaje" class="set__text"><i class="fas fa-paper-plane"></i>Mensajes</a>
+             <a class="items" href="#eliminar_cuenta" uk-toggle class="set__text"><i class="fas fa-trash"></i>Eliminar cuenta</a>
+             
+             <a class="items" href="../ElForastero.apk" download ><i class="fas fa-download"></i>Descargar APP</a>
              <a class="items" href="#info" uk-toggle><i class="fas fa-info"></i>Acerca de esta tienda</a>
             <a href="salir.php?salir=1" class="button primary compradores" >Cerrar Sesión <i class="fas fa-sign-out-alt "></i> </a>
     </div>
@@ -26,24 +29,26 @@
           <div class="modal__header">Editar mis datos</div>
         <div class="uk-modal-body">
     <form method="POST" action="return false" onsubmit="return false"> 
-         <label class="datos"><i class="fas fa-user"></i>Nombres</label>
-         <input type="text" id="nombre" name="nombre" class="compradores" value="<?php echo $negocio['nombre'] ?>" required>
-         <label class="datos"><i class="fas fa-user"></i>Apellidos</label> 
-         <input type="text" id="apellido" name="apellido" class="compradores" value="<?php echo $negocio['apellido'] ?>" required >
+         <label class="datos"><i class="fas fa-user"></i>Nombre</label>
+         <input type="text" id="nombre" name="nombre" class="compradores" value="<?php echo $negocio['nombre'] ?>">
+         <label class="datos"><i class="fas fa-user"></i>Apellido</label> 
+         <input type="text" id="apellido" name="apellido" class="compradores" value="<?php echo $negocio['apellido'] ?>" >
          <label class="datos"><i class="fas fa-compass"></i>Dirección</label> 
-         <input type="text" id="direccion" name="direccion" class="compradores" value="<?php echo $negocio['direccion'] ?>" required>
+         <input type="text" id="direccion" name="direccion" class="compradores" value="<?php echo $negocio['direccion'] ?>">
          <label class="datos"><i class="fas fa-city"></i>Ciudad</label> 
-        <input type="text" id="ciudad" name="ciudad" class="compradores" value="<?php echo $negocio['ciudad'] ?>" required>
+        <input type="text" id="ciudad" name="ciudad" class="compradores" value="<?php echo $negocio['ciudad'] ?>">
+        
         <label class="datos"><i class="fas fa-mail-bulk"></i>Código postal</label> 
-        <input type="text"id="codPostal" name="codPostal" class="compradores" value="<?php echo $negocio['codPostal'] ?>" required>
-         <label class="datos"><i class="fas fa-phone"></i>Celular</label>
-         <input type="tel" id="celular" name="celular" class="compradores" value="<?php echo $negocio['celular'] ?>" required>
+        <input type="text" id="codPostal" name="codPostal" class="compradores" value="<?php echo $negocio['codPostal'] ?>" maxlength="4">
+        
+        <label class="datos"><i class="fas fa-phone"></i>Celular</label>
+         <input type="tel" id="celular" name="celular" class="compradores" value="<?php echo $negocio['celular'] ?>">
 
            <button onclick="Validar(document.getElementById('nombre').value, document.getElementById('apellido').value,document.getElementById('direccion').value,document.getElementById('ciudad').value,document.getElementById('codPostal').value,document.getElementById('celular').value,);"class="button primary"><i class="fas fa-edit "></i> Editar mis datos  </button>
     </form>  
     <div id="resultado_panel"></div>
     
-       <script>      
+       <script>    
          function Validar(nombre,apellido,direccion,ciudad,codPostal,celular)
         {
             var parametros = {"nombre":nombre,"apellido":apellido,"direccion":direccion,"ciudad":ciudad,"codPostal":codPostal,"celular":celular};
@@ -53,9 +58,11 @@
                 data: parametros,
                 success: function(resp){
                  $('#resultado_panel').html(resp)
+                 
                 }  
                       
             });
+             
         }
         
         </script>
@@ -118,3 +125,26 @@
     </div>
 </div>    
 </div>
+
+  <div id="eliminar_cuenta" uk-modal>
+    <div class="uk-modal-dialog">
+     <div class="uk-modal-body">      
+    <h3 class="uk-text-center">¿Desea eliminar su cuenta?</h3>
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="eliminar">
+            <a href="index2" class="button primary eliminar__si" onclick="eliminar_cuenta((id ='<?php echo $id ?>'));salir();">Si <i class="fas fa-check"></i></a>
+            <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
+     </div>     
+      </div>    
+    </div>
+</div>
+
+<script asycn>
+    function eliminar_cuenta(id){
+        $.post('assets/php/eliminar_cuenta.php',{id:id});
+    }
+    
+    function salir(){
+        $.post('assets/php/salir.php',{});
+    }
+</script>

@@ -38,13 +38,13 @@ include 'database.php';
                 <?php include"assets/php/productos.php" ?>
 
                 <!-- Botones flotantes-->
-                <?php include"assets/php/contacto.php" ?>
+                <?php include "assets/php/contacto.php" ?>
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
                 
               <!-- Jquery -->    
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
           
         <!-- Hoja de estilo principal -->        
          <?php include 'assets/css/main.php' ?>

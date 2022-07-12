@@ -8,12 +8,19 @@
      ?> 
           
 <header id="header">
-            <h1><a href="/"><?php echo $negocio['nombre'] ?></a></h1>
+            <h1><a href="index"><?php echo $negocio['nombre'] ?></a></h1>
             <nav class="main">
                 <ul>
-                    <li class="main cart">
-                        <a href="#user2" uk-toggle ><i class="fas fa-user"></i></a>
-                    </li>
+                      <?php
+                      $usuario = "SELECT `nombre` FROM `usuarios` WHERE `id` ='$id';";     
+                      $resultados2 = mysqli_query($conn,$usuario);          
+                            while($usuario= mysqli_fetch_array($resultados2)){
+                       ?> 
+
+                       <li><a id="user2" href="#user2" uk-toggle><p class="main__texto"><?php echo $usuario['nombre']?></p></a></li>
+                       <?php
+                          }
+                       ?>  
                     
                     <li class="main">
                         <a href="#menu" uk-toggle ><i class="fas fa-shopping-cart"></i></a>

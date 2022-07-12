@@ -1,4 +1,4 @@
-<div id="<?php echo $productosp1['modal1'] ?>" uk-modal>
+<div id="<?php echo 'abc__',$productosp1['id'] ,$productosp1['modal1'] ?>" uk-modal>
      <div class="uk-modal-dialog">
      <div class="modal__header"><?php echo $productosp1['nombre'] ?></div>
      <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -6,19 +6,19 @@
        <ul class="uk-slider-items uk-grid">
         <li>
             <div class="uk-panel">
-                <img class="image__modal" onerror="this.style.display='none'" src="images/<?php echo $productosp1['imagen'] ?>" width="400" height="600" alt="">
+                <img class="image__modal" onerror="this.style.display='none'" src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $productosp1['imagen'] ?>" width="400" height="600" alt="images/<?php echo $productosp1['imagen'] ?>">
                 <div class="uk-position-center uk-panel"></div>
             </div>
         </li>
         <li>
             <div class="uk-panel">
-                <img class="image__modal" onerror="this.style.display='none'" src="images/<?php echo $productosp1['imagen01'] ?>" width="400" height="600" alt="">
+                <img class="image__modal" onerror="this.style.display='none'" src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $productosp1['imagen01'] ?>" width="400" height="300" alt="images/<?php echo $productosp1['imagen01'] ?>">
                 <div class="uk-position-center uk-panel"></div>
             </div>
         </li>
         <li>
             <div class="uk-panel">
-                <img class="image__modal" onerror="this.style.display='none'" src="images/<?php echo $productosp1['imagen02'] ?>" width="400" height="600" alt="">
+                <img class="image__modal" onerror="this.style.display='none'" src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $productosp1['imagen02'] ?>" width="400" height="600" alt="images/<?php echo $productosp1['imagen02'] ?>">
                 <div class="uk-position-center uk-panel"></div>
             </div>
         </li>

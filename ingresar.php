@@ -25,9 +25,9 @@
          <form class="registro" action="return false" onsubmit="return false">
              <img class="registro__logo" src="<?php echo '/images/',$mostrar_admin['logo'] ?> ">
              <label class="datos"><i class="fas fa-envelope"></i> Correo Electrónico</label>
-               <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" required maxlenght="90" autocomplete>
+               <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" maxlenght="90" autocomplete>
                <label class="datos"><i class="fas fa-key"></i> Contraseña</label>
-               <input class="compradores" id="password" name="password" type="password" placeholder="Ingrese contraseña" value="" required minlength="8" maxlength="15" autocomplete>
+               <input class="compradores" id="password" name="password" type="password" placeholder="Ingrese contraseña" value="" minlength="8" maxlength="15" autocomplete>
             <button  onclick="Validar(document.getElementById('email').value, document.getElementById('password').value);"  class="button primary compradores">Ingresar <i class="fas fa-sign-in-alt"></i></button>
         </form>
       <?php
@@ -40,7 +40,7 @@
      </div>
         
       <script>
-                function Validar(email, password)
+        function Validar(email, password)
         {
             $.ajax({
                 url: "login.php",

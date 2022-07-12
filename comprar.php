@@ -3,29 +3,12 @@ session_set_cookie_params(60*60*24*18);
 session_start();
 include 'database.php';
 $id = $_SESSION["id"];
-
-// SDK de Mercado Pago
-require __DIR__ .  '/vendor/autoload.php';
-// Agrega credenciales
-MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991');
 ?>
 
  <?php
   $negocio = "SELECT * FROM totalPedido WHERE UsuarioID = '$id'" ;     
   $resultados = mysqli_query($conn,$negocio);          
         while($negocio= mysqli_fetch_array($resultados)){
-        
-      $comision= 6;
-      $total = ($negocio['total'] * $comision)/100;
-      
-    // Crea un objeto de preferencia
-    $preference = new MercadoPago\Preference();
-    $item = new MercadoPago\Item();
-    $item->title = 'Su compra';
-    $item->quantity = 1;
-    $item->unit_price = $negocio['total'] + $total;
-    $preference->items = array($item);
-    $preference->save();
  }
   ?>
   
@@ -45,16 +28,14 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
        <?php include "assets/js/script.php" ?>
        <script src="https://sdk.mercadopago.com/js/v2"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/solid.min.js" integrity="sha512-C92U8X5fKxCN7C6A/AttDsqXQiB7gxwvg/9JCxcqR6KV+F0nvMBwL4wuQc+PwCfQGfazIe7Cm5g0VaHaoZ/BOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
               <?php include "assets/css/main.php" ?>
     </head>
 <body>   
      <?php include "assets/php/navbar2.php" ?>  
     <div id="resultados" class="uk-container uk-container-xsmall wrapp"> 
-    <div class="uk-alert">
-        <p class="panel__texto"><i class="fas fa-bullhorn"></i>Se aplicará un 6% de recargo por la comisión de Mercado Pago</p>
-    </div>
     <table class="uk-table uk-table-striped">
-              <div class="modal__header">Pedidos</caption>
+              <div class="modal__header">Pedidos</div>
          <thead>    
              <tr>
                 <th>Artículo</th>
@@ -92,71 +73,32 @@ MercadoPago\SDK::setAccessToken('APP_USR-5946296600794681-071419-17807207f136314
          $resultados = mysqli_query($conn,$negocio);          
             while($negocio= mysqli_fetch_array($resultados)){
     ?>      
-     <div style="margin-top:-1.2em" class="total">Total: $ <span id="total"><?php echo $negocio['total'] + $total ?></span></div> 
+     <div class="total">Total: $ <span id="total"><?php echo $negocio['total'] ?></span></div> 
     <?php
       }
     ?>      
- </div>    
-</div>    
-
-     </div>  
-        <div class="modal__botones carrito uk-container uk-container-xsmall ">
-            <a href="/index2" class="button__modal volver">
-                 <i class="fas fa-undo"></i>Volver</a>
-               <div class="comprar"></div>
-                </ul>
+  
+        <div class="modal__botones" style="margin-top:-5em;margin-bottom:5em" >
+            <a href="/index2" class="button__modal borrar borrar__carrito"><i class="fas fa-undo"></i>Volver</a>
+            <a href="/pagos" uk-toggle class="button__modal agregar agregar__carrito"><i class="fa-solid fa-list-ul"></i> Formas de pago</a>
         </div>
+     </div>  
+</div>
    
-<script>
-    // Agrega credenciales de SDK
-  const mp = new MercadoPago('TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d', {
-        locale: 'es-AR'
-  });
-
-  // Inicializa el checkout
-  mp.checkout({
-      preference: {
-          id: '<?php echo $preference->id ?>'
-      },
-      render: {
-            container: '.comprar', // Indica el nombre de la clase donde se mostrará el botón de pago
-            label: 'pagar', // Cambia el texto del botón de pago (opcional)
-      }
-});
-</script>
              
      <!-- footer -->
-      <div class="uk-container uk-container-xsmall"> 
+      <div class="uk-container uk-container-xsmall wrapp"> 
          <?php include "assets/php/footer.php" ?>
       </div> 
-   
-  <?php 
-  $negocio = 'SELECT * FROM estilos' ;     
-  $resultados = mysqli_query($conn,$negocio);          
- ?> 
+      
+     <div id="contacto" uk-modal>
+     <div class="uk-modal-dialog">
+         <button class="uk-modal-close-default" type="button" uk-close></button> 
+        <div class="modal__header">Medios de contacto</div>
+     </div>
+     </div>
+
          
-<?php
-        while($negocio= mysqli_fetch_array($resultados)){
-?>    
-      <style>
-          .mercadopago-button {
-                background-color:<?php echo $negocio['color2'] ?>;
-                justify-content: center;
-                border: 0;
-                text-align: left;
-                outline: 0;
-                display: flex;
-                flex: 1;
-                height: 4.8em;
-                margin-top: 0.5em;
-                width: 10.5em;
-                text-align: center;
-                align-items: center;
-                box-sizing: border-box;
-            }
-      </style>
-<?php
- }
-?>
+<?php include 'assets/php/contacto.php'?>
 </body>
 </html>

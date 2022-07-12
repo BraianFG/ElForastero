@@ -1,3 +1,4 @@
+
  <?php
   $negocio = 'SELECT * FROM negocio' ;     
   $resultados = mysqli_query($conn,$negocio);          
@@ -7,8 +8,17 @@
             <h1><a href="index2"><?php echo $negocio['nombre'] ?></a></h1>
             <nav class="main">
                 <ul>
-                       <li><a id="user2" href="#user2" class="fas fa-user" style="margin-top:1.3em;outline:0" uk-toggle><i class="fas fa-user"></i></a></li>
-                </ul>
+                      <?php
+                      $usuario = "SELECT `nombre` FROM `usuarios` WHERE `id` ='$id';";     
+                      $resultados2 = mysqli_query($conn,$usuario);          
+                            while($usuario= mysqli_fetch_array($resultados2)){
+                       ?> 
+
+                     <a id="user2" href="#user2" uk-toggle><p class="main__texto-texto"><?php echo $usuario['nombre']?></p></a></li>
+                       <?php
+                          }
+                       ?> 
+                </ul>       
             </nav>
         </header>
     <?php 

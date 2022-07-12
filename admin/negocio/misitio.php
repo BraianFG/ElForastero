@@ -40,19 +40,20 @@
 
         <button class="uk-modal-close-default" type="button" uk-close></button>
 
-        <div class="modal__header"> Editar datos del sitio web</div>
+        <div class="modal__header"> Datos del sitio</div>
    
         <div class="uk-modal-body" uk-overflow-auto>
-          <form method="post" action="negocio/editar_misitio.php/">
+          <form method="post" action="negocio/editar_misitio.php/"  enctype="multipart/form-data">
               <label class="datos"><i class="far fa-edit"></i>Titulo</label>
                 <input  name="title" type="text" placeholder="Ingrese el titulo de sitio web" value="<?php echo $mostrar['title'] ?>" >
                 <label class="datos"><i class="far fa-comment-alt"></i>Descripción del sitio web</label>
                 <textarea class="descripcion" name="descripcion" type="text" placeholder="Ingrese una breve descripción del sitio web" ><?php echo $mostrar['descripcion'] ?></textarea disabled>
                 <label class="datos"><i class="far fa-image"></i>Favicón</label>
-                <input  name="favicon" type="text" placeholder="Ingrese favicón del sitio web " value="<?php echo $mostrar['favicon'] ?>"  >
-                
+                <input type="file" accept="image/jpeg,image/ico"  name="favicon" >
+                <img onerror="this.style.display='none'" src="../../images/<?php echo $mostrar['favicon'] ?>" class="productos__images"> 
                 <label class="datos"><i class="far fa-image"></i>Imagen del sitio web</label>
-                <input  name="imagen_sitio" type="text" placeholder="Ingrese ruta de la imagen del sitio web" value="<?php echo $mostrar['imagen_sitio'] ?>" >
+                 <input type="file" accept="image/* "  name="imagen_sitio" >
+                <img onerror="this.style.display='none'" src="../../images/<?php echo $mostrar['imagen_sitio'] ?>" class="productos__images"> 
 
         </div>
 

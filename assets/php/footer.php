@@ -8,8 +8,6 @@
     <?php
         while($negocio= mysqli_fetch_array($resultados)){
      ?> 
-          
-  <hr class="footer">
             <!-- Footer -->
                 <ul class="icons">
                     <li><a href="<?php echo $negocio['telegram'] ?>"><i class="fab fa-telegram-plane"><span

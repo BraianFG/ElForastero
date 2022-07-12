@@ -24,22 +24,48 @@
     <div class="registrarse__recuadro">
         <div class="title">Registro</div>
          <form class="registro" method="POST" action="return false" onsubmit="return false">
-             <label class="datos"><i class="fas fa-user"></i> Nombre</label>
-               <input  minlength="3" class="compradores" id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" value="" required >
-                <label class="datos"> <i class="fas fa-user"></i> Apellido</label>
-                <input class="compradores"  minlength="3" id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido" value="" required>
+             <label class="datos"><i class="fas fa-user"></i> Nombre (NO usar símbolos y/o números)</label>
+               <input  minlength="3" class="compradores" id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" value="" >
+                <label class="datos"> <i class="fas fa-user"></i> Apellido (NO usar símbolos y/o números)</label>
+                <input class="compradores"  minlength="3" id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido" value="">
              <label class="datos"><i class="fas fa-envelope"></i> Correo Electrónico</label>    
-               <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" required autocomplete="off">
-               <label class="datos"><i class="fas fa-key"></i> Contraseña</label> 
-               <input class="compradores" id="password" name="password" minlength="8" maxlength="15" type="password" placeholder="Ingrese contraseña" value="" required autocomplete="off">
-               <label class="datos"><i class="fas fa-phone"></i> Celular</label> 
-                <input class="compradores" id="celular" name="celular" type="tel" maxlength="18" placeholder="Ingrese su celular" value="" required>
+               <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" autocomplete="off">
+               <label class="datos"><i class="fas fa-key"></i> Contraseña (NO MENOS DE 8 CARACTERES)</label> 
+               <input class="compradores" id="password" name="password" minlength="8" maxlength="15" type="password" placeholder="Ingrese contraseña" value="" autocomplete="off">
+               <label class="datos"><i class="fas fa-phone"></i> Celular (No usar +54,15,0,9 o espacios)</label> 
+               
+           <?php $productosp1 = "SELECT * FROM localidad" ;     
+              $result3 = mysqli_query($conn,$productosp1);
+               while($mostrar_productosp1 = mysqli_fetch_array($result3)){
+           ?>        
+                <input class="compradores" id="celular" name="celular" type="tel" maxlength="17" placeholder="EJ. 2346123456" value="<?php echo $mostrar_productosp1['codArea']?>" >
+            <?php
+               }
+            ?>   
              <label class="datos"><i class="fas fa-directions"></i> Domicilio</label>    
-               <input minlength="3" class="compradores" id="domicilio" name="domicilio" type="text" placeholder="Ingrese el domicilio a enviar" value="" required>
-              <label class="datos"> <i class="fas fa-city"></i> Ciudad</label>  
-              <input minlength="3" class="compradores" id="ciudad" name="ciudad" type="text" placeholder="Ingrese la ciudad a enviar" value="" required>
-              <label class="datos"><i class="fas fa-mail-bulk"></i> Código Postal</label> 
-             <input class="compradores" id="codPostal" name="codPostal" maxlength="4" type="text" placeholder="Ingrese código postal" value="" required>
+               <input minlength="3" class="compradores" id="domicilio" name="domicilio" type="text" placeholder="EJ. Laprida 123" value="">
+              
+         <label class="datos"> <i class="fas fa-city"></i> Localidad (NO usar símbolos y/o números) </label>   
+          <?php $productosp1 = "SELECT * FROM localidad" ;     
+              $result3 = mysqli_query($conn,$productosp1);
+               while($mostrar_productosp1 = mysqli_fetch_array($result3)){
+           ?> 
+                <input class="compradores" id="ciudad" type="text" name="ciudad" value="<?php echo $mostrar_productosp1['localidad'] ?>">
+            <?php
+               }
+            ?>
+
+            <label class="datos"><i class="fas fa-mail-bulk"></i> Código Postal (Sólo escribír los números)</label> 
+           <?php $productosp1 = "SELECT * FROM localidad" ;     
+              $result3 = mysqli_query($conn,$productosp1);
+              
+               while($mostrar_productosp1 = mysqli_fetch_array($result3)){
+             ?> 
+             <input minlength="4" maxlength="4" class="compradores_num" id="codPostal" name="codPostal" type="number" value="<?php echo $mostrar_productosp1['codPostal'] ?>">
+            <?php
+               }
+            ?>
+            </select>  
             <button class="button primary compradores" onclick="Validar__registro(document.getElementById('nombre').value, document.getElementById('apellido').value,document.getElementById('email').value,document.getElementById('password').value,document.getElementById('celular').value,document.getElementById('domicilio').value,document.getElementById('ciudad').value,document.getElementById('codPostal').value);" value="enviar" >Completar Registro<i class="fas fa-user-check"></i> </button>
             </form>
     </div>

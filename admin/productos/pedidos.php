@@ -1,8 +1,6 @@
-<?php
- include '../database.php';
-?>
-<div id="pedidos" class="uk-container  uk-container-large wrap">
-<header class="caption"><i class="fas fa-tags"></i>Pedidos</header>     
+
+<div id="pedidos" class="uk-container  uk-container-large">
+<div  class="caption"><i class="fas fa-tags"></i>Pedidos</div>     
     <div class="uk-overflow-auto">
     <table class="uk-table uk-table-striped ">
          <thead>    
@@ -46,26 +44,26 @@
   <div id="eliminar__carrito_<?php echo $mostrar_productosp1['0'] ?>" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
-    <h3 class="uk-text-center">¿Desea eliminar el pedido de este usuario?</h3>
+    <h3 class="uk-text-center">¿Desea eliminar el pedido de <?php echo $mostrar_productosp1['nombre'] ,' ',$mostrar_productosp1['apellido'] ?>?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
-            <a class="button primary eliminar__si" onclick="eliminar_pedido()">Si <i class="fas fa-check"></i></a>
+            <a class="button primary eliminar__si" onclick="eliminar_pedido(UsuarioID='<?php echo $mostrar_productosp1['1'] ?>')">Si <i class="fas fa-check"></i></a>
             <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
      </div>     
       </div>    
     </div>
 </div>
-  <?php
- }
-?>  
-            </table>
- </div>    
-</div>    
-           
-<script>
-    function eliminar_pedido(){
-       $.post( "productos/eliminar_pedido.php", { UsuarioID : <?php echo $_SESSION["id"] ?>} );
 
+<script>
+    function eliminar_pedido(UsuarioID){
+       $.post( "productos/eliminar_pedido.php", { UsuarioID : '<?php echo $mostrar_productosp1['1'] ?>'});
+       alertify.notify('pedido eliminado con exito','success',8);
     }
 </script>
 
+<?php
+ }
+?>  
+  </table>
+ </div>    
+</div>    

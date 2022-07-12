@@ -8,9 +8,14 @@ require_once 'database.php';
     $password =filter_var($_POST['password'], FILTER_SANITIZE_STRING);
      mysqli_real_escape_string($conn , $password);
      
+     $email = strtolower($email);
     
     $query = "SELECT * FROM usuarios WHERE email= '$email'";
     $result = mysqli_query($conn, $query);
+       
+    if(empty($email) || empty($password)){
+         echo "<script>alertify.notify('No deje sus datos de ingreso vacios','error',5)</script>";
+    }
     
     if(!empty($result) AND (mysqli_num_rows($result)==1)){
         $fila = mysqli_fetch_array($result);
@@ -21,10 +26,11 @@ require_once 'database.php';
              $_SESSION["apellido"] = $fila['apellido'];
              $_SESSION["carrito"];
         }else{
-            
+            echo "<script>alertify.notify('contraseña incorrecta','error',5)</script>";
         }
+
     }else{
-             echo "<script>alertify.notify('Error al acceder,vuelva a intentarlo','error',5)</script>";
+         echo "<script>alertify.notify('correo no existente','error',5)</script>";  
     }
     
   ?>
