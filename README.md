@@ -290,3 +290,39 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Función de borrar imagen parcialmente realizada,no borra imagen del servidor,solo la limpia de la Base de Datos
 
 * Posibilidad de subir y actualizar imagen las veces que sea necesario
+
+**11/7/2022**
+
+* Posibilidad de configurar los datos de MercadoPago sin ir al código
+
+* Funcionalidad de borrar imagen completa
+
+* Mensajes más personalizados en las ventanas modal
+
+* Formas de pagos diversas
+
+* Posibilidad de pagar con transferencia
+
+* Creación de tabla localidad que va a aparecer en el registro,dejando por defecto completo,la localidad,el cóidgo postal y de aréa de celular
+
+* Agrupar productos por categorías (Todavía no está dinámico)
+
+* Validaciones de registros e ingreso mejorada
+
+* Errores más específicos al registrarse y al ingresar
+
+* Posibilidad de eliminar cuenta 
+
+* Depuración de código CSS
+
+* Cambio de la tabla de ventas a mensajes
+
+* Creación de la página formas de pagos
+
+* No hay que configurar para que se abra la ventana modal del producto
+
+* Icono del usuario remplazado por el nombre del usuario al estar el mismo registrado
+
+* Visor de imagen con posibilidad de ver y descargar imagen en el mismo lugar
+
+* Mejeros al registrar invitados o moderadores en la administración
