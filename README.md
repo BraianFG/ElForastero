@@ -47,6 +47,12 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 * Uso **PhpDotEnv(https://github.com/vlucas/phpdotenv)**
 
+* Google Analytics **https://analytics.google.com/**
+
+* Lazysises **https://afarkas.github.io/lazysizes/index.html**
+
+* ImageOptim **https://imageoptim.com/**
+
 # MEJORAS
 **20/8/2021**
 
