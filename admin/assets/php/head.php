@@ -17,14 +17,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
     <!--Favicón -->
-    <link rel="shortcut icon" href="/images/<?php echo $negocio['favicon']?>" />
+    <link rel="shortcut icon" href="../../images/<?php echo $negocio['favicon']?>" />
    
     <!-- Descripcion del sitio  -->
     <meta property="og:title" content="<?php echo $negocio['title']?>">
     <meta property="og:image" content="../../images/<?php echo $negocio['imagen_sitio']?>" />
     <meta property="og:site_name" content="<?php echo $negocio['title']?>">
     <meta property="og:description" content="<?php echo $negocio['descripcion']?>">
-    <link rel="shortcut icon" href="../../images/<?php echo $negocio['favicon']?>" />
     
     <!-- No indexar a buscadores -->
     <meta name="googlebot" content="noindex">
