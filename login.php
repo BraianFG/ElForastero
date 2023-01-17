@@ -10,8 +10,10 @@ require_once 'database.php';
      
      $email = strtolower($email);
     
-    $query = "SELECT * FROM usuarios WHERE email= '$email'";
+    $query = "SELECT * FROM usuarios WHERE email = '$email'";
+    $query2 ="SELECT * FROM usuarios_eliminados = '$email' ";
     $result = mysqli_query($conn, $query);
+    $result2 = mysqli_query($conn, $query2);
        
     if(empty($email) || empty($password)){
          echo "<script>alertify.notify('No deje sus datos de ingreso vacios','error',5)</script>";
@@ -33,4 +35,11 @@ require_once 'database.php';
          echo "<script>alertify.notify('correo no existente','error',5)</script>";  
     }
     
+    
+    if(!empty($result2) AND (mysqli_num_rows($result2)==1)){
+        $fila = mysqli_fetch_array($result);
+        if(password_verify($password, $fila['password'])) {
+           echo '<script>location.href = "eliminado"</script>';
+        }
+    }
   ?>

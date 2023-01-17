@@ -89,7 +89,7 @@ $id = $_SESSION["id"];
 
      </div>  
         <div class="modal__botones carrito uk-container uk-container-xsmall ">
-            <a href="/index" class="button__modal volver">
+            <a href="<?=$_SERVER["HTTP_REFERER"]?>" class="button__modal volver">
                  <i class="fas fa-undo"></i>Volver</a>
              <a href="#cancelar__pedido" uk-toggle class="button__modal confirmar">
                  <i class="fas fa-check"></i>Comprar</a>      

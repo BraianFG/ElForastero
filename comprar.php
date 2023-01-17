@@ -79,7 +79,7 @@ $id = $_SESSION["id"];
     ?>      
   
         <div class="modal__botones" style="margin-top:-5em;margin-bottom:5em" >
-            <a href="/index2" class="button__modal borrar borrar__carrito"><i class="fas fa-undo"></i>Volver</a>
+            <a href="/" class="button__modal borrar borrar__carrito"><i class="fas fa-undo"></i>Volver</a>
             <a href="/pagos" uk-toggle class="button__modal agregar agregar__carrito"><i class="fa-solid fa-list-ul"></i> Formas de pago</a>
         </div>
      </div>  

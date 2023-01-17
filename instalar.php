@@ -1,13 +1,6 @@
 <?php
 include 'database.php';
     session_set_cookie_params(60*60*24*18);
-    session_start();
-    if (isset($_SESSION["id"])){
-     $id = $_SESSION["id"];
-    }else{
-       header('Location: ingresar');
-    }
- include 'top-cache.php'    
 ?>
 
 <html>
@@ -18,24 +11,22 @@ include 'database.php';
   <?php include 'assets/css/style.php' ?>
 </head>
 
-<body>
+<body class="is-preload">
 
     <!-- Wrapper -->
 
         <!-- Header -->
-        <?php include"assets/php/navbar.php" ?>
+        <?php include"assets/php/navbar2.php" ?>
 
         <!-- Menu -->
-       <?php include"assets/php/menu2.php"  ?>
+       <?php include"assets/php/menu.php"  ?>
        
+        <div class="uk-container uk-container-large">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
-                <!-- Selector -->
-                 <?php include 'assets/php/slider.php' ?>
-                 
-                <!--Productos -->
-                <?php include"assets/php/productos.php" ?>
+              <h2>Empezá a comprar desde la app</h2>
+              <a class="button primary" href="ElForastero.apk">Descargar</a>
 
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
@@ -49,12 +40,11 @@ include 'database.php';
         <!-- Hoja de estilo principal -->        
          <?php include 'assets/css/main.php' ?>
                 
-        <!-- Carrito -->  
-         <?php include 'assets/js/productos.php'?>
+
+        </div> 
 
          <!--style --> 
   
-  <?php include "assets/js/Google-Analytics.php";
-         include 'bottom-cache.php'?>
+  <?php include "assets/js/Google-Analytics.php" ?>
 </body>
 </html>

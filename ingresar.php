@@ -10,29 +10,19 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <?php include "assets/css/style.php" ?>
    <?php include "assets/php/navbar4.php" ?>
-         <?php 
-          include 'database.php';
-          $admin = "SELECT * from negocio  " ;     
-          $result2 = mysqli_query($conn,$admin);          
-          ?> 
-         
-         <?php
-           while($mostrar_admin=mysqli_fetch_array($result2)){
-         ?>
       <p id="error"></p> 
    <div class="login__recuadro">    
       <div class="title">Inicio de sesión</div>
          <form class="registro" action="return false" onsubmit="return false">
-             <img class="registro__logo" src="<?php echo '/images/',$mostrar_admin['logo'] ?> ">
              <label class="datos"><i class="fas fa-envelope"></i> Correo Electrónico</label>
                <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" maxlenght="90" autocomplete>
                <label class="datos"><i class="fas fa-key"></i> Contraseña</label>
-               <input class="compradores" id="password" name="password" type="password" placeholder="Ingrese contraseña" value="" minlength="8" maxlength="15" autocomplete>
-            <button  onclick="Validar(document.getElementById('email').value, document.getElementById('password').value);"  class="button primary compradores">Ingresar <i class="fas fa-sign-in-alt"></i></button>
+              <div class="contrasenia">
+                 <input class="compradores" id="password" name="password" type="password" placeholder="Ingrese contraseña" value="" minlength="8" maxlength="15" autocomplete><p id="ver">Ver</p>
+      
+              </div> 
+                <button  onclick="Validar(document.getElementById('email').value, document.getElementById('password').value);"  class="button primary compradores">Ingresar <i class="fas fa-sign-in-alt"></i></button>
         </form>
-      <?php
-          }
-        ?>   
    </div>
       
     <div class="pregunta">
@@ -40,6 +30,20 @@
      </div>
         
       <script>
+      
+      
+     document.querySelector('#ver').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#password');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Ver';
+        passwordInput.type = 'password';
+    }
+});
         function Validar(email, password)
         {
             $.ajax({

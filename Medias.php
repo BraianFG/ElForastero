@@ -3,8 +3,7 @@
     session_start();
     if (isset($_SESSION["id"])){
       $id = $_SESSION["id"];
-    }else{
-        header('Location: Trabajo');
+     header('Location: Medias2');
     }
 ?>
 <html>
@@ -14,32 +13,31 @@
     <?php include "assets/css/style.php" ?>
     <?php include "assets/js/Google-Analytics.php" ?>
     <?php include "assets/js/script.php" ?>
-     <!-- Jquery -->    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </head>
 <body>
         <!-- Header -->
-        <?php include"assets/php/navbar.php" ?>
+        <?php include "assets/php/navbar3.php" ?>
 
         <!-- Menu -->
-       <?php include"assets/php/menu.php"  ?>
+       <?php include "assets/php/menu.php"  ?>
        
         <div class="uk-container uk-container-large">
+                
                 <!-- Main -->
-                <?php include"assets/php/presentacion.php" ?>
+                <?php include "assets/php/presentacion.php" ?>
                 
                 <!--Selector-->
-                <?php include 'assets/php/categorias/slider/slider-trabajo.php' ?>
-                 
+                <?php include 'assets/php/categorias/slider/slider-medias.php' ?>
+
                 <!--Productos -->
-                <?php include "assets/php/categorias/productos-Trabajo.php" ?>
+                <?php include "assets/php/categorias/productos_nologueado-medias.php" ?>
               
                 <!-- Botones flotantes-->
                 <?php include"assets/php/contacto.php" ?>
         
          <!-- Footer -->
-              <?php include"assets/php/footer.php" ?>
+              <?php include "assets/php/footer.php" ?>
         </div>
-   <?php include "assets/js/productos.php" ?>
+
 </body>
 </html>
