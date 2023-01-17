@@ -326,3 +326,23 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Visor de imagen con posibilidad de ver y descargar imagen en el mismo lugar
 
 * Mejeros al registrar invitados o moderadores en la administración
+
+** 17/1/2023**
+
+* Posibilidad de bloquear usuarios sin eliminarlos antes
+
+* Incoroporación de sistema de cache
+
+* Incorporación de layload
+
+* Se eliminarón animaciones 
+
+* Se eliminó la tabla de total carrito y total pedido
+
+* Se puede quitar y modifícar los medios de pagos y el fisco a tráves del crud
+
+* Mejoras menores para calificar mejor en el PageSpeed 
+
+* Mejoras de errores
+
+* Posibilidad de ver contraseña en los ingresos de sesión 
