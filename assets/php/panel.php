@@ -5,8 +5,8 @@
             
              <section>
                 <ul class="actions stacked">
-                    <li class="botones"><a href="ingresar" class="button primary large fit">Iniciar Sesión</a></li>
-                    <li class="botones"><a href="registrarse" class="button large fit"> Registrarse </a></li>
+                    <li class="botones"><a href="ingresar" title="ingresar" class="button primary large fit">Iniciar Sesión</a></li>
+                    <li class="botones"><a href="registrarse" title="registrarse" class="button large fit"> Registrarse </a></li>
                     </ul>
             </section>      
         </div>

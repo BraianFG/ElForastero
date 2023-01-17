@@ -1,7 +1,7 @@
 
 <section class="productos">
 <?php
-  $productos = "SELECT * FROM productos";
+  $productos = "SELECT * FROM productos LIMIT 20";
   $resultp1 = mysqli_query($conn,$productos);          
 
    while($productosp1= mysqli_fetch_array($resultp1)){
@@ -16,3 +16,4 @@
   ?>
   
  </section> 
+   <a href="index-2" class="paginacion">Ver más <i class="fas fa-arrow-down"></i></a>

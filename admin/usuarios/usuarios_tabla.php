@@ -1,9 +1,4 @@
-
-         <div id="usuarios" class="uk-container  uk-container-large wrap">
-         <ul class="lista">
-              <li class="lista__item"><a class="button primary" href="#agregar__usuarios" uk-toggle >
-                <i class="fas fa-plus "></i> Agregar</a></li>
-         </ul> 
+ <div id="usuarios" class="uk-container  uk-container-large wrap">
       <header class="caption"> <i class="fas fa-users"> </i> Usuarios</header>
           <div class="uk-overflow-auto">    
              <table id="user" class="uk-table uk-table-striped ">
@@ -23,11 +18,7 @@
         </thead>        
       <?php $productosp1 = 'SELECT * FROM `usuarios` ' ;     
           $result3 = mysqli_query($conn,$productosp1);
-        
-        ?>
-        
-        
-         <?php
+
            while($mostrar_productosp1 = mysqli_fetch_array($result3)){
          ?>    
          <tbody>
@@ -116,9 +107,8 @@
 </div>
 
 <script>
-    function eliminar_usuarios(id){
-       $.post( "usuarios/eliminar_usuarios.php", { id:id });
-       $("#usuarios").load("usuarios/usuarios_tabla.php");
+    function eliminar_usuarios(id) {
+       $.post( "usuarios/eliminar_usuarios.php", { id:id});
         alertify.notify('usuario eliminado con exito','success',8);
     }
 </script>
@@ -127,51 +117,7 @@
 ?>
 
    </div>
-
-   
 </div>
 
-
-
-  <div id="agregar__usuarios" uk-modal>
-    <div class="uk-modal-dialog">
-
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-
-        <div class="modal__header">Agregar usuario</div>
-   
-        <div class="uk-modal-body" uk-overflow-auto>
-    <form method="post" action="usuarios/agregar_usuarios.php/">
-        <label class="datos">Ingrese nombre/s del usuario</label>    
-        <input  name="nombre" type="text" placeholder="Ingrese sus nombre/s" value="">
-        
-        <label class="datos">Ingrese apellido/s del usuario</label> 
-        <input name="apellido" type="text" placeholder="Ingrese sus apellido/s" value="" >
-        
-        <label class="datos">Ingrese su correo electrónico</label>
-        <input  name="email" type="email" placeholder="Ingrese correo electrónico" value=""autocomplete="off" >
-       
-       <label class="datos">Ingrese su contraseña</label>
-       <input  name="password" type="password" placeholder="Ingrese contraseña" minlength="8" maxlength="15" value="" autocomplete="off" >
-       
-       <label class="datos">Ingrese celular</label>
-       <input  name="celular" type="tel" placeholder="Ingrese su celular" value="" >
-       
-       <label class="datos">Ingrese dirección</label>
-       <input  name="direccion" type="text" placeholder="Ingrese el domicilio a enviar" value="" >
-       
-       <label class="datos">Ingrese la ciudad</label>
-       <input  name="ciudad" type="text" placeholder="Ingrese la ciudad a enviar" value="" >
-       
-       <label class="datos">Ingrese el código postal</label>
-       <input  name="codPostal" type="text" maxlength="6" placeholder="Ingrese el código postal" value="" >
-        </div>
-
-        <div class="uk-modal-footer uk-text-right">
-         <button type="submit" class="button primary compradores" value="enviar"  > <i class="fas fa-user-plus"></i> Completar Registro</button>
-            </form>
-        </div>
-    </div>
-</div>
 
 

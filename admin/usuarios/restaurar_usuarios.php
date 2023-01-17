@@ -5,10 +5,10 @@
     mysqli_real_escape_string($conn , $id);
     
 //------------------------------------------------------------------------------//
-    $sql = "INSERT INTO `usuarios_eliminados` SELECT * FROM `usuarios` WHERE id='$id';";
-    $sql2="DELETE FROM `usuarios` WHERE id='$id'";
+    $sql = "INSERT INTO `usuarios` SELECT * FROM `usuarios_eliminados` WHERE id='$id';";
+    $sql2="DELETE FROM `usuarios_eliminados` WHERE id='$id'";
       $resultInsert = mysqli_query($conn, $sql); 
-      $resultInsert = mysqli_query($conn, $sql2); 
+      $resultInsert2 = mysqli_query($conn, $sql2); 
       
    mysqli_close($conn);   
    

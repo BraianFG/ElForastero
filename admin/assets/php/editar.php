@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../database.php';
+include '../../../database.php';
 $id_admin =  $_SESSION["id_admin"];
 
     $nombre =filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);

@@ -7,27 +7,32 @@ include 'database.php';
     header('Location: index2');
 
     }
+include 'top-cache.php'
 ?>
 
-<html>
+         
+
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <!--head-->
-   <?php include "assets/php/head.php" ?>
-   <?php include "assets/js/script.php" ?>
-  <?php include 'assets/css/style.php' ?>
+   <?php
+   include "assets/php/head.php";
+    include 'assets/css/style.php';
+    //Hoja de estilo principal
+    include 'assets/css/main.php';
+   ?>
 </head>
 
-<body class="is-preload">
-
-    <!-- Wrapper -->
-
+<body>
         <!-- Header -->
-        <?php include"assets/php/navbar3.php" ?>
+        <?php 
+        include"assets/php/navbar3.php" ?>
 
         <!-- Menu -->
        <?php include"assets/php/menu.php"  ?>
        
-        <div class="uk-container uk-container-large">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
@@ -36,26 +41,16 @@ include 'database.php';
                  
                 <!--Productos -->
                 <?php include"assets/php/productos_nologueado.php" ?>
-
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
-                
-              <!-- Jquery -->    
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
-          
-        <!-- Hoja de estilo principal -->        
-         <?php include 'assets/css/main.php' ?>
-                
-        <!-- Carrito -->  
-         <?php include 'assets/js/productos.php'?>
 
-        </div> 
-
-         <!--style --> 
-  
-  <?php include "assets/js/Google-Analytics.php" ?>
 </body>
 </html>
+
+  <?php 
+  include "assets/js/Google-Analytics.php";
+  include "bottom-cache.php";
+  include "assets/js/script.php" ;?>

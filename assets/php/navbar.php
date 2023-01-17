@@ -8,7 +8,7 @@
      ?> 
           
 <header id="header">
-            <h1><a href="index"><?php echo $negocio['nombre'] ?></a></h1>
+            <a href="/" class="navTitulo"><?php echo $negocio['nombre'] ?></a>
             <nav class="main">
                 <ul>
                       <?php

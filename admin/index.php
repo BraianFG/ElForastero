@@ -6,7 +6,7 @@ require '../database.php';
     }else{
         header('Location:ingresar');
     }
-
+include '../top-cache.php';
 ?>
 <html lang="ES">
 
@@ -27,15 +27,13 @@ require '../database.php';
     <!-------------------------------------------------------------------------->
 <?php include "usuarios/usuarios_tabla.php" ?>    
     <!-------------------------------------------------------------------------->
+<?php include "usuarios/usuarios_eliminados-tabla.php" ?>
+    <!-------------------------------------------------------------------------->
 <?php include "usuarios/invitado_tabla.php" ?>
       <!-------------------------------------------------------------------------->
 <?php include "productos/carrito.php" ?>
   <!---------------------------------------------------------------------------->
-  <?php include "productos/totalCarrito.php" ?>
-  <!---------------------------------------------------------------------------->
  <?php include "productos/pedidos.php" ?> 
-  <!---------------------------------------------------------------------------->
-  <?php include "productos/totalPedido.php" ?>   
  <!---------------------------------------------------------------------------->
 <?php include "usuarios/mensajes.php" ?>
     <!-------------------------------------------------------------------------->
@@ -63,3 +61,4 @@ require '../database.php';
 
 </body>
 </html>
+<?php include "../bottom-cache.php" ?>;

@@ -1,4 +1,5 @@
 <?php 
+
   $id_admin = $_SESSION['id_admin'];
 ?>
 <div id="user2" uk-modal>
@@ -34,7 +35,7 @@
        ?>                
     <form method="POST" action="return false" onsubmit="return false"> 
          <label class="datos"><i class="fas fa-user"></i>Nombre</label>
-         <input id="nombre" type="text" name="nombre" class="compradores" value="<?php echo $negocio['nombre'] ?>" required>
+         <input id="nombre" type="text" id="nombre" name="nombre" class="compradores" value="<?php echo $negocio['nombre'] ?>" required>
 
            <button id="panel_admin" onclick="Validar_admin(document.getElementById('nombre').value)" class="button primary"><i class="fas fa-edit "></i> Editar mis datos </button>
            <div id="resultado_panel"></div>
