@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 17-01-2023 a las 15:09:04
+-- Tiempo de generación: 17-01-2023 a las 15:11:26
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -24,31 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `MercadoPago`
+-- Estructura de tabla para la tabla `usuarios_eliminados`
 --
 
-CREATE TABLE `MercadoPago` (
+CREATE TABLE `usuarios_eliminados` (
   `id` int(11) NOT NULL,
-  `AcessToken` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sdk` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comision` int(254) NOT NULL
+  `nombre` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellido` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direccion` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ciudad` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `codPostal` int(10) NOT NULL,
+  `celular` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `MercadoPago`
---
-
-INSERT INTO `MercadoPago` (`id`, `AcessToken`, `sdk`, `comision`) VALUES
-(1, '0', 'TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d', 8);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `MercadoPago`
+-- Indices de la tabla `usuarios_eliminados`
 --
-ALTER TABLE `MercadoPago`
+ALTER TABLE `usuarios_eliminados`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +54,10 @@ ALTER TABLE `MercadoPago`
 --
 
 --
--- AUTO_INCREMENT de la tabla `MercadoPago`
+-- AUTO_INCREMENT de la tabla `usuarios_eliminados`
 --
-ALTER TABLE `MercadoPago`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `usuarios_eliminados`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

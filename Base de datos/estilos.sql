@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 12-07-2022 a las 04:15:34
+-- Tiempo de generación: 17-01-2023 a las 15:07:44
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -43,7 +43,7 @@ CREATE TABLE `estilos` (
 --
 
 INSERT INTO `estilos` (`body`, `color2`, `color3`, `navbar`, `texto`, `fontFamily`, `fontFamily2`, `placeholder`) VALUES
-('#ededed', '#1c0b03', '#fefefe', '#fefefe', '#000000', '\'Manrope\' , sans-serif', '\'Leckerli One\' , cursive', '#8f8a8a');
+('#ededed', '#210000', '#fefefe', '#fefefe', '#000000', '\'Manrope\' , sans-serif', '\'Leckerli One\' , cursive', '#8f8a8a');
 
 --
 -- Índices para tablas volcadas

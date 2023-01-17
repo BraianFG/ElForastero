@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 12-07-2022 a las 04:17:32
+-- Tiempo de generación: 17-01-2023 a las 15:10:18
 -- Versión del servidor: 10.5.12-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -37,7 +37,11 @@ CREATE TABLE `productos` (
   `imagen` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `imagen01` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `imagen02` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal1` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
+  `modal1` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fecha1` date NOT NULL,
+  `hora1` time NOT NULL,
+  `fecha2` date NOT NULL,
+  `hora2` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
