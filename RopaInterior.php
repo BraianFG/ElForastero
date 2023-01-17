@@ -25,7 +25,8 @@
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
-                <?php include 'assets/php/slider-medias.php' ?>
+                <!--Selector-->
+                <?php include 'assets/php/categorias/slider/slider-ropaInterior.php' ?>
 
                 <!--Productos -->
                 <?php include"assets/php/categorias/productos_nologueado-RopaInterior.php" ?>

@@ -25,10 +25,11 @@
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
-                <?php include 'assets/php/slider-medias.php' ?>
+                <!--Selector-->
+                <?php include 'assets/php/categorias/slider/slider-trabajo.php' ?>
 
                 <!--Productos -->
-                <?php include"assets/php/categorias/productos_nologueado-Trabajo.php" ?>
+                <?php include "assets/php/categorias/productos_nologueado-Trabajo.php" ?>
               
                 <!-- Botones flotantes-->
                 <?php include"assets/php/contacto.php" ?>
