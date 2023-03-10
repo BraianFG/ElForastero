@@ -363,4 +363,6 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Google Analitycs no está presente
 
-* Se hizo la landing de la pwa
+**Además**
+
+* Se hizo la página de instalación de la PWA
