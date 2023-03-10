@@ -352,3 +352,15 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Mejoras de errores
 
 * Posibilidad de ver contraseña en los ingresos de sesión 
+
+10/3/2023
+
+**Con el fin de mejorar la agilidad del sitio web**,se quitaron ...
+
+* Fuentes de Google Fonts
+
+* Los iconos de Font-Awesome se quitaron,dejando los básicos
+
+* Google Analitycs no está presente
+
+* Se hizo la landing de la pwa
