@@ -16,7 +16,6 @@ include '../top-cache.php';
    <?php include "assets/css/style.php" ?>
    <?php include "assets/css/main.php" ?>
    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/solid.min.js" integrity="sha512-C92U8X5fKxCN7C6A/AttDsqXQiB7gxwvg/9JCxcqR6KV+F0nvMBwL4wuQc+PwCfQGfazIe7Cm5g0VaHaoZ/BOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
    <!-- Header -->  
@@ -58,6 +57,8 @@ include '../top-cache.php';
 <?php include "slider/up.php" ?>
 <!------------------------------------------------------------------------------->
 <?php include "localidad/localidad_tabla.php" ?>
+<!------------------------------------------------------------------------------->
+<?php include "visitas/visitas.php" ?>
 
 </body>
 </html>
