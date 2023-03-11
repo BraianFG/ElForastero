@@ -15,7 +15,7 @@
 </head>
 <body>
         <!-- Header -->
-        <?php include "assets/php/navbar.php" ?>
+        <?php include "assets/php/navbar3.php" ?>
 
         <!-- Menu -->
        <?php include "assets/php/menu.php"  ?>
@@ -28,7 +28,7 @@
                 <?php include 'assets/php/categorias/slider/slider-calzado.php' ?>
 
                 <!--Productos -->
-                <?php include "assets/php/categorias/productos-Calzado.php" ?>
+                <?php include "assets/php/categorias/productos_nologueado-Calzado.php" ?>
               
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
