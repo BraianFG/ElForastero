@@ -12,7 +12,7 @@
                 <th>Hora</th>
               </tr>
         </thead>        
-      <?php $productosp1 = 'SELECT * FROM `visitas` ' ;     
+      <?php $productosp1 = "SELECT  `fecha`,`ip`,`hora`,`num`,`pais`,`pagina`,`navegador`,`referido` FROM `visitas`  GROUP BY `ip`,`pagina` ORDER BY `fecha` , `hora` DESC;" ;     
           $result3 = mysqli_query($conn,$productosp1);
 
            while($mostrar_productosp1 = mysqli_fetch_array($result3)){
