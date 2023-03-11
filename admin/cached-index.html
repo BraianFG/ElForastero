@@ -1,0 +1,239 @@
+    
+         <tbody>
+              <tr>
+                   <td>Braian Emanuel</td>
+                   <td>Frediani Guelffi</td>
+                   <td>20437996165</td>
+                   <td>Brubank S.A.U</td>
+                   <td>1430001713019856090015</td>
+                   <td>1301985609001</td>
+                   <td>braian.fg.287</td>
+                   <td><a  class="button primary" href="#editar__datos-transferencia" uk-toggle> <i class="fas fa-pen"></i> Editar</a></td>
+                   <td><a  class="button primary" href="#eliminar__datos-transferencia-1430001713019856090015" uk-toggle> <i class="fas fa-trash"></i>Eliminar</a></td>
+              </tr>
+            </tbody>
+        
+            </table>
+        </div>    
+    </div>
+</div>
+
+      
+  <div id="editar__datos-transferencia" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="modal__header">Editar datos</div>
+   
+        <div class="uk-modal-body" uk-overflow-auto>
+          <form method="post" action="transferencia/editar_transferencia.php/">
+              
+               <label class="datos">Nombre del títular</label>
+                <input  name="nombre" type="text" placeholder="Ingrese el nombre/s del títular" value="Braian Emanuel" >
+                
+                <label class="datos">Apellido del títular</label>
+                <input name="apellido" type="text" placeholder="Ingrese apellido/s del títular" value="Frediani Guelffi">
+                
+                <label class="datos">N° de CUIT o CUIL</label>
+                <input name="cuit"  type="number" placeholder="Ingrese su número de CUIL o CUIT"  maxlength="250" value="20437996165">
+                
+               <label class="datos">Nombre del banco o Billetera digital</label>    
+               <input name="banco" type="text" placeholder="Ingrese el nombre del banco o billetera digital a usar" value="Brubank S.A.U" >
+               
+               <label class="datos">CBU / CVU</label>
+               <input  name="cbu" type="number" placeholder="Ingrese el número de CBU o CVU" value="1430001713019856090015" >
+               
+               <label class="datos">N° de Cuenta</label>
+               <input name="cuenta" type="number" placeholder="Ingrese el número de cuenta" value="1301985609001" >
+               
+                <label class="datos">Alias</label>
+               <input name="alias" type="text" placeholder="Ingrese el alias de la cuenta" value="braian.fg.287" >
+           </div>
+
+        <div class="uk-modal-footer uk-text-right">
+         <button type="submit" class="button primary compradores" value="enviar" > <i class="fas fa-pen"></i> Editar datos</button>
+            </form>
+        </div>
+      </div>   
+    </div>
+    
+  <div id="eliminar__datos-transferencia-1430001713019856090015" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+   <div class="uk-modal-dialog">
+     <div class="uk-modal-body">      
+    <h3 class="uk-text-center">¿Desea elimminar esta cuenta?</h3>
+      <div class="eliminar">
+            <a class="button primary eliminar__si" onclick="eliminar_cuentaBancaria((cbu = 1430001713019856090015)) ">Si <i class="fas fa-check"></i></a>
+            <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
+     </div>     
+      </div>    
+    </div>
+        </div>
+      </div>   
+    
+    <div id="agregar__datos-transferencia" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="modal__header">agregar datos</div>
+   
+        <div class="uk-modal-body" uk-overflow-auto>
+          <form method="post" action="transferencia/agregar_transferencia.php/">
+              
+               <label class="datos">Nombre del títular</label>
+                <input  name="nombre" type="text" placeholder="Ingrese el nombre/s del títular" value="" >
+                
+                <label class="datos">Apellido del títular</label>
+                <input name="apellido" type="text" placeholder="Ingrese apellido/s del títular" value="">
+                
+                <label class="datos">N° de CUIT o CUIL</label>
+                <input name="cuit"  type="number" placeholder="Ingrese su número de CUIL o CUIT"  maxlength="250" value="">
+                
+               <label class="datos">Nombre del banco o Billetera digital</label>    
+               <input name="banco" type="text" placeholder="Ingrese el nombre del banco o billetera digital a usar" value="" >
+               
+               <label class="datos">CBU / CVU</label>
+               <input  name="cbu" type="number" placeholder="Ingrese el número de CBU o CVU" value="" >
+               
+               <label class="datos">N° de Cuenta</label>
+               <input name="cuenta" type="number" placeholder="Ingrese el número de cuenta" value="" >
+               
+                <label class="datos">Alias</label>
+               <input name="alias" type="text" placeholder="Ingrese el alias de la cuenta" value="" >
+           </div>
+
+        <div class="uk-modal-footer uk-text-right">
+         <button type="submit" class="button primary compradores" value="enviar" > <i class="fas fa-pen"></i>Agregar datos</button>
+            </form>
+        </div>
+      </div>   
+    </div>
+    
+    <script>
+    function eliminar_cuentaBancaria(cbu){
+       $.post( "transferencia/eliminar_transferencia.php", { cbu : cbu } );
+        alertify.notify('cuenta elimininada','success',8)
+
+    }
+    </script>
+
+<!------------------------------------------------------------------------------>
+   <div id="mp" class="uk-container  uk-container-large wrap">
+     <header class="caption"><i class="fas fa-desktop"></i> Datos de Mercado Pago</header>     
+        <div class="uk-overflow-auto">     
+             <table class="uk-table uk-table-striped ">
+         <thead>    
+             <tr>
+                <th>ACCESS TOKEN</th>
+                <th>SDK</th>
+                <th>COMISIÓN</th>
+                <th>EDITAR</th>
+              </tr>
+        </thead>        
+            
+         <tbody>
+              <tr>
+                   <td>APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991</td>
+                   <td>TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d</td>
+                   <td>8%</td>
+                   <td><a  class="button primary" href="#editar__datos_mp" uk-toggle> <i class="fas fa-pen"></i> Editar</a></td>
+              </tr>
+            </tbody>
+        
+            </table>
+        </div>    
+    </div>
+</div>
+
+      
+  <div id="editar__datos_mp" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="modal__header">Editar datos</div>
+   
+        <div class="uk-modal-body" uk-overflow-auto>
+          <form method="post" action="MercadoPago/editar_mp.php/">
+                
+                <label class="datos">Access Token</label>
+                <input name="AcessToken" type="text" placeholder="Ingrese el AccessToken" value="APP_USR-5946296600794681-071419-17807207f136314c898e73c447f1c1d0-335219991">
+                
+                <label class="datos">SDK</label>
+                <input name="sdk"  type="text" placeholder="Ingrese el sdk"  maxlength="250" value="TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d">
+                
+               <label class="datos">Comisión</label>    
+               <input name="comision" type="text" placeholder="Ingrese el porcentaje de comisión" value="8" >
+           </div>
+
+        <div class="uk-modal-footer uk-text-right">
+         <button type="submit" class="button primary compradores" value="enviar" > <i class="fas fa-pen"></i> Editar datos</button>
+            </form>
+            </div>
+    </div>
+</div>        <!------------------------------------------------------------------------------>
+
+         <a href="#" class="icono__up" > <img src="https://cdn.pixabay.com/photo/2013/07/12/13/43/arrow-147174_960_720.png" alt="Telegram" /></a>
+
+        <a class="icono__add" href="#agregar__productos" uk-toggle><img src="https://cdn.pixabay.com/photo/2021/07/25/08/07/add-6491203_960_720.png"/></a><!------------------------------------------------------------------------------->
+   <div id="localidad" class="uk-container  uk-container-large wrap">
+     <header class="caption"><i class="fas fa-city"></i>Localidad por defecto</header>     
+        <div class="uk-overflow-auto">     
+             <table class="uk-table uk-table-striped ">
+         <thead>    
+             <tr>
+                <th>LOCALIDAD</th>
+                <th>CÓDIGO POSTAL</th>
+                <th>CÓDIGO DE ARÉA</th>
+                <th>EDITAR</th>
+              </tr>
+        </thead>        
+            
+         <tbody>
+              <tr>
+                   <td>Chivilcoy</td>
+                   <td>6620</td>
+                   <td>2346</td>
+                   <td><a  class="button primary" href="#editar__datos-localidad" uk-toggle> <i class="fas fa-pen"></i> Editar</a></td>
+              </tr>
+            </tbody>
+        
+            </table>
+        </div>    
+    </div>
+</div>
+
+      
+  <div id="editar__datos-localidad" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="modal__header">Editar datos</div>
+   
+        <div class="uk-modal-body" uk-overflow-auto>
+          <form method="post" action="localidad/editar_localidad.php/">
+                
+                <label class="datos"><i class="fas fa-city"></i> Localidad</label>
+                <input name="localidad" type="text" placeholder="Ingrese su localidad" value="Chivilcoy">
+                
+                <label class="datos"><i class="fas fa-envelope"></i> Código postal</label>
+                <input name="codPostal"  type="number" placeholder="Ingrese el código postal"  maxlength="250" value="6620">
+                
+               <label class="datos"><i class="fas fa-phone"></i> Código de aréa</label>
+                <input name="codArea"  type="number" placeholder="Ingrese el código de aréa"  maxlength="250" value="2346">
+           </div>
+
+        <div class="uk-modal-footer uk-text-right">
+         <button type="submit" class="button primary compradores" value="enviar" > <i class="fas fa-pen"></i> Editar datos</button>
+            </form>
+        </div>
+      </div>   
+    </div>
+
+</body>
+</html>
