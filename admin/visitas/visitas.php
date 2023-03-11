@@ -1,4 +1,4 @@
- <div id="usuarios" class="uk-container  uk-container-large wrap">
+ <div id="visitas" class="uk-container  uk-container-large wrap">
       <header class="caption"> <i class="fas fa-users"> </i>Visitas</header>
           <div class="uk-overflow-auto">    
              <table id="user" class="uk-table uk-table-striped ">
@@ -8,6 +8,7 @@
                 <th>IP</th>
                 <th>Página</th>
                 <th>Navegador</th>
+                <th>Referencia</th>
                 <th>Fecha</th>
                 <th>Hora</th>
               </tr>
@@ -23,6 +24,7 @@
                    <td><?php echo $mostrar_productosp1["ip"] ?></td>
                    <td><?php echo $mostrar_productosp1["pagina"] ?></td>
                    <td><?php echo $mostrar_productosp1["navegador"] ?></td>
+                   <td><?php echo $mostrar_productosp1["referido"] ?></td>
                    <td><?php echo $mostrar_productosp1["fecha"] ?></td>
                    <td><?php echo $mostrar_productosp1["hora"] ?></td>
               </tr>
