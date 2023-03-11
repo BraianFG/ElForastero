@@ -9,12 +9,18 @@ $hora  = date("H:m:s");
 $pagina = $_SERVER["REQUEST_URI"];
 $navegador = $_SERVER["HTTP_USER_AGENT"];
 $referido = $_SERVER['HTTP_REFERER'];
+$pais = $_SERVER['GEOIP_COUNTRY_NAME'];
+$ciudad = $_SERVER['GEOIP_CITY'];
 
 if(empty($referido)){
     $referido = "Link directo";
 }
 
-$sql = "INSERT INTO `visitas`(`ip`, `fecha`, `hora`,`pagina`,`navegador`,`pais`,`referido`) VALUES ('$ip','$fecha','$hora','$pagina','$navegador','$pais','$referido')";
+if(empty($ciudad)){
+    $ciudad = "sin definír";
+}
+
+$sql = "INSERT INTO `visitas`(`ip`, `fecha`, `hora`, `num`, `pais`, `ciudad`, `pagina`, `navegador`, `referido`) VALUES ('$ip','$fecha','$hora','$num','$pais','$ciudad','$pagina','$navegador','$referido')";
  $resultInsert = mysqli_query($conn, $sql); 
  
  
