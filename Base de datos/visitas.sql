@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-03-2023 a las 18:09:04
+-- Tiempo de generación: 11-03-2023 a las 23:06:51
 -- Versión del servidor: 10.6.11-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -33,6 +33,7 @@ CREATE TABLE `visitas` (
   `hora` varchar(254) NOT NULL,
   `num` int(254) NOT NULL,
   `pais` varchar(254) NOT NULL,
+  `ciudad` varchar(254) NOT NULL,
   `pagina` varchar(254) NOT NULL,
   `navegador` varchar(254) NOT NULL,
   `referido` varchar(254) NOT NULL
