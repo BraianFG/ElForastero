@@ -30,12 +30,12 @@ include 'database.php';
 
         <!-- Menu -->
        <?php include"assets/php/menu.php"  ?>
-      
+          <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
                 <!-- Selector -->
-                 <?php include 'assets/php/slider.php-120' ?>
+                 <?php include 'assets/php/slider-120.php' ?>
                  
                 <!--Productos -->
                 <?php include"assets/php/productos_nologueado-120.php" ?>
@@ -45,7 +45,7 @@ include 'database.php';
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
-
+           </div>
          <!--style --> 
   
   <?php include "assets/js/Google-Analytics.php" ?>

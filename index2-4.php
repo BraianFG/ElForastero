@@ -29,7 +29,7 @@ include 'database.php';
 
         <!-- Menu -->
        <?php include"assets/php/menu2.php"  ?>
-       
+       <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 

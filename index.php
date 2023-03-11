@@ -10,9 +10,6 @@ include 'database.php';
 include 'top-cache.php'
 ?>
 
-         
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,7 +29,7 @@ include 'top-cache.php'
 
         <!-- Menu -->
        <?php include"assets/php/menu.php"  ?>
-       
+       <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
@@ -46,11 +43,11 @@ include 'top-cache.php'
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
+        </div>        
 
 </body>
 </html>
 
   <?php 
-  include "assets/js/Google-Analytics.php";
   include "bottom-cache.php";
   include "assets/js/script.php" ;?>

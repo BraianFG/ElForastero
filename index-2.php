@@ -25,14 +25,13 @@ include 'database.php';
 
 <body>
 
-    <!-- Wrapper -->
 
         <!-- Header -->
         <?php include"assets/php/navbar3.php" ?>
 
         <!-- Menu -->
        <?php include"assets/php/menu.php"  ?>
-
+<div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
@@ -48,10 +47,11 @@ include 'database.php';
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
         
-                
+</div>                
   
   <?php include "assets/js/Google-Analytics.php";
   include "bottom-cache.php";
   ?>
+  
 </body>
 </html>

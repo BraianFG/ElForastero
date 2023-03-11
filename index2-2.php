@@ -30,7 +30,7 @@ include 'database.php';
 
         <!-- Menu -->
        <?php include"assets/php/menu2.php"  ?>
-      
+      <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
@@ -45,7 +45,7 @@ include 'database.php';
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
-                
+        </div>        
               <!-- Jquery -->    
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
           
