@@ -353,7 +353,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Posibilidad de ver contraseña en los ingresos de sesión 
 
-10/3/2023
+**10/3/2023**
 
 **Con el fin de mejorar la agilidad del sitio web**,se quitaron ...
 
@@ -367,6 +367,6 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Se hizo la página de instalación de la PWA
 
-11/3/2023
+**11/3/2023**
 
 * Recopila datos de usuarios de manera nativa (ip,fecha y hora de visita,navegador y página visitada)
