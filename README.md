@@ -370,3 +370,10 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 **11/3/2023**
 
 * Recopila datos de usuarios de manera nativa (ip,fecha y hora de visita,navegador y página visitada)
+
+
+**12/3/2023**
+
+* Mejora en el login
+
+* Función de bloquear completa
