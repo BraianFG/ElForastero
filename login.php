@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+require 'database.php';
 
      $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
      mysqli_real_escape_string($conn, $email);
@@ -11,15 +11,10 @@ require_once 'database.php';
      $email = strtolower($email);
     
     $query = "SELECT * FROM usuarios WHERE email = '$email'";
-    $query2 ="SELECT * FROM usuarios_eliminados = '$email' ";
     $result = mysqli_query($conn, $query);
-    $result2 = mysqli_query($conn, $query2);
-       
-    if(empty($email) || empty($password)){
-         echo "<script>alertify.notify('No deje sus datos de ingreso vacios','error',5)</script>";
-    }
+
     
-    if(!empty($result) AND (mysqli_num_rows($result)==1)){
+    if(!empty($result) && (mysqli_num_rows($result)==1)){
         $fila = mysqli_fetch_array($result);
         if(password_verify($password, $fila['password'])) {
          echo '<script>location.href = "index2"</script>';
@@ -27,19 +22,27 @@ require_once 'database.php';
              $_SESSION["nombre"] =  $fila['nombre'];
              $_SESSION["apellido"] = $fila['apellido'];
              $_SESSION["carrito"];
+             
         }else{
-            echo "<script>alertify.notify('contraseña incorrecta','error',5)</script>";
+            if(empty($password)){
+                echo "<script>alertify.notify('Escriba su contraseña','error',5)</script>";
+            }else{
+                echo "<script>alertify.notify('contraseña incorrecta','error',5)</script>";
+            }        
         }
 
     }else{
-         echo "<script>alertify.notify('correo no existente','error',5)</script>";  
-    }
-    
-    
-    if(!empty($result2) AND (mysqli_num_rows($result2)==1)){
-        $fila = mysqli_fetch_array($result);
-        if(password_verify($password, $fila['password'])) {
-           echo '<script>location.href = "eliminado"</script>';
-        }
+         $query2 ="SELECT * FROM usuarios_eliminados WHERE email = '$email' ";
+    $result2 = mysqli_query($conn, $query2);
+    if(!empty($result2) && (mysqli_num_rows($result2)==1)){
+        $fila2 = mysqli_fetch_array($result2);
+         echo '<script>location.href = "eliminado"</script>';
+     }else{
+             if(empty($email)){
+         echo "<script>alertify.notify('Escriba su correo','error',5)</script>";
+    }else{
+      echo "<script>alertify.notify('correo no existente','error',5)</script>";      
+    } 
+     }    
     }
   ?>
