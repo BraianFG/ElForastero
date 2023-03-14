@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-03-2023 a las 23:06:51
+-- Tiempo de generación: 14-03-2023 a las 18:17:25
 -- Versión del servidor: 10.6.11-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -36,6 +36,8 @@ CREATE TABLE `visitas` (
   `ciudad` varchar(254) NOT NULL,
   `pagina` varchar(254) NOT NULL,
   `navegador` varchar(254) NOT NULL,
+  `sistema_operativo` varchar(254) NOT NULL,
+  `dispositivo` varchar(254) NOT NULL,
   `referido` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
