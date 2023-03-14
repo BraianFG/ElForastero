@@ -41,5 +41,6 @@
     <div class="uk-container uk-card uk-card-default uk-card-body">  
     <p class="uk-text-center">Sitio web creado por <a href="../Braian">BraianFg287</a></p>
     </div>
+    <?php include "../visitas.php" ?>
 </body>
 </html>
