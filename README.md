@@ -377,3 +377,10 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Mejora en el login
 
 * Función de bloquear completa
+
+**14/3/2023**
+
+* Mejora en la recopilación de datos,utilizé como fuente para detectar sistema operativo **(https://ejemplocodigo.com/ejemplo-php-detectar-plataforma-o-sistema-operativo/)**
+
+* Para detectar celulares **(https://ejemplocodigo.com/ejemplo-php-detectar-plataforma-o-sistema-operativo/)**
+
