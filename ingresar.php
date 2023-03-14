@@ -28,7 +28,7 @@
     <div class="pregunta">
          <p class="registro uk-text-center">¿Todavía no tenés una cuenta?<br> <a class="marron" href="registrarse">Registrate para comenzar a comprar</a></a></p>
      </div>
-        
+      <?php include "visitas.php" ?>  
       <script>
       
       
