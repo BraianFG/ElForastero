@@ -18,6 +18,7 @@
            <option value="#transferencia">Datos para la transferencia</option>
            <option value="#mp">Datos de Mercado Pago</option>
            <option value="#localidad">Localidad por defecto</option>
+           <option value="vistas">Visitas</a></option>
                    <script async>
                      function nav(value) {
                         if (value != "") { location.href = value; }
