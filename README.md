@@ -333,7 +333,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Mejeros al registrar invitados o moderadores en la administración
 
-** 17/1/2023**
+**17/1/2023**
 
 * Posibilidad de bloquear usuarios sin eliminarlos antes
 
