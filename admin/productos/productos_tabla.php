@@ -1,5 +1,6 @@
 <div id="producto" class="uk-container  uk-container-large wrap">
         <ul class="lista">
+         <li class="lista__item"><a href="productos/lista.csv" class="button primary" download>Descargar lista</a></li>
           <li class="lista__item"><a href="#agregar__productos"  uk-toggle class="button primary"> <i class="fas fa-plus "></i> Agregar</a></p></li>
         </ul>
         
@@ -53,8 +54,7 @@
   <?php
  }
 ?>  
-            </table>
-            
+        </table>
        <?php $productos = 'SELECT * FROM `productos` ' ;     
           $result3 = mysqli_query($conn,$productos);
         
@@ -175,6 +175,8 @@
         </div>
 </div>
 
+</div>
+
 
 
   <div id="agregar__productos" uk-modal>
@@ -232,3 +234,39 @@
         </div>
     </div>
 </div>
+<script>
+    document.querySelector("#descarga").addEventListener("click" , () => {
+         <?php 
+           $archivo = "productos/lista.csv";
+          if(file_exists($archivo)){
+              unlink($archivo);
+          }
+            $crear = touch("productos/lista.csv");  
+            $sql = "SELECT * FROM productos";
+            $result3 = mysqli_query($conn,$sql);
+            while($mostrar_productosp1 = mysqli_fetch_array($result3))
+           {
+            $id =  $mostrar_productosp1['id'];
+            $nombre = $mostrar_productosp1['nombre'];
+            $descripcion = $mostrar_productosp1['descripcion'];
+            $precio=$mostrar_productosp1['precio'];
+            $cantidad= $mostrar_productosp1['cantidad'];
+            $categoria= $mostrar_productosp1['categoria'];
+               $datos = fopen("productos/lista.csv", "a+"); 
+               fwrite($datos , "N° : $id");
+               fwrite($datos , "\n");
+               fwrite($datos , "NOMBRE : $nombre");
+               fwrite($datos , "\n");
+               fwrite($datos , "DESCRIPCIÓN : $descripcion");
+               fwrite($datos , "\n");
+               fwrite($datos , "CANTIDAD : $cantidad");
+               fwrite($datos , "\n");
+               fwrite($datos , "PRECIO : $precio");
+               fwrite($datos , "\n");
+               fwrite($datos , "CATEGORÍA : $categoria");
+               fwrite($datos , "\n \n");
+          fclose($datos);
+           } 
+        ?>
+    })
+</script>
