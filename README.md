@@ -384,3 +384,8 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Para detectar celulares **(https://ejemplocodigo.com/ejemplo-php-detectar-plataforma-o-sistema-operativo/)**
 
+**19/3/2023**
+
+* Posibilidad de descargar visitas del sitio en archivo txt
+
+* Posibilidad de descargar lista de productos en archivo txt
