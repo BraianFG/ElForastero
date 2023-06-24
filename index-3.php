@@ -47,7 +47,7 @@ include 'database.php';
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
   </div>
-  <?php include "assets/js/Google-Analytics.php";
+  <?php include "visitas.php";
   include 'bottom-cache.php'?>
 </body>
 </html>

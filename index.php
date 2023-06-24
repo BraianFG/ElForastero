@@ -50,4 +50,5 @@ include 'top-cache.php'
 
   <?php 
   include "bottom-cache.php";
-  include "assets/js/script.php" ;?>
+  include "assets/js/script.php" ;
+  include "visitas.php";?>

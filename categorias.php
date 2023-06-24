@@ -38,6 +38,6 @@
              ?>
       <div>
 </div>
-
+<?php include "visitas.php" ?>
 </body>
 </html>

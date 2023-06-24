@@ -48,6 +48,6 @@ include 'database.php';
            </div>
          <!--style --> 
   
-  <?php include "assets/js/Google-Analytics.php" ?>
+  <?php include "visitas.php"; ?>
 </body>
 </html>

@@ -51,6 +51,7 @@ include 'database.php';
   
   <?php include "assets/js/Google-Analytics.php";
   include "bottom-cache.php";
+  include "visitas.php";
   ?>
   
 </body>

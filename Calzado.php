@@ -39,5 +39,6 @@
         
     <?php include "assets/js/script.php" ?>
    <?php include "assets/js/productos.php" ?>
+   <?php include "visitas.php" ?>
 </body>
 </html>

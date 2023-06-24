@@ -37,6 +37,6 @@
          <!-- Footer -->
               <?php include"assets/php/footer.php" ?>
         </div>
-
+<?php include "visitas.php" ?>
 </body>
 </html>
