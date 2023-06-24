@@ -389,3 +389,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Posibilidad de descargar visitas del sitio en archivo txt
 
 * Posibilidad de descargar lista de productos en archivo txt
+
+  **22/3/2023**
+
+  * Seguimiento de visitas desde el sitio web,desde la página de administración
