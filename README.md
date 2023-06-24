@@ -393,5 +393,5 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 **22/3/2023**
 
 * Seguimiento de visitas el sitio web,desde la página de administración
-* 
+ 
 * Posibilidad de reaccionar productos a futuro
