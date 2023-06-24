@@ -96,5 +96,24 @@ $dispositivo = movil();
 $sql = "INSERT INTO `visitas`(`ip`, `fecha`, `hora`, `num`, `pais`, `ciudad`, `pagina`, `navegador`, `referido`,`sistema_operativo`,`dispositivo`) VALUES ('$ip','$fecha','$hora','$num','$pais','$ciudad','$pagina','$navegador','$referido','$so','$dispositivo')";
  $resultInsert = mysqli_query($conn, $sql); 
  
+$sql2="INSERT INTO `paises` (`pais`,`num`)VALUES('$pais','$num')" ;
+ $resultInsert2 = mysqli_query($conn, $sql2); 
  
+$sql3=" INSERT INTO `ciudades`(`num`, `ciudad`) VALUES ('$num','$ciudad')";
+ $resultInsert3 = mysqli_query($conn, $sql3); 
+ 
+$sql4=" INSERT INTO `paginas`(`num`, `pagina`) VALUES ('$num','$pagina')";
+ $resultInsert4 = mysqli_query($conn, $sql4);  
+ 
+ $sql4=" INSERT INTO `navegador`(`num`, `navegador`) VALUES ('$num','$navegador')";
+ $resultInsert4 = mysqli_query($conn, $sql4);  
+ 
+ $sql5=" INSERT INTO `so`(`num`, `so`) VALUES ('$num','$so')";
+ $resultInsert5 = mysqli_query($conn, $sql5); 
+ 
+  $sql6=" INSERT INTO `referencia`(`num`, `referido`) VALUES ('$num','$referido')";
+ $resultInsert6 = mysqli_query($conn, $sql6);  
+ 
+   $sql7=" INSERT INTO `ip`(`num`, `ip`) VALUES ('$num','$ip')";
+ $resultInsert7 = mysqli_query($conn, $sql7);  
 ?>
