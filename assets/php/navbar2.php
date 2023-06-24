@@ -1,29 +1,26 @@
-
  <?php
   $negocio = 'SELECT * FROM negocio' ;     
   $resultados = mysqli_query($conn,$negocio);          
         while($negocio= mysqli_fetch_array($resultados)){
    ?> 
-<header id="header">
-           <a class="navTitulo" href="index2"><?php echo $negocio['nombre'] ?></a>
-            <nav class="main">
-                <ul>
-                      <?php
-                      $usuario = "SELECT `nombre` FROM `usuarios` WHERE `id` ='$id';";     
+   <header id="header">
+            <h1><a href="#"><?php echo $negocio['nombre'] ?></a></h1>
+                   <?php
+                      $usuario = "SELECT `nombre` FROM `admin` WHERE `id` ='$id_admin';";     
                       $resultados2 = mysqli_query($conn,$usuario);          
                             while($usuario= mysqli_fetch_array($resultados2)){
                        ?> 
 
-                     <a id="user2" href="#user2" title="ir a gestion de usuarios" uk-toggle><p class="main__texto-texto"><?php echo $usuario['nombre']?></p></a></li>
+                      <a id="user2" href="#user2" title="ir a gestion de usuarios" uk-toggle><p class="main__texto-texto"><?php echo $usuario['nombre']?></a>
                        <?php
                           }
-                       ?> 
-                </ul>       
-            </nav>
-        </header>
+                       ?>
+
+    </header>
     <?php 
         }
     ?>
     
 <?php include"panel2.php" ?>
   
+
