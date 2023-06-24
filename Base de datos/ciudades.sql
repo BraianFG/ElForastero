@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 24-06-2023 a las 17:28:15
+-- Tiempo de generación: 24-06-2023 a las 17:32:09
 -- Versión del servidor: 10.5.19-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
@@ -24,21 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `visitas`
+-- Estructura de tabla para la tabla `ciudades`
 --
 
-CREATE TABLE `visitas` (
-  `ip` varchar(254) NOT NULL,
-  `fecha` varchar(254) NOT NULL,
-  `hora` varchar(254) NOT NULL,
-  `num` int(254) NOT NULL,
-  `pais` varchar(254) NOT NULL,
-  `ciudad` varchar(254) NOT NULL,
-  `pagina` varchar(254) NOT NULL,
-  `navegador` varchar(254) NOT NULL,
-  `sistema_operativo` varchar(254) NOT NULL,
-  `dispositivo` varchar(254) NOT NULL,
-  `referido` varchar(254) NOT NULL
+CREATE TABLE `ciudades` (
+  `num` int(11) NOT NULL,
+  `ciudad` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -46,9 +37,9 @@ CREATE TABLE `visitas` (
 --
 
 --
--- Indices de la tabla `visitas`
+-- Indices de la tabla `ciudades`
 --
-ALTER TABLE `visitas`
+ALTER TABLE `ciudades`
   ADD PRIMARY KEY (`num`);
 
 --
@@ -56,10 +47,10 @@ ALTER TABLE `visitas`
 --
 
 --
--- AUTO_INCREMENT de la tabla `visitas`
+-- AUTO_INCREMENT de la tabla `ciudades`
 --
-ALTER TABLE `visitas`
-  MODIFY `num` int(254) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `ciudades`
+  MODIFY `num` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
