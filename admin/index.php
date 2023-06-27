@@ -40,9 +40,9 @@ include '../top-cache.php';
     <!-------------------------------------------------------------------------->
 <?php include "productos/categorias.php" ?> 
   <!---------------------------------------------------------------------------->
-<?php include "archivo/subir_archivos.php" ?>
+<?php include "negocio/archivo/subir_archivos.php" ?>
 <!------------------------------------------------------------------------------>
-<?php include "archivo/directorio_ver.php" ?>
+<?php include "negocio/archivo/directorio_ver.php" ?>
  <!----------------------------------------------------------------------------->
 <?php include "negocio/misitio.php" ?>
 <!------------------------------------------------------.----------------------->
@@ -58,7 +58,6 @@ include '../top-cache.php';
 <!------------------------------------------------------------------------------->
 <?php include "localidad/localidad_tabla.php" ?>
 <!------------------------------------------------------------------------------->
-<?php include "visitas/visitas.php" ?>
 
 </body>
 </html>
