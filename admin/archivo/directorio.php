@@ -1,4 +1,4 @@
-<?php require '../../database.php' ;
+<?php require '../../../database.php' ;
 
     session_start();
     if (isset($_SESSION["id_admin"])){
@@ -17,7 +17,7 @@
    <!-- Header -->    
  <div class="directorio__imagenes">
 <?php
-    $thefolder = "../../images";
+    $thefolder = "../../../images";
     $count = 0;
     if ($handler = opendir($thefolder)) {
     	echo "<ul>";
