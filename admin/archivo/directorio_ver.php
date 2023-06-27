@@ -6,7 +6,7 @@
 <body>
  <div id="ver_imagenes" class="uk-container uk-container-large wrap">
      <div class="modal__header"> <i class="fas fa-photo-video"></i> Visor de archivos</div> 
-    <object class="ventana fondo" data="archivo/directorio.php"> </object>  
-  </div>  
+    <iframe class="ventana fondo" src="negocio/archivo/directorio.php"> </iframe>
+    </div>  
  </body>
  </html>
