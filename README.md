@@ -28,7 +28,8 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 **AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
 
-
+* Cambiarle la ruta a las imagenes
+  
 # COMPONENTES EXTERNOS
 
 * Plantilla de base de **HTML5UP Future Inperfect (https://html5up.net/future-imperfect)**
