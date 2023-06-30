@@ -8,9 +8,9 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 * Crear una base de datos y conectarla desde el archivo **database.php** ,las tablas o archivo de configuración se encuentra en la carpeta **Base de Datos**
 
-* Una vez realizada la conexión ir a **httṕ://tudominio.com/admin** e ingresar **email : admin@admin** y **Contraseña:12345678**
+* Una vez realizada la conexión ir a **http://tudominio.com/admin** e ingresar **email : admin@admin** y **Contraseña:12345678**
 
-* Una vez adentro del aréa administrativa ir **httṕ://tudominio.com/admin/registro** y ahí hacer una cuenta nueva a gusto del usuario
+* Una vez adentro del aréa administrativa ir **http://tudominio.com/admin/registro** o ir a la tabla de invitados y ahí hacer una cuenta nueva a gusto del usuario
 
 * Una vez hecho esto eliminar esta cuenta **email : admin@admin** y **Contraseña:12345678** que aparece en el **id : 1 , tabla: admin** de la Base de Datos
 
