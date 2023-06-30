@@ -17,9 +17,9 @@
 
 
             <!-- Mini Posts -->
-         <div class="uk-alert">
+         <section class="uk-alert">
             <p> <?php echo $negocio['alert'] ?></p>
-        </div>
+        </section>
                 
 <?php 
     }

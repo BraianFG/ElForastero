@@ -8,9 +8,10 @@
            <p class="card-text "><?php echo 'Disponible : ', $productosp1['cantidad'] ?></p>
         <p class="card-text "><?php echo 'descripción : ', $productosp1['descripcion'] ?></p>
    </div>  
-   <div class="reaccion">
-       <button type="button" id="reaccion_<?php echo $productosp1['0'] ?>" alt="reacionar">+</button><p id="reacciones_<?php echo $productosp1['0'] ?>"></p>
-   </div>
+     <div class="uk-flex-inline">
+    
+       <img src="icons/heart-regular.svg" class="icon-heart" id="reaccion_<?php echo $productosp1['0'] ?>" width="10" height="10" alt="reacionar"><p id="reacciones_<?php echo $productosp1['0'] ?>"><?php echo $productosp1['14'] ?></p>
+     </div>
         <ul class="mini-post_lista">
          <?php include 'botones.php'?>
         </ul> 
@@ -18,3 +19,4 @@
        <p class="uk-text-small">Art. actualizado: <?php echo $productosp1['fecha2'] , ' ', $productosp1['hora2'] ?></p>
     </div>
     
+    <?php include "reaccionar.php" ?>

@@ -8,9 +8,12 @@
         <p class="card-text "><?php echo 'descripción : ', $productosp1['descripcion'] ?></p>
      </div> 
      <div class="uk-flex-inline">
-       <img src="icons/heart-regular.svg" class="icon-heart" id="reacción" width="10" height="10" alt="reacionar"><p class="reaciones"> +1</p>
+       <img src="icons/heart-regular.svg" class="icon-heart" id="reaccion_<?php echo $productosp1['0'] ?>" width="10" height="10" alt="reacionar"><p id="reacciones_<?php echo $productosp1['0'] ?>">0</p>
      </div>
       </div>
         <p class="uk-text-small">Art. actualizado: <?php echo $productosp1['fecha2'] , ' ', $productosp1['hora2'] ?></p>
     </div>
+    
+    <?php include "reaccionar.php" ?>
+    
     
