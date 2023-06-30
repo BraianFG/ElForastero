@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 17-01-2023 a las 15:05:56
--- Versión del servidor: 10.5.12-MariaDB-cll-lve
+-- Tiempo de generación: 30-06-2023 a las 20:26:03
+-- Versión del servidor: 10.5.19-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+  `nombre` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -39,8 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `nombre`, `email`, `password`) VALUES
-(1, 'Braian', 'admin@elforastero.com', '$2y$08$kBK4zpgZBpHKfcckX2kLj.N8JQPE2LLhfoRLAaPU1CC8pAFJRfM1G'),
-(2, 'admin', 'admin@admin.com', '12345678\r\n');
+(88, 'admin', 'admin@admin.com', '$2y$08$DA8QQIF11e5gKYAXZ7oGLecxtBxRI1rCM.F3ptYCpYY7g9Lt31LTa');
 
 --
 -- Índices para tablas volcadas
@@ -61,7 +60,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
