@@ -1,12 +1,6 @@
 # El FORASTERO TIENDA ONLINE Y CMS
 Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanuel Frediani Guellffi con ayuda de conocidos e internautas y con mucha dedicación de tiempo comenzó en agosoto de 2021 como parte de un proyecto de las prácticas profesionalizantes la cual me había proyectado esto para terminar el secundario y finalizar la técnicatura en Técnico Personal y Profesional en informática,en el 2022 continua con mejoras haciendo el uso del usuario más cómodo,fácil y rápido,el 28 de mayo del 2022 esté códgo fue liberado bajo **la Licencia Apache 2.0**.
 
-**Visite http://braianfg287.tk/**
-
-**Tienda Online demo https://tiendaelforastero.com.ar/tienda**
-
-**Tienda Online en en funcionamiento https://tiendaelforastero.com.ar**
-
 # INSTALACIÓN Y CONFIGURACÍON
 * Descargar el archivo .zip y subirlo al servidor
 
@@ -26,9 +20,11 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 * Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
 
-**AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
-
 * Cambiarle la ruta a las imagenes
+
+* Cargar una vez la página antes de comenzar a usarla,esto permite que se cargue la tabla de reacciones y muestre los productos
+  
+**AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
   
 # COMPONENTES EXTERNOS
 
@@ -379,20 +375,25 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Función de bloquear completa
 
-**14/3/2023**
+**14/6/2023**
 
 * Mejora en la recopilación de datos,utilizé como fuente para detectar sistema operativo **(https://ejemplocodigo.com/ejemplo-php-detectar-plataforma-o-sistema-operativo/)**
 
 * Para detectar celulares **(https://ejemplocodigo.com/ejemplo-php-detectar-plataforma-o-sistema-operativo/)**
 
-**19/3/2023**
+**19/6/2023**
 
 * Posibilidad de descargar visitas del sitio en archivo txt
 
 * Posibilidad de descargar lista de productos en archivo txt
 
-**22/3/2023**
+**22/6/2023**
 
 * Seguimiento de visitas el sitio web,desde la página de administración
  
 * Posibilidad de reaccionar productos a futuro
+
+
+**30/6/2023**
+
+* Posibilidad de reaccionar a los artículos
