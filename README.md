@@ -32,7 +32,9 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 * Framework CSS **UIkit (https://getuikit.com/)** y  **Bootstrap (https://getbootstrap.com/)** 
 
-* Framework JS **Alertify (https://alertifyjs.com/)** y **Ajax(https://api.jquery.com/jquery.ajax/)**
+* Framework JS **Alertify (https://alertifyjs.com/)**
+  
+*  **Ajax(https://api.jquery.com/jquery.ajax/)**
 
 * Librería JS **Jquery (https://jquery.com/)**
 
