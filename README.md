@@ -399,3 +399,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 **30/6/2023**
 
 * Posibilidad de reaccionar a los artículos
+
+**27/06/2023**
+
+* Corrección de errores y mejoras menores
