@@ -8,5 +8,5 @@
     
   $imagen = filter_var($_POST['imagen'], FILTER_SANITIZE_STRING);
   
-   unlink("../../../images/$imagen");
+   unlink("../../images/$imagen");
 ?>

@@ -8,7 +8,7 @@
         header('Location:../../ingresar');
     } 
 //------------------------------------------------------------------------------//
-    $id = filter_var($_POST['id_producto'], FILTER_SANITIZE_NUMBER_INT);
+    $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
     mysqli_real_escape_string($conn , $id);
     
     $sql="DELETE FROM `productos` WHERE `productos`.`id` =  '$id' ";

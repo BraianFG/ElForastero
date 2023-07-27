@@ -42,7 +42,7 @@
                    
                    <td><a href="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen'] ?>" target="_Blank"><img class="img__producto"  src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen'] ?>" lazzy="loading" onerror="this.src='../../images/blanco.webp'" /></a></td>
                    
-                   <td><a href="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen01'] ?>" target="_Blank"> <img class="img__producto" src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen01'] ?>" loading="lazzy"onerror="this.src='../../images/blanco.webp'"  /></a></td>
+                   <td><a href="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen01'] ?>" target="_Blank"> <img class="img__producto" src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/mcmasajes/images/<?php echo $mostrar_productosp1['imagen01'] ?>" loading="lazzy"onerror="this.src='../../images/blanco.webp'"  /></a></td>
                    
                    <td><a href="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen02'] ?>" target="_Blank"> <img class="img__producto" src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen02'] ?>" loading="lazzy" onerror="this.src='../../images/blanco.webp'"  /></a></td>
                    
@@ -133,7 +133,7 @@
     <h3 class="uk-text-center">¿Desea eliminar el artículo <?php echo $ver['1'] ?>?</h3>
       <button class="uk-modal-close-default" type="button" uk-close></button>
       <div class="eliminar">
-            <a class="button primary eliminar__si" onclick="eliminar_producto((id =<?php echo $ver['0'] ?>)) ">Si <i class="fas fa-check"></i></a>
+            <a class="button primary eliminar__si" onclick="eliminar_producto_<?php echo $ver['0'] ?>() ">Si <i class="fas fa-check"></i></a>
             <a class="button primary  uk-modal-close">No <i class="fas fa-times"></i></a>
      </div>     
       </div>    
@@ -141,8 +141,8 @@
 </div>
 
 <script>
-    function eliminar_producto(id){
-       $.post( "productos/eliminar_productos.php", { id : id } );
+    function eliminar_producto_<?php echo $ver['0'] ?>(){
+       $.post( "productos/eliminar_productos.php", { id_producto : "<?php echo $ver['0'] ?>"} );
         alertify.notify('producto eliminado con exito','success',8)
 
     }
@@ -234,6 +234,7 @@
         </div>
     </div>
 </div>
+
 <script>
     document.querySelector("#descarga").addEventListener("click" , () => {
          <?php 
@@ -270,3 +271,4 @@
         ?>
     })
 </script>
+

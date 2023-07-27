@@ -32,7 +32,7 @@ N° : 5
 NOMBRE : Alpargatas el Vasco
 DESCRIPCIÓN : Hay lisas y estampasas,talles 
 CANTIDAD : 10 Unidades
-PRECIO : 2100
+PRECIO : 2000
 CATEGORÍA : Calzado
  
 N° : 6
@@ -54,14 +54,14 @@ N° : 8
 NOMBRE : Mates térmicos
 DESCRIPCIÓN : Doble capa de acero
 CANTIDAD : 3 Unidades 
-PRECIO : 2800
+PRECIO : 2600
 CATEGORÍA : Accesorios
  
 N° : 9
 NOMBRE : Juego de cubierto
 DESCRIPCIÓN : El material de la hoja es de disco de arado, ya vienen con filo.
 CANTIDAD : 8 unidades
-PRECIO : 3500
+PRECIO : 3300
 CATEGORÍA : Accesorios
  
 N° : 10
@@ -85,6 +85,13 @@ Colores blanco , bordó , negro y gris.
 
 CANTIDAD : 11 Unidades 
 PRECIO : 6500
+CATEGORÍA : Indumentaria
+ 
+N° : 13
+NOMBRE : Remera lisa talle XXXL
+DESCRIPCIÓN : Remera manga corta lisa talle XXXL
+CANTIDAD : 5 unidades 
+PRECIO : 2200
 CATEGORÍA : Indumentaria
  
 N° : 14
@@ -127,7 +134,7 @@ N° : 19
 NOMBRE : Soquetes Elemento 
 DESCRIPCIÓN : Soquetes Elemento para damas y caballeros talles unicos,precio por par
 CANTIDAD : 12 pares
-PRECIO : 600
+PRECIO : 550
 CATEGORÍA : Medias
  
 N° : 20
@@ -141,42 +148,35 @@ N° : 21
 NOMBRE : Toallas de mano 
 DESCRIPCIÓN : Toallas de mano Fantasía ,medias 40 x 70 y color nuez.
 CANTIDAD : 5 unidades
-PRECIO : 1900
+PRECIO : 1700
 CATEGORÍA : Blanquería
  
 N° : 22
 NOMBRE : Docena de soquetes
 DESCRIPCIÓN : Docena de soquetes Mundo,hombre y mujer
 CANTIDAD : 50 docenas
-PRECIO : 6000
+PRECIO : 5700
 CATEGORÍA : Medias
- 
-N° : 23
-NOMBRE : Bombachas de campo elástizadas
-DESCRIPCIÓN : Talles 38 al 46
-CANTIDAD : Sin definír
-PRECIO : 8200
-CATEGORÍA : Trabajo
  
 N° : 24
 NOMBRE : Tenedor expulsor
 DESCRIPCIÓN : 
 CANTIDAD : 10 Unidades
-PRECIO : 2000
+PRECIO : 1800
 CATEGORÍA : Accesorios
  
 N° : 25
 NOMBRE : Toallones Fantasia
 DESCRIPCIÓN : Colores naranja y amarillo,miden 70 x 135cm.
 CANTIDAD : 8 Unidades
-PRECIO : 3800
+PRECIO : 3500
 CATEGORÍA : Blanquería
  
 N° : 26
 NOMBRE : Cuchillos verijeros
 DESCRIPCIÓN : 14 y 16 cm largo de hoja incluye vaina
 CANTIDAD : 11 unidades
-PRECIO : 2200
+PRECIO : 2000
 CATEGORÍA : Accesorios
  
 N° : 27
@@ -225,7 +225,7 @@ N° : 33
 NOMBRE : Chaira
 DESCRIPCIÓN : 
 CANTIDAD : 5 Unidades 
-PRECIO : 1700
+PRECIO : 1300
 CATEGORÍA : Accesorios
  
 N° : 34
@@ -247,7 +247,7 @@ N° : 36
 NOMBRE : Boxer + soquete Mundo
 DESCRIPCIÓN : Boxer Zorba + tres pares de soquete Mundo,liso o estampado
 CANTIDAD : Sin definír
-PRECIO : 2850
+PRECIO : 2300
 CATEGORÍA : Combos
  
 N° : 37
@@ -269,7 +269,7 @@ N° : 39
 NOMBRE : Soquetes Mundo
 DESCRIPCIÓN : 90% de algodón,diseños lisos y estampados.
 CANTIDAD : 59 pares 
-PRECIO : 600
+PRECIO : 550
 CATEGORÍA : Medias
  
 N° : 40
@@ -286,6 +286,13 @@ DESCRIPCIÓN :
 CANTIDAD : 5 Unidades
 PRECIO : 1500
 CATEGORÍA : Blanquería
+ 
+N° : 42
+NOMBRE : Medias económicas
+DESCRIPCIÓN : 80% de algodón y 20% de nylon,precio por par.
+CANTIDAD : 48 pares 
+PRECIO : 300
+CATEGORÍA : Medias
  
 N° : 43
 NOMBRE : Slip 
@@ -312,14 +319,14 @@ N° : 46
 NOMBRE : Repasadores pack X12
 DESCRIPCIÓN : Miden 40 x 60,tela de algodón de toalla,12 unidades
 CANTIDAD : 314 unidades
-PRECIO : 6000
+PRECIO : 5800
 CATEGORÍA : Blanquería
  
 N° : 47
 NOMBRE : Boxer + tres pares de soquetes 
 DESCRIPCIÓN : Combo de Boxer Zorba + soquetes económicos
 CANTIDAD : No definido
-PRECIO : 1800
+PRECIO : 1500
 CATEGORÍA : Combos
  
 N° : 48
@@ -349,7 +356,7 @@ NOMBRE : Toalla y toallón
 DESCRIPCIÓN : Toallas de mano miden 40x70 cm
 Toallones 70x135 cm
 CANTIDAD : No definido
-PRECIO : 5500
+PRECIO : 5200
 CATEGORÍA : Blanqueria
  
 N° : 53
@@ -371,7 +378,7 @@ NOMBRE : Soquetes económicos
 DESCRIPCIÓN : Talles únicos 85 de algodón,5% poliamida,5% de elastano.
 Precio por par.
 CANTIDAD : 48 pares 
-PRECIO : 300
+PRECIO : 250
 CATEGORÍA : Medias
  
 N° : 56
@@ -429,7 +436,7 @@ N° : 63
 NOMBRE : Soquetes Mundo Hombres
 DESCRIPCIÓN : Talles unicos,diseños lisos y estampados
 CANTIDAD : 36 pares 
-PRECIO : 600
+PRECIO : 550
 CATEGORÍA : Medias
  
 N° : 65
@@ -464,14 +471,14 @@ N° : 69
 NOMBRE : Yerbera y azucarera
 DESCRIPCIÓN : Latas para yerbas y azucar
 CANTIDAD : 8 Unidades
-PRECIO : 2000
+PRECIO : 1800
 CATEGORÍA : Accesorios
  
 N° : 70
 NOMBRE : Set matero
 DESCRIPCIÓN : Latas yerbera y azucarera + mate térmico + bombilla
 CANTIDAD : 8 Unidades
-PRECIO : 5500
+PRECIO : 5100
 CATEGORÍA : Accesorios
  
 N° : 71
@@ -541,7 +548,7 @@ N° : 84
 NOMBRE : Bombillas para mate
 DESCRIPCIÓN : Material: Acero
 CANTIDAD : 6 unidades 
-PRECIO : 900
+PRECIO : 700
 CATEGORÍA : Accesorios
  
 N° : 85
@@ -569,20 +576,27 @@ N° : 88
 NOMBRE : Sweater de hilos
 DESCRIPCIÓN : 
 CANTIDAD : Sin definír
-PRECIO : 6300
+PRECIO : 6000
 CATEGORÍA : Abrigos
  
 N° : 89
-NOMBRE : Medias toalla blancas
-DESCRIPCIÓN : Sólo pares blancos por par
+NOMBRE : Soquetes económicos PROMO
+DESCRIPCIÓN : Soquetes económicos por docena,promo exclusiva comprando desde el sitio web
 CANTIDAD : Sin definír
-PRECIO : 400
-CATEGORÍA : Medias
+PRECIO : 2050
+CATEGORÍA : promos
  
 N° : 90
-NOMBRE : Medias económicas blancas
-DESCRIPCIÓN : Solo medias blancas por par
-CANTIDAD : 7 pares 
-PRECIO : 250
-CATEGORÍA : Medias
+NOMBRE : Pantalones cargo PROMO 
+DESCRIPCIÓN : PROMO EXCLUSIVA COMPRANDO DESDE EL SITIO WEB
+CANTIDAD : Sin definír
+PRECIO : 7600
+CATEGORÍA : promos
+ 
+N° : 91
+NOMBRE : Bombacha de campo PROMO
+DESCRIPCIÓN : Promoción exclusiva comprando desde el sitio web
+CANTIDAD : Sin definír
+PRECIO : 5700
+CATEGORÍA : promos
  
