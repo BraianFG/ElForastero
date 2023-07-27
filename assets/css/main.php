@@ -218,6 +218,13 @@ textarea {
     border: 0;
     display: inline-block;
     position: relative;
+    object-fit:cover;
+    
+}
+
+
+img{
+    object-fit:cover;
 }
 
 /* List */
