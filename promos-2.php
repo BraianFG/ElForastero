@@ -23,7 +23,7 @@
         <!-- Menu -->
        <?php include 'assets/php/menu.php'  ?>
        
-        <div class='uk-container uk-container-large'>
+        <div class='uk-container'>
                 
                 <!-- Main -->
                 <?php include 'assets/php/presentacion.php'?>

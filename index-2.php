@@ -39,7 +39,9 @@ include 'database.php';
                  <?php include 'assets/php/slider-60.php' ?>
                  
                 <!--Productos -->
-                <?php include"assets/php/productos_nologueado-60.php" ?>
+                <?php include"assets/php/productos_nologueado-60.php";
+                  include "assets/php/cargar.php";
+                ?>
 
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
