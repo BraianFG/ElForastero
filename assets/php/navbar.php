@@ -9,7 +9,7 @@
           
 <header id="header">
             <a href="/" class="navTitulo"><?php echo $negocio['nombre'] ?></a>
-            <nav class="main">
+            <nav class="main" role="presentation">
                 <ul>
                       <?php
                       $usuario = "SELECT `nombre` FROM `usuarios` WHERE `id` ='$id';";     
@@ -21,10 +21,23 @@
                        <?php
                           }
                        ?>  
+                     <li class="main">
+                         <a href="resumen" ><i class="fa-shopping-cart">m</i></a>
+                     </li>
+                     <?php
+                      $usuarios = "SELECT * FROM `totalCarrito` WHERE `UsuarioID` ='$id';";     
+                      $resultados3 = mysqli_query($conn,$usuarios);          
+                            while($usuarios= mysqli_fetch_array($resultados3)){
+                      ?> 
+    
+                           <li>
+                                <a href="resumen" id="resumen"><?php echo '$',$usuarios['total']?></a>
+                            </li>
+                             
                     
-                    <li class="main">
-                        <a href="#menu" uk-toggle ><i class="fa-shopping-cart">m</i></a>
-                    </li>
+                     <?php
+                       }
+                    ?> 
                 </ul>
             </nav>
         </header>
@@ -36,3 +49,4 @@
 
      <!--- estilos --->
        <?php include "assets/css/main.php" ?> 
+

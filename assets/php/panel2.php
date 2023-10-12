@@ -1,9 +1,18 @@
    <div id="user2" uk-modal>
    <div class="uk-modal-dialog">
              <button class="uk-modal-close-default" type="button" uk-close></button>
-        <div class="modal__header">Panel de Usuario</div>
+    <?php
+       $usuario = "SELECT `nombre` FROM `usuarios` WHERE `id` ='$id';";     
+       $resultados2 = mysqli_query($conn,$usuario);          
+        while($usuario= mysqli_fetch_array($resultados2)){
+     ?>          
+        <div class="modal__header">Hola <?php echo $usuario['nombre']?></div>
+    <?php
+        }
+    ?>
         <div class="uk-modal-body">
              <a class="items" href="index#productos"> <i class="fas fa-store-alt"></i>Productos</a>
+             <a class="items" href="favoritos"> <i class="fas fa-store-alt"></i>Productos favoritos</a>
              <a class="items" href="#datos" uk-toggle> <i class="fas fa-user"></i> Datos personales</a>
              <a class="items" href="resumen"><i class="fas fa-shopping-cart"></i>Carrito</a>
              <a class="items" href="comprar"><i class="fas fa-tags"></i>Pedidos</a>

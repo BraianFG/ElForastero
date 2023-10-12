@@ -10,13 +10,13 @@
      ?> 
             <!-- Footer -->
                 <section class="icons">
-                    <a href="<?php echo $negocio['telegram'] ?>" title="ir a Telegram"><i class="fa-telegram">c</i></a>
-                    <a href="<?php echo $negocio['facebook'] ?>" title="Ir a Facebook"><i class="fa-facebook">s</i></a>
-                    <a href="<?php echo $negocio['instagram'] ?>" title="Ir a Instagram"><i class="fa-instagram">s</i></a>
-                    <a href="<?php echo $negocio['whatsapp'] ?>" title="Ir a Whatsapp"><i class="fa-whatsapp">s</i></a>
-                    <a href="<?php echo 'mailto:',$negocio['email'] ?>" title="Enviar un Correo"><i class="fa-envelope">s</i></a>
-                    <a href="https://github.com/BraianFG/ElForastero" target="Blank" title="Ir a Github"><i class="fa-github">s</i></a>
-                    <a class="label" href="#info2" title="Acerca de la tienda" uk-toggle> <i class="fa-info">a</i></a>
+                    <a  role="link" href="<?php echo $negocio['telegram'] ?>" title="ir a Telegram"><i class="fa-telegram">c</i></a>
+                    <a role="link"  href="<?php echo $negocio['facebook'] ?>" title="Ir a Facebook"><i class="fa-facebook">s</i></a>
+                    <a role="link"  href="<?php echo $negocio['instagram'] ?>" title="Ir a Instagram"><i class="fa-instagram">s</i></a>
+                    <a  role="link" href="<?php echo $negocio['whatsapp'] ?>" title="Ir a Whatsapp"><i class="fa-whatsapp">s</i></a>
+                    <a  role="link" href="<?php echo 'mailto:',$negocio['email'] ?>" title="Enviar un Correo"><i class="fa-envelope">s</i></a>
+                    <a role="link"  href="https://github.com/BraianFG/ElForastero" target="Blank" title="Ir a Github"><i class="fa-github">s</i></a>
+                    <a  role="link" class="label" href="#info2" title="Acerca de la tienda" uk-toggle> <i class="fa-info">a</i></a>
 
                 </section>
                 
@@ -30,9 +30,9 @@
 
                                         
                <p class="copyright">Hecho por <a
-                        href="../Braian" title="Hecho por BraianFG287" target="_Blank" class="autor">Braian FG287 </a> a partír de una plantilla de <a
-                        href="http://html5up.net" target="_Blank" title="ir a HTML5UP">HTML5 UP</a>,icono vectoriales extridos desde <a
-                        href="https://pixabay.com" class="autor" target="_Blank" title="ir a Pixabay">Pixabay</a> y <a href="https://fontawesome.com/" title="ir a Fontawesome"class="autor"  target="_Blank" >Fontawesome</a>
+                        href="../Braian" title="Hecho por BraianFG287" target="_Blank" class="autor">Braian FG287 </a> a partír de una plantilla de <a role="link"
+                        href="http://html5up.net" target="_Blank" title="ir a HTML5UP">HTML5 UP</a>,icono vectoriales extridos desde <a role="link"
+                        href="https://pixabay.com" class="autor" target="_Blank" title="ir a Pixabay">Pixabay</a> y <a href="https://fontawesome.com/" title="ir a Fontawesome" class="autor"  target="_Blank" >Fontawesome</a>
                 </p>
     </section>
 <?php

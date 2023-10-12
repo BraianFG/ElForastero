@@ -23,17 +23,18 @@
     $productoID = filter_var($_POST['productoID'], FILTER_SANITIZE_NUMBER_INT);
     mysqli_real_escape_string($conn , $productoID);
     
-    $cantidad = filter_var($_POST['cantidad'], FILTER_SANITIZE_NUMBER_INT);
-    mysqli_real_escape_string($conn , $cantidad);
+    
+    $imagen = filter_var($_POST['imagen'], FILTER_SANITIZE_STRING);
+    mysqli_real_escape_string($conn , $imagen);
    
  
- $sql ="INSERT INTO `carrito`( `usuarioID`, `nombre`, `apellido`, `productoID`, `nombreProduc`, `cantidad`, `precio`, `fecha`, `hora`) VALUES ('$id','$nombre','$apellido','$productoID','$nombreProduc','$cantidad','$precio','$fecha','$hora')";
+ $sql ="INSERT INTO `carrito`( `usuarioID`, `nombre`, `apellido`, `productoID`, `nombreProduc`, `cantidad`, `precio`,`imagen`,`fecha`, `hora`) VALUES ('$id','$nombre','$apellido','$productoID','$nombreProduc','1','$precio','$imagen','$fecha','$hora')";
  
     
  $sql2 = "INSERT INTO `totalCarrito`(`UsuarioID`, `nombre`, `apellido`,`fecha`, `hora`, `total`) VALUES ('$id','$nombre','$apellido','$fecha','$hora',(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id'))";
    
   $sql3 ="UPDATE `totalCarrito` SET `fecha` ='$fecha',`hora`='$hora' ,`total`=(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id')  WHERE `totalCarrito`.`UsuarioID` = '$id'";    
-
+ 
   $resultInsert = mysqli_query($conn, $sql);  
   $resultInsert2 = mysqli_query($conn, $sql2); 
   $resultInsert3 = mysqli_query($conn, $sql3); 

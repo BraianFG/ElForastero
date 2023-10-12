@@ -1,4 +1,4 @@
-        <script>
+        <script defer>
         document.querySelector("#reaccion_<?php echo $productosp1['0'] ?>").addEventListener("click",presionar);
         
         let iniciar_<?php echo $productosp1['0'] ?> = <?php echo $productosp1['14'] ?>;

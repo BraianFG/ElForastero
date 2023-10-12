@@ -6,7 +6,7 @@
    ?> 
 <header id="header">
            <a class="navTitulo" href="index2"><?php echo $negocio['nombre'] ?></a>
-            <nav class="main">
+            <nav class="main" role="presentation">
                 <ul>
                       <?php
                       $usuario = "SELECT `nombre` FROM `usuarios` WHERE `id` ='$id';";     
@@ -14,7 +14,7 @@
                             while($usuario= mysqli_fetch_array($resultados2)){
                        ?> 
 
-                     <a id="user2" href="#user2" title="ir a gestion de usuarios" uk-toggle><p class="main__texto-texto"><?php echo $usuario['nombre']?></p></a></li>
+                     <a class="user2" href="#user2" title="ir a gestion de usuarios" uk-toggle><p class="main__texto-texto"><?php echo $usuario['nombre']?></p></a></li>
                        <?php
                           }
                        ?> 

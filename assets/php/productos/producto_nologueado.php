@@ -1,4 +1,4 @@
-<div class="mini-post card"  data-id="<?php echo $productosp1['0'] ?>" id="<?php echo $productosp1['9'] ?>" >
+<div class="mini-post card"  role="article"  data-id="<?php echo $productosp1['0'] ?>" id="<?php echo $productosp1['9'] ?>" >
        <a href="#<?php echo 'abc__',$productosp1['id'] ,$productosp1['modal1'] ?>" title="abrir imagen" uk-toggle class="image"><img class="lazyload card-img-top" src="images/blanco.webp" data-src="https://img.gs/jhcplzwzdm/3x,150x150,quality=high,/https://tiendaelforastero.com.ar/images/<?php echo $productosp1['imagen'] ?>" alt="<?php echo  $productosp1['nombre'] ?>" class="card-img-top" width="150" heigh="150" onerror="this.src='images/blanco.webp';"></a>
       <div id="<?php echo $productosp1['id'] ?>" class="card-body">
         <h3 class="card-title"><?php echo $productosp1['id'], '. '?><?php echo $productosp1['nombre'] ?></h3>

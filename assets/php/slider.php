@@ -1,5 +1,5 @@
 <div class="uk-flex">
-      <select class="select" onChange=nav(this.value) >
+      <select class="select" onChange=nav(this.value) aria-label=".form-select-md example">
          <?php
                 
               $productos = "SELECT * FROM productos LIMIT 20";
@@ -14,7 +14,7 @@
             ?>    
         </select>
 
-      <select  class="select2" onChange=nav(this.value)>
+      <select class="select2" onChange=nav(this.value) aria-label=".form-select-md example">
            <option value="categorias" id="seleccionar">Ver todas la categorias</option>
          <?php
                 

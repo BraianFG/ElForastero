@@ -7,7 +7,7 @@
      ?> 
 <header id="header">
      <a class="navTitulo" href="/"><?php echo $negocio['nombre'] ?></a>
-     <nav>
+     <nav role="presentation">
          <ul>
               <li class="main">
                 <a href="#user" title="ir a gestion de usuarios" uk-toggle ><p>Ingresar</p></a>

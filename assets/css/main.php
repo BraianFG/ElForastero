@@ -54,6 +54,7 @@ a {
     color:<?php echo $negocio ['color2'] ?>;
     text-decoration: none;
      cursor:pointer;
+    font-weight:bold; 
 }
 
 a:hover {
@@ -1136,6 +1137,9 @@ font-display:swap;
         margin-bottom:1.3em;
         font-family: <?php echo $negocio['fontFamily']?>;
         font-display:swap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     
      .uk-text-small{
@@ -1361,6 +1365,12 @@ font-display:swap;
     width:1em;
     height:1em;
     margin-top:1.2em;
+}
+
+.icon-star{
+    object-fit:unset;
+    height:1.2em;
+    width:1.2em;
 }
 
 </style>
