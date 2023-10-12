@@ -1075,6 +1075,13 @@ svg,a{
     margin-top:1em;
 }
 
+.grafico{
+    margin-top:0em;
+    margin-bottom:2em;
+    padding:1em;
+    background-color:<?php echo $negocio['color3']?>;
+    border-bottom:0.2em solid  <?php echo $negocio['color2']?>;
+}
 </style>
 <?php
 }
