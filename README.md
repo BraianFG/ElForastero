@@ -403,3 +403,13 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 **27/06/2023**
 
 * Corrección de errores y mejoras menores
+
+**12/10/2023**
+
+* Intento de recuperar contraseña
+
+* Agregar producto a favoritos
+
+* Posibilidad de reaccionar a productos
+
+* Estádisticas con gráficos gracias a ChartJS
