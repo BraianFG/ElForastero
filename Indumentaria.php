@@ -21,7 +21,7 @@
         <!-- Menu -->
        <?php include"assets/php/menu.php"  ?>
        
-        <div class="uk-container">
+        <div class="uk-container uk-container-large">
                 
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>

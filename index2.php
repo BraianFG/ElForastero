@@ -55,9 +55,6 @@ include 'database.php';
          <!--style --> 
   
   <?php include "assets/js/Google-Analytics.php";
-         include 'bottom-cache.php';
-         include 'cargar.php';
-         ?>
-        
+         include 'bottom-cache.php'?>
 </body>
 </html>
