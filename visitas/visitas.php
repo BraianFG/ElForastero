@@ -1,7 +1,8 @@
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
  <div class="uk-container  uk-container-large wrap">
     <ul class="lista">
         <li class="lista__item"><a class="button primary" href="../admin" >Volver</a></li>
-        <li class="lista__item">  <a href="visitas/visitas.csv"  download class="button primary" id="descarga">Descargar datos</a> </li>
+        <li class="lista__item">  <a href="visitas/visitas.pdf"  download class="button primary" id="descarga">Descargar datos</a> </li>
     </ul>
 </div> 
 
@@ -59,7 +60,14 @@
                fwrite($datos , "\n \n");
           fclose($datos);
           }     
+          
+          doc.text("<?php $crear ?>");
+          doc.save("visitas.pdf");
         ?>
+        
+        
     })
+    
+
 </script>
 

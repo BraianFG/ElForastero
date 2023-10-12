@@ -1,0 +1,1 @@
+<a class="fa-solid fa-trash" onclick="eliminar_<?php echo $count?>()"> </a>

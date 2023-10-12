@@ -37,6 +37,7 @@
    }
    
   //------------------------------------------------------------------------------// 
+   
   $nombreIMG = $_FILES['imagen']['name'];
   $guardado = $_FILES['imagen']['tmp_name'];
   
@@ -102,13 +103,8 @@
     $hora = date("H:i:s");
     
 //------------------------------------------------------------------------------//
-   $sql_productos = "INSERT INTO `productos`(`id`,`nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`,`fecha1`,`hora1`) VALUES ('{$id}','{$nombre}','{$descripcion}','{$cantidad}','{$precio}','{$categoria}','{$nombreIMG}','{$nombreIMG2}','{$nombreIMG3}','{$modal1}','{$fecha}','{$hora}')";
-   
-    $sql_productos2 = "INSERT INTO `reacciones`(`id`,`idproducto`, `likes`) VALUES ('NULL','{$id}','0')";
-   
-    $resultInsert = mysqli_query($conn, $sql_productos); 
-    
-    $resultInsert2 = mysqli_query($conn, $sql_productos2);   
-    mysqli_close($conn);    
+  $sql_productos = "INSERT INTO `productos`(`id`,`nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`,`fecha1`,`hora1`) VALUES ('{$id}','{$nombre}','{$descripcion}','{$cantidad}','{$precio}','{$categoria}','{$nombreIMG}','{$nombreIMG2}','{$nombreIMG3}','{$modal1}','{$fecha}','{$hora}')";
+    $resultInsert = mysqli_query($conn, $sql_productos);   
    mysqli_close($conn);   
+
 ?>

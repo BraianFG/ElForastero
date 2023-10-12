@@ -1,97 +1,70 @@
 <?php
-    include 'database.php';
-    header('Content-Type: text/html; charset=UTF-8');
+    include '../database.php';
     session_start();
-    if (isset($_SESSION["id"])){
-        $id = $_SESSION["id"];
-       header('Location: index2');
-
+    if (isset($_SESSION["id_admin"]) && $_SESSION['id_admin'] == 1){
+    }else{
+     header('Location:denegado');
     }
+    
 ?>
 <html>
 
 <head>
       <?php include"assets/php/head.php"  ?>
-      <?php include 'assets/css/main.php' ?>
-       <?php include 'assets/js/script.php'?>
-      <?php include "assets/css/style.php" ?>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+      <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js" async></script>
+      
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    
+    <!-- 
+        RTL version
+    -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
 </head>    
 <body>
-    <?php include "visitas.php" ?>
-   <?php include "assets/php/navbar4.php" ?> 
+   <?php include "assets/php/navbar3.php" ?> 
    <?php include 'assets/css/main.php' ?> 
-   <div id="resultado__registro"></div>
+    
     <div class="registrarse__recuadro">
-        <div class="title">Registro</div>
-         <form class="registro" method="POST" action="return false" onsubmit="return false">
-             <label class="datos"><i class="fas fa-user"></i> Nombre (NO usar símbolos y/o números)</label>
-               <input  minlength="3" class="compradores" id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" value="" >
-                <label class="datos"> <i class="fas fa-user"></i> Apellido (NO usar símbolos y/o números)</label>
-                <input class="compradores"  minlength="3" id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido" value="">
-             <label class="datos"><i class="fas fa-envelope"></i> Correo Electrónico</label>    
-               <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" autocomplete="off">
-               <label class="datos"><i class="fas fa-key"></i> Contraseña (NO MENOS DE 8 CARACTERES)</label> 
-               <input class="compradores" id="password" name="password" minlength="8" maxlength="15" type="password" placeholder="Ingrese contraseña" value="" autocomplete="off">
-               <label class="datos"><i class="fas fa-phone"></i> Celular (No usar +54,15,0,9 o espacios)</label> 
-               
-           <?php $productosp1 = "SELECT * FROM localidad" ;     
-              $result3 = mysqli_query($conn,$productosp1);
-               while($mostrar_productosp1 = mysqli_fetch_array($result3)){
-           ?>        
-                <input class="compradores" id="celular" name="celular" type="tel" maxlength="17" placeholder="EJ. 2346123456" value="<?php echo $mostrar_productosp1['codArea']?>" >
-            <?php
-               }
-            ?>   
-             <label class="datos"><i class="fas fa-directions"></i> Domicilio</label>    
-               <input minlength="3" class="compradores" id="domicilio" name="domicilio" type="text" placeholder="EJ. Laprida 123" value="">
-              
-         <label class="datos"> <i class="fas fa-city"></i> Localidad (NO usar símbolos y/o números) </label>   
-          <?php $productosp1 = "SELECT * FROM localidad" ;     
-              $result3 = mysqli_query($conn,$productosp1);
-               while($mostrar_productosp1 = mysqli_fetch_array($result3)){
-           ?> 
-                <input class="compradores" id="ciudad" type="text" name="ciudad" value="<?php echo $mostrar_productosp1['localidad'] ?>">
-            <?php
-               }
-            ?>
-
-            <label class="datos"><i class="fas fa-mail-bulk"></i> Código Postal (Sólo escribír los números)</label> 
-           <?php $productosp1 = "SELECT * FROM localidad" ;     
-              $result3 = mysqli_query($conn,$productosp1);
-              
-               while($mostrar_productosp1 = mysqli_fetch_array($result3)){
-             ?> 
-             <input minlength="4" maxlength="4" class="compradores_num" id="codPostal" name="codPostal" type="number" value="<?php echo $mostrar_productosp1['codPostal'] ?>">
-            <?php
-               }
-            ?>
-            </select>  
-            <button class="button primary compradores" onclick="Validar__registro(document.getElementById('nombre').value, document.getElementById('apellido').value,document.getElementById('email').value,document.getElementById('password').value,document.getElementById('celular').value,document.getElementById('domicilio').value,document.getElementById('ciudad').value,document.getElementById('codPostal').value);" value="enviar" >Completar Registro<i class="fas fa-user-check"></i> </button>
+        <div class="header"><i class="fas fa-users"></i> Registro de invitado</div>
+         <form class="registro" action="return false" onsubmit="return false">
+               <input class="compradores" id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" value="" required >
+               <input class="compradores" id="email" name="email" type="email" placeholder="Ingrese correo electrónico" value="" required autocomplete="off">
+               <input class="compradores" id="password" name="password" minlength="8" maxlength="15" type="password" placeholder="Ingrese contraseña" value="" required autocomplete="off">
+            <button onclick="Validar(document.getElementById('nombre').value, document.getElementById('email').value, document.getElementById('password').value);"  class="button primary compradores" value="enviar" >Completar Registro<i class="fas fa-user-check"></i> </button>
             </form>
     </div>
-        <div class="pregunta">
-         <p class="registro  uk-text-center">¿Ya tenés una cuenta? ,<br> <a class="marron" href="ingresar">Solo tenés que ingresar para comenzar a comprar </a></a></p>
-        </div>
-     </div> 
-     
+    <div id="error"></div>
+    
      <script>
-         function Validar__registro(nombre,apellido,email,password,celular,domicilio,ciudad,codPostal)
+         function Validar(nombre,email,password)
         {
-            var registro = {'nombre':nombre,'apellido':apellido,'email':email,'password':password,'celular':celular,'domicilio':domicilio,'ciudad':ciudad,'codPostal':codPostal};
+            var registro = {'nombre':nombre,'email':email,'password':password};
             $.ajax({
                 url: "registro.php",
                 type: "POST",
                 data: registro,
                 success: function(resp){
-                $('#resultado__registro').html(resp)
+                $('#error').html(resp)
                 }       
             });
         }
         </script>
-     </script>
+     
     </body> 
 </html>
-
 
 
