@@ -52,6 +52,8 @@ Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanue
 
 * ImageOptim **para redimensionar imagenes** **(https://imageoptim.com/)**
 
+* Chartjs **https://chartjs.org***
+
 # MEJORAS
 **20/8/2021**
 
