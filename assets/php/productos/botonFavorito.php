@@ -1,4 +1,4 @@
-<a id="favoritosQUITAR_<?php echo $productosp1['0'] ?>" type="button" class="button PRIMARY">Quitar de la lista</a>
+<a id="favoritosQUITAR_<?php echo $productosp1['0'] ?>" type="button" class="button PRIMARY">Quitar</a>
 
         <script defer>
         document.querySelector("#favoritosQUITAR_<?php echo $productosp1['0'] ?>").addEventListener("click",presionar2);

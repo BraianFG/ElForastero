@@ -1,8 +1,9 @@
 <div class="uk-flex">
       <select class="select" onChange=nav(this.value) class="form-select form-select-md" aria-label=".form-select-md example">
+                     <option value="<?php echo $productosp1['nombre']?>"><?php echo $productosp1['nombre']?>Ver todas la categorias</option>
          <?php
                 
-              $productos = "SELECT * FROM productos LIMIT 120 OFFSET 60";
+              $productos = "SELECT * FROM `categorias` ORDER BY `id` ASC";
               $resultp1 = mysqli_query($conn,$productos);          
             
                while($productosp1= mysqli_fetch_array($resultp1)){
@@ -21,10 +22,10 @@
         </select>
 
       <select  class="select2" onChange=nav(this.value) class="form-select form-select-md" aria-label=".form-select-md example">
-           <option value="categorias" id="seleccionar">Ver todas la categorias</option>
+           <option value="categorias" id="seleccionar"></option>
          <?php
                 
-              $productos = "SELECT * FROM `categorias` ORDER BY `id` ASC";
+              $productos = "SELECT * FROM productos LIMIT 120 OFFSET 60";
               $resultp1 = mysqli_query($conn,$productos);          
             
                while($productosp1= mysqli_fetch_array($resultp1)){

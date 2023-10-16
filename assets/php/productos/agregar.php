@@ -8,7 +8,7 @@
        header('Location: ../../../ingresar');
     }
    
- include '../../../database.php' ;
+  require '../../../database.php' ;
  
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $fecha = date("Y-m-d", time());
@@ -31,13 +31,13 @@
  $sql ="INSERT INTO `carrito`( `usuarioID`, `nombre`, `apellido`, `productoID`, `nombreProduc`, `cantidad`, `precio`,`imagen`,`fecha`, `hora`) VALUES ('$id','$nombre','$apellido','$productoID','$nombreProduc','1','$precio','$imagen','$fecha','$hora')";
  
     
- $sql2 = "INSERT INTO `totalCarrito`(`UsuarioID`, `nombre`, `apellido`,`fecha`, `hora`, `total`) VALUES ('$id','$nombre','$apellido','$fecha','$hora',(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id'))";
+ //$sql2 = "INSERT INTO `totalCarrito`(`UsuarioID`, `nombre`, `apellido`,`fecha`, `hora`, `total`) VALUES ('$id','$nombre','$apellido','$fecha','$hora',(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id'))";
    
   $sql3 ="UPDATE `totalCarrito` SET `fecha` ='$fecha',`hora`='$hora' ,`total`=(SELECT SUM(precio)FROM carrito WHERE UsuarioID = '$id')  WHERE `totalCarrito`.`UsuarioID` = '$id'";    
  
   $resultInsert = mysqli_query($conn, $sql);  
-  $resultInsert2 = mysqli_query($conn, $sql2); 
-  $resultInsert3 = mysqli_query($conn, $sql3); 
+ // $resultInsert2 = mysqli_query($conn, $sql2); 
+ $resultInsert3 = mysqli_query($conn, $sql3); 
    mysqli_close($conn);   
    
    return;

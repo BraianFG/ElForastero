@@ -11,6 +11,7 @@
   
  <! --Ajax--> 
   <script src="assets/js/ajax/ajax.js" defer></script>
+  
 
 <!--Lazysizes -->
 <script "assets/js/lazysizes/lazysizes.js" defer></script>

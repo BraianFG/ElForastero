@@ -23,6 +23,9 @@
           <a href="#" class="button__modal borrar borrar__carrito " uk-slider-item="previous"> Anterior</a>
           <a   href="#" class="button__modal agregar agregar__carrito"  uk-slider-item="next" >Siguiente </a>
 
+         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
        </div>   
      </div>
      </div>

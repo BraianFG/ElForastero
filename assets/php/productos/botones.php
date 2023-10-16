@@ -1,4 +1,4 @@
-<button class="button primary" onclick="carrito<?php echo $productosp1['id'] ?>()"> Agregar al carrito</button>
+<button class="button primary" onclick="carrito<?php echo $productosp1['id'] ?>()"> Agregar</button>
 
 <script defer>
 

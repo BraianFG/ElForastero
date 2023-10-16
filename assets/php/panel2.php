@@ -45,8 +45,8 @@
    <div class="uk-modal-dialog">
              <button class="uk-modal-close-default" type="button" uk-close></button>
           <div class="modal__header">Editar mis datos</div>
-        <div class="uk-modal-body">
-    <form method="POST" action="return false" onsubmit="return false"> 
+        <div class="uk-modal-body ">
+    <form class="uk-container" method="POST" action="return false" onsubmit="return false"> 
          <label class="datos"><i class="fas fa-user"></i>Nombre</label>
          <input type="text" id="nombre" name="nombre" class="compradores" value="<?php echo $negocio['nombre'] ?>">
          <label class="datos"><i class="fas fa-user"></i>Apellido</label> 
@@ -54,7 +54,7 @@
          <label class="datos"><i class="fas fa-compass"></i>Dirección</label> 
          <input type="text" id="direccion" name="direccion" class="compradores" value="<?php echo $negocio['direccion'] ?>">
          <label class="datos"><i class="fas fa-city"></i>Ciudad</label> 
-        <input type="text" id="ciudad" name="ciudad" class="compradores" value="<?php echo $negocio['ciudad'] ?>">
+        <input type="text" id="ciudad" name="ciudad"  value="<?php echo $negocio['ciudad'] ?>">
         
         <label class="datos"><i class="fas fa-mail-bulk"></i>Código postal</label> 
         <input type="text" id="codPostal" name="codPostal" class="compradores" value="<?php echo $negocio['codPostal'] ?>" maxlength="4">
@@ -62,7 +62,7 @@
         <label class="datos"><i class="fas fa-phone"></i>Celular</label>
          <input type="tel" id="celular" name="celular" class="compradores" value="<?php echo $negocio['celular'] ?>">
 
-           <button onclick="Validar(document.getElementById('nombre').value, document.getElementById('apellido').value,document.getElementById('direccion').value,document.getElementById('ciudad').value,document.getElementById('codPostal').value,document.getElementById('celular').value,);"class="button primary"><i class="fas fa-edit "></i> Editar mis datos  </button>
+           <button onclick="Validar(document.getElementById('nombre').value, document.getElementById('apellido').value,document.getElementById('direccion').value,document.getElementById('ciudad').value,document.getElementById('codPostal').value,document.getElementById('celular').value,);"class="button primary">Editar mis datos  </button>
     </form>  
     <div id="resultado_panel"></div>
     

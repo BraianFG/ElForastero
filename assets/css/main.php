@@ -156,7 +156,7 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
     display: block;
     font-family: <?php echo $negocio['fontFamily'] ?>;
     margin: auto;
-    margin:0.5em;
+    margin:0;
     cursor:pointer;
     font-weight:normal;
 font-display:swap;
@@ -220,9 +220,7 @@ textarea {
     display: inline-block;
     position: relative;
     object-fit:cover;
-    
 }
-
 
 img{
     object-fit:cover;
@@ -599,17 +597,8 @@ font-display:swap;
         color: <?php echo $negocio['texto'] ?>;
         background: <?php echo $negocio['color3'] ?>;
         width: 2em;
-        height: 2em;
+        height: 2.5em;
         cursor:pointer;
-    }
-    
-    [class*=uk-modal-close-] {
-        position: absolute;
-        margin-bottom: 0;
-        top:1em;
-        margin-right: 0.4em;
-        height: 2em;
-        padding-left:0.1em;
     }
     
     .modal__botones {
@@ -623,11 +612,10 @@ font-display:swap;
         margin-bottom:5em;
     }
     
-    
     ul li{
          font-family:  <?php echo $negocio['fontFamily'] ?>;
          background: transparent;
-font-display:swap;
+         font-display:swap;
     }
     
     .compradores{
@@ -655,113 +643,11 @@ font-display:swap;
         background: <?php echo $negocio['color3']?>;
         font-weight:bold;
     }
-    
-    .registrarse__recuadro{
-       padding: 1em 1em 1em;
-       margin-top:4em;
-    }
-    
-    .login__recuadro{
-        margin-top:5em;
-    }
-    
-    .pregunta{
-        margin:1em 0;
-    }
-
-.registro{
-    padding:1em 1.5em 2em;
-    background-color: <?php echo $negocio['color3'] ?>;
-    border-radius: 0em 0em  .7em .7em;
-    box-sizing: border-box;
-    width: 30%;
-    display: block;
-    margin:auto;
-    border-bottom:  0.2em solid;
-    border-top: <?php echo $negocio['color2'] ?> 0.1em solid;
-    padding-bottom:1em;
-    
-}
- .title{
-    background:<?php echo $negocio['color2'] ?>;
-    color:<?php echo $negocio['color3'] ?>;;
-    margin: auto;
-    display: block;
-    text-align: center;
-    max-width: 30%;
-    border-radius: 0.3em 0.3em 0 0;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
- @media(max-width:1000px){
-     .registro{
-        padding:  1em 1.4em 1.5em;
-        background-color:  <?php echo $negocio['color3'] ?>;
-        min-width: 50%;
-        padding: 1em;
-        padding-bottom:1em;
-      }
-
-     .title{
-       background:<?php echo $negocio['color2'] ?>;
-       color:<?php echo $negocio['color3'] ?>;
-        margin: auto;
-        display: block;
-        text-align: center;
-        border-radius: 0.3em 0.3em 0 0;
-        font-weight:bold;
-        min-width:50%;
-        text-transform:uppercase;
-      }  
-      
-      .registrarse__recuadro{
-        padding: 1em 1em 1em;
-        margin-top:4em;
-       }
-       
-       #error{
-           padding: 1em 1em 1em;
-       }
-}    
-
+ 
 @media(max-width:560px){
-       .registrarse__recuadro{
-            padding: 1.2em 0em 1em;
-            border-radius: 0em 0em  0.7 0.7em;
-            box-sizing: border-box;
-            margin-top:8em;
-       }
-        
-     .registro{
-        padding:  1.3em 1.4em 1.5em;
-        background-color:  <?php echo $negocio['color3'] ?>;
-        min-width: 80%;
-        margin-top: 0em;
-      }
-
-     .title{
-        background:<?php echo $negocio['color2'] ?>;
-        color:<?php echo $negocio['color3'] ?>;
-        margin: auto;
-        display: block;
-        text-align: center;
-        border-radius: 0.3em 0.3em 0 0;
-        font-weight:bold;
-        min-width:80%;
-        text-transform:uppercase;
-        margin-top:-5em;
-      } 
-        
     .botones{
        margin: -1.3em 0em;
        display:block;
-    }
-    
-    .pregunta{
-        padding-top:1em;
-        padding-bottom:1em;
-       
     }
     
     .button .primary .alianeado{
@@ -769,11 +655,6 @@ font-display:swap;
         margin:auto;
     }
 }
-    
-    .uk-alert-close svg{
-        margin-top:0.35em;
-        margin-left:0.2em;
-    }
 
     i{
         margin-right:0.3em;
@@ -957,26 +838,6 @@ font-display:swap;
        color:<?php echo $negocio['color2'] ?>;
     }
     
-    @media(max-width:1500px){
-        .telegram img{
-            margin-bottom:3em;
-        }
-        
-        .whatsapp img{
-            margin-bottom:3em;
-        }
-    }
-    
-    @media(max-width:470px){
-        .telegram img{
-            margin-bottom:1em;
-        }
-        
-        .whatsapp img{
-            margin-bottom:1em;
-        }
-    }    
-    
     .pedidos__lista{
      display:block;
      width:100%;
@@ -1104,44 +965,6 @@ font-display:swap;
         margin-right:1em;
     }
 
-    .card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: <?php echo $negocio['color3']?>;
-        background-clip: border-box;
-        border:0;
-        margin-bottom: 1em;
-        width:18em;
-        border-radius: 0 0 0.5em 0.5em;
-        border-bottom:<?php echo $negocio['color2']?> 0.3em solid;
-    }
-
-    .card-body {
-        padding: 1em 1em;
-        flex: 1;
-        flex-wrap: wrap;
-        border: 0;
-        height: 5em;
-        margin-bottom: 0em;
-        border-top:<?php echo $negocio['color2']?> 0.1em solid;
-        font-family: <?php echo $negocio['fontFamily']?>;
-         font-display:swap;
-    }
-    
-    .card-title {
-        font-size: 1em;
-        height: 2em;
-        margin-bottom:1.3em;
-        font-family: <?php echo $negocio['fontFamily']?>;
-        font-display:swap;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
      .uk-text-small{
        font-size:0.5em; 
        margin-bottom:0;
@@ -1149,10 +972,6 @@ font-display:swap;
        padding-left:1.2em;
        margin-top:0;
        font-size:0.7em;
-    }
-    
-    .mini-post_lista{
-        margin:0;
     }
 
     .card-img-top {
@@ -1162,7 +981,7 @@ font-display:swap;
         height: 15em;
         background-image:url("../../images/blanco.webp");
         image-rendering: pixelated;
-
+        max-height:10em;
     }
     
     .productos{
@@ -1170,42 +989,6 @@ font-display:swap;
         flex-wrap:wrap;
         justify-content: space-evenly;
         margin-top:1.7em;
-    }
-    
-    @media(max-width:450px){
-        .card{
-            width:100%;
-        }
-        
-          .uk-close {
-            width: 2.3em;
-            height: 2.3em;
-            cursor: pointer;
-            margin-top: 0.2em;
-        }
-    }
-    
-    @media(max-width:320px){
-          .uk-close {
-            width: 2.3em;
-            height: 2.3em;
-            cursor: pointer;
-        }
-    }
-    
-    .precio{
-       margin-top:2em;
-    }
-    
-    .card-text{
-        height:7em;
-        margin-bottom:-5em;
-        margin-top:0.7em;
-    }
-    
-    .titulo{
-    	font-family:<?php echo $negocio['fontFamily2'] ?>;
-    	font-display:swap;
     }
     
     .popup{
@@ -1292,14 +1075,6 @@ font-display:swap;
     .uk-card-default{
         background-color:<?php echo $negocio['color3']?>;
     }
-
-    .card-pregunta{
-        background-color:<?php echo $negocio['color3']?>;
-        padding:1em;
-        text-align:center;
-        border-bottom:0.2em solid <?php echo $negocio['color2']?>;
-        border-radius:0.2em 0.2em 0 0 ;
-    }
     
     .paginacion{
         display:flex;
@@ -1324,10 +1099,6 @@ font-display:swap;
         display:flex;
         justify-content:space-around;
         margin:auto;
-    }
-    
-    .card-text-precio{
-        font-size:2em;
     }
     
     .image__modal{
@@ -1361,18 +1132,75 @@ font-display:swap;
 }
 
 .icon-heart{
-    margin-right:0.5em;
-    width:1em;
-    height:1em;
+    margin-right:1em;
+    width:0.7em;
+    height:0.7em;
     margin-top:1.2em;
+    background-color:<?php echo $negocio['color3']?>;
 }
 
 .icon-star{
     object-fit:unset;
     height:1.2em;
     width:1.2em;
+    margin-bottom:1em;
+    position:bottom;
+    
 }
 
+.uk-card{
+    margin:0.3em;
+}
+
+.uk-card-header{
+   background-color:<?php echo $negocio['color2']?>;
+   color:<?php echo $negocio['color3']?>;
+   height:1em;
+   font-size:0.7em;
+}
+
+.uk-card-body {
+    display: flow-root;
+    padding: 1em 1.875em;
+    margin-bottom:3em;
+    font-size:0.9em;
+}
+
+.uk-card-footer{
+    padding: 1.5em;
+    height:1em;
+    display:flex;
+    flex:1;
+    justify-content:space-between;
+    align-items:center;
+    margin:0;
+}
+
+.uk-text-meta{
+    padding-top:1.2em;
+    color:<?php echo $negocio['color2']?>;
+}
+
+.uk-flex-between{
+       justify-content:space-between; 
+       display:flex;
+}
+
+.uk-overlay-default{
+    background:none;
+}
+
+.uk-overlay{
+    padding: 2.813em 1.875em; 
+}
+
+.uk-flex-inline{
+    align-items:baseline;
+}
+
+.uk-flex-inline-nolog{
+    align-items:center;
+}
 </style>
 <?php
   }
