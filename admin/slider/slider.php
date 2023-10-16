@@ -8,6 +8,7 @@
            <option value="#carrito">Carritos</option>
            <option value="#pedidos">Pedidos</option>
            <option value="#producto">Productos</option>
+           <option value="#favoritos">Favoritos</option>
            <option value="#categorias">Categorías</option>
            <option value="#subir_imagenes">Subír imagenes</option>
            <option value="#ver_imagenes">Ver imagenes</option>

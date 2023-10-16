@@ -26,7 +26,7 @@
 
 <header class="caption"> <i class="fas fa-users"> </i>Última acceso a la administración</header>
           <div class="uk-overflow-auto">    
-             <table id="user" class="uk-table uk-table-striped ">
+             <table id="user" class="uk-table uk-table-striped "  style="margin-bottom:1em">
           <thead>    
              <tr>
                 <th>ip</th>
@@ -65,9 +65,9 @@
  </table>
  </div> 
  
-   <header class="caption" style="margin-top:1em"> <i class="fas fa-users"> </i>Última visita</header>
+   <header class="caption"> <i class="fas fa-users" > </i>Última visita</header>
           <div class="uk-overflow-auto">    
-             <table id="user" class="uk-table uk-table-striped ">
+             <table id="user" class="uk-table uk-table-striped" style="margin-bottom:1em" >
           <thead>    
              <tr>
                 <th>ciudad</th>
@@ -95,14 +95,10 @@
 <?php
  }
 ?>  
-<div >
  </table> 
-         </div>
-    </div>
- <div>
-        </div>
-    </div>
-<div class="uk-container  uk-container-large wrap">
+</div>        
+<div class="uk-child-width-1-3@s uk-child-width-1-3@m " uk-grid>
+<div>
  <header class="caption">Países</header>  
   <canvas class="grafico" id="paises"></canvas> 
 </div>     
@@ -151,7 +147,7 @@
   });
 
 </script>
-<div class="uk-container  uk-container-large wrap">
+<div >
 <header class="caption">Ciudades</header>  
   <canvas class="grafico" id="ciudades"></canvas>
 </div>
@@ -210,7 +206,7 @@
 </script>
  
  
- <div class="uk-container  uk-container-large wrap">
+ <div>
 <header class="caption">Páginas visitadas</header>       
   <canvas class="grafico" id="paginas"></canvas>
 </div>
@@ -269,7 +265,7 @@
 </script>
  
  
-  <div class="uk-container  uk-container-large wrap">
+  <div>
 <header class="caption">Sistemas Operativos</header>        
   <canvas class="grafico" id="so"></canvas>
 </div>
@@ -328,7 +324,7 @@
 </script>
  
  
- <div class="uk-container  uk-container-large wrap">
+ <div>
 <header class="caption">¿De dónde vienen?</header>  
   <canvas class="grafico" id="procedencia"></canvas>
 </div>
@@ -386,11 +382,11 @@
 
 </script>
 
-   <div class="uk-container  uk-container-large wrap">
+   <div >
 <header class="caption">Direcciones IP</header>         
   <canvas class="grafico" id="ip"></canvas>
 </div>
-
+</div>
 
 <script>
   const ctx6 = document.getElementById('ip');

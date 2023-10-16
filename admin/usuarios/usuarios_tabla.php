@@ -1,4 +1,9 @@
  <div id="usuarios" class="uk-container  uk-container-large wrap">
+         <ul class="lista">
+        <li class="lista__item">
+                 <a class="button primary" href="vistas" >Ver visitas</a>
+        </li>
+    </ul>
       <header class="caption"> <i class="fas fa-users"> </i> Usuarios</header>
           <div class="uk-overflow-auto">    
              <table id="user" class="uk-table uk-table-striped ">

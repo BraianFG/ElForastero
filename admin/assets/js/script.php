@@ -4,9 +4,6 @@
 
  <!--UI kit -->
  <script src="assets/css/uikit/js/uikit.js" async></script>
- 
- <!-- Bootstrap -->
- <script src="assets/css/bootstrap/js/bootstrap.js" async></script>
 
 <!--alertify -->
 <script src="assets/js/alertify/js/alertify.min.js" async></script>
