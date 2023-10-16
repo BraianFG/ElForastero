@@ -416,3 +416,12 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Posibilidad de reaccionar a productos
 
 * Estádisticas con gráficos gracias a ChartJS
+
+**15/10/2023**
+
+* Rediseño de card de productos
+
+* Rediseño en página de ingreso y registro
+
+* Rediseño en gráficos
+
