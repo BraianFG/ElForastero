@@ -190,11 +190,11 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 **17/11/2021**
 
-*Correcciones en CSS
+* Correcciones en CSS
 
-*Correcciones de errores
+* Correcciones de errores
 
-*Posibilidad de incluír código postal
+* Posibilidad de incluír código postal
 
 **14/12/2021**
 
