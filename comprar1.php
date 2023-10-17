@@ -158,12 +158,12 @@ require __DIR__ .  '/vendor/autoload.php';
 });
 </script>
              
-     <!-- footer -->
+  <!-- footer -->
    <div class="uk-container uk-container-xsmall"> 
-          <div class="uk-container uk-container-xsmall"> 
-      <div class="card-pregunta">
+      <div class="uk-card uk-card-default uk-card-body uk-text-center">
        <p>¿No le convence este medio de pago? , <a class="marron" href="pagos"><i class="fa-solid fa-circle-arrow-right"></i> Pruebe alguna de las otras opciones </a></p>
-      </div> 
+     </div>
+   <div class="uk-container uk-container-xsmall">        
           <?php include 'assets/php/footer.php'?>
    </div>
    
