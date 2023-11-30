@@ -32,5 +32,5 @@
   <?php
  }
 ?>  
-        </table>
-
+</table>
+</div>
