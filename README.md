@@ -47,13 +47,13 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 * Uso **PhpDotEnv(https://github.com/vlucas/phpdotenv)**
 
-* Google Analytics **para toma de datos** **(https://analytics.google.com/)**
-
-* Lazysises **para carga diferida de imagenes** **(https://afarkas.github.io/lazysizes/index.html)**
+* Lazyises **para carga diferida de imagenes** **(https://afarkas.github.io/lazysizes/index.html)**
 
 * ImageOptim **para redimensionar imagenes** **(https://imageoptim.com/)**
 
 * Chartjs **https://chartjs.org***
+
+* Genero pdf con **FPDF (https://fpdf.org)**
 
 # MEJORAS
 **20/8/2021**
