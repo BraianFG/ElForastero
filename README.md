@@ -425,3 +425,6 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Rediseño en gráficos
 
+**19/12/2023**
+
+* Posibilidad de generar lista de productos con sus precios en pdf 
