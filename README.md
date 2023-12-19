@@ -65,6 +65,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 **Tienda**
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/0b2587d5-faf8-4b55-8aaf-093dbe90789b)
+![image](https://github.com/BraianFG/ElForastero/assets/55467665/864109c3-9cad-4560-b59a-091b6c5dd6e7)
 
 # MEJORAS
 **20/8/2021**
