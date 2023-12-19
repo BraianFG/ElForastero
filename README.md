@@ -427,4 +427,4 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 **19/12/2023**
 
-* Posibilidad de generar lista de productos con sus precios en pdf 
+* Posibilidad de generar lista de productos con sus precios en pdf con FPDF (**https://fpdf.org**)
