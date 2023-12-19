@@ -55,6 +55,9 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 * Genero pdf con **FPDF (https://fpdf.org)**
 
+# IMAGENES DE LA TIENDA
+![image](https://github.com/BraianFG/ElForastero/assets/55467665/0b2587d5-faf8-4b55-8aaf-093dbe90789b)
+
 # MEJORAS
 **20/8/2021**
 
