@@ -51,7 +51,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 * ImageOptim **para redimensionar imagenes** **(https://imageoptim.com/)**
 
-* Chartjs **https://chartjs.org***
+* Para gráficos estádisticos **ChartJS(https://chartjs.org)***
 
 * Genero pdf con **FPDF (https://fpdf.org)**
 
