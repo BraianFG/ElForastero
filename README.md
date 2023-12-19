@@ -1,5 +1,5 @@
 # El FORASTERO TIENDA ONLINE Y CMS
-Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanuel Frediani Guellffi (**https://braianfg.com.ar**)con ayuda de conocidos e internautas y con mucha dedicación de tiempo comenzó en agosoto de 2021 como parte de un proyecto de las prácticas profesionalizantes la cual me había proyectado esto para terminar el secundario y finalizar la técnicatura en Técnico Personal y Profesional en informática,en el 2022 continua con mejoras haciendo al uso por parte del usuario más cómodo,fácil y rápido.
+Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanuel Frediani Guellffi **(https://braianfg.com.ar)** con ayuda de conocidos e internautas y con mucha dedicación de tiempo comenzó en agosoto de 2021 como parte de un proyecto de las prácticas profesionalizantes la cual me había proyectado esto para terminar el secundario y finalizar la técnicatura en Técnico Personal y Profesional en informática,en el 2022 continua con mejoras haciendo al uso por parte del usuario más cómodo,fácil y rápido.
 El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0**.
 
 # INSTALACIÓN Y CONFIGURACÍON
