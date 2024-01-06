@@ -45,7 +45,6 @@
    }
 ?>       
 <?php include"panel2.php" ?>
-<?php include"menu2.php" ?>
 
      <!--- estilos --->
        <?php include "assets/css/main.php" ?> 

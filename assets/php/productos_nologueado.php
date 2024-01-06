@@ -8,6 +8,9 @@ while ($productosp1 = mysqli_fetch_array($resultp1)) {
     include "productos/reaccionar.php";
 }
 ?></li></ul>
+<ul id="ver5" class="uk-container uk-container-xlarge">
+
+</ul>
 <ul id="ver2" class="uk-container uk-container-xlarge">
 
 </ul>
@@ -21,4 +24,5 @@ while ($productosp1 = mysqli_fetch_array($resultp1)) {
     <li id="slider2" class="pagination__item"><a href="#slide2">2</a></li>
     <li id="slider3" class="pagination__item"><a  href="#slide3">3</a></li>
     <li id="slider4" class="pagination__item"><a href="#slide4">4</a></li>
+    
 </ul>

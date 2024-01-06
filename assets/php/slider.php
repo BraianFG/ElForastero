@@ -35,9 +35,13 @@
              }
             ?>    
         </select>
-        
+    <form action="busqueda.php" method="GET">
+      <label class="datos">Buscador</label>
+        <input class="uk-input uk-form-width-medium uk-form-small" placeholder="BUSCAR" type="text" name="buscar" ></input>
+    </form>    
 </div>     
 
+<script>
             <script defer>
                 document.querySelector("#seleccionar").addEventListener("click", () => {
                     if(value == categorias){
