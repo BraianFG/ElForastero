@@ -69,7 +69,7 @@ a:hover {
 }
 
 p {
-    font-size: 0.8em;
+    font-size:0.85em;
     font-weight: normal;
     text-transform: uppercase;
     font-family:  <?php echo $negocio['fontFamily'] ?>;
@@ -219,7 +219,6 @@ textarea {
     border: 0;
     display: inline-block;
     position: relative;
-    object-fit:cover;
 }
 
 img{
@@ -271,7 +270,7 @@ ul.icons li {
     }
     
     .uk-close{
-        font-size:0.8em;
+        font-size:0.9em;
     }
 }
 
@@ -412,6 +411,10 @@ font-display:swap;
     
     .uk-open > .uk-modal-dialog{
         margin-top:3em;
+    }
+    
+    .uk-close{
+        height:2.8em;
     }
 }
 
@@ -596,7 +599,7 @@ font-display:swap;
     .uk-close {
         color: <?php echo $negocio['texto'] ?>;
         background: <?php echo $negocio['color3'] ?>;
-        width: 2em;
+        width: 2.5em;
         height: 2.5em;
         cursor:pointer;
     }
@@ -975,8 +978,6 @@ font-display:swap;
     }
 
     .card-img-top {
-        border-top-left-radius: calc(.25rem - 1px);
-        border-top-right-radius: calc(.25rem - 1px);
         width:42.857em;
         height: 15em;
         background-image:url("../../images/blanco.webp");
@@ -1076,31 +1077,6 @@ font-display:swap;
         background-color:<?php echo $negocio['color3']?>;
     }
     
-    .paginacion{
-        display:flex;
-        justify-content:center;
-        margin:auto;
-        align-items:center;
-         text-align:center;
-         background-color:<?php echo $negocio['color2']?>;
-         color:<?php echo $negocio['color3']?>;
-         width:40%;
-         border-radius:0.2em;
-         padding:0.4em;
-         text-transform:uppercase;
-         margin-top:2em;
-         margin-bottom:2em;
-    }
-    .paginacion:hover{
-       color:<?php echo $negocio['color3']?>;
-    }
-    
-    .paginacion__volver{
-        display:flex;
-        justify-content:space-around;
-        margin:auto;
-    }
-    
     .image__modal{
         width: 40.000em;
         height: 26.688em;
@@ -1155,15 +1131,15 @@ font-display:swap;
 .uk-card-header{
    background-color:<?php echo $negocio['color2']?>;
    color:<?php echo $negocio['color3']?>;
-   height:1em;
-   font-size:0.7em;
+   height:2em;
+   font-size:1em;
 }
 
 .uk-card-body {
     display: flow-root;
     padding: 1em 1.875em;
     margin-bottom:3em;
-    font-size:0.9em;
+    font-size:1.2em;
 }
 
 .uk-card-footer{
@@ -1174,11 +1150,13 @@ font-display:swap;
     justify-content:space-between;
     align-items:center;
     margin:0;
+    border-bottom:0.2em solid <?php echo $negocio['color2']?>;
 }
 
 .uk-text-meta{
     padding-top:1.2em;
     color:<?php echo $negocio['color2']?>;
+    font-size:1em;
 }
 
 .uk-flex-between{
@@ -1200,6 +1178,33 @@ font-display:swap;
 
 .uk-flex-inline-nolog{
     align-items:center;
+}
+
+.pagination__item{
+         background-color:<?php echo $negocio['color2']?>;
+         color:<?php echo $negocio['color3']?>;
+         justify-content:center;
+         border-radius:0.1em;
+         text-align:center;
+         margin:0.2em;
+         padding:0.2em;
+}
+
+.uk-pagination:hover{
+    color:<?php echo $negocio['color3']?>; 
+}
+.uk-pagination{
+    justify-content:center;
+    margin:auto;
+    text-align:center;
+}
+
+#ver2,#ver3,#ver4{
+    margin-top:-2em;
+}
+
+.margen__abajo{
+    margin-bottom:1.5em;
 }
 </style>
 <?php

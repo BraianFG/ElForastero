@@ -1,4 +1,5 @@
 <style>
+    <?php include 'assets/css/bootstrap/css/bootstrap.php' ?>
      <?php include 'assets/css/uikit/css/uikit.min.css' ?>
      <?php include "assets/js/alertify/css/alertify.min.css" ?>
      <?php include "assets/js/alertify/css/alertify-1.min.css"?>
