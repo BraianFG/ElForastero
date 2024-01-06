@@ -12,7 +12,7 @@ require 'database.php';
     
     $query = "SELECT * FROM usuarios WHERE email = '$email'";
     $result = mysqli_query($conn, $query);
-
+    
     
     if(!empty($result) && (mysqli_num_rows($result)==1)){
         $fila = mysqli_fetch_array($result);
@@ -45,4 +45,6 @@ require 'database.php';
     } 
      }    
     }
+    
+    
   ?>

@@ -14,6 +14,8 @@
         "Reply-To: '$email'". "\r\n" .
         'X-Mailer: PHP/' . phpversion();
         mail($email,"Recuperar contraseña",$link,$headers);
+        $sql="INSERT INTO `usuarios_recuperar`( `email`) VALUES ('$email')";
+        $result = mysqli_query($conn, $sql);
     }
     
 ?>

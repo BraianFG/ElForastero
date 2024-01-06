@@ -19,7 +19,7 @@
             <div class="uk-width-auto">
             </div>
             <div class="uk-width-expand">
-                <p class="uk-margin-remove-bottom">Inicio de sesión</p>
+                <p class="uk-margin-remove-bottom">Recuperar contraeña</p>
             </div>
         </div>
     </div>

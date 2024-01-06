@@ -15,15 +15,13 @@ $id = $_SESSION["id"];
     <head>
          <?php include "assets/php/head.php" ?>
          <?php include "assets/css/style.php" ?>
-        <?php include "assets/js/Google-Analytics.php" ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
        <?php include "assets/js/script.php" ?>
        <?php include "assets/css/main.php" ?>
     </head>
-<body>   
+<body>
      <?php include "assets/php/navbar2.php" ?>  
     <div class="uk-container uk-container-xsmall wrapp"> 
-    <div c id="resultados" class="uk-overflow-auto uk-container">
+    <div id="resultados" class="uk-overflow-auto uk-container">
     <table class="uk-table">
               <div class="modal__header">Resumen</caption>
          <thead>    
@@ -69,10 +67,14 @@ $id = $_SESSION["id"];
        $("#resultados").load("resumen.php #resultados");
           alertify.notify('Producto eliminado de la lista','success');
         $("#total").load("resumen.php #total");  
+        const total =  document.querySelector("#total").innerText;
+          if(total === "0"){
+                        alertify.notify('Producto eliminado de la lista','success');
+             }
     } 
 </script>
 
-  <?php
+<?php
  }
 ?>  
   
@@ -90,19 +92,17 @@ $id = $_SESSION["id"];
     
  </div>    
 </div>    
-
-     </div>  
-        <div class="modal__botones carrito uk-container uk-container-xsmall ">
-            <a href="<?=$_SERVER["HTTP_REFERER"]?>" class="button__modal volver">
+</div>  
+        <div class="modal__botones carrito uk-container uk-container-xsmall" >
+            <a href="<?=$_SERVER["HTTP_REFERER"]?>" class="button__modal volver ">
                  <i class="fas fa-undo"></i>Volver</a>
-             <a href="#cancelar__pedido" uk-toggle class="button__modal confirmar">
+             <a href="#cancelar__pedido"  uk-toggle class="button__modal confirmar" id="paginac">
                  <i class="fas fa-check"></i>Comprar</a>      
                  
           <!---  <div class="comprar"></div> -->
                 </ul>
-                
+ </div>               
         </div>
-   
     <div id="cancelar__pedido" uk-modal>
     <div class="uk-modal-dialog">
      <div class="uk-modal-body">      
@@ -114,8 +114,12 @@ $id = $_SESSION["id"];
      </div>     
       </div>    
     </div>
-</div>
-
+    <p id="ver"></p>
+<script>
+  if(total === "0"){
+              alertify.notify('Agregue producto al carrito','error');
+     }
+</script>
 <?php include 'assets/php/contacto.php'?>
 <script>
     function confirmar(){
@@ -123,7 +127,7 @@ $id = $_SESSION["id"];
        $.post( "total.php", { UsuarioID:<?php echo $_SESSION["id"]?>});
     }
 </script>
-   
+</div> 
      <?php include "assets/js/productos.php" ?>
      <?php include "assets/php/mensaje.php" ?>
      

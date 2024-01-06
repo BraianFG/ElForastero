@@ -9,14 +9,13 @@ include 'database.php';
     }
  include 'top-cache.php'    
 ?>
-<!DOCTYPE html>
-<html lang="es">
+
+<html>
 <head>
     <!--head-->
    <?php include "assets/php/head.php" ?>
    <?php include "assets/js/script.php" ?>
   <?php include 'assets/css/style.php' ?>
-   <script src="assets/js/slider/ver.js" defer></script>
 </head>
 
 <body>
@@ -29,29 +28,27 @@ include 'database.php';
        <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
-                
-                <!-- Selector -->
-                 <?php include 'assets/php/slider.php' ?>
-                <!--Productos -->
-                <ul class="uk-container uk-container-xlarge">
-                <?php include "assets/php/productos.php" ?>
-          
+              <!--Productos -->
+                <?php include"assets/php/productos_favoritos.php" ?>
+
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
          </div>       
-
+              <!-- Jquery -->    
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
           
         <!-- Hoja de estilo principal -->        
          <?php include 'assets/css/main.php' ?>
-
+                
          <!--style --> 
   
-  <?php  include 'bottom-cache.php' ?>
-  
-<?php   include 'assets/php/cargar.php' ?>
+  <?php include 
+         include 'bottom-cache.php';
+         include 'assets/php/cargar.php';
+         ?>
         
 </body>
 </html>

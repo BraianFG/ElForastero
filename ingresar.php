@@ -12,7 +12,7 @@
    <?php include "assets/php/navbar4.php" ?>
       <p id="error"></p> 
       
-<div class="uk-position-center wrapp">
+<div class="uk-container uk-container-small uk-position-center wrapp">
   <div class="uk-card uk-card-default ">
     <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -65,6 +65,15 @@
         {
             $.ajax({
                 url: "login.php",
+                type: "POST",
+                data: "email="+email+"&password="+password,
+                success: function(resp){
+                 $('#error').html(resp)
+                }      
+            });
+                    
+            $.ajax({
+                url: "login2.php",
                 type: "POST",
                 data: "email="+email+"&password="+password,
                 success: function(resp){

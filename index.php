@@ -19,7 +19,10 @@ include 'top-cache.php'
     include 'assets/css/style.php';
     //Hoja de estilo principal
     include 'assets/css/main.php';
+      include "assets/js/script.php" ;
    ?>
+   
+   <script src="assets/js/slider/ver2.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +32,7 @@ include 'top-cache.php'
 
         <!-- Menu -->
        <?php include"assets/php/menu.php"  ?>
-       <div class="uk-container">
+       <article class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
                 
@@ -43,12 +46,14 @@ include 'top-cache.php'
         
                  <!-- Footer -->
                 <?php include"assets/php/footer.php" ?>
-        </div>        
+        </article>        
 
 </body>
 </html>
 
   <?php 
   include "bottom-cache.php";
-  include "assets/js/script.php" ;
-  include "visitas.php";?>
+  include "visitas.php";
+  include "assets/php/cargar.php";
+  ?>
+  
