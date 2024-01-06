@@ -21,6 +21,7 @@ require '../database.php';
         if(password_verify($password, $fila['password'])) {
                echo '<script>location.href = "index"</script>';
              $_SESSION["id_admin"] = $fila['id'];
+             include '../visitas.php';
        }else{
          echo "<script>alertify.notify('contraseña incorrecta','error',5)</script>";
         }

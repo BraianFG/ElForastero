@@ -11,11 +11,12 @@ include '../top-cache.php';
 <html lang="ES">
 
 <head>
+    
   <?php include "assets/php/head.php" ?>
    <?php include "assets/js/script.php" ?>
    <?php include "assets/css/style.php" ?>
    <?php include "assets/css/main.php" ?>
-   
+</head>
 </head>
 <body>
    <!-- Header -->  
@@ -25,4 +26,4 @@ include '../top-cache.php';
 
 </body>
 </html>
-<?php include "../bottom-cache.php" ?>;
+<?php include "../bottom-cache.php" ?>

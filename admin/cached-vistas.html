@@ -1,0 +1,705 @@
+ ;
+}
+
+.fondo{
+   background-color:#fefefe ;
+   justify-content:center;
+   border-bottom:#210000  0.2em solid;
+    display: flex;
+    margin: auto;
+}
+
+.uk-modal-footer {
+    display: flow-root;
+    padding: 2em;
+    background: #fefefe ;
+    border:0;
+}
+
+.error{
+    display:none;
+}
+
+svg{
+    margin-right:0.3em;
+    outline:none;
+}
+
+svg{
+    margin-right:0.4em;
+    align-items:center;
+    margin-left:0.4em;
+}
+
+svg,a{
+    cursor:pointer;
+}
+
+.datos{
+    padding:0em;
+    font-size: 0.7em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: block;
+    justify-content: flex-start;
+    margin-top:1em;
+}
+
+.directorio__imagenes{
+    background-color:#fefefe;
+    font-weight:bolder;
+    padding:0 1em;
+    margin-top:-2em;
+}
+
+.help{
+   display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.editar_link{
+    color:#210000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media(max-width:470px){
+     select{
+        min-width:15em;
+        justify-content:left;
+    }
+    
+    .editar_link{
+        color:#210000;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:0.8em;
+    }
+    
+    .registro__logo{
+        width:12em;
+        height:10em;
+    }
+}    
+
+.dos{
+    margin-top:-2em;
+}
+
+.slider{
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+
+.icono__add{
+  position:fixed;
+  margin-bottom:1em;
+  bottom:2;
+  right:3.5;
+  height:2em;
+  width:2em;
+
+}
+
+.icono__up{
+  position:fixed;
+  margin-bottom:4em;
+  bottom:2;
+  right:3.5;
+  height:2em;
+  width:2em;
+}
+
+.eliminar{
+    display:flex;
+    width:100%;
+}
+
+.descripcion{
+    height:10em;
+}
+
+.uk-text-center {
+    text-align: center!important;
+    padding: 0 0 1em 0;
+    font-size: 1.5em;
+}
+
+.img__producto{
+    height:4em;
+    width:4em;
+}
+
+.img__sitio{
+    height:3em;
+    width:7em;
+    align-items:center;
+}
+
+.caption{
+    background-color:#210000;
+    color:#fefefe;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:0em;
+    padding-left:0.5em;
+}
+
+ .select{
+       width:23%;
+       font-size:0.7em;
+       color:#210000;
+       background-color:#fefefe;
+       border-bottom:0.2em solid  #210000;
+       text-transform:uppercase;
+       font-weight:bold;
+       outline:none;
+       border-radius:0.3em;
+       outline:none;
+}
+
+* + .uk-table{
+    margin-top:0;
+}
+
+.productos__images{
+    width:10em;
+    height:10em;
+}
+
+   
+.imagen{
+    margin-bottom:0;
+}
+
+.img__directorio{
+    width:4em;
+    height:4em;
+}
+
+.fecha{
+   margin-bottom:1.5em;
+   margin-top:1.5em;
+   text-align:left;
+}
+
+.contrasenia{
+    display:flex;
+}
+
+#ver{
+    font-size:0.6em;
+    margin-left:0.5em;
+    margin-top:1em;
+}
+
+.grafico{
+    margin-top:0em;
+    margin-bottom:2em;
+    padding:1em;
+    background-color:#fefefe;
+    border-bottom:0.2em solid  #210000;
+}
+</style>
+</head>
+</head>
+<body>
+   <!-- Header -->  
+   
+   
+   <header id="header">
+            <h1><a href="#">El Forastero</a></h1>
+                    
+
+                      <a id="user2" href="#user2" title="ir a gestion de usuarios" uk-toggle><p class="main__texto-texto">Braian</a>
+                       
+    </header>
+        
+<div id="user2" uk-modal>
+   <div class="uk-modal-dialog">
+             <button class="uk-modal-close-default" type="button" uk-close></button>
+          <div class="modal__header">Panel de Administrador</div>
+            
+        <div class="uk-modal-body">
+           <p id="dato_nombre"><i class="fas fa-user"></i> Braian</p>
+           <p><i class="fas fa-envelope"></i> admin@elforastero.com</p>
+           <a href="#editar" uk-toggle><i class="fas fa-edit"></i>Editar mis datos</a>
+                  <a href="salir.php?salir=1" class="button primary compradores" >Cerrar Sesión <i class="fas fa-sign-out-alt "></i> </a>
+    </div>
+    </div>
+</div>    
+
+<div id="editar" uk-modal>
+   <div class="uk-modal-dialog">
+             <button class="uk-modal-close-default" type="button" uk-close></button>
+          <div class="modal__header">Editar mis datos</div>
+        <div class="uk-modal-body">
+                
+    <form method="POST" action="return false" onsubmit="return false"> 
+         <label class="datos"><i class="fas fa-user"></i>Nombre</label>
+         <input id="nombre" type="text" id="nombre" name="nombre" class="compradores" value="Braian" required>
+
+           <button id="panel_admin" onclick="Validar_admin(document.getElementById('nombre').value)" class="button primary"><i class="fas fa-edit "></i> Editar mis datos </button>
+           <div id="resultado_panel"></div>
+    </form>         
+    </div>
+    </div>
+</div>    
+
+        <script>
+ 
+        function Validar_admin(nombre)
+        {
+            $.ajax({
+                url: "assets/php/editar.php",
+                type: "POST",
+                data: "nombre="+nombre,
+                success: function(resp){
+                  $('#resultado_panel').html(resp)
+                }  
+            })
+            
+            $("#panel_admin").load('assets/php/panel2.php');
+            alertify.notify('Cambios aplicados correctamente','success',8);
+        }
+        </script>
+        
+                   
+
+ <div class="uk-container  uk-container-large wrap">
+    <ul class="lista">
+        <li class="lista__item"><a class="button primary" href="../admin" >Volver</a></li>
+        <li class="lista__item">  <a href="visitas/visitas.csv"  download class="button primary" id="descarga">Descargar datos</a> </li>
+    </ul>
+</div> 
+
+ <div class="uk-container  uk-container-large wrap">
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<header class="caption"> <i class="fas fa-users"> </i>Total de visitas</header>
+          <div class="uk-overflow-auto">    
+             <table id="user" class="uk-table uk-table-striped ">
+          <thead>    
+             <tr>
+                <th>Total</th>
+              </tr>
+        </thead>        
+          
+         <tbody>
+              <tr>
+                   <td>10237</td>
+              </tr>
+            </tbody>
+        </div>
+    </div>
+  
+            </table>
+
+<header class="caption"> <i class="fas fa-users"> </i>Última acceso a la administración</header>
+          <div class="uk-overflow-auto">    
+             <table id="user" class="uk-table uk-table-striped ">
+          <thead>    
+             <tr>
+                <th>ip</th>
+                <th>fecha</th>
+                <th>Hora</th>
+                <th>Ciudad</th>
+                <th>País</th>
+                <th>Navegador</th>
+                <th>Dispositvo</th>
+                <th>Sistema Operativo</th>
+              </tr>
+        </thead>        
+          
+         <tbody>
+              <tr>
+                   <td>186.143.134.59</td>
+                   <td>11/10/2023</td>
+                   <td>19:10:08</td>
+                   <td>Buenos Aires</td>
+                   <td>Argentina</td>
+                   <td>Google Chrome</td>
+                   <td> Celular</td>
+                   <td> Android</td> 
+              </tr>
+            </tbody>
+
+
+  
+
+ </table>
+ </div> 
+ 
+   <header class="caption" style="margin-top:1em"> <i class="fas fa-users"> </i>Última visita</header>
+          <div class="uk-overflow-auto">    
+             <table id="user" class="uk-table uk-table-striped ">
+          <thead>    
+             <tr>
+                <th>ciudad</th>
+                <th>País</th>
+                <th>fecha</th>
+                <th>Hora</th>
+              </tr>
+        </thead>        
+          
+         <tbody>
+              <tr>
+                   <td>La Plata</td>
+                    <td>Argentina</td>
+                   <td>11/10/2023</td>
+                     <td>20:10:56</td>
+              </tr>
+            </tbody>
+
+    </div>
+
+  
+<div >
+ </table> 
+         </div>
+    </div>
+ <div>
+        </div>
+    </div>
+<div class="uk-container  uk-container-large wrap">
+ <header class="caption">Países</header>  
+  <canvas class="grafico" id="paises"></canvas> 
+</div>     
+<script>
+   
+  const ctx = document.getElementById('paises');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    
+
+    data: {
+      labels: ['United States'  ,  'Argentina'  ,  'Ireland'  ,  'Sweden'  ,  'Denmark'  ,  'Germany'  ,  'Singapore'  ,  'Brazil'  ,  'Canada'  ,  'United Kingdom'  ,   '.'],
+      datasets: [{
+        label: 'Países que visitaron',
+        data: [ '5619'  ,  '3705'  ,  '195'  ,  '165'  ,  '116'  ,  '92'  ,  '58'  ,  '52'  ,  '48'  ,  '40'  ,   '.'],
+  backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    
+        borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+        borderWidth: 1
+      } ]
+    },
+    options: {
+    scales: {
+        y: {
+          beginAtZero: true
+        }
+    }
+    }
+  });
+</script>
+<div class="uk-container  uk-container-large wrap">
+<header class="caption">Ciudades</header>  
+  <canvas class="grafico" id="ciudades"></canvas>
+</div>
+
+
+<script>
+  const ctx2 = document.getElementById('ciudades');
+  new Chart(ctx2, {
+    type: 'doughnut',
+    
+
+    data: {
+      labels: ['sin definír'  ,  'Chivilcoy'  ,  'La Plata'  ,  'Ashburn'  ,  'Huntsville'  ,  'Buenos Aires'  ,  'Social Circle'  ,  'Sandston'  ,  'Boardman'  ,  'New Albany'  ,   '.'],
+ 
+      datasets: [{
+        label: 'Ciudades que visitaron',
+        data: [ '2748'  ,  '1339'  ,  '1067'  ,  '605'  ,  '533'  ,  '452'  ,  '237'  ,  '232'  ,  '196'  ,  '182'  ,   '.'],
+          
+           backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    
+        borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+
+        borderWidth: 1
+        
+      } ]
+    },
+    options: {
+          padding: 200,
+          
+      scales: {
+ y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>
+ 
+ 
+ <div class="uk-container  uk-container-large wrap">
+<header class="caption">Páginas visitadas</header>       
+  <canvas class="grafico" id="paginas"></canvas>
+</div>
+
+
+<script>
+  const ctx3 = document.getElementById('paginas');
+  new Chart(ctx3, {
+    type: 'doughnut',
+    
+
+    data: {
+      labels: ['/'  ,  '/index-2'  ,  '/index-4'  ,  '/index-3'  ,  '/ingresar'  ,  '/Medias'  ,  '/Blanqueria'  ,  '/Accesorios'  ,  '/index'  ,  '/app/'  ,   '.'],
+ 
+      datasets: [{
+        label: 'Paginas que visitaron',
+        data: [ '6424'  ,  '568'  ,  '466'  ,  '208'  ,  '162'  ,  '151'  ,  '144'  ,  '130'  ,  '122'  ,  '96'  ,   '.'],
+          
+           backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    
+        borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+
+        borderWidth: 1
+        
+      } ]
+    },
+    options: {
+          padding: 200,
+          
+      scales: {
+         y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>
+ 
+ 
+  <div class="uk-container  uk-container-large wrap">
+<header class="caption">Sistemas Operativos</header>        
+  <canvas class="grafico" id="so"></canvas>
+</div>
+
+
+<script>
+  const ctx4 = document.getElementById('so');
+  new Chart(ctx4, {
+    type: 'doughnut',
+
+
+    data: {
+      labels: ['Otro'  ,  'Android'  ,  'Windows 10'  ,  'Mac OS X'  ,  'Linux'  ,  'iPhone'  ,  'Windows 7'  ,  'Windows 8.1'  ,  'Windows XP'  ,   '.'],
+ 
+      datasets: [{
+        label: 'Sistema operativo usado',
+        data: [ '4539'  ,  '3563'  ,  '733'  ,  '541'  ,  '359'  ,  '171'  ,  '7'  ,  '7'  ,  '3'  ,   '.'],
+          
+           backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    
+        borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+
+        borderWidth: 1
+        
+      } ]
+    },
+    options: {
+          padding: 200,
+          
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>
+ 
+ 
+ <div class="uk-container  uk-container-large wrap">
+<header class="caption">¿De dónde vienen?</header>  
+  <canvas class="grafico" id="procedencia"></canvas>
+</div>
+
+
+<script>
+  const ctx5 = document.getElementById('procedencia');
+  new Chart(ctx5, {
+    type: 'doughnut',
+
+
+    data: {
+      labels: ['Link directo'  ,  'https://lm.facebook.com/'  ,  'https://tiendaelforastero.com.ar/'  ,  'https://www.google.com/'  ,  'https://l.instagram.com/'  ,   '.'],
+ 
+      datasets: [{
+        label: '¿De dónde viene?',
+        data: [ '7253'  ,  '432'  ,  '266'  ,  '236'  ,  '193'  ,   '.'],
+          
+           backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    
+        borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+
+        borderWidth: 1
+        
+      } ]
+    },
+    options: {
+          padding: 200,
+          
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>
+
+   <div class="uk-container  uk-container-large wrap">
+<header class="caption">Direcciones IP</header>         
+  <canvas class="grafico" id="ip"></canvas>
+</div>
+
+
+<script>
+  const ctx6 = document.getElementById('ip');
+  new Chart(ctx6, {
+    type: 'doughnut',
+    
+
+    data: {
+      labels: ['190.15.225.8'  ,  '181.231.139.110'  ,  '181.231.169.98'  ,  '181.231.167.225'  ,  '2a02:4780:1:5::1a'  ,  '66.249.64.37'  ,  '181.231.159.75'  ,  '66.249.64.38'  ,  '66.249.64.39'  ,  '66.249.66.37'  ,   '.'],
+ 
+      datasets: [{
+        label: 'Direcciones IP',
+        data: [ '354'  ,  '264'  ,  '245'  ,  '236'  ,  '114'  ,  '110'  ,  '109'  ,  '101'  ,  '90'  ,  '81'  ,   '.'],
+          
+           backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    
+        borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+
+        borderWidth: 1
+        
+      } ]
+    },
+    options: {
+          padding: 200,
+          
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>     
+ </div>             
+     
+<script>
+    document.querySelector("#descarga").addEventListener("click" , () => {
+             })
+</script>
+
+
+</body>
+</html>

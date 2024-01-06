@@ -19,10 +19,10 @@ include '../top-cache.php';
 </head>
 <body>
    <!-- Header -->  
-   
+   <  <?php include "slider/slider.php" ?>
  <?php include "assets/php/navbar2.php" ?>
             
- <?php include "slider/slider.php" ?>
+
     <!-------------------------------------------------------------------------->
 <?php include "usuarios/usuarios_tabla.php" ?>    
     <!-------------------------------------------------------------------------->
@@ -37,6 +37,8 @@ include '../top-cache.php';
 <?php include "usuarios/mensajes.php" ?>
     <!-------------------------------------------------------------------------->
 <?php include "productos/productos_tabla.php" ?>  
+    <!-------------------------------------------------------------------------->
+<?php include "productos/favoritos.php" ?>  
     <!-------------------------------------------------------------------------->
 <?php include "productos/categorias.php" ?> 
   <!---------------------------------------------------------------------------->
