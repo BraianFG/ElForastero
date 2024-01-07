@@ -39,9 +39,6 @@
       <label class="datos">Buscador</label>
         <input class="uk-input uk-form-width-medium uk-form-small" placeholder="BUSCAR" type="text" name="buscar" ></input>
     </form>    
-</div>     
-
-<script>
             <script defer>
                 document.querySelector("#seleccionar").addEventListener("click", () => {
                     if(value == categorias){
@@ -55,3 +52,4 @@
                         if (value != "") { location.href = value; }
                       }
          </script>
+</div>     
