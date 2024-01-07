@@ -1206,6 +1206,10 @@ font-display:swap;
 .margen__abajo{
     margin-bottom:1.5em;
 }
+
+.busqueda{
+    align-items:center;
+    margin-top:-1.6em;
 </style>
 <?php
   }
