@@ -35,9 +35,12 @@
              }
             ?>    
         </select>
-    <form action="busqueda.php" method="GET">
+    <form action="busqueda.php" method="GET" >
       <label class="datos">Buscador</label>
-        <input class="uk-input uk-form-width-medium uk-form-small" placeholder="BUSCAR" type="text" name="buscar" ></input>
+      <div class="uk-flex busqueda">
+        <input class="uk-input uk-form-width-medium uk-form-small" placeholder="BUSCAR" type="search" name="buscar" ></input>
+        <button type="submit" class="uk-search-icon-flip" uk-search-icon></button>
+      </div>
     </form>    
             <script defer>
                 document.querySelector("#seleccionar").addEventListener("click", () => {
