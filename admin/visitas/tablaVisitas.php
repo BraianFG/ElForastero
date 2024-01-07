@@ -110,7 +110,7 @@
 
     data: {
       labels: [<?php $productosp1 = "SELECT `pais` , COUNT(`num`) FROM `paises` GROUP BY `pais` ORDER BY COUNT(`num`) DESC LIMIT 10;" ;     
-          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['pais'] ?>' <?php echo ' , '?> <?php }?> '<?php echo '.'?>'],
+          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['pais'] ?>' <?php echo ' , '?> <?php }?>],
       datasets: [{
         label: 'Países que visitaron',
         data: [ <?php $productosp1 = "SELECT `pais` , COUNT(`num`) FROM `paises` GROUP BY `pais` ORDER BY COUNT(`num`) DESC LIMIT 10;" ;     
@@ -161,7 +161,7 @@
 
     data: {
       labels: [<?php $productosp1 = "SELECT `ciudad` , COUNT(`num`) FROM `ciudades` GROUP BY `ciudad` ORDER BY COUNT(`num`) DESC LIMIT 10;" ;     
-          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['ciudad'] ?>' <?php echo ' , '?> <?php }?> '<?php echo '.'?>'],
+          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['ciudad'] ?>' <?php echo ' , '?> <?php }?> ],
  
       datasets: [{
         label: 'Ciudades que visitaron',
@@ -220,7 +220,7 @@
 
     data: {
       labels: [<?php $productosp1 = "SELECT `pagina` , COUNT(`num`) FROM `paginas` GROUP BY `pagina` ORDER BY COUNT(`num`) DESC LIMIT 10;" ;     
-          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['pagina'] ?>' <?php echo ' , '?> <?php }?> '<?php echo '.'?>'],
+          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['pagina'] ?>' <?php echo ' , '?> <?php }?>],
  
       datasets: [{
         label: 'Paginas que visitaron',
@@ -279,7 +279,7 @@
 
     data: {
       labels: [<?php $productosp1 = "SELECT `so` , COUNT(`num`) FROM `so` GROUP BY `so` ORDER BY COUNT(`num`) DESC LIMIT 10;" ;     
-          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['so'] ?>' <?php echo ' , '?> <?php }?> '<?php echo '.'?>'],
+          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['so'] ?>' <?php echo ' , '?> <?php }?>],
  
       datasets: [{
         label: 'Sistema operativo usado',
@@ -338,7 +338,7 @@
 
     data: {
       labels: [<?php $productosp1 = "SELECT `referido` , COUNT(`num`) FROM `referencia` GROUP BY `referido` ORDER BY COUNT(`num`) DESC LIMIT 5;" ;     
-          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['referido'] ?>' <?php echo ' , '?> <?php }?> '<?php echo '.'?>'],
+          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['referido'] ?>' <?php echo ' , '?> <?php }?> ],
  
       datasets: [{
         label: '¿De dónde viene?',
@@ -396,7 +396,7 @@
 
     data: {
       labels: [<?php $productosp1 = "SELECT `ip` , COUNT(`num`) FROM `ip` GROUP BY `ip` ORDER BY COUNT(`num`) DESC LIMIT 10;" ;     
-          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['ip'] ?>' <?php echo ' , '?> <?php }?> '<?php echo '.'?>'],
+          $result3 = mysqli_query($conn,$productosp1);  while($mostrar_productosp1 = mysqli_fetch_array($result3)){?>'<?php  echo $mostrar_productosp1['ip'] ?>' <?php echo ' , '?> <?php }?> ],
  
       datasets: [{
         label: 'Direcciones IP',
