@@ -13,6 +13,7 @@
         <div class="uk-modal-body">
              <a class="items" href="index2">Productos</a>
              <a class="items" href="favoritos"> Productos favoritos</a>
+             <a class="items" href="admin/productos/fpdf/fpdf/Lista.php">Ver lista en pdf</a>
              <a class="items" href="#datos" uk-toggle> Datos personales</a>
              <a class="items" href="resumen">Carrito</a>
              <a class="items" href="comprar">Pedidos</a>
