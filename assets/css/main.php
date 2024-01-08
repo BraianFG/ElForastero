@@ -44,7 +44,7 @@ input, select, textarea {
 body, input, select, textarea {
     color: <?php echo $negocio['texto'] ?>;
     font-family: <?php echo $negocio['fontFamily'] ?>;
-    font-size: 14pt;
+    font-size: 1em;
     font-weight: 400;
     line-height: 1.75;
 font-display:swap;
@@ -1126,6 +1126,7 @@ font-display:swap;
 
 .uk-card{
     margin:0.3em;
+    font-size:1em;
 }
 
 .uk-card-header{
@@ -1210,6 +1211,13 @@ font-display:swap;
 .busqueda{
     align-items:center;
     margin-top:-1.6em;
+}    
+
+.uk-container .uk-container {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1em;
+}
 </style>
 <?php
   }
