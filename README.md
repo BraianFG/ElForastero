@@ -447,3 +447,9 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Posibilidad de buscar productos
 
 * Mejoras muy minímas
+
+**7/01/2024**
+
+*Mejoras minímas
+
+* Posibilidad de ver pdf a presonas registradas
