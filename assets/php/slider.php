@@ -1,4 +1,4 @@
-+<div class="uk-flex">
+<div class="uk-flex">
       <select class="select" onChange=nav(this.value) aria-label=".form-select-md example">
            <option value="categorias" id="seleccionar">Ver todas la categorias</option>
          <?php
@@ -39,7 +39,7 @@
       <label class="datos">Buscador</label>
       <div class="uk-flex busqueda">
         <input class="uk-input uk-form-width-small uk-form-small" placeholder="BUSCAR" type="search" name="buscar" ></input>
-        <button type="submit" class="uk-search-icon-flip" uk-search-icon></button>
+        <button type="submit" class="uk-search-icon-flip" aria-label="buscar" uk-search-icon></button>
       </div>
     </form>    
             <script defer>
