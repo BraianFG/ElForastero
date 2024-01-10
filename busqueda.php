@@ -38,18 +38,20 @@ require "database.php"; ?>
         ?>
         <ul class="uk-container uk-container-xlarge"><li class="productos slider"id="slider">
         <?php
-        $productosB = "SELECT * FROM productos WHERE `nombre` LIKE '%$buscar%'";
+        $productosB = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `nombre` LIKE '%$buscar%'";
         $resultp1 = mysqli_query($conn, $productosB);
         while ($productosp1 = mysqli_fetch_array($resultp1)) {
          while ($productosp1 = mysqli_fetch_array($resultp1)) {
          if(isset($_SESSION['id'])){
             include"assets/php/productos/producto.php"; 
-            include "productos/popup.php";
+            include "assets/php/productos/popup.php";
+            include "assets/php/productos/reaccionar.php";
+           include "assets/php/productos/agregarFavoritos.php";
             
          }else{
             include"assets/php/productos/producto_nologueado.php" ;
-            include "productos/popup.php";
-             include "productos/reaccionar.php";
+            include "assets/php/productos/popup.php";
+             include "assets/php/productos/reaccionar.php";
          }
          }
         ?>
