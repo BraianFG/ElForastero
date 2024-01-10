@@ -1,6 +1,8 @@
-<?php 
+
+<?php
+require "database.php"; 
 session_start();
-require "database.php"; ?>
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +17,8 @@ require "database.php"; ?>
     <!-- Wrapper -->
 
         <!-- Header -->
-                <?php 
+ 
+        <?php 
          if(isset($_SESSION['id'])){
             include"assets/php/navbar.php"; 
             
@@ -24,24 +27,24 @@ require "database.php"; ?>
             
          }
         ?>
-      
+
        <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
-                      <?php include "assets/php/slider.php" ?>
+                
+                 <?php include"assets/php/slider.php" ?>
+                 
                 
                 <!--Productos -->
-        <?php
-          $buscar = $_GET['buscar'];
-          $busqueda = $_SESSION[$buscar];
-          if(!empty($buscar)){
+                  <?php
+          $categoria = $_GET['categoria'];
+          if(isset($_GET['categoria'])){
         ?>
-        <ul class="uk-container uk-container-xlarge"><li class="productos slider"id="slider">
+        <ul class="uk-container uk-container-xlarge"><li class="productos">
         <?php
-        $productosB = "SELECT * FROM productos WHERE `nombre` LIKE '%$buscar%'";
+        $productosB = "SELECT * FROM productos WHERE categoria='$categoria'";
         $resultp1 = mysqli_query($conn, $productosB);
         while ($productosp1 = mysqli_fetch_array($resultp1)) {
-         while ($productosp1 = mysqli_fetch_array($resultp1)) {
          if(isset($_SESSION['id'])){
             include"assets/php/productos/producto.php"; 
             include "productos/popup.php";
@@ -57,10 +60,6 @@ require "database.php"; ?>
         }?>
               </li>
         </ul>        
-
-    <?php
-        }
-        ?>
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
         
