@@ -448,14 +448,15 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Mejoras muy minímas
 
-***9/01/2024**
-
-* Filtrar por categoría sin crear varias páginas
-  
-* Mejoras en el buscador
-
 **7/01/2024**
 
 * Mejoras minímas
 
 * Posibilidad de ver pdf a presonas registradas
+
+**9/01/2024**
+
+* Filtrar por categoría sin crear varias páginas
+  
+* Mejoras en el buscador
+
