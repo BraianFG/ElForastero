@@ -35,9 +35,23 @@ Redirect 301 /ADM  /admin
 Redirect 301 /ADMIN /admin
 Redirect 301 /Admin /admin
 
-Redirect 301 /2  /index-2
-Redirect 301 /3   /index-3
-Redirect 301 /4    /index-4
+Redirect 301 /2  /
+Redirect 301 /3   /
+Redirect 301 /4    /
+
+Redirect 301 /index-2 /
+Redirect 301 /index-3 /
+Redirect 301 /index-4 /
+Redirect 301 /Medias filtrar.php?categoria=Medias
+Redirect 301 /Trabajo filtrar.php?categoria=Trabajo
+Redirect 301 /Blanqueria filtrar.php?categoria=Blanqueria
+Redirect 301 /Accesorios filtrar.php?categoria=Accesorios
+Redirect 301 /RopaInterior filtrar.php?categoria=RopaInterior
+Redirect 301 /Indumentaria filtrar.php?categoria=Indumentaria
+Redirect 301 /Combos filtrar.php?categoria=Combos
+Redirect 301 /promos filtrar.php?categoria=promo
+Redirect 301 /Calzado filtrar.php?categoria=Calzado
+Redirect 301 /Abrigos filtrar.php?categoria=Abrigos
 
 GeoIPEnable On
 
@@ -292,9 +306,6 @@ deny from 2a03:2880:22ff:7::face:b00c
 # DO NOT REMOVE THIS LINE AND THE LINES ABOVE qIvEWG3aJC:IPDENYID
 
 
-# DO NOT REMOVE THIS LINE AND THE LINES BELOW IPDENYID:xLUTxbMgZz
-deny from 2a03:2880:27ff:14::face:b00c
-# DO NOT REMOVE THIS LINE AND THE LINES ABOVE xLUTxbMgZz:IPDENYID
 
 
 # DO NOT REMOVE THIS LINE AND THE LINES BELOW IPDENYID:NMDCt1JPqp
@@ -433,11 +444,6 @@ deny from 2a03:2880:25ff:75::face:b00c
 # DO NOT REMOVE THIS LINE AND THE LINES ABOVE UKF1bA0ith:IPDENYID
 
 
-# DO NOT REMOVE THIS LINE AND THE LINES BELOW HOTLINKID:1ISLG3xrng
-RewriteEngine on
-RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tiendaelforastero.com.ar/.*$      [NC]
-RewriteRule .*\.(jpeg|gif|png|bmp|tiff|avi|mpeg|mpg|wma|mov|zip|rar|exe|mp3|pdf|swf|psd|txt|htm|jpg)$ https://tiendaelforastero.com.ar/error [R,NC]
-# DO NOT REMOVE THIS LINE AND THE LINES ABOVE 1ISLG3xrng:HOTLINKID
 
 RewriteEngine On RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] RewriteCond %{HTTP_USER_AGENT} ^Zeus RewriteRule .* - [F]
 
