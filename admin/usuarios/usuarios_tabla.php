@@ -1,3 +1,4 @@
+
  <div id="usuarios" class="uk-container  uk-container-large wrap">
          <ul class="lista">
         <li class="lista__item">
@@ -6,7 +7,7 @@
     </ul>
       <header class="caption"> <i class="fas fa-users"> </i> Usuarios</header>
           <div class="uk-overflow-auto">    
-             <table id="user" class="uk-table uk-table-striped ">
+             <table id="resultado3" class="uk-table uk-table-striped ">
           <thead>    
              <tr>
                 <th>N°</th>
@@ -21,7 +22,7 @@
                 <th>EDITAR</th>
               </tr>
         </thead>        
-      <?php $productosp1 = 'SELECT * FROM `usuarios` ' ;     
+      <?php $productosp1 = 'SELECT * FROM `usuarios` LIMIT 10' ;     
           $result3 = mysqli_query($conn,$productosp1);
 
            while($mostrar_productosp1 = mysqli_fetch_array($result3)){
@@ -47,6 +48,33 @@
  }
 ?>  
             </table>
+<label class="datos" id="enviarB">Ver más</label>
+     <select id="ver" name="numero" onchange="verUsuarios()" class="uk-select  uk-input uk-form-width-medium uk-form-small">
+        <option value="10">10</option>
+        <option value="50">50</option>
+        <option value="25">75</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+        <option value="500">500</option>
+        <option value="750">750</option>
+        <option value="100">1000</option>
+    </select>
+
+<script>
+   function verUsuarios() {
+        // Obtén el valor seleccionado
+        var numero = $('#ver').val();
+        // Realiza la petición Ajax
+        $.post("slider/slider-usuarios.php", { numero: numero}, function(response) {
+            // Maneja la respuesta del servidor
+            $('#resultado3').html(response);
+        });
+                  
+            document.querySelector("#enviarB").style="display:none";  
+            document.querySelector("#ver").style="display:none";  
+    }
+    </script>
   <?php $productosp1 = 'SELECT * FROM `usuarios` ORDER BY `id` ASC' ;     
           $result3 = mysqli_query($conn,$productosp1);
         
