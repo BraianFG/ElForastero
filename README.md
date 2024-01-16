@@ -475,7 +475,8 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
-### ARGENTINA
+### ARGENTINA (TRANSFERENCIA BANCARIA)
+
 * ##### CBU : 1430001713019856090015
   
 * ##### CUIT : 20437996165
@@ -483,3 +484,13 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * ##### BANCO : BRUBANK S.A.U
   
 * ##### ALIAS : braian.fg.287
+
+### ARGENTINA LINK DE PAGO CON MERCADO PAGO
+
+**Aporte de $200** https://mpago.la/12zGmhD
+
+**Aporte de $500** https://mpago.la/1rZNfkw 
+
+**Aporte de $1000** https://mpago.la/1hPNuPv
+
+**Aporte de 50000** https://mpago.la/2ZBdrF3
