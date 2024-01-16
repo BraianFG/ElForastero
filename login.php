@@ -17,7 +17,7 @@ require 'database.php';
     if(!empty($result) && (mysqli_num_rows($result)==1)){
         $fila = mysqli_fetch_array($result);
         if(password_verify($password, $fila['password'])) {
-         echo '<script>location.href = "index2"</script>';
+         echo '<script>location.href = "/"</script>';
              $_SESSION["id"] = $fila['id'];
              $_SESSION["nombre"] =  $fila['nombre'];
              $_SESSION["apellido"] = $fila['apellido'];

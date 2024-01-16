@@ -23,7 +23,7 @@ include 'database.php';
     <!-- Wrapper -->
 
         <!-- Header -->
-        <?php include"assets/php/navbar.php" ?>
+        <?php include"assets/php/navbar3.php" ?>
 
        <div class="uk-container">
                 <!-- Main -->

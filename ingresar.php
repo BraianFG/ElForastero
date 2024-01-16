@@ -3,13 +3,13 @@
     session_start();
     if (isset($_SESSION["id"])){
       $id = $_SESSION["id"];
-    header('Location: index2');
+    header('Location: /');
     }
 ?>
     <?php include "assets/php/head.php"  ?>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <?php include "assets/css/style.php" ?>
-   <?php include "assets/php/navbar4.php" ?>
+   <?php include "assets/php/navbar2.php" ?>
       <p id="error"></p> 
       
 <div class="uk-container uk-container-small uk-position-center wrapp">
@@ -82,7 +82,6 @@
             });
         }
     </script>
-             <?php include "assets/js/Google-Analytics.php" ?>
              <?php include 'assets/css/main.php' ?>
              <?php include 'assets/js/script.php'?>
     </body> 

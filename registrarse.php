@@ -4,7 +4,7 @@
     session_start();
     if (isset($_SESSION["id"])){
         $id = $_SESSION["id"];
-       header('Location: index2');
+       header('Location: /');
 
     }
 ?>
@@ -19,7 +19,7 @@
 </head>    
 <body>
     <?php include "visitas.php" ?>
-   <?php include "assets/php/navbar4.php" ?> 
+   <?php include "assets/php/navbar2.php" ?> 
    <?php include 'assets/css/main.php' ?> 
  <div class="uk-container uk-container-xsmall wrapp">
     <div class="uk-card uk-card-default   wrap">

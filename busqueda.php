@@ -15,14 +15,11 @@ require "database.php"; ?>
     <!-- Wrapper -->
 
         <!-- Header -->
-                <?php 
-         if(isset($_SESSION['id'])){
-            include"assets/php/navbar.php"; 
-            
-         }else{
-            include"assets/php/navbar3.php" ;
-            
+        <?php 
+         if(!isset($_SESSION['id'])){
+             include "visitas.php";
          }
+          include"assets/php/navbar3.php" ;
         ?>
       
        <div class="uk-container">
@@ -32,34 +29,54 @@ require "database.php"; ?>
                 
                 <!--Productos -->
         <?php
-          $buscar = $_GET['buscar'];
-          $busqueda = $_SESSION[$buscar];
+          $buscar = mysqli_real_escape_string($conn, filter_var($_GET['buscar'], FILTER_SANITIZE_STRING));
+          $numero = mysqli_real_escape_string($conn, filter_var($_POST['numero'], FILTER_SANITIZE_NUMBER_INT));
           if(!empty($buscar)){
         ?>
         <ul class="uk-container uk-container-xlarge"><li class="productos slider"id="slider">
         <?php
-        $productosB = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `nombre` LIKE '%$buscar%'";
+        $productosB = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `nombre` LIKE '%$buscar%' LIMIT 20";
         $resultp1 = mysqli_query($conn, $productosB);
         while ($productosp1 = mysqli_fetch_array($resultp1)) {
-         while ($productosp1 = mysqli_fetch_array($resultp1)) {
-         if(isset($_SESSION['id'])){
-            include"assets/php/productos/producto.php"; 
-            include "assets/php/productos/popup.php";
-            include "assets/php/productos/reaccionar.php";
-           include "assets/php/productos/agregarFavoritos.php";
-            
-         }else{
-            include"assets/php/productos/producto_nologueado.php" ;
-            include "assets/php/productos/popup.php";
-             include "assets/php/productos/reaccionar.php";
-         }
-         }
+
+include "assets/php/productos/producto.php" ;
+
+     include "assets/php/productos/popup.php";
+
+     include "assets/php/productos/reaccionar.php";
+        }
         ?>
-        <?php
-        }?>
+        
               </li>
         </ul>        
+<div id="resultado3"></div>
+<label class="datos" id="ver">Ver más</label>
+     <select id="enviarB" name="numero" onchange="ver()" class="uk-select  uk-input uk-form-width-medium uk-form-small">
+        <option value="25">20</option>
+        <option value="50">50</option>
+        <option value="25">75</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+        <option value="500">500</option>
+        <option value="750">750</option>
+        <option value="100">1000</option>
+    </select>
 
+<script>
+   function ver() {
+        // Obtén el valor seleccionado
+        var numero = $('#enviarB').val();
+        // Realiza la petición Ajax
+        $.post("assets/php/productos-slider/slider-buscar.php", { numero: numero , buscar:"<?php echo $buscar ?>"}, function(response) {
+            // Maneja la respuesta del servidor
+            $('#resultado3').html(response);
+        });
+                  
+            document.querySelector("#enviarB").style="display:none";  
+            document.querySelector("#ver").style="display:none";  
+    }
+    </script>
     <?php
         }
         ?>

@@ -19,13 +19,10 @@ session_start();
         <!-- Header -->
  
         <?php 
-         if(isset($_SESSION['id'])){
-            include"assets/php/navbar.php"; 
-            
-         }else{
-            include"assets/php/navbar3.php" ;
-            
+         if(!isset($_SESSION['id'])){
+             include "visitas.php";
          }
+          include"assets/php/navbar3.php" ;
         ?>
 
        <div class="uk-container">
@@ -37,30 +34,19 @@ session_start();
                 
                 <!--Productos -->
                   <?php
-          $categoria = $_GET['categoria'];
-          if(isset($_GET['categoria'])){
+           $categoria = mysqli_real_escape_string($conn, filter_var($_GET['categoria'], FILTER_SANITIZE_STRING));
+          if(isset($categoria)){
         ?>
         <ul class="uk-container uk-container-xlarge"><li class="productos">
         <?php
-        $productosB = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE categoria='$categoria'  ";
+        $productosB = "SELECT `productos`.`id`, `productos`.`nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `categoria`='$categoria'";
         $resultp1 = mysqli_query($conn, $productosB);
         while ($productosp1 = mysqli_fetch_array($resultp1)) {
-         if(isset($_SESSION['id'])){
-            include"assets/php/productos/producto.php"; 
-            include "assets/php/productos/popup.php";
-            include "assets/php/productos/reaccionar.php";
-            include "assets/php/productos/agregarFavoritos.php";
-            
-         }else{
-            include"assets/php/productos/producto_nologueado.php" ;
-            include "assets/php/productos/popup.php";
-            include "assets/php/productos/reaccionar.php";
-
-         }
-         }
-        ?>
-        <?php
-        }?>
+         include "assets/php/productos/producto.php" ;
+        }
+          }
+     ?>
+        
               </li>
         </ul>        
                 <!-- Botones flotantes-->
