@@ -1,8 +1,8 @@
-# El FORASTERO TIENDA ONLINE Y CMS
+# El FORASTERO TIENDA ONLINE Y CMS 🐎
 Tienda Online desarrollada en Chivilcoy,Buenos Aires,Argentina por Braian Emanuel Frediani Guellffi **(https://braianfg.com.ar)** con ayuda de conocidos e internautas y con mucha dedicación de tiempo comenzó en agosoto de 2021 como parte de un proyecto de las prácticas profesionalizantes la cual me había proyectado esto para terminar el secundario y finalizar la técnicatura en Técnico Personal y Profesional en informática,en el 2022 continua con mejoras haciendo al uso por parte del usuario más cómodo,fácil y rápido.
 El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0**.
 
-# INSTALACIÓN Y CONFIGURACÍON
+# INSTALACIÓN Y CONFIGURACÍON ⚙️
 * Descargar el archivo .zip y subirlo al servidor
 
 * Descomprimirlo en el servidor 
@@ -27,7 +27,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
   
 **AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim ( https://imageoptim.com/api )o ImageKit.io ( https://imagekit.io/)**
   
-# COMPONENTES EXTERNOS
+# COMPONENTES EXTERNOS 🔗
 
 * Plantilla de base de **HTML5UP Future Inperfect (https://html5up.net/future-imperfect)**
 
@@ -55,7 +55,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 * Genero pdf con **FPDF (https://fpdf.org)**
 
-# IMAGENES DE LA TIENDA
+# IMAGENES DE LA TIENDA 📷
 
 **Administración**
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/ba82d49c-b684-4b28-8316-d2ddbde37981)
@@ -68,7 +68,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/864109c3-9cad-4560-b59a-091b6c5dd6e7)
 
-# MEJORAS
+# MEJORAS 💻
 **20/8/2021**
 
 * Agegué más arículo,en general todo los que me interesan 
@@ -460,3 +460,26 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
   
 * Mejoras en el buscador
 
+**16/01/2024**
+
+* Eliminación de archivos con la finalidad de optimizar código y espacio
+
+* Mejoras en la páginación en la página principal
+
+* Incorporación de páginación en la página del buscador
+
+* Incorporación de páginación en la tabla de usuarios en la administración
+  
+* Correciones menores
+
+
+
+# APORTE ECONOMICAMENTE AL PROYECTO 🤖
+### ARGENTINA
+* ##### CBU : 1430001713019856090015
+  
+* ##### CUIT : 20437996165
+  
+* ##### BANCO : BRUBANK S.A.U
+  
+* ##### ALIAS : braian.fg.287
