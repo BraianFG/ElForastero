@@ -1,4 +1,5 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
 <div id="producto" class="uk-container  uk-container-large wrap">
         <ul class="lista">
          <li class="lista__item"><a class="button primary" href="productos/fpdf/fpdf/Lista.php" >Descargar lista</a></li>
@@ -7,23 +8,22 @@
         
  <header class="caption"><i class="fas fa-store"> </i> Productos</header>        
     <div class="uk-overflow-auto"> 
-    <table class="uk-table uk-table-striped ">
+    <table class="uk-table uk-table-striped my-table"  id="resultado">
          <thead>    
              <tr>
-                <th>N°</th>
                 <th>NOMBRE</th>
                 <th>DESCRIPCÍÓN</th>
                 <th>CANTIDAD</th>
                 <th>PRECIO</th>
                 <th>CATEGORIA</th>
                 <th>IMAGEN</th>
-                <th>IMAGEN01</th>
                 <th>IMAGEN02</th>
+                <th>IMAGEN03</th>
                 <th>ELIMINAR</th>
                 <th>EDITAR</th>
               </tr>
         </thead>        
-        <?php $productosp1 = 'SELECT * FROM `productos` ORDER BY `id` ASC' ;     
+        <?php $productosp1 = "SELECT * FROM `productos`"  ;     
           $result3 = mysqli_query($conn,$productosp1);
         
         ?>
@@ -34,11 +34,10 @@
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1['0'] ?></td>
                    <td><?php echo $mostrar_productosp1['1'] ?></td>
                    <td><?php echo $mostrar_productosp1['2'] ?></td>
                    <td><?php echo $mostrar_productosp1['3'] ?></td>
-                   <td><?php echo '$ ',$mostrar_productosp1['4'] ?></td>
+                   <td><?php echo '$ '. $mostrar_productosp1['4'] ?></td>
                    <td><?php echo $mostrar_productosp1['5'] ?></td>
                    
                    <td><a href="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen'] ?>" target="_Blank"><img class="img__producto"  src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen'] ?>" lazzy="loading" onerror="this.src='../../images/blanco.webp'" /></a></td>
@@ -56,6 +55,8 @@
  }
 ?>  
         </table>
+
+    
        <?php $productos = 'SELECT * FROM `productos` ' ;     
           $result3 = mysqli_query($conn,$productos);
         
@@ -74,13 +75,13 @@
         <button class="uk-modal-close-default" type="button" uk-close></button>
 
         <div class="modal__header">Editar producto</div>
-   
-       <div class="uk-modal-body" id="productos" uk-overflow-auto>
+       <div class="uk-modal-body" id="productos_tabla" uk-overflow-auto>
           <form method="POST" action="productos/editar_productos.php" enctype="multipart/form-data">
-              
-        <label class="datos">Número de producto</label> 
-         <input name="id" type="number" placeholder="Número de producto" value="<?php echo $ver[0] ?>" required >
          
+         <label class="datos">Ingrese número del producto</label>
+         <input  name="id" type="number" ng-model="number" min="1" placeholder="Ingrese número de producto" value="<?php echo $ver[0] ?>" required >
+     
+     
          <label class="datos">Nombre del producto</label> 
          <input  name="nombre" type="text" placeholder="Ingrese nombre de producto" value="<?php echo $ver[1] ?>" required >
            
@@ -190,9 +191,6 @@
         <div class="uk-modal-body" uk-overflow-auto>
           <form method="post" action="productos/agregar_productos.php/"  enctype="multipart/form-data">
               
-            <label class="datos">Ingrese número del producto</label>
-            <input  name="id" type="number" ng-model="number" min="1" placeholder="Ingrese número de producto" value="" required >
-                
             <label class="datos">Ingrese nombre del producto</label>    
              <input  name="nombre" type="text" placeholder="Ingrese nombre de producto" value="" required >
              
@@ -235,4 +233,3 @@
         </div>
     </div>
 </div>
-

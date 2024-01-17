@@ -9,7 +9,6 @@
              <table class="uk-table uk-table-striped ">
          <thead>    
              <tr>
-                <th>N°</th>
                 <th>NOMBRE</th>
                 <th>EMAIL</th>
                 <th>ELIMINAR</th>
@@ -22,7 +21,6 @@
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar['0'] ?></td>
                    <td><?php echo $mostrar['1'] ?></td>
                    <td><?php echo $mostrar['2'] ?></td>
                    <td><a class="button primary" href="#eliminar__invitado_<?php echo $mostrar['0'] ?>" uk-toggle ><i class="fas fa-trash "></i> Eliminar</a></td>

@@ -5,8 +5,6 @@
     <table class="uk-table uk-table-striped ">
          <thead>    
              <tr>
-                 <th>N°</th>
-                 <th>Usuario</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Artículo</th>
@@ -29,8 +27,6 @@
          ?>    
          <tbody>
               <tr>
-                  <td><?php echo $mostrar_productosp1['id'] ?></td>  
-                  <td><?php echo $mostrar_productosp1['UsuarioID'] ?></td>
                    <td><?php echo $mostrar_productosp1['nombre'] ?></td>
                    <td><?php echo $mostrar_productosp1['apellido'] ?></td>
                    <td><?php echo $mostrar_productosp1['nombreProduc'] ?></td>

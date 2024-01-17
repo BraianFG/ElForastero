@@ -4,7 +4,6 @@
     <table class="uk-table uk-table-striped ">
          <thead>    
              <tr>
-                <th>N°</th>
                 <th>NOMBRE</th>
                 <th>PRECIO</th>
                 <th>IMAGEN</th>
@@ -22,7 +21,6 @@
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1['id'] ?></td>
                    <td><?php echo $mostrar_productosp1['nombre'] ?></td>
                    <td><?php echo '$',$mostrar_productosp1['precio'] ?></td>
                    <td><a href="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen'] ?>" target="_Blank"><img class="img__producto"  src="https://img.gs/jhcplzwzdm/3x,130,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $mostrar_productosp1['imagen'] ?>" lazzy="loading" onerror="this.src='../../images/blanco.webp'" /></a></td>

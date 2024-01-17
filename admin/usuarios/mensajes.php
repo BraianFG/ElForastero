@@ -5,8 +5,6 @@
     <table class="uk-table uk-table-striped ">
          <thead>    
              <tr>
-                <th>N°</th>
-                <th>USUARIO</th>
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
                 <th>MENSAJE</th>
@@ -28,8 +26,6 @@
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1[0] ?></td>
-                   <td><?php echo $mostrar_productosp1[1] ?></td>
                    <td><?php echo $mostrar_productosp1[2]  ?></td>
                    <td><?php echo $mostrar_productosp1[3] ?></td>
                    <td><?php echo $mostrar_productosp1[4] ?></td>

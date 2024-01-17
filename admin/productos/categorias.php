@@ -8,13 +8,12 @@
     <table class="uk-table uk-table-striped ">
          <thead>    
              <tr>
-                <th>N"</th>
                 <th>NOMBRE</th>
                 <th>ELIMINAR</th>
                 <th>EDITAR</th>
             </tr>
         </thead>        
-   <?php $productosp1 = 'SELECT * FROM `categorias` ORDER BY `id` ASC' ;     
+   <?php $productosp1 = 'SELECT * FROM `categorias` ORDER BY `nombre` ASC' ;     
           $result3 = mysqli_query($conn,$productosp1);
         
         ?>
@@ -25,7 +24,6 @@
          ?>    
          <tbody>
               <tr>
-                   <td><?php echo $mostrar_productosp1['0'] ?></td>
                    <td><?php echo $mostrar_productosp1['1'] ?></td>
                  <td><a href="#eliminar__categorias_<?php echo $mostrar_productosp1['0'] ?>" uk-toggle class="button primary"><i class="fas fa-trash "></i> Eliminar</a></td>  
                  <td><a href="#editar__productos-categorias_<?php echo $mostrar_productosp1['0'] ?>"  uk-toggle class="button primary"> <i class="fas fa-pen"></i> Editar</a></td>
@@ -56,13 +54,13 @@
 
         <button class="uk-modal-close-default" type="button" uk-close></button>
 
-        <div class="modal__header">Editar categoria</div>
+        <div class="modal__header">Editar rubro</div>
    
         <div class="uk-modal-body" id="productos" uk-overflow-auto>
           <form method="POST" action="return false" onsubmit="return false">
-        <label class="datos">Ingrese número de la categoría</label>           
+        <label class="datos">Número de rubro</label>           
          <input  id="id__<?php echo $ver0['0']?>" name="id" type="number" min="1" placeholder="Ingrese numero de categoría" value="<?php echo $ver0[0] ?>" >
-          <label class="datos">Ingrese nombre de la categoría</label> 
+          <label class="datos">Ingrese nombrel rubro</label> 
                <input  id="nombre__<?php echo $ver0['0']?>" name="nombre" type="text" placeholder="Ingrese nombre de la categoría" value="<?php echo $ver0[1] ?>" required >
         </div>
 
@@ -119,12 +117,10 @@
 
         <button class="uk-modal-close-default" type="button" uk-close></button>
 
-        <div class="modal__header">Agregar Categoria</div>
+        <div class="modal__header">Agregar categoría</div>
    
         <div class="uk-modal-body" uk-overflow-auto>
           <form method="post" action="productos/agregar_categorias.php">
-            <label class="datos">Ingrese número de la categoría</label> 
-             <input name="id" type="number" placeholder="Ingrese número de la categoría" min="1" value="" required >
             <label class="datos">Ingrese nombre de la categoría</label> 
             <input name="nombre" type="text" placeholder="Ingrese el nombre de la categoría" value="" required >
           
