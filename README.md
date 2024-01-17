@@ -496,7 +496,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * **Aporte de $1000** https://mpago.la/1hPNuPv
 
-* **Aporte de 5000** https://mpago.la/2ZBdrF3
+* **Aporte de $5000** https://mpago.la/2ZBdrF3
 
 ### PAYPAL
 
