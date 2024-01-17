@@ -5,7 +5,66 @@ require "database.php"; ?>
 <html lang="es">
 <head>
     <!--head-->
-   <?php include "assets/php/head.php" ?>
+<?php
+  $negocio = 'SELECT * FROM negocio_misitio' ;     
+  $resultados = mysqli_query($conn,$negocio);          
+        while($negocio= mysqli_fetch_array($resultados)){
+     ?> 
+ <title><?php echo $negocio['title'] ?></title>
+    <!--Repositive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <!--Codificación -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    
+   <!--Favicón -->
+    <link rel="shortcut icon" href="/images/<?php echo $negocio['favicon']?>" />
+    
+  <!-- Manifiesto -->    
+   <link rel="manifest" href="manifest.json">
+ <?php
+        }
+ ?>       
+ 
+   
+<?php
+  $buscar = mysqli_real_escape_string($conn, filter_var($_GET['buscar'], FILTER_SANITIZE_STRING));
+  $negocio = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `nombre` LIKE '%$buscar%'" ;     
+  $resultados = mysqli_query($conn,$negocio);          
+        while($negocio= mysqli_fetch_array($resultados)){
+     ?>     
+   <!-- Descripcion -->
+    <meta property="og:title" content="<?php echo $negocio['nombre'] .' ' .' $' .$negocio['precio']?>">
+    <meta property="og:image" content="https://img.gs/jhcplzwzdm/3x,500x500,quality=high/http://tiendaelforastero.com.ar/images/<?php echo $negocio['imagen']?>">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1452" />
+    <meta name="description" property="og:description" content="<?php echo $negocio['descripcion']?>">
+    <meta property="og:site_name" content="https://tiendaelforastero.com.ar/busqueda.php?buscar='<?php echo $buscar ?>'" /> 
+    <meta property="og:type" content="article">
+
+    <?php
+        }
+   ?>
+
+<?php
+  $negocio = 'SELECT * FROM estilos' ;     
+  $resultados = mysqli_query($conn,$negocio); 
+     while($negocio= mysqli_fetch_array($resultados)){
+  ?>      
+     <meta name="theme-color" content="<?php echo $negocio['color2'] ?>" />
+     <meta name="msapplication-navbutton-color" content="<?php echo $negocio['color2'] ?>"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $negocio['color2'] ?>">
+    
+    
+          
+      <?php
+        }
+     ?>
+ 
+
+ 
    <?php include "assets/js/script.php" ?>
   <?php include 'assets/css/style.php' ?>
 </head>
@@ -77,9 +136,9 @@ include "assets/php/productos/producto.php" ;
             document.querySelector("#ver").style="display:none";  
     }
     </script>
-    <?php
-        }
-        ?>
+        <?php
+          }
+        ?>  
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
         
