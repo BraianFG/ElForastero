@@ -57,7 +57,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 # IMAGENES DE LA TIENDA 📷
 
-#### Administració
+#### Administración
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/ba82d49c-b684-4b28-8316-d2ddbde37981)
 
 #### Administracíon (Estadística)
