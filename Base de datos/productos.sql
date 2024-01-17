@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 17-01-2023 a las 15:10:18
--- Versión del servidor: 10.5.12-MariaDB-cll-lve
+-- Tiempo de generación: 17-01-2024 a las 22:55:23
+-- Versión del servidor: 10.5.19-MariaDB-cll-lve
 -- Versión de PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `descripcion` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cantidad` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombre` varchar(60) NOT NULL,
+  `descripcion` varchar(100) NOT NULL,
+  `cantidad` varchar(30) NOT NULL,
   `precio` int(6) NOT NULL,
-  `categoria` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen01` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen02` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modal1` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `categoria` varchar(55) NOT NULL,
+  `imagen` varchar(254) NOT NULL,
+  `imagen01` varchar(254) NOT NULL,
+  `imagen02` varchar(254) NOT NULL,
+  `modal1` varchar(60) NOT NULL,
   `fecha1` date NOT NULL,
   `hora1` time NOT NULL,
   `fecha2` date NOT NULL,
@@ -53,10 +53,17 @@ CREATE TABLE `productos` (
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `nombre` (`nombre`),
-  ADD KEY `categoria` (`categoria`),
-  ADD KEY `id` (`id`,`categoria`) USING BTREE,
-  ADD KEY `categoria_2` (`categoria`);
+  ADD UNIQUE KEY `nombre` (`nombre`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
