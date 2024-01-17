@@ -472,8 +472,11 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
   
 * Correciones menores
 
+**17/01/2024**
 
+* Posibilidad de ver productos que se busco desde Open Graph sin desde fuera de la página
 
+  
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
 ### ARGENTINA (TRANSFERENCIA BANCARIA) 
 
@@ -498,3 +501,15 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 ### PAYPAL
 
 * https://www.paypal.com/donate/?hosted_button_id=KPYPY3QYQ5XHL
+
+### CRIPTOS
+
+* **Bitcoin (Red Bitcoin)** 3N5sN9trRrB2LNFKBt9o4uQDmz9E5cJaPb
+
+* **ETHERIUM (Red ERC20)** 0x752c4313433c654fd6d76579ead6f0a5f65ab27e
+
+* **USDT (Red ERC20)** 0x752c4313433c654fd6d76579ead6f0a5f65ab27e
+
+*  **USDT (TRON)** TAjCfDW1zGzcYydc1DaWVjQtdDZjDF3VRC
+
+*  **USDC (TRON)** TAjCfDW1zGzcYydc1DaWVjQtdDZjDF3VRC
