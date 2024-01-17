@@ -57,13 +57,13 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 # IMAGENES DE LA TIENDA 📷
 
-**Administración**
+#### Administració
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/ba82d49c-b684-4b28-8316-d2ddbde37981)
 
-**Administracíon (Estadística)**
+#### Administracíon (Estadística)
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/13b62836-8515-4118-ad16-40ce9a3b24e8)
 
-**Tienda**
+#### Tienda
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/0b2587d5-faf8-4b55-8aaf-093dbe90789b)
 
 ![image](https://github.com/BraianFG/ElForastero/assets/55467665/864109c3-9cad-4560-b59a-091b6c5dd6e7)
