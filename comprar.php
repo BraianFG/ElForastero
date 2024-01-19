@@ -24,7 +24,6 @@ $id = $_SESSION["id"];
     <head>
          <?php include "assets/php/head.php" ?>
          <?php include "assets/css/style.php" ?>
-        <?php include "assets/js/Google-Analytics.php" ?>
        <?php include "assets/js/script.php" ?>
        <script src="https://sdk.mercadopago.com/js/v2"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
@@ -43,7 +42,7 @@ $id = $_SESSION["id"];
                 <th>Precio</th>
                 <th>Imagen</th>
             </tr>
-        </thead>        
+        </thead>   
    <?php $productosp1 = "SELECT `imagen`, SUM(`cantidad`), SUM(`precio`),`nombreProduc` ,`prodcutoID` FROM `pedidos` WHERE UsuarioID = '$id' GROUP BY `cantidad`,`prodcutoID`; ";     
           $result3 = mysqli_query($conn,$productosp1);
 

@@ -44,6 +44,7 @@
                 <p class="uk-text-center">¿Olvidadeste tu contraseña? ,<a href="recuperar">Recuperarla</a></p>
          </div>
 </div>
+<div id="error"></div>
 
       <?php include "visitas.php" ?>  
       <script>

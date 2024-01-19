@@ -106,8 +106,8 @@ $id = $_SESSION["id"];
                 <p><i class="fa-solid fa-money-bill-transfer"></i> CBU/CVU : <?php echo $ver[4]?></p>
                 <p><i class="fa-solid fa-money-bill-transfer"></i> N° de cuenta : <?php echo $ver[5]?></p>
                 <p><i class="fa-solid fa-address-card"></i> Alias : <?php echo $ver[6]?></p>
-                <a class="button primary" href="datos/datos-<?php echo $id ?>.txt" download 
-                  onclick="descargar();eliminar_archivo()"> <i class="fa-solid fa-circle-down"></i> Descargar</a> 
+                <a class="button primary" href="datos/datos.php"
+                  onclick="descargar();eliminar_archivo()"> <i class="fa-solid fa-circle-down"></i>Ver remito</a> 
            <?php
                }
             ?>  
@@ -115,7 +115,7 @@ $id = $_SESSION["id"];
    <?php
       }
     ?>    
-     </div>
+     </div
      </div>
          
 <?php include 'assets/php/contacto.php'?>
@@ -123,11 +123,6 @@ $id = $_SESSION["id"];
 </html>
 
 <script>
-    function descargar(){
-        $.post("datos/datos2.php" , {id:<?php echo $id ?>});
-         alertify.notify('archivo generado y descargado','success');
-    }
-    
     function eliminar_archivo(){
        $.post("datos/eliminar_datos.php" , {id:<?php echo $id ?>});
     }

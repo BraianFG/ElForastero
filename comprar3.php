@@ -104,8 +104,8 @@ $id = $_SESSION["id"];
          <p><i class="fa-brands fa-telegram"></i> <a href="<?php echo $mostrar_productosp1[11]?>" target="_Blank">Telegram</a></p>
          <p><i class="fa-solid fa-comments"></i> <a href="mensaje" target="_Blank">Mesajería interna</a></p>
          <p><i class="fa-solid fa-phone"></i> <a href="tel:<?php echo $mostrar_productosp1[5]?>" target="_Blank">Llamada o SMS</a></p>
-         <a class="button primary" href="datos/datos3-<?php echo $id ,'.txt'?>" download 
-                  onclick="descargar();eliminar_archivo()"> <i class="fa-solid fa-circle-down"></i> Descargar</a> 
+         <a class="button primary" href="datos/datos.php"
+                  onclick="descargar();eliminar_archivo()"> <i class="fa-solid fa-circle-down"></i> Ver remito</a> 
         <?php
            }
         ?>
@@ -117,11 +117,6 @@ $id = $_SESSION["id"];
 </html>
 
 <script>
-    function descargar(){
-        $.post("datos/datos3.php" , {id:<?php echo $id ?>});
-         alertify.notify('archivo generado y descargado','success');
-    }
-    
     function eliminar_archivo(){
        $.post("datos/eliminar_datos3.php" , {id:<?php echo $id ?>});
     }
