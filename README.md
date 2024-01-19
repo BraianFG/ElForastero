@@ -477,9 +477,16 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Posibilidad de ver productos que se busco desde Open Graph sin desde fuera de la página
 
 * Quita de la vista de ID y usuarioID en la administración
-
-* **Cambio de ID autoincremental en la tabla productos de la base de datos**
   
+* **Cambio de ID autoincremental en la tabla productos de la base de datos**
+
+**19/01/2024***
+
+* Posibilidad de generar remitos
+  
+* Agregue un <div> faltante en ingresar.php
+
+<h1>Hola mundo </h1>
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
 ### ARGENTINA (TRANSFERENCIA BANCARIA) 
 
