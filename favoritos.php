@@ -28,6 +28,7 @@ include 'assets/php/database.php';
        <div class="uk-container">
                 <!-- Main -->
                 <?php include"assets/php/presentacion.php" ?>
+                  <?php include"assets/php/slider.php" ?>
               <!--Productos -->
                 <?php include"assets/php/productos_favoritos.php" ?>
 
