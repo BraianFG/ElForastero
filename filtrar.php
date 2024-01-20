@@ -2,6 +2,7 @@
 <?php
 require "assets/php/database.php"; 
 session_start();
+$id = $_SESSION["id"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
