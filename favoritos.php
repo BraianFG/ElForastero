@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+include 'assets/php/database.php';
     session_set_cookie_params(60*60*24*18);
     session_start();
     if (isset($_SESSION["id"])){
@@ -7,7 +7,7 @@ include 'database.php';
     }else{
        header('Location: ingresar');
     }
- include 'top-cache.php'    
+ include 'assets/php/top-cache.php'    
 ?>
 
 <html>
@@ -46,7 +46,7 @@ include 'database.php';
          <!--style --> 
   
   <?php include 
-         include 'bottom-cache.php';
+         include 'assets/php/bottom-cache.php';
          include 'assets/php/cargar.php';
          ?>
         
