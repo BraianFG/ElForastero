@@ -8,7 +8,7 @@
        header('Location: ../../../ingresar');
     }
    
-  require '../../../database.php' ;
+    require '../database.php';
  
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $fecha = date("Y-m-d", time());

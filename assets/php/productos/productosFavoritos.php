@@ -13,7 +13,6 @@
     </div>
 
     <div class="uk-card-body">
-       <p data-precio="<?php echo $productosp1['precio'] ?>"><?php echo '$',$productosp1['precio'] ?></p>
                 <p class="uk-text-meta"><p><?php include 'botonFavorito.php'?></p></p>
      </div>     
 </div>

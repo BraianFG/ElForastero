@@ -1,6 +1,5 @@
 <?php
- include '../../../database.php' ; 
- 
+    require '../database.php';
    $cantidad = filter_var($_POST['resultado'], FILTER_SANITIZE_NUMBER_INT);
     mysqli_real_escape_string($conn , $cantidad);
     
