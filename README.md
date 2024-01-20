@@ -486,6 +486,12 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
   
 * Agregue un <div> faltante en ingresar.php
 
+**20/01/2024**
+
+* Unificación de tres archivos en resumen.php como lista
+
+* Movimiento de archivo de raíz a **assets/php/**
+
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
 
 ### ARGENTINA (TRANSFERENCIA BANCARIA) 
