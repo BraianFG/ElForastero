@@ -3786,4 +3786,5 @@ input, select, textarea {
 .texto{
 	text-align: left;
 	margin-bottom: 1em;
+	box-sizing: border-box;
 }
