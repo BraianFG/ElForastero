@@ -17,7 +17,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 * Una vez eliminada la cuenta inicial modifícarle **id : 1** a la cuenta nueva y comprobar si se puede ingresar con la cuenta nueva
 
-* Descomprimir el Archivo **vendor.zip** y **vendorR.zip**
+* Descomprimir el Archivo **vendor.zip**
 
 * Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
 
