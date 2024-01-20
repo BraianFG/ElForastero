@@ -39,6 +39,7 @@ Redirect 301 /2  /
 Redirect 301 /3   /
 Redirect 301 /4    /
 
+Redirect 301 /index2 /
 Redirect 301 /index-2 /
 Redirect 301 /index-3 /
 Redirect 301 /index-4 /
