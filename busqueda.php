@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require "database.php"; ?>
+require "assets/php/database.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

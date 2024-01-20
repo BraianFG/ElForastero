@@ -1,5 +1,5 @@
 <?php
-   include 'database.php';
+   include 'asseys/php/database.php';
     session_cache_limiter('private');
     $cache_limiter = session_cache_limiter();
     session_cache_expire(1);

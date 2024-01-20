@@ -35,6 +35,7 @@ $id = $_SESSION["id"];
         </thead>        
    <?php $productosp1 = "SELECT  `nombreProduc`,`imagen`,id,SUM(`cantidad`),SUM(`precio`)FROM `carrito` WHERE `usuarioID` = '$id'  GROUP BY `productoID`,`cantidad`" ;     
           $result3 = mysqli_query($conn,$productosp1);
+
            while($mostrar_productosp1 = mysqli_fetch_array($result3)){
          ?> 
          <tbody>

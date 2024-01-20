@@ -1,7 +1,7 @@
 <?php
 session_set_cookie_params(60*60*24*18);
 session_start();
-include 'database.php';
+require "assets/php/database.php";
 $id = $_SESSION["id"];
 ?>
 
@@ -73,18 +73,12 @@ $id = $_SESSION["id"];
   
   
         <div class="modal__botones" style="margin-top:-5em;margin-bottom:5em" >
-            <a href="/index2" class="button__modal borrar borrar__carrito"><i class="fas fa-undo"></i>Volver</a>
+            <a href="<?=$_SERVER["HTTP_REFERER"]?>" class="button__modal borrar borrar__carrito"><i class="fas fa-undo"></i>Volver</a>
             <a href="#datos_bancarios" uk-toggle class="button__modal agregar agregar__carrito"><i class="fa-solid fa-bag-shopping"></i> Comprar</a>
         </div>
      </div>  
 </div>
    
-       <div class="uk-container uk-container-xsmall"> 
-          <div class="uk-container uk-container-xsmall"> 
-    <div class="uk-card uk-card-default uk-card-body uk-text-center">
-       <p>¿No le convence este medio de pago? , <a class="marron" href="pagos"><i class="fa-solid fa-circle-arrow-right"></i>Pruebe alguna de las otras opciones </a></p>
-      </div> 
-   </div>
          <?php include "assets/php/footer.php" ?>
        </div>
 
@@ -106,7 +100,7 @@ $id = $_SESSION["id"];
                 <p><i class="fa-solid fa-money-bill-transfer"></i> CBU/CVU : <?php echo $ver[4]?></p>
                 <p><i class="fa-solid fa-money-bill-transfer"></i> N° de cuenta : <?php echo $ver[5]?></p>
                 <p><i class="fa-solid fa-address-card"></i> Alias : <?php echo $ver[6]?></p>
-                <a class="button primary" href="datos/datos.php"
+                <a class="button primary" href="assets/php/datos/datos.php"
                   onclick="descargar();eliminar_archivo()"> <i class="fa-solid fa-circle-down"></i>Ver remito</a> 
            <?php
                }

@@ -1,7 +1,7 @@
 <?php
 session_set_cookie_params(60*60*24*18);
 session_start();
-include 'database.php';
+require "assets/php/database.php";
 $id = $_SESSION["id"];
 
 // SDK de Mercado Pago
@@ -121,7 +121,7 @@ require __DIR__ .  '/vendor/autoload.php';
 
      </div>  
         <div style="margin-top:-2em" class="modal__botones carrito uk-container uk-container-xsmall ">
-            <a href="/index2" class="button__modal volver">
+            <a href="<?=$_SERVER["HTTP_REFERER"]?>" class="button__modal volver">
                  <i class="fas fa-undo"></i>Volver</a>
                <div class="comprar"></div>
                 </ul>
@@ -154,10 +154,7 @@ require __DIR__ .  '/vendor/autoload.php';
 </script>
              
      <!-- footer -->
-   <div class="uk-container uk-container-xsmall"> 
-      <div class="uk-card uk-card-default uk-card-body uk-text-center">
-       <p>¿No le convence este medio de pago? , <a class="marron" href="pagos"><i class="fa-solid fa-circle-arrow-right"></i> Pruebe alguna de las otras opciones </a></p>
-     </div>
+
    <div class="uk-container uk-container-xsmall">        
           <?php include 'assets/php/footer.php'?>
    </div>

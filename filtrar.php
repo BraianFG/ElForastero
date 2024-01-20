@@ -20,7 +20,7 @@ session_start();
  
         <?php 
          if(!isset($_SESSION['id'])){
-             include "visitas.php";
+             include "assets/php/visitas.php";
          }
           include"assets/php/navbar3.php" ;
         ?>
@@ -39,7 +39,7 @@ session_start();
         ?>
         <ul class="uk-container uk-container-xlarge"><li class="productos">
         <?php
-        $productosB = "SELECT `productos`.`id`, `productos`.`nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `categoria`='$categoria'";
+        $productosB = "SELECT `productos`.`id`, `productos`.`nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto`  WHERE `categoria`='$categoria'";
         $resultp1 = mysqli_query($conn, $productosB);
         while ($productosp1 = mysqli_fetch_array($resultp1)) {
          include "assets/php/productos/producto.php" ;
