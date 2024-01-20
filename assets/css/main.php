@@ -1141,6 +1141,7 @@ font-display:swap;
     padding: 1em 1.875em;
     margin-bottom:3em;
     font-size:1.2em;
+    box-sizing:border-box;
 }
 
 .uk-card-footer{
@@ -1187,8 +1188,8 @@ font-display:swap;
          justify-content:center;
          border-radius:0.1em;
          text-align:center;
-         margin:0.2em;
-         padding:0.2em;
+         margin:1em 0.5em;
+         padding:1em;
 }
 
 .uk-pagination:hover{
@@ -1217,6 +1218,16 @@ font-display:swap;
     padding-left: 0;
     padding-right: 0;
     font-size: 1em;
+}
+
+.paginacion{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.pagination__item:hover{
+      color:<?php echo $negocio['color3']?>; 
 }
 </style>
 <?php
