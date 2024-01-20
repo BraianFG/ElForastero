@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$id = $_SESSION["id"];
 require "assets/php/database.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
