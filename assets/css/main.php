@@ -1141,7 +1141,6 @@ font-display:swap;
     padding: 1em 1.875em;
     margin-bottom:3em;
     font-size:1.2em;
-    box-sizing:border-box;
 }
 
 .uk-card-footer{
@@ -1219,7 +1218,6 @@ font-display:swap;
     padding-right: 0;
     font-size: 1em;
 }
-
 </style>
 <?php
   }

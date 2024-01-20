@@ -13,35 +13,15 @@
     <div class="uk-card-body">
     <div class="uk-flex-between uk-flex-inline" >
                 <p data-precio="<?php echo $productosp1['precio'] ?>"><?php echo '$',$productosp1['precio'] ?></p>
-            <?php 
-              if(isset($_SESSION['id'])){
-            ?>
                 <a id="favoritos_<?php echo $productosp1['0'] ?>"><img src="icons/bookmark-regular.svg" class="icon-star" width="10" height="10" alt="favoritos"/></a>
-               <?php include "agregarFavoritos.php"?>     
-            <?php 
-              }
-            ?>
+
     </div>   
         <p><?php echo $productosp1['descripcion'] ?></p>
      </div>     
-    <div class="uk-card-footer uk-position-bottom uk-flex-inline-nolog">
-        
-             <?php 
-              if(!isset($_SESSION['id'])){
-            ?>    
-         <p class="uk-text-meta "><time datetime="<?php echo $productosp1['fecha2'] , ' ', $productosp1['hora2'] ?>"><?php echo $productosp1['fecha2'] , ' ', $productosp1['hora2'] ?></time></p>
-         <?php
-              }else{
-        ?>
-       
-       <p><?php include "botones.php"; ?></p>
-        <?php
-              }
-         ?>      
-            <div  class="uk-flex-inline">   
-               <img src="icons/heart-regular.svg" class="icon-heart" id="reaccion_<?php echo $productosp1['0'] ?>" width="10" height="10" alt="reacionar"><p id="reacciones_<?php echo $productosp1['0'] ?>"><?php echo $productosp1['14'] ?></p>
+    <div class="uk-card-footer uk-position-bottom  uk-flex-between">
+                     <p class="uk-text-meta "> <?php include 'botones.php'?></p>
+                       <div class="uk-flex-inline ">
+             <img src="icons/heart-regular.svg" class="icon-heart" id="reaccion_<?php echo $productosp1['0'] ?>" width="10" height="10" alt="reacionar"><p id="reacciones_<?php echo $productosp1['0'] ?>"><?php echo $productosp1['14'] ?></p>
            </div>
-
     </div>
 </div>
-
