@@ -1,6 +1,6 @@
 
 <?php
-require "database.php"; 
+require "assets/php/database.php"; 
 session_start();
 ?>
 <!DOCTYPE html>
@@ -68,4 +68,3 @@ session_start();
         
 </body>
 </html>
-
