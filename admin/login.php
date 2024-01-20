@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../database.php';
+    require '../assets/php/database.php';
   
      $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
      mysqli_real_escape_string($conn, $email);

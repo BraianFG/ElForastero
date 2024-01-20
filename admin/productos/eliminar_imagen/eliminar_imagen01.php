@@ -1,5 +1,5 @@
 <?php
-    require "../../../database.php";
+      require '../../../assets/php/database.php';
     
     $id = filter_var($_POST['id'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $id);

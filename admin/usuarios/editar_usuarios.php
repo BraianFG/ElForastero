@@ -1,5 +1,5 @@
  <?php 
-    require '../../database.php';
+        require '../assets/php/database.php';
     
     session_start();
     

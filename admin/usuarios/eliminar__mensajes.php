@@ -1,6 +1,5 @@
 <?php 
-    require '../../database.php';
-      
+        require '../assets/php/database.php';
    if($UsuarioID ==""){
     header("Location:../");
    }else{

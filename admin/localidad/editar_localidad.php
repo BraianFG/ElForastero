@@ -1,6 +1,5 @@
 <?php
-  require '../../database.php';
-  
+  require '../../assets/php/database.php';
     echo '<script> window.location.href = "../../";</script>';
     
     $localidad = filter_var($_POST['localidad'], FILTER_SANITIZE_STRING);

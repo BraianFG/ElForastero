@@ -1,5 +1,5 @@
 <?php 
-    include '../../database.php';
+   require '../../assets/php/database.php';
 
    if($id == "" ){
          header("Location:../");

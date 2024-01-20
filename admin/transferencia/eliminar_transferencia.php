@@ -1,6 +1,6 @@
 <?php
 
- require '../../database.php';
+require '../assets/php/database.php';
  
  $cbu = filter_var($_POST['cbu'], FILTER_SANITIZE_NUMBER_INT);
   mysqli_real_escape_string($conn , $cbu);

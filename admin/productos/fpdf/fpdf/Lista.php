@@ -1,5 +1,5 @@
 <?php
-require "../../../../database.php";
+  require '../../../../assets/php/database.php';
 require('./fpdf.php');
 
 class PDF extends FPDF
@@ -8,7 +8,7 @@ class PDF extends FPDF
    // Cabecera de página
    function Header()
    {
-       require "../../../../database.php";
+       require '../../../../assets/php/database.php';
          $sql = "SELECT * FROM negocio JOIN localidad JOIN negocio_misitio";
             $result3 = mysqli_query($conn,$sql);
             while($mostrar_productosp1 = mysqli_fetch_array($result3))
