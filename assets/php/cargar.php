@@ -1,5 +1,5 @@
   <?php
-    
+    require "database.php";
   $productos = "SELECT * FROM productos";
   $resultp1 = mysqli_query($conn,$productos);          
 

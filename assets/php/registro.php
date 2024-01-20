@@ -1,9 +1,28 @@
-<?php
-    session_start();
+<?php    
     include 'database.php';
-    $id =  $_SESSION["id"];
-
-
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    mysqli_real_escape_string($conn, $email);
+    $email = strtolower($email);
+    $email = trim($email);
+    
+     if(empty($email)){
+        echo "<script>alertify.notify('Ingrese su correo electrónico','error','4');</script>"; 
+    }
+    
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          echo "<script>alertify.notify('Ingrese un correo valido','error','4');</script>";
+    }
+   
+   
+    $password =filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+     mysqli_real_escape_string($conn , $password);
+    
+    if(strlen($password)<8){
+        echo "<script>alertify.notify('Ingrese una contraseña con un mínimo de 8 caracteres','error','4');</script>";
+    }
+    
+    
+    
     $nombre =filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $nombre);
     $nombre = ucwords($nombre);
@@ -18,7 +37,7 @@
     }
     
     
-    
+     
     $apellido = filter_var($_POST['apellido'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $apellido);
     $apellido = ucwords($apellido);
@@ -60,12 +79,10 @@
     }
     
     
-    
-    
-    $direccion = filter_var($_POST['direccion'], FILTER_SANITIZE_STRING);
+    $direccion = filter_var($_POST['domicilio'], FILTER_SANITIZE_STRING);
     mysqli_real_escape_string($conn , $direccion);
-    $direccion = ucwords($direccion);
     $direccion = trim($direccion);
+    $direccion = ucwords($direccion);
    
     if(empty($direccion)){
         echo "<script>alertify.notify('Ingrese la dirección donde está viviendo','error','4');</script>"; 
@@ -87,16 +104,22 @@
         echo "<script>alertify.notify('Ingrese los 4 números del código postal','error','4');</script>";
     }
     
-
-//------------------------------------------------------------------------------//
- if(!empty($nombre && $apellido && $direccion && $celular && $ciudad && $codPostal) && strlen($codPostal) == 4 && preg_match('/^(?=.{3,36}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/',$nombre) && preg_match('/^(?=.{3,36}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/',$ciudad) && preg_match('/^(?=.{3,36}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/',$apellido) && (!(preg_match('/[$%&|<>#]/', $direccion))) && preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/D',$celular)){
-
-        $sql = "UPDATE `usuarios` SET nombre= '$nombre' , apellido = '$apellido', direccion = '$direccion' , celular = '$celular' , ciudad = '$ciudad' , codPostal = '$codPostal' WHERE `usuarios` .id = '$id';";
-         echo "<script>alertify.notify('cambios aplicados con exito','success','8');</script>";
-      $resultInsert = mysqli_query($conn, $sql);    
+    $query = "SELECT * FROM usuarios WHERE email= '$email'";
+    $result = mysqli_query($conn, $query);
+        
+    if(mysqli_num_rows($result)==1){
+           echo "<script>alertify.notify('correo ya registrado','error',4)</script>";
+    }
+    
+   $hash = password_hash($password ,PASSWORD_DEFAULT, ['cost' => 8]);
    
-   }
-   
+   if(!(empty($nombre && $apellido && $direccion && $direccion && $email && $password && $celular && $ciudad && $codPostal)) && strlen($password)>=8 && preg_match('/^(?=.{3,36}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/',$nombre) && preg_match('/^(?=.{3,36}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/',$ciudad) && preg_match('/^(?=.{3,36}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/',$apellido) && (!(preg_match('/[$%&|<>#]/', $direccion)) && preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/D',$celular) && mysqli_num_rows($result)==0)){
+     $sql="INSERT INTO `usuarios`(`nombre`,  `apellido`,`direccion`, `ciudad`, `celular`, `email`, `password`,`CodPostal`) VALUES ('$nombre','$apellido', '$direccion','$ciudad' ,'$celular','$email','$hash','$codPostal');";
+     
+      $resultInsert = mysqli_query($conn, $sql); 
+      mysqli_close($conn);  
+    echo '<script>location.href="ingresar";</script>'; 
+    }
+  
 
 ?>
-  

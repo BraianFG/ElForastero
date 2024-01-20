@@ -2,7 +2,7 @@
 <li class="productos">
 <?php
   session_start();
-  require '../../../database.php';
+       require '../database.php';
   
 $buscar = mysqli_real_escape_string($conn, filter_var($_GET['buscar'], FILTER_SANITIZE_STRING));
 $numero = mysqli_real_escape_string($conn, filter_var($_POST['numero'], FILTER_SANITIZE_NUMBER_INT));
