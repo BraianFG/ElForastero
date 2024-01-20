@@ -266,7 +266,7 @@ $id = $_SESSION["id"];
      
     function tocar3(){
          document.querySelector("#item-2").style="display:none";
-         document.querySelector("#item-1").style="display:none";
+         document.querySelector("#item-1").style="display:noAne";
          document.querySelector("#item-3").style="display:block";
      }
 </script>
