@@ -1127,12 +1127,21 @@ font-display:swap;
 .uk-card{
     margin:0.3em;
     font-size:1em;
+     max-width:20em;
+}
+
+@media screen and (max-width: 718px){
+   .uk-card{
+    margin:0.3em;
+    font-size:1.2em;
+     max-width:40em;
+   } 
 }
 
 .uk-card-header{
    background-color:<?php echo $negocio['color2']?>;
    color:<?php echo $negocio['color3']?>;
-   height:2em;
+   height:2.5em;
    font-size:1em;
 }
 
@@ -1140,7 +1149,7 @@ font-display:swap;
     display: flow-root;
     padding: 1em 1.875em;
     margin-bottom:3em;
-    font-size:1.2em;
+    font-size:1em;
     box-sizing:border-box;
 }
 
