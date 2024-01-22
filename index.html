@@ -1,61 +1,162 @@
-}<?php
-    require "assets/php/database.php";
-    session_set_cookie_params(60*60*24*18);
-    session_start();
-    if (isset($_SESSION["id"])){
-     $id = $_SESSION["id"];
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>El Forastero CMS ecomerce</title>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assetss/css/main.css" />
+		<noscript><link rel="stylesheet" href="assetss/css/noscript.css" /></noscript>
+		<meta property="og:title" content="CMS ecomerce - EL Forastero">
+		<link rel="icon" href="https://raw.githubusercontent.com/BraianFG/ElForastero/main/Imagenes-Publicitarias/logo.ico" type="image/x-icon">}
+<meta property="og:image:secure_url" content="https://github.com/BraianFG/ElForastero/blob/main/Imagenes-Publicitarias/portada.png?raw=true" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content="CMS ecomerce" />
+	</head>
+	<body class="is-preload">
 
-    }
-include 'top-cache.php'
-?>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <!--head-->
-   <?php
-   include "assets/php/head.php";
-    include 'assets/css/style.php';
-    //Hoja de estilo principal
-    include 'assets/css/main.php';
-      include "assets/js/script.php" ;
-   ?>
-</head>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="https://raw.githubusercontent.com/BraianFG/ElForastero/c605f803d8c11b53922bb66f63612091e14b8857/Imagenes-Publicitarias/logo.svg" width="200" height="100" alt="" /></span>
+						<h1>El Forastero</h1>
+						<p>CMS ecomerce de código abierto</p>
+					</header>
 
-<body>
-        <!-- Header -->
-      <?php 
-      
-         if(!isset($_SESSION['id'])){
-            include "assets/php/visitas.php";  
-         }
-        include"assets/php/navbar3.php";
-        ?>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introducción</a></li>
+							<li><a href="#first">Componentes externos</a></li>
+							<li><a href="#cta">Comenzar</a></li>
+						</ul>
+					</nav>
 
-        <!-- Menu -->
-       <article class="uk-container">
-                <!-- Main -->
-                <?php include"assets/php/presentacion.php" ?>
-                
-                <!-- Selector -->
-                 <?php include 'assets/php/slider.php' ?>
-                 
-                <!--Productos -->
-                <?php include "assets/php/productos.php"; 
-                 ?>
-               
-                <!-- Botones flotantes-->
-                <?php include "assets/php/contacto.php" ?>
-        
-                 <!-- Footer -->
-                <?php include"assets/php/footer.php" ?>
-        </article>        
+				<!-- Main -->
+					<div id="main">
 
-</body>
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Introdución</h2>
+										</header>
+										<p class="texto">CMS ecomerce desarrollado en la ciudsd de Chivilcoy,Buenos Aires,Argentina por Braian Emanuel Frediani Guellffi <a href="https://braianfg.com.ar" target="_Blank"><b>(https://braianfg.com.ar)</b></a> con ayuda de conocidos e internautas que con mucha dedicación de tiempo comenzó en agosto de 2021 como parte de un proyecto de las prácticas profesionalizantes. <br><br>Con estas terminé el secundario obteniendo el titulo de Técnico Personal y Profesional en informática, en el 2022.<br><br>Actualmente, continúo mejorando la tienda para que su uso sea mas comodo, fácil y rápido.<br><br> El 28 de mayo del 2022 esté código fue liberado bajo la Licencia Apache 2.0.</p>
+										</ul>
+									</div>
+									<span class="image"><img src="https://github.com/BraianFG/ElForastero/blob/main/Imagenes-Publicitarias/portada.png?raw=true" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Componentes externos</h2>
+								</header>
+								<ul class="texto">
+<li>Plantilla de base de HTML5UP Future Inperfect <a href="https://html5up.net/future-imperfect"><b>(https://html5up.net/future-imperfect)</b></a></li>
+
+<li>Framework CSS UIkit <a href="https://getuikit.com/"><b>(https://getuikit.com/)</b></a></li>
+
+<li>Framework JS Alertify <a href"https://alertifyjs.com/"><b>(https://alertifyjs.com/)</b></a></li>
+
+
+<li>Ajax <a href="https://api.jquery.com/jquery.ajax/"><b>(https://api.jquery.com/jquery.ajax/)</b></a></li>
+
+
+<li>Librería JS Jquery <a href="https://jquery.com/"><b>(https://jquery.com/)</b></a></li>
+
+
+<li>Iconos de Fonts Awesome <a href="https://fontawesome.com/"><b>(https://fontawesome.com/)</b></a> y con imagenes usadas de Pixabay <a href="https://pixabay.com/"><b>(https://pixabay.com/)</b></a></li>
+
+<li>Fuentes tipográficas de Google Fonts <a href="https://fonts.google.com/">(https://fonts.google.com/)</a></li>
+
+<li>Pasarela de pago SDK de Cheeckout Pro de Mercado Pago <a href="https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/landing"><b>(https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/landing)</b></a></li>
+
+<li>Uso PhpDotEnv<a href="https://github.com/vlucas/phpdotenv"><b>(https://github.com/vlucas/phpdotenv)</b></a></li>
+
+<li>Lazyises para carga diferida de imagenes <a href="https://afarkas.github.io/lazysizes/index.html"><b>https://github.com/vlucas/phpdotenv(https://afarkas.github.io/lazysizes/index.html)</b></a></li>
+
+<li>ImageOptim para redimensionar imagenes <a href="https://imageoptim.com/"><b>(https://imageoptim.com/)</b></a></li>
+
+<li>Para gráficos estádisticos ChartJS <a href="https://chartjs.org"><b>(https://chartjs.org)</b></a></li>
+
+<li>Genero pdf con FPDF <a href="https://fpdf.org"><b>(https://fpdf.org)</b></a></li>
+									</li>
+								</ul>
+
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Instalación</h2>
+								<ul class="texto">
+								  <li>Descargar el archivo .zip y subirlo al servidor</li>
+
+                                  <li>Descomprimirlo en el servidor</li>
+
+                                   <li>Crear una base de datos y conectarla desde el archivo database.php
+								   las tablas o archivo de configuración se encuentra en la carpeta Base de Datos</li>
+
+<li>Una vez realizada la conexión ir a <b>http://tudominio.com/admin</b> e ingresar email : <b>admin@admin y Contraseña:12345678</b></li>
+
+<li>Una vez adentro del aréa administrativa ir <b>http://tudominio.com/admin/registro</b> o ir a la tabla de invitados y ahí hacer una cuenta nueva a gusto del usuario</li>
+
+<li>Una vez hecho esto eliminar esta cuenta <b>email : admin@admin</b> y <b>Contraseña:12345678</b> que aparece en el id : 1 , tabla: admin de la Base de Datos</li>
+
+<li>Una vez eliminada la cuenta inicial modifícarle id : 1 a la cuenta nueva y comprobar si se puede ingresar con la cuenta nueva</li>
+
+<li>Descomprimir el Archivo vendor.zip</li>
+
+<li>Configurar el link de pago de Mercado Pago Solo le falta añadír el Access Token y el Public Key para esto se debe ingresar a <a href="https://www.mercadopago.com.ar/developers/
+es/docs/checkout-pro/integrate-checkout-pro" target="_Blank"><b>https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro</b></a> e iniciar sesión para anadir eso que falta,una vez encontrado ir a comprar.php donde se tiene que agregar esos dos datos faltante.</li>
+
+<li>Cambiarle la ruta a las imagenes</li>
+
+<li>Cargar una vez la página antes de comenzar a usarla,esto permite que se cargue la tabla de reacciones y muestre los productos</li>
+
+<li>AL SUBÍR LAS IMAGENES NO SE COMPRIME DESDE EL SERIVIDOR COMPRIRLAS ANTES DE USARLA O USAR SERVICIOS COMO ImageOptim  <a href=" https://imageoptim.com/api" target="_Blank"><b>( https://imageoptim.com/api )</b></a>o ImageKit.io <a href"https://imagekit.io/"><b>( https://imagekit.io/)</b></a></li>
+								<ul>
+								
+								</header>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="https://github.com/BraianFG/ElForastero/" target="_Blank" class="button">Comenzar</a></li>
+									</ul>
+								</footer>
+							</section>
+					</div>
+					
+											<footer class="major">
+									<ul class="actions special">
+										<p>HECHO A BASE DE UNA PLANTILLA DE <a href="https://html5up.net/stellar" target="_Blank">HTML5UP.NET STELLAR</a> POR  @ajlkn , MODIFICADO <a href="https://braianfg.com.ar" target="_Blank">BraianFG</a><p>
+									</ul>
+								</footer>
+							</section>
+					</div>			
+
+				<!-- Footer -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assetss/js/jquery.min.js"></script>
+			<script src="assetss/js/jquery.scrollex.min.js"></script>
+			<script src="assetss/js/jquery.scrolly.min.js"></script>
+			<script src="assetss/js/browser.min.js"></script>
+			<script src="assetss/js/breakpoints.min.js"></script>
+			<script src="assetss/js/util.js"></script>
+			<script src="assetss/js/main.js"></script>
+
+	</body>
 </html>
-
-  <?php 
-  include "bottom-cache.php";
-  include "assets/php/cargar.php";
-  ?>
-  
