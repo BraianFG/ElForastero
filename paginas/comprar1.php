@@ -113,8 +113,9 @@ require __DIR__ .  '/vendor/autoload.php';
         <div style="margin-top:-2em" class="modal__botones carrito uk-container uk-container-xsmall ">
             <a href="<?php $_SERVER["HTTP_REFERER"]?>" class="button__modal volver">
                  <i class="fas fa-undo"></i>Volver</a>
+            <a href="../assets/php/datos/datosMP.php" class="button__modal volver">Remito</a>
                <div class="comprar"></div>
-                </ul>
+            </ul>
         </div>
    
 <script>
