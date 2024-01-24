@@ -496,6 +496,10 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Creación de carpeta Paginas y con movimiento de archivos que estaban en la raíz hacia ahí
 
 * No va a ser necesario descomprimír las carpetas Vendor y VendorR
+
+* Generación de remitos para Mercado Pago
+
+* Elimiación de 6 tablas de bases de datos para optimizar
   
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
 
