@@ -478,7 +478,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
   
 * **Cambio de ID autoincremental en la tabla productos de la base de datos**
 
-**19/01/2024***
+**19/01/2024**
 
 * Posibilidad de generar remitos
   
@@ -494,6 +494,8 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 **24/01/2024**
 
 * Creación de carpeta Paginas y con movimiento de archivos que estaban en la raíz hacia ahí
+
+* No va a ser necesario descomprimír las carpetas Vendor y VendorR
   
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
 
