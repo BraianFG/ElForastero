@@ -490,6 +490,11 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 
 * Movimiento de archivo de raíz a **assets/php/**
 
+
+**24/01/2024**
+
+* Creación de carpeta Paginas y con movimiento de archivos que estaban en la raíz hacia ahí
+  
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
 
 ### ARGENTINA (TRANSFERENCIA BANCARIA) 
