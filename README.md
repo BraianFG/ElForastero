@@ -7,7 +7,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 
 * Descomprimirlo en el servidor 
 
-* Crear una base de datos y conectarla desde el archivo **database.php** ,las tablas o archivo de configuración se encuentra en la carpeta **Base de Datos**
+* Crear una base de datos y conectarla desde el archivo **database.php** ,las tablas o archivo de configuración se encuentra en la carpeta **Base de Datos** , hay que importarlas a la base de datos
 
 * Una vez realizada la conexión ir a **http://tudominio.com/admin** e ingresar **email : admin@admin** y **Contraseña:12345678**
 
@@ -16,9 +16,7 @@ El 28 de mayo del 2022 esté código fue liberado bajo **la Licencia Apache 2.0*
 * Una vez hecho esto eliminar esta cuenta **email : admin@admin** y **Contraseña:12345678** que aparece en el **id : 1 , tabla: admin** de la Base de Datos
 
 * Una vez eliminada la cuenta inicial modifícarle **id : 1** a la cuenta nueva y comprobar si se puede ingresar con la cuenta nueva
-
-* Descomprimir el Archivo **vendor.zip**
-
+  
 * Configurar el link de pago de Mercado Pago **Solo le falta añadír el Access Token y el Public Key** para esto se debe ingresar a **https://www.mercadopago.com.ar/developers/es/docs/checkout-pro/integrate-checkout-pro** e iniciar sesión para anadir eso que falta,una vez encontrado ir a **comprar.php** donde se tiene que agregar esos dos datos faltante.
 
 * Cambiarle la ruta a las imagenes
