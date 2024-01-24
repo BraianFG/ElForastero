@@ -1,7 +1,7 @@
 <?php
 /// Powered by Evilnapsis go to http://evilnapsis.com
-require "../database.php";
-include "../admin/productos/fpdf/fpdf/fpdf.php";
+    require '../database.php';
+    include "../../../admin/productos/fpdf/fpdf/fpdf.php";
 
 $pdf = new FPDF($orientation='P',$unit='mm');
 $pdf->AddPage();

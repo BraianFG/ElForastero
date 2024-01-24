@@ -54,12 +54,14 @@ if(!isset($_SESSION['id'])){
         }
     ?>
         <div class="uk-modal-body">
-             <a class="items" href="index2">Productos</a>
-             <a class="items" href="favoritos"> Productos favoritos</a>
+             <a class="items" href="/">Productos</a>
+             <a class="items" href="paginas/favoritos"> Productos favoritos</a>
              <a class="items" href="admin/productos/fpdf/fpdf/Lista.php">Ver lista en pdf</a>
              <a class="items" href="#datos" uk-toggle> Datos personales</a>
-             <a class="items" href="resumen">Carrito</a>
-             <a class="items" href="mensaje" class="set__text">Mensajes</a>
+             <a class="items" href="paginas/resumen">Carrito</a>
+             <a class="items" href="paginas/pagos" class="set__text">Pedidos</a>
+             
+             <a class="items" href="paginas/mensaje" class="set__text">Mensajes</a>
              <a class="items" href="#eliminar_cuenta" uk-toggle class="set__text">Eliminar cuenta</a>
                 <?php
           $negocio = "SELECT * FROM usuarios WHERE id = '$id' " ;     

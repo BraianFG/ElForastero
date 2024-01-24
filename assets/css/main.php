@@ -1238,6 +1238,21 @@ font-display:swap;
 .pagination__item:hover{
       color:<?php echo $negocio['color3']?>; 
 }
+
+.pagos{
+   justify-content:center;   
+   display:flex;
+   flex:1;
+   flex-wrap:wrap;
+}
+
+.pagar{
+    margin-top:5em
+}
+
+.uk-grid-item-match, .uk-grid-match>*{
+    justify-content:center;
+}
 </style>
 <?php
   }

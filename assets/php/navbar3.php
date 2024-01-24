@@ -39,7 +39,7 @@
                       ?> 
     
                            <li>
-                                <a href="resumen" id="resumen"><?php echo '$',$usuarios['total']?></a>
+                                <a href="paginas/resumen" id="resumen"><?php echo '$',$usuarios['total']?></a>
                             </li>
                              
         <?php

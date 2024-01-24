@@ -6,9 +6,9 @@ $nombre = $_SESSION["nombre"];
 $apellido = $_SESSION["apellido"];
 
    if($id ==""){
-         header("Location:../../mensaje");
+         header("Location:../../paginas/mensaje");
    }else{
-          header("Location:../../mensaje");
+          header("Location:../../paginas/mensaje");
    }
 
     $mensaje =filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING);
