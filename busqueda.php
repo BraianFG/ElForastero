@@ -32,7 +32,7 @@ require "assets/php/database.php"; ?>
    
 <?php
   $buscar = mysqli_real_escape_string($conn, filter_var($_GET['buscar'], FILTER_SANITIZE_STRING));
-  $negocio = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `nombre` LIKE '%$buscar%'" ;     
+  $negocio = "SELECT `productos`.`id`, `nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`, `fecha1`, `hora1`, `fecha2`, `hora2`,`reacciones`.`likes` FROM `productos` INNER JOIN `reacciones` ON `productos`.`id` = `reacciones`.`idproducto` WHERE `nombre` LIKE '%$buscar%' ORDER BY  `productos`.`nombre` ASC" ;     
   $resultados = mysqli_query($conn,$negocio);          
         while($negocio= mysqli_fetch_array($resultados)){
      ?>     
@@ -77,7 +77,7 @@ require "assets/php/database.php"; ?>
         <!-- Header -->
         <?php 
          if(!isset($_SESSION['id'])){
-             include "visitas.php";
+             include "assets/php/visitas.php";
          }
           include"assets/php/navbar3.php" ;
         ?>
@@ -105,7 +105,8 @@ include "assets/php/productos/producto.php" ;
 
      include "assets/php/productos/reaccionar.php";
         }
-        ?>
+      ?>  
+
         
               </li>
         </ul>        
@@ -138,7 +139,11 @@ include "assets/php/productos/producto.php" ;
     }
     </script>
         <?php
-          }
+          }else{
+          ?>    
+           <p class="uk-text-center">HAGA UNA BUSQUEDA</p>
+          <?php
+          }        
         ?>  
                 <!-- Botones flotantes-->
                 <?php include "assets/php/contacto.php" ?>
