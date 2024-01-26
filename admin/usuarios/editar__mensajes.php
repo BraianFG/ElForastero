@@ -1,5 +1,5 @@
 <?php 
-      require '../assets/php/database.php';
+   require '../../assets/php/database.php';
 
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $fecha = date("Y-m-d", time());
