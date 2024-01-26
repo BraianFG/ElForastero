@@ -1,0 +1,29 @@
+<?php
+require './assets/php/database.php';
+/*
+  ## LINEA DE COMANDOS PARA CREAR LA BASE DE DATOS
+*/
+
+$files = scandir('./Base de datos');
+
+foreach ($files as $file) {
+  if ($file == '.' || $file == '..') {
+    continue;
+  }
+
+  if (strpos($file, '.sql') === false) {
+    continue;
+  }
+
+  $content = file_get_contents('./Base de datos/' . $file);
+  $lines = explode(";", $content);
+
+  foreach ($lines as $line) {
+    $line = trim($line);
+    if ($line != '') {
+      $sql = $line;
+      $result = $conn->query($sql);
+      echo $sql . '<br>';
+    }
+  }
+}
