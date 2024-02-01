@@ -1,8 +1,7 @@
 <div class="uk-flex">
 <form action="filtrar.php" method="GET">    
-      <select class="select" name="categoria" aria-label=".form-select-md example" onchange="this.form.action = this.value; this.disabled = true; this.form.submit()" >
+      <select class="select" name="categoria" aria-label=".form-select-md example" onchange=" this.form.submit()" >
          <?php
-                
               $productos = "SELECT categoria,COUNT(*) AS cantidad,id FROM productos GROUP BY categoria ORDER BY categoria;";
               $resultp1 = mysqli_query($conn,$productos);          
             
@@ -10,7 +9,7 @@
                $categorias = $productosp1['categoria']       
                    
          ?>   
-           <option value="<?php echo $categorias ?>"><?php echo $productosp1['categoria']?> (<?php echo $productosp1['cantidad']?>)</option>
+           <option value="<?php echo $categorias ?>"><?php echo $categorias ?> (<?php echo $productosp1['cantidad']?>)</option>
            
            <?php
              }
