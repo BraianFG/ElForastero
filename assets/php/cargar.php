@@ -7,7 +7,10 @@
    $id = $productosp1['id'];
     $sql = "INSERT INTO `reacciones`(`idproducto`, `likes`) VALUES ('$id','0')";
      $resultInsert = mysqli_query($conn, $sql);
-       
+    
+ $sql2 = "INSERT INTO `reacciones`(`idproducto`, `likes`)
+VALUES ((SELECT id FROM productos ORDER BY id DESC LIMIT 1), '0');";
+     $resultInsert2 = mysqli_query($conn, $sql2);
  ?>
  
  <?php
