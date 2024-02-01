@@ -104,7 +104,8 @@
 //------------------------------------------------------------------------------//
    $sql_productos = "INSERT INTO `productos`(`nombre`, `descripcion`, `cantidad`, `precio`, `categoria`, `imagen`, `imagen01`, `imagen02`, `modal1`,`fecha1`,`hora1`) VALUES ('{$nombre}','{$descripcion}','{$cantidad}','{$precio}','{$categoria}','{$nombreIMG}','{$nombreIMG2}','{$nombreIMG3}','{$modal1}','{$fecha}','{$hora}')";
    
-    $sql_productos2 = "INSERT INTO `reacciones`(`id`,`idproducto`, `likes`) VALUES ('NULL','{$id}','0')";
+    $sql_productos2 = "INSERT INTO `reacciones`(`idproducto`, `likes`)
+VALUES ((SELECT id FROM productos ORDER BY id DESC LIMIT 1), '0');";
    
     $resultInsert = mysqli_query($conn, $sql_productos); 
     
