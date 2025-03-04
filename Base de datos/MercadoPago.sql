@@ -39,7 +39,7 @@ CREATE TABLE `MercadoPago` (
 --
 
 INSERT INTO `MercadoPago` (`id`, `AcessToken`, `sdk`, `comision`) VALUES
-(1, '0', 'TEST-a12f8a47-a8fa-4f90-aa7f-ab6ad20fe03d', 8);
+(1, '0', '0', 8);
 
 --
 -- Índices para tablas volcadas
