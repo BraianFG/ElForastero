@@ -507,7 +507,7 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Elimiación de 6 tablas de bases de datos para optimizar
 
 **6/06/2025**
-#LLEGÓ LA V2.0 DE LA TIENDA ONLINE !!!
+# LLEGÓ LA V2.0 DE LA TIENDA ONLINE !!!
 ## Una versión más moderna y minimalisa a lo anterior
 
 ### Descripción:
@@ -516,8 +516,6 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Ve uno o más productos
 * Hace scroll y se desplegarían más productos
 * Puede tocar un card de productos y se va a una pagina que sería el archivo *Penlace.php?* que puede ver en detalle ese producto y compartírlo o agregarlo al carrito y también verá a otros productos
-
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
