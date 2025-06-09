@@ -516,12 +516,18 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Ve uno o más productos
 * Hace scroll y se desplegarían más productos
 * Puede tocar un card de productos y se va a una pagina que sería el archivo *Penlace.php?* que puede ver en detalle ese producto y compartírlo o agregarlo al carrito y también verá a otros productos
-
+  
 ## ¿Cómo instalar y usar la v2.0 de la tienda online?
 * Descargar el zip o clonar el proyecto en el servidor
 * Conectar la base de datos,creando un archivo *.env*
 * Todos los archivos de la nueva versión están en la carpeta v2.0 , por la cual se accedería como http://tudominio.com/v2.0 por el momento lo recomendable es hacerle una redirección ya que se usan en la anterior versión la base de datos *./assets/php/database* , la carpeta de imagenes en */imagen* y la carpeta para ver lista de precios en pdf desde la administración de la misma en ./admin/productos/fpdf/fpdf/lista.php
-  
+
+## Herramientas utilizadas 
+* Inteligencia artificial
+* Bootstrap
+* Alertify
+* Fpdf
+* Font Awsome 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
