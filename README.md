@@ -527,7 +527,10 @@ FALTA TRABAJAR EL CARRITO Y OPCIONES DE RECUPERAR CONTRASEÑA
 * Bootstrap
 * Alertify
 * Fpdf
-* Font Awsome 
+* Font Awsome
+* Lazyload
+* JQuery Ajax
+* Php
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 # APORTE ECONOMICAMENTE AL PROYECTO 🤖
